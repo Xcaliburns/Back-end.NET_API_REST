@@ -16,14 +16,14 @@ namespace Dot.Net.WebApi.Controllers
             return Ok();
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("add")]
         public IActionResult AddCurvePoint([FromBody]CurvePoint curvePoint)
         {
             return Ok();
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("validate")]
         public IActionResult Validate([FromBody]CurvePoint curvePoint)
         {
