@@ -5,7 +5,7 @@ namespace Dot.Net.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BidListController : ControllerBase
+    public class BidListControllerSteph : ControllerBase
     {
         [HttpPost]
         [Route("validate")]

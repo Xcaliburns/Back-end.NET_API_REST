@@ -1,33 +1,34 @@
+using Dot.Net.WebApi.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dot.Net.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RuleNameController : ControllerBase
+    public class TradeControllerSteph : ControllerBase
     {
-        // TODO: Inject RuleName service
+        // TODO: Inject Trade service
 
         [HttpGet]
         [Route("list")]
         public IActionResult Home()
         {
-            // TODO: find all RuleName, add to model
+            // TODO: find all Trade, add to model
             return Ok();
         }
 
         [HttpGet]
         [Route("add")]
-        public IActionResult AddRuleName([FromBody]RuleName trade)
+        public IActionResult AddTrade([FromBody]Trade trade)
         {
             return Ok();
         }
 
         [HttpGet]
         [Route("validate")]
-        public IActionResult Validate([FromBody]RuleName trade)
+        public IActionResult Validate([FromBody]Trade trade)
         {
-            // TODO: check data valid and save to db, after saving return RuleName list
+            // TODO: check data valid and save to db, after saving return Trade list
             return Ok();
         }
 
@@ -35,23 +36,23 @@ namespace Dot.Net.WebApi.Controllers
         [Route("update/{id}")]
         public IActionResult ShowUpdateForm(int id)
         {
-            // TODO: get RuleName by Id and to model then show to the form
+            // TODO: get Trade by Id and to model then show to the form
             return Ok();
         }
 
         [HttpPost]
         [Route("update/{id}")]
-        public IActionResult UpdateRuleName(int id, [FromBody] RuleName rating)
+        public IActionResult UpdateTrade(int id, [FromBody] Trade trade)
         {
-            // TODO: check required fields, if valid call service to update RuleName and return RuleName list
+            // TODO: check required fields, if valid call service to update Trade and return Trade list
             return Ok();
         }
 
         [HttpDelete]
         [Route("{id}")]
-        public IActionResult DeleteRuleName(int id)
+        public IActionResult DeleteTrade(int id)
         {
-            // TODO: Find RuleName by Id and delete the RuleName, return to Rule list
+            // TODO: Find Trade by Id and delete the Trade, return to Trade list
             return Ok();
         }
     }

@@ -5,5 +5,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <ActiveDebugProfile>P7CreateRestApi</ActiveDebugProfile>
+    <_SelectedScaffolderID>ApiControllerWithContextScaffolder</_SelectedScaffolderID>
+    <_SelectedScaffolderCategoryPath>root/Common/Api</_SelectedScaffolderCategoryPath>
+    <WebStackScaffolding_ControllerDialogWidth>650</WebStackScaffolding_ControllerDialogWidth>
   </PropertyGroup>
 </Project>

@@ -1,11 +1,11 @@
-using Dot.Net.WebApi.Controllers.Domain;
+using Dot.Net.WebApi.Domain;//correction effectuée Controllers.Domain vers Domain
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dot.Net.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RatingController : ControllerBase
+    public class RatingControllerSteph : ControllerBase
     {
         // TODO: Inject Rating service
 

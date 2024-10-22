@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Domain;
+using Dot.Net.WebApi.Controllers;
+
+
 
 namespace Dot.Net.WebApi.Data
 {
@@ -12,6 +15,17 @@ namespace Dot.Net.WebApi.Data
             base.OnModelCreating(builder);
         }
 
-        public DbSet<User> Users { get; set;}
+        //referencer les entités
+        public DbSet<User> Users { get; set; }
+        public DbSet<BidList> Bids { get; set; }
+        public DbSet<CurvePoint> CurvePoints { get; set; }
+        public DbSet<Rating> Rating { get; set; }
+        public DbSet<RuleName> RuleNames { get; set; }
+        public DbSet<Trade> Trades{ get; set; }
+        
+
+
+
+
     }
 }
