@@ -1,0 +1,16 @@
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Infrastructure.deps.json
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Infrastructure.dll
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Infrastructure.pdb
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Domain.dll
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Domain.pdb
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.AssemblyInfo.cs
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.sourcelink.json
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexiu.B30BAC69.Up2Date
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.dll
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\refint\Findexium.Infrastructure.dll
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.pdb
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\ref\Findexium.Infrastructure.dll

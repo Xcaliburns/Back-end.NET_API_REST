@@ -13,9 +13,9 @@ namespace Dot.Net.WebApi.Repositories
             DbContext = dbContext;
         }
 
-        public User FindByUserName(string userName)
+        public User FindByUserName(string userName)//correction de l'erreur de type
         {
-            return DbContext.Users.Where(user => user.UserName == userName)
+            return DbContext.Users.Where(user => user.UserName.ToString() == userName)
                                   .FirstOrDefault();
         }
 
