@@ -9,6 +9,7 @@ using Dot.Net.WebApi.Data;
 using Dot.Net.WebApi.Domain;
 using P7CreateRestApi.Interfaces;
 using P7CreateRestApi.Repositories;
+using Findexium.Domain.Interfaces;
 
 namespace P7CreateRestApi.Controllers
 {
@@ -16,25 +17,25 @@ namespace P7CreateRestApi.Controllers
     [ApiController]
     public class BidListController : ControllerBase
     {
-        private readonly IBidListRepository _repository;
+        private readonly IBidListServices _bidListServices;
 
-        public BidListController(IBidListRepository repository)
+        public BidListController(IBidListServices bidListServices)
         {
-            _repository = repository;
+            _bidListServices = bidListServices;
         }
 
         // GET: api/BidList
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BidList>>> GetBids()
         {
-            return Ok(await _repository.GetAllAsync());
+            return Ok(await _bidListServices.GetAllAsync());
         }
 
         // GET: api/BidLists/5
         [HttpGet("{id}")]
         public async Task<ActionResult<BidList>> GetBid(int id)
         {
-            var bid = await _repository.GetByIdAsync(id);
+            var bid = await _bidListServices.GetByIdAsync(id);
             if (bid == null)
             {
                 return NotFound();
@@ -53,11 +54,11 @@ namespace P7CreateRestApi.Controllers
 
             try
             {
-                await _repository.UpdateAsync(bidList);
+                await _bidListServices.UpdateAsync(bidList);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!await _repository.ExistsAsync(id))
+                if (!await _bidListServices.ExistsAsync(id))
                 {
                     return NotFound();
                 }
@@ -74,7 +75,7 @@ namespace P7CreateRestApi.Controllers
         [HttpPost]
         public async Task<ActionResult<BidList>> PostBidList(BidList bidList)
         {
-            await _repository.AddAsync(bidList);
+            await _bidListServices.AddAsync(bidList);
             return CreatedAtAction("GetBid", new { id = bidList.BidListId }, bidList);
         }
 
@@ -82,13 +83,13 @@ namespace P7CreateRestApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBidList(int id)
         {
-            var bidList = await _repository.GetByIdAsync(id);
+            var bidList = await _bidListServices.GetByIdAsync(id);
             if (bidList == null)
             {
                 return NotFound();
             }
 
-            await _repository.DeleteAsync(id);
+            await _bidListServices.DeleteAsync(id);
             return NoContent();
         }
     }
