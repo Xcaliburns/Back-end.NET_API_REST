@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Findexium.Domain.Services
 {
-    public class BidListServices : IBidListServices
+    public class BidListService : IBidListServices
     {
         private readonly IBidListRepository _bidRepository;
 
-        public BidListServices(IBidListRepository bidRepository)
+        public BidListService(IBidListRepository bidRepository)
         {
             _bidRepository = bidRepository;
         }

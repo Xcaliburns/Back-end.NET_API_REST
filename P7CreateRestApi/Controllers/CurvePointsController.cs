@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Data;
 using Dot.Net.WebApi.Domain;
+using Findexium.Domain.Interfaces;
 
 namespace Findexium.Api.Controllers
 {
@@ -14,36 +15,36 @@ namespace Findexium.Api.Controllers
     [ApiController]
     public class CurvePointsController : ControllerBase
     {
-        private readonly LocalDbContext _context;
+        private readonly ICurvePointServices _CurvePointService;
 
-        public CurvePointsController(LocalDbContext context)
+        public CurvePointsController(ICurvePointServices curvePointService)
         {
-            _context = context;
+            _CurvePointService = curvePointService;
         }
 
         // GET: api/CurvePoints
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CurvePoint>>> GetCurvePoints()
         {
-            return await _context.CurvePoints.ToListAsync();
+            var curvePoints = await _CurvePointService.GetAllAsync();
+            return Ok(curvePoints);
         }
 
         // GET: api/CurvePoints/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CurvePoint>> GetCurvePoint(int id)
         {
-            var curvePoint = await _context.CurvePoints.FindAsync(id);
+            var curvePoint = await _CurvePointService.GetByIdAsync(id);
 
             if (curvePoint == null)
             {
                 return NotFound();
             }
 
-            return curvePoint;
+            return Ok(curvePoint);
         }
 
         // PUT: api/CurvePoints/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCurvePoint(int id, CurvePoint curvePoint)
         {
@@ -52,15 +53,13 @@ namespace Findexium.Api.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(curvePoint).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _CurvePointService.UpdateAsync(id, curvePoint);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CurvePointExists(id))
+                if (await _CurvePointService.GetByIdAsync(id) == null)
                 {
                     return NotFound();
                 }
@@ -74,13 +73,10 @@ namespace Findexium.Api.Controllers
         }
 
         // POST: api/CurvePoints
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePoint curvePoint)
         {
-            _context.CurvePoints.Add(curvePoint);
-            await _context.SaveChangesAsync();
-
+            await _CurvePointService.AddAsync(curvePoint);
             return CreatedAtAction("GetCurvePoint", new { id = curvePoint.Id }, curvePoint);
         }
 
@@ -88,21 +84,14 @@ namespace Findexium.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCurvePoint(int id)
         {
-            var curvePoint = await _context.CurvePoints.FindAsync(id);
+            var curvePoint = await _CurvePointService.GetByIdAsync(id);
             if (curvePoint == null)
             {
                 return NotFound();
             }
 
-            _context.CurvePoints.Remove(curvePoint);
-            await _context.SaveChangesAsync();
-
+            await _CurvePointService.DeleteAsync(id);
             return NoContent();
-        }
-
-        private bool CurvePointExists(int id)
-        {
-            return _context.CurvePoints.Any(e => e.Id == id);
         }
     }
 }
