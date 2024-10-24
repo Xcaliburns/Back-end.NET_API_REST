@@ -1,4 +1,7 @@
 using Dot.Net.WebApi.Data;
+using Findexium.Domain.Interfaces;
+using Findexium.Domain.Services;
+using Findexium.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using P7CreateRestApi.Interfaces;
 using P7CreateRestApi.Repositories;
@@ -16,7 +19,9 @@ builder.Services.AddDbContext<LocalDbContext>(options =>
 
 // Register repositories
 builder.Services.AddScoped<IBidListRepository, BidRepository>();
-
+builder.Services.AddScoped<IBidListServices, BidListService>();
+builder.Services.AddScoped<ICurvePointRepository, CurvePointRepository>();
+builder.Services.AddScoped<ICurvePointServices, CurvePointService>();
 // Register HttpClient with default handler
 builder.Services.AddHttpClient("DefaultClient");
 
