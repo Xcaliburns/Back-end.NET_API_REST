@@ -24,6 +24,8 @@ builder.Services.AddScoped<ICurvePointRepository, CurvePointRepository>();
 builder.Services.AddScoped<ICurvePointServices, CurvePointService>();
 builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 builder.Services.AddScoped<IRatingServices, RatingService>();
+builder.Services.AddScoped<IRuleNameRepository, RuleNameRepository>();
+builder.Services.AddScoped<IRuleNameServices, RuleNameService>();
 // Register HttpClient with default handler
 builder.Services.AddHttpClient("DefaultClient");
 
