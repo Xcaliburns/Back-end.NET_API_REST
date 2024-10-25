@@ -26,9 +26,28 @@ namespace P7CreateRestApi.Repositories
 
         public async Task AddAsync(BidList bidList)
         {
-            _context.Bids.Add(bidList);
-            await _context.SaveChangesAsync();
+            using (var transaction = await _context.Database.BeginTransactionAsync())
+            {
+                try
+                {
+                    //TODO : voir avec Laala si les requetes avec swagger sont ok
+                    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Bids ON");
+
+                    _context.Bids.Add(bidList);
+                    await _context.SaveChangesAsync();
+
+                    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Bids OFF");
+                    await transaction.CommitAsync();
+                }
+                catch (Exception e)
+                {
+                    await transaction.RollbackAsync();
+                    // Log the exception or handle it as needed
+                    throw;
+                }
+            }
         }
+
 
         public async Task UpdateAsync(BidList bidList)
         {
