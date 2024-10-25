@@ -1,10 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Dot.Net.WebApi.Domain;
-using Dot.Net.WebApi.Controllers;
+using Findexium.Domain.Models;
 
 
 
-namespace Dot.Net.WebApi.Data
+namespace Findexium.Infrastructure.Data
 {
     public class LocalDbContext : DbContext
     {
@@ -21,8 +20,8 @@ namespace Dot.Net.WebApi.Data
         public DbSet<CurvePoint> CurvePoints { get; set; }
         public DbSet<Rating> Rating { get; set; }
         public DbSet<RuleName> RuleNames { get; set; }
-        public DbSet<Trade> Trades{ get; set; }
-        
+        public DbSet<Trade> Trades { get; set; }
+
 
 
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dot.Net.WebApi.Data;
-using Dot.Net.WebApi.Domain;
 using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
+using Findexium.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Findexium.Infrastructure.Repositories

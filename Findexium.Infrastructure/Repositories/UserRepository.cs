@@ -1,36 +1,54 @@
-using Dot.Net.WebApi.Data;
-using Dot.Net.WebApi.Domain;
+using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
+using Findexium.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Dot.Net.WebApi.Repositories
+namespace Findexium.Infrastructure.Repositories
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
-        public LocalDbContext DbContext { get; }
+        private readonly LocalDbContext _context;
 
-        public UserRepository(LocalDbContext dbContext)
+        public UserRepository(LocalDbContext context)
         {
-            DbContext = dbContext;
+            _context = context;
         }
 
-        public User FindByUserName(string userName)//correction de l'erreur de type
+        public async Task<IEnumerable<User>> GetUsersAsync()
         {
-            return DbContext.Users.Where(user => user.UserName.ToString() == userName)
-                                  .FirstOrDefault();
+            return await _context.Users.ToListAsync();
         }
 
-        public async Task<List<User>> FindAll()
+        public async Task<User> GetUserByIdAsync(int id)
         {
-            return await DbContext.Users.ToListAsync();
+            return await _context.Users.FindAsync(id);
         }
 
-        public void Add(User user)
+        public async Task AddUserAsync(User user)
         {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
         }
 
-        public User FindById(int id)
+        public async Task UpdateUserAsync(User user)
         {
-            return null;
+            _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteUserAsync(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<bool> UserExistsAsync(int id)
+        {
+            return await _context.Users.AnyAsync(e => e.Id == id);
         }
     }
 }

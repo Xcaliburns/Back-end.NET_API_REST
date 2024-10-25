@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace P7CreateRestApi.Models
+namespace Findexium.Api.Models
 {
     public class BidListModel
     {

@@ -1,4 +1,4 @@
-namespace Dot.Net.WebApi.Domain
+namespace Findexium.Domain.Models
 {
     public class BidList
     {
