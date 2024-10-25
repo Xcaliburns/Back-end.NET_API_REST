@@ -26,6 +26,9 @@ builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 builder.Services.AddScoped<IRatingServices, RatingService>();
 builder.Services.AddScoped<IRuleNameRepository, RuleNameRepository>();
 builder.Services.AddScoped<IRuleNameServices, RuleNameService>();
+builder.Services.AddScoped<ITradeRepository, TradeRepository>();
+builder.Services.AddScoped<ITradeService, TradeService>();
+
 // Register HttpClient with default handler
 builder.Services.AddHttpClient("DefaultClient");
 
