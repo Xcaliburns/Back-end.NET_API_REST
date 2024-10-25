@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Dot.Net.WebApi.Data;
-using Dot.Net.WebApi.Domain;
+
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Services;
+using Findexium.Domain.Models;
 
 namespace Findexium.Api.Controllers
 {

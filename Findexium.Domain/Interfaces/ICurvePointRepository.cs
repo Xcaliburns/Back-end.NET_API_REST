@@ -1,4 +1,4 @@
-﻿using Dot.Net.WebApi.Domain;
+﻿using Findexium.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Findexium.Domain.Interfaces
 {
-   public interface ICurvePointRepository
+    public interface ICurvePointRepository
     {
         Task<IEnumerable<CurvePoint>> GetAllAsync();
         Task<CurvePoint> GetByIdAsync(int id);

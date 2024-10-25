@@ -1,12 +1,12 @@
-﻿using Dot.Net.WebApi.Data;
-using Dot.Net.WebApi.Domain;
+﻿using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
+using Findexium.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using P7CreateRestApi.Interfaces;
 
-namespace P7CreateRestApi.Repositories
+namespace Findexium.Infrastructure.Repositories
 {
     public class BidRepository : IBidListRepository
-    { 
+    {
         private readonly LocalDbContext _context;
 
         public BidRepository(LocalDbContext context)

@@ -1,6 +1,7 @@
+using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dot.Net.WebApi.Controllers
+namespace Findexium.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -18,14 +19,14 @@ namespace Dot.Net.WebApi.Controllers
 
         [HttpGet]
         [Route("add")]
-        public IActionResult AddRuleName([FromBody]RuleName trade)
+        public IActionResult AddRuleName([FromBody] RuleName trade)
         {
             return Ok();
         }
 
         [HttpGet]
         [Route("validate")]
-        public IActionResult Validate([FromBody]RuleName trade)
+        public IActionResult Validate([FromBody] RuleName trade)
         {
             // TODO: check data valid and save to db, after saving return RuleName list
             return Ok();

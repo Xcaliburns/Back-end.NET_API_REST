@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using Dot.Net.WebApi.Domain;
 using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
 
 namespace Findexium.Domain.Services
 {

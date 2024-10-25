@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Dot.Net.WebApi.Data;
-using Dot.Net.WebApi.Domain;
-using P7CreateRestApi.Interfaces;
-using P7CreateRestApi.Repositories;
+using Findexium.Infrastructure;
 using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
 
-namespace P7CreateRestApi.Controllers
+namespace Findexium.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

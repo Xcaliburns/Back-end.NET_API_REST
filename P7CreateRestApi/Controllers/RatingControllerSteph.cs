@@ -1,7 +1,7 @@
-using Dot.Net.WebApi.Domain;//correction effectuée Controllers.Domain vers Domain
+using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dot.Net.WebApi.Controllers
+namespace Findexium.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -19,14 +19,14 @@ namespace Dot.Net.WebApi.Controllers
 
         [HttpGet]
         [Route("add")]
-        public IActionResult AddRatingForm([FromBody]Rating rating)
+        public IActionResult AddRatingForm([FromBody] Rating rating)
         {
             return Ok();
         }
 
         [HttpGet]
         [Route("validate")]
-        public IActionResult Validate([FromBody]Rating rating)
+        public IActionResult Validate([FromBody] Rating rating)
         {
             // TODO: check data valid and save to db, after saving return Rating list
             return Ok();

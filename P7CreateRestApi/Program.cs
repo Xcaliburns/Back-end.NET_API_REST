@@ -1,10 +1,8 @@
-using Dot.Net.WebApi.Data;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Services;
+using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
-using P7CreateRestApi.Interfaces;
-using P7CreateRestApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -28,6 +26,8 @@ builder.Services.AddScoped<IRuleNameRepository, RuleNameRepository>();
 builder.Services.AddScoped<IRuleNameServices, RuleNameService>();
 builder.Services.AddScoped<ITradeRepository, TradeRepository>();
 builder.Services.AddScoped<ITradeService, TradeService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 // Register HttpClient with default handler
 builder.Services.AddHttpClient("DefaultClient");

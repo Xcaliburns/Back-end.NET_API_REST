@@ -1,6 +1,6 @@
-﻿using Dot.Net.WebApi.Data;
-using Dot.Net.WebApi.Domain;
-using Findexium.Domain.Interfaces;
+﻿using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
+using Findexium.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

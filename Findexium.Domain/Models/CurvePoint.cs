@@ -1,6 +1,6 @@
 using System;
 
-namespace Dot.Net.WebApi.Domain
+namespace Findexium.Domain.Models
 {
     public class CurvePoint
     {

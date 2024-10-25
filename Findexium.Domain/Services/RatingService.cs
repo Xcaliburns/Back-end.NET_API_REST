@@ -1,5 +1,5 @@
-﻿using Dot.Net.WebApi.Domain;
-using Findexium.Domain.Interfaces;
+﻿using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

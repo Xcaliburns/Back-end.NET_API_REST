@@ -1,11 +1,11 @@
 ﻿using Findexium.Domain.Interfaces;
-using Dot.Net.WebApi.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dot.Net.WebApi.Controllers;
+using Findexium.Domain.Models;
+using Findexium.Infrastructure.Data;
 
 namespace Findexium.Infrastructure.Repositories
 {
