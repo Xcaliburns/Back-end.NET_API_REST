@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Data;
 using Dot.Net.WebApi.Domain;
+using Findexium.Domain.Interfaces;
+
 
 namespace Findexium.Api.Controllers
 {
@@ -14,53 +16,50 @@ namespace Findexium.Api.Controllers
     [ApiController]
     public class RatingsController : ControllerBase
     {
-        private readonly LocalDbContext _context;
+        private readonly IRatingServices _ratingService;
 
-        public RatingsController(LocalDbContext context)
+        public RatingsController(IRatingServices ratingService)
         {
-            _context = context;
+            _ratingService = ratingService;
         }
 
         // GET: api/Ratings
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Rating>>> GetRating()
         {
-            return await _context.Rating.ToListAsync();
+            var ratings = await _ratingService.GetAllRatingsAsync();
+            return Ok(ratings);
         }
 
         // GET: api/Ratings/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Rating>> GetRating(int id)
         {
-            var rating = await _context.Rating.FindAsync(id);
+            var rating = await _ratingService.GetRatingByIdAsync(id);
 
             if (rating == null)
             {
                 return NotFound();
             }
 
-            return rating;
+            return Ok(rating);
         }
 
         // PUT: api/Ratings/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRating(int id, Rating rating)
         {
-            if (id != rating.Id)
+            try
+            {
+                await _ratingService.UpdateRatingAsync(id, rating);
+            }
+            catch (ArgumentException)
             {
                 return BadRequest();
             }
-
-            _context.Entry(rating).State = EntityState.Modified;
-
-            try
+            catch (Exception)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!RatingExists(id))
+                if (await _ratingService.GetRatingByIdAsync(id) != null)
                 {
                     return NotFound();
                 }
@@ -74,13 +73,10 @@ namespace Findexium.Api.Controllers
         }
 
         // POST: api/Ratings
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Rating>> PostRating(Rating rating)
         {
-            _context.Rating.Add(rating);
-            await _context.SaveChangesAsync();
-
+            await _ratingService.AddRatingAsync(rating);
             return CreatedAtAction("GetRating", new { id = rating.Id }, rating);
         }
 
@@ -88,21 +84,14 @@ namespace Findexium.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRating(int id)
         {
-            var rating = await _context.Rating.FindAsync(id);
+            var rating = await _ratingService.GetRatingByIdAsync(id);
             if (rating == null)
             {
                 return NotFound();
             }
 
-            _context.Rating.Remove(rating);
-            await _context.SaveChangesAsync();
-
+            await _ratingService.DeleteRatingAsync(id);
             return NoContent();
-        }
-
-        private bool RatingExists(int id)
-        {
-            return _context.Rating.Any(e => e.Id == id);
         }
     }
 }
