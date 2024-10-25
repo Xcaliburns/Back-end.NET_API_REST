@@ -1,6 +1,5 @@
-﻿using Dot.Net.WebApi.Controllers;
-using Dot.Net.WebApi.Domain;
-using Findexium.Domain.Interfaces;
+﻿using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Findexium.Domain.Services
 {
-   public class RuleNameService : IRuleNameServices
+    public class RuleNameService : IRuleNameServices
     {
         private readonly IRuleNameRepository _ruleNameRepository;
 

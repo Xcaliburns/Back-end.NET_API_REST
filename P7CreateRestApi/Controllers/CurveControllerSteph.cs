@@ -1,7 +1,7 @@
-using Dot.Net.WebApi.Domain;
+using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dot.Net.WebApi.Controllers
+namespace Findexium.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -18,14 +18,14 @@ namespace Dot.Net.WebApi.Controllers
 
         [HttpPost]
         [Route("add")]
-        public IActionResult AddCurvePoint([FromBody]CurvePoint curvePoint)
+        public IActionResult AddCurvePoint([FromBody] CurvePoint curvePoint)
         {
             return Ok();
         }
 
         [HttpPost]
         [Route("validate")]
-        public IActionResult Validate([FromBody]CurvePoint curvePoint)
+        public IActionResult Validate([FromBody] CurvePoint curvePoint)
         {
             // TODO: check data valid and save to db, after saving return bid list
             return Ok();

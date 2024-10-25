@@ -1,8 +1,8 @@
-﻿using Dot.Net.WebApi.Domain;
+﻿using Findexium.Domain.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace P7CreateRestApi.Interfaces
+namespace Findexium.Domain.Interfaces
 {
     public interface IBidListRepository
     {

@@ -1,85 +1,85 @@
-using Dot.Net.WebApi.Domain;
-using Dot.Net.WebApi.Repositories;
+using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
+using Findexium.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace Dot.Net.WebApi.Controllers
+namespace Findexium.Api.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
-    public class UserController : ControllerBase
+    public class UsersController : ControllerBase
     {
-        private UserRepository _userRepository;
+        private readonly IUserService _userService;
 
-        public UserController(UserRepository userRepository)
+        public UsersController(IUserService userService)
         {
-            _userRepository = userRepository;
+            _userService = userService;
         }
 
         [HttpGet]
-        [Route("list")]
-        public IActionResult Home()
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return Ok();
+            var users = await _userService.GetUsersAsync();
+            return Ok(users);
         }
 
-        [HttpGet]
-        [Route("add")]
-        public IActionResult AddUser([FromBody]User user)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            return Ok();
+            var user = await _userService.GetUserByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
         }
 
-        [HttpGet]
-        [Route("validate")]
-        public IActionResult Validate([FromBody]User user)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (!ModelState.IsValid)
+            if (id != user.Id)
             {
                 return BadRequest();
             }
-           
-           _userRepository.Add(user);
 
-            return Ok();
-        }
+            try
+            {
+                await _userService.UpdateUserAsync(user);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!await _userService.UserExistsAsync(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
-        [HttpGet]
-        [Route("update/{id}")]
-        public IActionResult ShowUpdateForm(int id)
-        {
-            User user = _userRepository.FindById(id);
-            
-            if (user == null)
-                throw new ArgumentException("Invalid user Id:" + id);
-
-            return Ok();
+            return NoContent();
         }
 
         [HttpPost]
-        [Route("update/{id}")]
-        public IActionResult UpdateUser(int id, [FromBody] User user)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            // TODO: check required fields, if valid call service to update Trade and return Trade list
-            return Ok();
+            await _userService.AddUserAsync(user);
+            return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
 
-        [HttpDelete]
-        [Route("{id}")]
-        public IActionResult DeleteUser(int id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            User user = _userRepository.FindById(id);
-            
+            var user = await _userService.GetUserByIdAsync(id);
             if (user == null)
-                throw new ArgumentException("Invalid user Id:" + id);
+            {
+                return NotFound();
+            }
 
-            return Ok();
-        }
-
-        [HttpGet]
-        [Route("/secure/article-details")]
-        public async Task<ActionResult<List<User>>> GetAllUserArticles()
-        {
-            return Ok();
+            await _userService.DeleteUserAsync(id);
+            return NoContent();
         }
     }
 }
