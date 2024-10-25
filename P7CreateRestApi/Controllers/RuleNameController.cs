@@ -1,157 +1,81 @@
 ﻿using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Dot.Net.WebApi.Controllers;
 using Dot.Net.WebApi.Data;
+using Dot.Net.WebApi.Domain;
+using Findexium.Domain.Interfaces;
+using Dot.Net.WebApi.Controllers;
 
 namespace Findexium.Api.Controllers
 {
-    public class RuleNameController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class RuleNameController : ControllerBase
     {
-        private readonly LocalDbContext _context;
-
-        public RuleNameController(LocalDbContext context)
+        private readonly IRuleNameServices _ruleNameServices;
+        public RuleNameController(IRuleNameServices ruleNameServices)
         {
-            _context = context;
+            _ruleNameServices = ruleNameServices;
         }
-
-        // GET: RuleName
-        public async Task<IActionResult> Index()
+        // GET: api/RuleName
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<RuleName>>> GetRuleName()
         {
-            return View(await _context.RuleNames.ToListAsync());
+            var ruleNames = await _ruleNameServices.GetAllRatingsAsync();
+            return Ok(ruleNames);
         }
-
-        // GET: RuleName/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: api/RuleName/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<RuleName>> GetRuleName(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ruleName = await _context.RuleNames
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var ruleName = await _ruleNameServices.GetRuleByIdAsync(id);
             if (ruleName == null)
             {
                 return NotFound();
             }
-
-            return View(ruleName);
+            return Ok(ruleName);
         }
-
-        // GET: RuleName/Create
-        public IActionResult Create()
+        //PUT :api/RuleName/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
         {
-            return View();
+            try
+            {
+                await _ruleNameServices.UpdateRuleAsync(id, ruleName);
+            }
+            catch (ArgumentException)
+            {
+                return BadRequest();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            return NoContent();
         }
-
-        // POST: RuleName/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: api/RuleName
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Json,Template,SqlStr,SqlPart")] RuleName ruleName)
+        public async Task<ActionResult<RuleName>> PostRuleName(RuleName ruleName)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(ruleName);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(ruleName);
+            await _ruleNameServices.AddRuleAsync(ruleName);
+            return CreatedAtAction("GetRuleName", new { id = ruleName.Id }, ruleName);
+        }
+        // DELETE: api/RuleName/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteRuleName(int id)
+        {
+            await _ruleNameServices.DeleteRuleAsync(id);
+            return NoContent();
         }
 
-        // GET: RuleName/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ruleName = await _context.RuleNames.FindAsync(id);
-            if (ruleName == null)
-            {
-                return NotFound();
-            }
-            return View(ruleName);
-        }
-
-        // POST: RuleName/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Json,Template,SqlStr,SqlPart")] RuleName ruleName)
-        {
-            if (id != ruleName.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(ruleName);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!RuleNameExists(ruleName.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(ruleName);
-        }
-
-        // GET: RuleName/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ruleName = await _context.RuleNames
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (ruleName == null)
-            {
-                return NotFound();
-            }
-
-            return View(ruleName);
-        }
-
-        // POST: RuleName/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var ruleName = await _context.RuleNames.FindAsync(id);
-            if (ruleName != null)
-            {
-                _context.RuleNames.Remove(ruleName);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool RuleNameExists(int id)
-        {
-            return _context.RuleNames.Any(e => e.Id == id);
-        }
     }
+
+
 }
+
