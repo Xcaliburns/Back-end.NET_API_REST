@@ -22,6 +22,8 @@ builder.Services.AddScoped<IBidListRepository, BidRepository>();
 builder.Services.AddScoped<IBidListServices, BidListService>();
 builder.Services.AddScoped<ICurvePointRepository, CurvePointRepository>();
 builder.Services.AddScoped<ICurvePointServices, CurvePointService>();
+builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+builder.Services.AddScoped<IRatingServices, RatingService>();
 // Register HttpClient with default handler
 builder.Services.AddHttpClient("DefaultClient");
 
