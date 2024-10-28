@@ -1,6 +1,7 @@
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\bin\Debug\net8.0\Findexium.Domain.deps.json
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\bin\Debug\net8.0\Findexium.Domain.dll
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\bin\Debug\net8.0\Findexium.Domain.pdb
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\obj\Debug\net8.0\Findexium.Domain.csproj.AssemblyReference.cache
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\obj\Debug\net8.0\Findexium.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\obj\Debug\net8.0\Findexium.Domain.AssemblyInfoInputs.cache
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\obj\Debug\net8.0\Findexium.Domain.AssemblyInfo.cs

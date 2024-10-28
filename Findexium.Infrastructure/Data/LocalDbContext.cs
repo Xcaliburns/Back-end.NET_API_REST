@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 
 
 namespace Findexium.Infrastructure.Data
 {
-    public class LocalDbContext : DbContext
+    public class LocalDbContext : IdentityDbContext<IdentityUser>
     {
         public LocalDbContext(DbContextOptions<LocalDbContext> options) : base(options) { }
 
@@ -15,6 +17,8 @@ namespace Findexium.Infrastructure.Data
         }
 
         //referencer les entités
+
+        //TODO : voir avec Laala : les champs de la table USER sont ils pour la plupart déjà inclus dans IdentityUser ?
         public DbSet<User> Users { get; set; }
         public DbSet<BidList> Bids { get; set; }
         public DbSet<CurvePoint> CurvePoints { get; set; }
