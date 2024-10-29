@@ -25,7 +25,7 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        public async Task<ActionResult<User>> GetUser(string id)
         {
             var user = await _userService.GetUserByIdAsync(id);
             if (user == null)
@@ -36,7 +36,7 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+        public async Task<IActionResult> PutUser(string id, User user)
         {
             if (id != user.Id)
             {
@@ -70,7 +70,7 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteUser(string id)
         {
             var user = await _userService.GetUserByIdAsync(id);
             if (user == null)
