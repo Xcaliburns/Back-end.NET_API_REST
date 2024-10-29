@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Findexium.Api", "P7CreateRe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3FA1B650-40B0-4AC4-854E-A8A20F109DC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Findexium.Domain", "Findexium.Domain\Findexium.Domain.csproj", "{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Findexium.Domain", "Findexium.Domain\Findexium.Domain.csproj", "{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Findexium.Infrastructure", "Findexium.Infrastructure\Findexium.Infrastructure.csproj", "{2AACDA51-F0FF-430E-90B3-3DB182183C10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Findexium.Infrastructure", "Findexium.Infrastructure\Findexium.Infrastructure.csproj", "{2AACDA51-F0FF-430E-90B3-3DB182183C10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4FC222DB-8CD0-4A97-A735-44737DAE7BFD}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
