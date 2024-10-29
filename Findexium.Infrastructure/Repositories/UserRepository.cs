@@ -19,7 +19,7 @@ namespace Findexium.Infrastructure.Repositories
             return await _context.Users.ToListAsync();
         }
 
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<User> GetUserByIdAsync(string id)
         {
             return await _context.Users.FindAsync(id);
         }
@@ -36,7 +36,7 @@ namespace Findexium.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(string id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user != null)
@@ -46,7 +46,7 @@ namespace Findexium.Infrastructure.Repositories
             }
         }
 
-        public async Task<bool> UserExistsAsync(int id)
+        public async Task<bool> UserExistsAsync(string id)
         {
             return await _context.Users.AnyAsync(e => e.Id == id);
         }

@@ -1,6 +1,3 @@
-using Findexium.Domain.Interfaces;
-using Findexium.Domain.Services;
-using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -9,6 +6,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Findexium.Domain.Models;
 using Findexium.Api.Extensions;
+using Findexium.Infrastructure.Data;
+using Findexium.Domain.Interfaces;
+using Findexium.Domain.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;

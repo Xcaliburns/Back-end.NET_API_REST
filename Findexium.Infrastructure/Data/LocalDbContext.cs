@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Findexium.Infrastructure.Data
 {
-    public class LocalDbContext : IdentityDbContext<IdentityUser>
+    public class LocalDbContext : IdentityDbContext<User>
     {
         public LocalDbContext(DbContextOptions<LocalDbContext> options) : base(options) { }
 
@@ -16,19 +16,11 @@ namespace Findexium.Infrastructure.Data
             base.OnModelCreating(builder);
         }
 
-        //referencer les entités
-
-        //TODO : voir avec Laala : les champs de la table USER sont ils pour la plupart déjà inclus dans IdentityUser ?
-        public DbSet<User> Users { get; set; }
+        // Référencer les entités
         public DbSet<BidList> Bids { get; set; }
         public DbSet<CurvePoint> CurvePoints { get; set; }
-        public DbSet<Rating> Rating { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
         public DbSet<RuleName> RuleNames { get; set; }
         public DbSet<Trade> Trades { get; set; }
-
-
-
-
-
     }
 }

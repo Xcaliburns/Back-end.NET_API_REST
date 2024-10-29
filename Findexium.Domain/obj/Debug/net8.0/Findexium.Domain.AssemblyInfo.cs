@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Findexium.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fe7f223897a65e84895831df1f77175208e900c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3798bcc838ddc7edfeba751ae8a5fcd4e9ddc0c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Findexium.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Findexium.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

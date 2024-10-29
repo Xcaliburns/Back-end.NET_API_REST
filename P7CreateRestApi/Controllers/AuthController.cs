@@ -15,7 +15,7 @@ namespace Findexium.Api.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly Domain.Interfaces.IUserService _userService;
+        private readonly IUserService _userService;
 
         public AuthController(IConfiguration configuration, IUserService userService)
         {

@@ -1,13 +1,12 @@
+using Microsoft.AspNetCore.Identity;
+
 namespace Findexium.Domain.Models
 {
-    public class User //: IdentityUser
+    public class User : IdentityUser
     {
-        //TODO : voir avec Laala : les champs de la table USER sont ils pour la plupart déja inclus dans IdentityUser ?
-
-        public int Id { get; set; }
-        public int UserName { get; set; }
-        public int Password { get; set; }
-        public int Fullname { get; set; }
-        public string Role { get; set; }
+        // Propriétés supplémentaires
+        public string Fullname { get; set; } = string.Empty;
+        // Vous n'avez pas besoin de redéfinir UserName et Password ici
+        // public string Role { get; set; } // Les rôles sont gérés séparément
     }
 }

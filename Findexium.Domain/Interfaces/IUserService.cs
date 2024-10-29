@@ -10,10 +10,11 @@ namespace Findexium.Domain.Interfaces
     public interface IUserService
     {
         Task<IEnumerable<User>> GetUsersAsync();
-        Task<User> GetUserByIdAsync(int id);
+        Task<User> GetUserByIdAsync(string id);
         Task AddUserAsync(User user);
         Task UpdateUserAsync(User user);
-        Task DeleteUserAsync(int id);
-        Task<bool> UserExistsAsync(int id);
+        Task DeleteUserAsync(string id);
+        Task<bool> UserExistsAsync(string id);
+        Task <User>ValidateCredentialsAsync(string login, string password);
     }
 }

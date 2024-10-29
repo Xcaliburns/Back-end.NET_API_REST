@@ -14,49 +14,49 @@ namespace Findexium.Infrastructure.Repositories
 
     public class RatingRepository : IRatingRepository
     {
-            private readonly LocalDbContext _context;
+        private readonly LocalDbContext _context;
 
-            public RatingRepository(LocalDbContext context)
-            {
-                _context = context;
-            }
+        public RatingRepository(LocalDbContext context)
+        {
+            _context = context;
+        }
 
-            public async Task<IEnumerable<Rating>> GetAllAsync()
-            {
-                return await _context.Rating.ToListAsync();
-            }
+        public async Task<IEnumerable<Rating>> GetAllAsync()
+        {
+            return await _context.Ratings.ToListAsync();
+        }
 
-            public async Task<Rating> GetByIdAsync(int id)
-            {
-                return await _context.Rating.FindAsync(id);
-            }
+        public async Task<Rating> GetByIdAsync(int id)
+        {
+            return await _context.Ratings.FindAsync(id);
+        }
 
-            public async Task AddAsync(Rating rating)
+        public async Task AddAsync(Rating rating)
+        {
+            _context.Ratings.Add(rating);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Rating rating)
+        {
+            _context.Entry(rating).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var rating = await _context.Ratings.FindAsync(id);
+            if (rating != null)
             {
-                _context.Rating.Add(rating);
+                _context.Ratings.Remove(rating);
                 await _context.SaveChangesAsync();
-            }
-
-            public async Task UpdateAsync(Rating rating)
-            {
-                _context.Entry(rating).State = EntityState.Modified;
-                await _context.SaveChangesAsync();
-            }
-
-            public async Task DeleteAsync(int id)
-            {
-                var rating = await _context.Rating.FindAsync(id);
-                if (rating != null)
-                {
-                    _context.Rating.Remove(rating);
-                    await _context.SaveChangesAsync();
-                }
-            }
-
-            public async Task<bool> ExistsAsync(int id)
-            {
-                return await _context.Rating.AnyAsync(e => e.Id == id);
             }
         }
+
+        public async Task<bool> ExistsAsync(int id)
+        {
+            return await _context.Ratings.AnyAsync(e => e.Id == id);
+        }
+    }
     }
 

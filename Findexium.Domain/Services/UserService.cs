@@ -1,5 +1,6 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,12 @@ namespace Findexium.Domain.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly UserManager<User> _userManager;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, UserManager<User> userManager)
         {
             _userRepository = userRepository;
+            _userManager = userManager;
         }
 
         public async Task<IEnumerable<User>> GetUsersAsync()
@@ -22,7 +25,7 @@ namespace Findexium.Domain.Services
             return await _userRepository.GetUsersAsync();
         }
 
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<User> GetUserByIdAsync(string id)
         {
             return await _userRepository.GetUserByIdAsync(id);
         }
@@ -37,14 +40,24 @@ namespace Findexium.Domain.Services
             await _userRepository.UpdateUserAsync(user);
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(string id)
         {
             await _userRepository.DeleteUserAsync(id);
         }
 
-        public async Task<bool> UserExistsAsync(int id)
+        public async Task<bool> UserExistsAsync(string id)
         {
             return await _userRepository.UserExistsAsync(id);
+        }
+
+        public async Task<User> ValidateCredentialsAsync(string login, string password)
+        {
+            var user = await _userManager.FindByNameAsync(login);
+            if (user != null && await _userManager.CheckPasswordAsync(user, password))
+            {
+                return user;
+            }
+            return null;
         }
     }
 }
