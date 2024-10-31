@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Findexium.Infrastructure.Models;
 
 
 
@@ -19,7 +20,7 @@ namespace Findexium.Infrastructure.Data
         // Référencer les entités
         public DbSet<BidList> Bids { get; set; }
         public DbSet<CurvePoint> CurvePoints { get; set; }
-        public DbSet<Rating> Ratings { get; set; }
+        public DbSet<RatingDto> Ratings { get; set; }//dto
         public DbSet<RuleName> RuleNames { get; set; }
         public DbSet<Trade> Trades { get; set; }
     }

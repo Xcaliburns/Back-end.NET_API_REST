@@ -1,6 +1,7 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
+using Findexium.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,17 +24,19 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<IEnumerable<Rating>> GetAllAsync()
         {
-            return await _context.Ratings.ToListAsync();
+            var ratingDtos = await _context.Ratings.ToListAsync();
+            return ratingDtos.ConvertAll(r => r.ToRating());
         }
 
         public async Task<Rating> GetByIdAsync(int id)
         {
-            return await _context.Ratings.FindAsync(id);
+            var ratingDto = await _context.Ratings.FindAsync(id);
+            return ratingDto.ToRating();
         }
 
         public async Task AddAsync(Rating rating)
         {
-            _context.Ratings.Add(rating);
+            _context.Ratings.Add(new RatingDto(rating.MoodysRating,rating.SandPRating,rating.FitchRating,rating.OrderNumber));
             await _context.SaveChangesAsync();
         }
 

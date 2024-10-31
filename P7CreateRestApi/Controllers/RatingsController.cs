@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
+using Findexium.Api.Models;
 
 
 namespace Findexium.Api.Controllers
@@ -74,10 +75,10 @@ namespace Findexium.Api.Controllers
 
         // POST: api/Ratings
         [HttpPost]
-        public async Task<ActionResult<Rating>> PostRating(Rating rating)
+        public async Task<ActionResult<Rating>> PostRating(RatingRequest request) //
         {
-            await _ratingService.AddRatingAsync(rating);
-            return CreatedAtAction("GetRating", new { id = rating.Id }, rating);
+            await _ratingService.AddRatingAsync(request.ToRating());//
+            return CreatedAtAction("GetRating", request);
         }
 
         // DELETE: api/Ratings/5

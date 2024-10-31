@@ -1,3 +1,4 @@
+
 namespace Findexium.Domain.Models // namespace Dot.Net.WebApi.Controllers.Domain Correction effectuée
 {
     public class Rating
@@ -8,7 +9,8 @@ namespace Findexium.Domain.Models // namespace Dot.Net.WebApi.Controllers.Domain
         public string MoodysRating { get; set; }
         public string SandPRating { get; set; }
         public string FitchRating { get; set; }
-        public byte? OrderNumber { get; set; }
+        public int OrderNumber { get; set; }
 
+      
     }
 }

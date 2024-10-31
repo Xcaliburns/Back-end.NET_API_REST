@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Findexium.Infrastructure;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
+using Findexium.Api.Models;
 
 namespace Findexium.Api.Controllers
 {
@@ -26,7 +27,8 @@ namespace Findexium.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BidList>>> GetBids()
         {
-            return Ok(await _bidListServices.GetAllAsync());
+            var bids = await _bidListServices.GetAllAsync();
+            return Ok(bids);
         }
 
         // GET: api/BidLists/5
@@ -38,7 +40,7 @@ namespace Findexium.Api.Controllers
             {
                 return NotFound();
             }
-            return bid;
+            return Ok(bid);
         }
 
         // PUT: api/BidLists/5
@@ -71,10 +73,10 @@ namespace Findexium.Api.Controllers
 
         // POST: api/BidLists
         [HttpPost]
-        public async Task<ActionResult<BidList>> PostBidList(BidList bidList)
+        public async Task<ActionResult<BidList>> PostBidList(BidRequest request)
         {
-            await _bidListServices.AddAsync(bidList);
-            return CreatedAtAction("GetBid", new { id = bidList.BidListId }, bidList);
+            await _bidListServices.AddAsync(request.ToBid());
+            return CreatedAtAction("GetBid",  request);
         }
 
         // DELETE: api/BidLists/5
