@@ -1,4 +1,5 @@
 ﻿using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,8 @@ namespace Findexium.Infrastructure.Models
         public int Id { get; internal set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        public string FullName { get;set; }
+        public string FullName { get; set; }
         public string Role { get; set; }
-       
 
         public UsersDto(string userName, string password, string fullName, string role)
         {
@@ -22,19 +22,21 @@ namespace Findexium.Infrastructure.Models
             Password = password;
             FullName = fullName;
             Role = role;
-           
         }
 
-        internal User ToUser()
+        internal User ToUser(UserManager<User> userManager)
         {
-            return new User
+            var user = new User
             {
                 UserName = UserName,
-                PasswordHash = Password,// Je ne sais plus si ce n'est pas l'inverse
                 Fullname = FullName,
-                Role = Role,
-               
+                Role = Role
             };
+
+            // Hash the password using UserManager then the password is always secured
+            user.PasswordHash = userManager.PasswordHasher.HashPassword(user, Password);
+
+            return user;
         }
     }
 }

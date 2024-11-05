@@ -59,5 +59,10 @@ namespace Findexium.Domain.Services
             }
             return null;
         }
+
+        public async Task<IList<string>> GetUserRolesAsync(User user)
+        {
+            return await _userManager.GetRolesAsync(user);
+        }
     }
 }

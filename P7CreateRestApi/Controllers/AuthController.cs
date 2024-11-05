@@ -16,11 +16,13 @@ namespace Findexium.Api.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IUserService _userService;
+        private readonly UserManager<User> _userManager;
 
-        public AuthController(IConfiguration configuration, IUserService userService)
+        public AuthController(IConfiguration configuration, IUserService userService, UserManager<User> userManager)
         {
             _configuration = configuration;
             _userService = userService;
+            _userManager = userManager;
         }
 
         [HttpPost("login")]
@@ -29,13 +31,15 @@ namespace Findexium.Api.Controllers
             var user = await _userService.ValidateCredentialsAsync(loginRequest.Login, loginRequest.Password);
             if (user != null)
             {
+                var userRoles = await _userManager.GetRolesAsync(user);
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var key = Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]);
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new[]
                     {
-                        new Claim(ClaimTypes.Name, user.UserName)
+                        new Claim(ClaimTypes.Name, user.UserName),
+                        new Claim(ClaimTypes.Role, userRoles.FirstOrDefault() ?? "User") // Assuming a single role for simplicity
                     }),
                     Expires = DateTime.UtcNow.AddHours(1),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
