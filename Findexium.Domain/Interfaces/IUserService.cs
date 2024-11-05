@@ -1,4 +1,5 @@
 ﻿using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,11 @@ namespace Findexium.Domain.Interfaces
     {
         Task<IEnumerable<User>> GetUsersAsync();
         Task<User> GetUserByIdAsync(string id);
-        Task AddUserAsync(User user);
+        Task<IdentityResult> AddUserAsync(User user, string password); // Change return type to Task<IdentityResult>
         Task UpdateUserAsync(User user);
         Task DeleteUserAsync(string id);
         Task<bool> UserExistsAsync(string id);
-        Task <User>ValidateCredentialsAsync(string login, string password);
+        Task<User> ValidateCredentialsAsync(string login, string password);
         Task<IList<string>> GetUserRolesAsync(User user);
     }
 }

@@ -4,24 +4,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Findexium.Infrastructure.Models
 {//TODO revoir cette classe avec Laala
-    internal class UsersDto
+    public class UsersDto
     {
         public int Id { get; internal set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string FullName { get; set; }
-        public string Role { get; set; }
+
+        [JsonIgnore] // Ignore this property during serialization/deserialization
+        public string Role { get; set; } = "User"; //attribue le role user par défaut
 
         public UsersDto(string userName, string password, string fullName, string role)
         {
             UserName = userName;
             Password = password;
             FullName = fullName;
-            Role = role;
+           
         }
 
         internal User ToUser(UserManager<User> userManager)

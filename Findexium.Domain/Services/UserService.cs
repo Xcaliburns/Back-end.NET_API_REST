@@ -30,9 +30,16 @@ namespace Findexium.Domain.Services
             return await _userRepository.GetUserByIdAsync(id);
         }
 
-        public async Task AddUserAsync(User user)
+        public async Task<IdentityResult> AddUserAsync(User user, string password)
         {
-            await _userRepository.AddUserAsync(user);
+            var result = await _userManager.CreateAsync(user, password);
+
+            if (result.Succeeded)
+            {
+                await _userRepository.AddUserAsync(user);
+            }
+
+            return result;
         }
 
         public async Task UpdateUserAsync(User user)

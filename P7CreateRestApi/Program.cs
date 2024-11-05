@@ -70,7 +70,8 @@ builder.Services.Configure<IdentityOptions>(options =>
     // User settings
     options.User.AllowedUserNameCharacters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-    options.User.RequireUniqueEmail = true;
+    options.User.RequireUniqueEmail = false;
+    options.SignIn.RequireConfirmedEmail = false;
 });
 
 // Configure PasswordHasher options
