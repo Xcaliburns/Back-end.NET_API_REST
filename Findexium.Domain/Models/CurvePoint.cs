@@ -12,5 +12,7 @@ namespace Findexium.Domain.Models
         public double? Term { get; set; }
         public double? CurvePointValue { get; set; }
         public DateTime? CreationDate { get; set; }
+
+      
     }
 }

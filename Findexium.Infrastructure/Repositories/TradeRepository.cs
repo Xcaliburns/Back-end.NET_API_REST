@@ -1,6 +1,7 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
+using Findexium.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,23 +22,43 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<IEnumerable<Trade>> GetAllTradesAsync()
         {
-            return await _context.Trades.ToListAsync();
+            var tradeDtos= await _context.Trades.ToListAsync();
+            return tradeDtos.ConvertAll(t => t.ToTrade());
         }
 
         public async Task<Trade> GetTradeByIdAsync(int id)
         {
-            return await _context.Trades.FirstOrDefaultAsync(m => m.TradeId == id);
+            var tradeDto= await _context.Trades.FindAsync(id);
+            return tradeDto.ToTrade();
         }
 
         public async Task AddTradeAsync(Trade trade)
         {
-            _context.Trades.Add(trade);
+           _context.Trades.Add(new TradeDto(
+               trade.Account,
+               trade.AccountType,
+               trade.BuyQuantity,
+               trade.SellQuantity,
+               trade.BuyPrice,
+               trade.SellPrice,
+               trade.TradeDate,
+               trade.TradeSecurity,
+               trade.TradeStatus,
+               trade.Trader,
+               trade.Benchmark,
+               trade.Book,
+               trade.CreationName,
+               trade.CreationDate,
+               trade.RevisionName,
+               trade.RevisionDate,
+               trade.DealName
+            ));
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateTradeAsync(Trade trade)
         {
-            _context.Trades.Update(trade);
+          _context.Entry(trade).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

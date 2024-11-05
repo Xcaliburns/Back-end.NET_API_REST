@@ -1,6 +1,7 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
+using Findexium.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Findexium.Infrastructure.Repositories
@@ -16,36 +17,43 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<IEnumerable<BidList>> GetAllAsync()
         {
-            return await _context.Bids.ToListAsync();
+            var bidDtos = await _context.Bids.ToListAsync();
+            return bidDtos.ConvertAll(b => b.ToBidList());
         }
 
         public async Task<BidList> GetByIdAsync(int id)
         {
-            return await _context.Bids.FindAsync(id);
+            var bidDto = await _context.Bids.FindAsync(id);
+            return bidDto.ToBidList();
         }
 
         public async Task AddAsync(BidList bidList)
         {
-            using (var transaction = await _context.Database.BeginTransactionAsync())
-            {
-                try
-                {
-                    //TODO : voir avec Laala si les requetes avec swagger sont ok
-                    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Bids ON");
-
-                    _context.Bids.Add(bidList);
-                    await _context.SaveChangesAsync();
-
-                    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Bids OFF");
-                    await transaction.CommitAsync();
-                }
-                catch (Exception e)
-                {
-                    await transaction.RollbackAsync();
-                    // Log the exception or handle it as needed
-                    throw;
-                }
-            }
+            _context.Bids.Add(new BidDto(
+                bidList.BidListId,
+                bidList.Account,
+                bidList.BidType,
+                bidList.BidQuantity,
+                bidList.AskQuantity,
+                bidList.Bid,
+                bidList.Ask,
+                bidList.Benchmark,
+                bidList.BidListDate,
+                bidList.Commentary,
+                bidList.BidSecurity,
+                bidList.BidStatus,
+                bidList.Trader,
+                bidList.Book,
+                bidList.CreationName,
+                bidList.CreationDate,
+                bidList.RevisionName,
+                bidList.RevisionDate,
+                bidList.DealName,
+                bidList.DealType,
+                bidList.SourceListId,
+                bidList.Side
+            ));
+            await _context.SaveChangesAsync();
         }
 
 

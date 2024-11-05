@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
+using Findexium.Api.Models;
 
 namespace Findexium.Api.Controllers
 {
@@ -60,10 +61,10 @@ namespace Findexium.Api.Controllers
         }
         // POST: api/RuleName
         [HttpPost]
-        public async Task<ActionResult<RuleName>> PostRuleName(RuleName ruleName)
+        public async Task<ActionResult<RuleName>> PostRuleName(RuleNameRequest request)
         {
-            await _ruleNameServices.AddRuleAsync(ruleName);
-            return CreatedAtAction("GetRuleName", new { id = ruleName.Id }, ruleName);
+            await _ruleNameServices.AddRuleAsync(request.ToRuleName()  );
+            return CreatedAtAction("GetRuleName",request);
         }
         // DELETE: api/RuleName/5
         [HttpDelete("{id}")]

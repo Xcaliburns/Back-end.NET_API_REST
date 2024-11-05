@@ -14,5 +14,6 @@ namespace Findexium.Domain.Interfaces
         Task AddAsync(CurvePoint curvePoint);
         Task UpdateAsync(int id, CurvePoint curvePoint);
         Task DeleteAsync(int id);
+        
     }
 }

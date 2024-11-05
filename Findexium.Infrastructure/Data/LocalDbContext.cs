@@ -15,13 +15,14 @@ namespace Findexium.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.Entity<BidDto>().HasKey(b => b.BidListId); // Define primary key
+            builder.Entity<TradeDto>().HasKey(t => t.TradeId);
         }
 
-        // Référencer les entités
-        public DbSet<BidList> Bids { get; set; }
-        public DbSet<CurvePoint> CurvePoints { get; set; }
-        public DbSet<RatingDto> Ratings { get; set; }//dto
-        public DbSet<RuleName> RuleNames { get; set; }
-        public DbSet<Trade> Trades { get; set; }
+        public DbSet<BidDto> Bids { get; set; }
+        public DbSet<CurvePointsDto> CurvePoints { get; set; }
+        public DbSet<RatingDto> Ratings { get; set; }
+        public DbSet<RuleNameDto> RuleNames { get; set; }
+        public DbSet<TradeDto> Trades { get; set; }
     }
 }

@@ -1,11 +1,8 @@
 ﻿using Findexium.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
+using Findexium.Infrastructure.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Findexium.Infrastructure.Repositories
 {
@@ -20,31 +17,45 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<IEnumerable<RuleName>> GetAllAsync()
         {
-            return await Task.FromResult(_context.RuleNames.AsEnumerable());
+           var ruleNamesDtos = await _context.RuleNames.ToListAsync();
+            return ruleNamesDtos.ConvertAll(r => r.ToRuleName()); 
+
         }
 
         public async Task<RuleName> GetByIdAsync(int id)
         {
-            return await Task.FromResult(_context.RuleNames.FirstOrDefault(x => x.Id == id));
+            var ruleNameDto = await _context.RuleNames.FindAsync(id);
+            return ruleNameDto.ToRuleName();
         }
 
         public async Task AddAsync(RuleName ruleName)
         {
-            await _context.RuleNames.AddAsync(ruleName);
+           _context.RuleNames.Add(new RuleNameDto(
+                ruleName.Name,
+                ruleName.Description,
+                ruleName.Json,
+                ruleName.Template,
+                ruleName.SqlStr,
+                ruleName.SqlPart
+            ));
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(RuleName ruleName)
         {
-            _context.RuleNames.Update(ruleName);
+            _context.Entry(ruleName).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(int id)
         {
-            var ruleName = await GetByIdAsync(id);
-            _context.RuleNames.Remove(ruleName);
-            await _context.SaveChangesAsync();
+            var ruleName = await _context.RuleNames.FindAsync(id);
+            if(ruleName!=null)
+                {
+                _context.RuleNames.Remove(ruleName);
+                await _context.SaveChangesAsync();
+            }
+           
         }
 
         public async Task<bool> ExistsAsync(int id)

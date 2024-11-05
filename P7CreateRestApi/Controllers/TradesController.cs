@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Services;
 using Findexium.Domain.Models;
+using Findexium.Api.Models;
 
 namespace Findexium.Api.Controllers
 {
@@ -28,20 +29,20 @@ namespace Findexium.Api.Controllers
         }
 
         // GET: Trades/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<ActionResult<Trade>> Details(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var trade = await _tradeService.GetTradeByIdAsync(id.Value);
+            var trade = await _tradeService.GetTradeByIdAsync(id);
             if (trade == null)
             {
                 return NotFound();
             }
 
-            return View(trade);
+            return Ok(trade);
         }
 
         // GET: Trades/Create
@@ -53,14 +54,16 @@ namespace Findexium.Api.Controllers
         // POST: Trades/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TradeId,Account,AccountType,BuyQuantity,SellQuantity,BuyPrice,SellPrice,TradeDate,TradeSecurity,TradeStatus,Trader,Benchmark,Book,CreationName,CreationDate,RevisionName,RevisionDate,DealName,DealType,SourceListId,Side")] Trade trade)
+        public async Task<ActionResult<Trade>> Create(TradeRequest request)
         {
-            if (ModelState.IsValid)
             {
-                await _tradeService.AddTradeAsync(trade);
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    await _tradeService.AddTradeAsync(request.ToTrade());
+                    return RedirectToAction("GetTrade,request");
+                }
+                return View(request);
             }
-            return View(trade);
         }
 
         // GET: Trades/Edit/5

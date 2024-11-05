@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
+using Findexium.Api.Models;
 
 namespace Findexium.Api.Controllers
 {
@@ -74,10 +75,10 @@ namespace Findexium.Api.Controllers
 
         // POST: api/CurvePoints
         [HttpPost]
-        public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePoint curvePoint)
+        public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePointRequest request)
         {
-            await _CurvePointService.AddAsync(curvePoint);
-            return CreatedAtAction("GetCurvePoint", new { id = curvePoint.Id }, curvePoint);
+            await _CurvePointService.AddAsync(request.ToCurvePoint());
+            return CreatedAtAction("GetCurvePoint", request);
         }
 
         // DELETE: api/CurvePoints/5

@@ -3,16 +3,9 @@ using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Findexium.Infrastructure.Repositories.RatingRepository;
 
 namespace Findexium.Infrastructure.Repositories
 {
-
     public class RatingRepository : IRatingRepository
     {
         private readonly LocalDbContext _context;
@@ -36,7 +29,11 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task AddAsync(Rating rating)
         {
-            _context.Ratings.Add(new RatingDto(rating.MoodysRating,rating.SandPRating,rating.FitchRating,rating.OrderNumber));
+            _context.Ratings.Add(new RatingDto(
+                rating.MoodysRating,
+                rating.SandPRating, rating.FitchRating,
+                rating.OrderNumber
+                ));
             await _context.SaveChangesAsync();
         }
 
@@ -61,5 +58,5 @@ namespace Findexium.Infrastructure.Repositories
             return await _context.Ratings.AnyAsync(e => e.Id == id);
         }
     }
-    }
+}
 

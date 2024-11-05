@@ -6,6 +6,7 @@ namespace Findexium.Domain.Models
     {
         // Propriétés supplémentaires
         public string Fullname { get; set; } = string.Empty;
+        public string Role { get; set; }
         // Vous n'avez pas besoin de redéfinir UserName et Password ici
         // public string Role { get; set; } // Les rôles sont gérés séparément
     }
