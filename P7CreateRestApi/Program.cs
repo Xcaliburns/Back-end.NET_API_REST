@@ -10,11 +10,29 @@ using Findexium.Infrastructure.Data;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Services;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Logging;
 using System.Reflection;
+using Serilog;
+
+
 
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(configuration)
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+// Configure logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+builder.Logging.AddEventSourceLogger();
+builder.Logging.AddConfiguration(configuration.GetSection("Logging"));
 
 // Load JWT settings from configuration
 var jwtSettings = configuration.GetSection("Jwt");
