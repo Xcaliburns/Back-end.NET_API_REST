@@ -64,7 +64,7 @@ namespace Findexium.Api.Controllers
         public async Task<ActionResult<RuleName>> PostRuleName(RuleNameRequest request)
         {
             await _ruleNameServices.AddRuleAsync(request.ToRuleName()  );
-            return CreatedAtAction("GetRuleName",request);
+            return Created();
         }
         // DELETE: api/RuleName/5
         [HttpDelete("{id}")]

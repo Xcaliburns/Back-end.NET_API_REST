@@ -78,7 +78,7 @@ namespace Findexium.Api.Controllers
         public async Task<ActionResult<Rating>> PostRating(RatingRequest request) //
         {
             await _ratingService.AddRatingAsync(request.ToRating());//
-            return CreatedAtAction("GetRating", request);
+            return Created();
         }
 
         // DELETE: api/Ratings/5

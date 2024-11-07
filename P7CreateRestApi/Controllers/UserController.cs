@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Findexium.Api.Controllers
 {
+
+    //TODO : voir avec Laala pour la séparation DDD
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase

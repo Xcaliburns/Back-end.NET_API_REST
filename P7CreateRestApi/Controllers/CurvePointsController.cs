@@ -78,7 +78,7 @@ namespace Findexium.Api.Controllers
         public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePointRequest request)
         {
             await _CurvePointService.AddAsync(request.ToCurvePoint());
-            return CreatedAtAction("GetCurvePoint", request);
+            return Created();
         }
 
         // DELETE: api/CurvePoints/5

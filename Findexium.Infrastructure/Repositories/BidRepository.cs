@@ -2,6 +2,7 @@
 using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace Findexium.Infrastructure.Repositories
@@ -54,6 +55,7 @@ namespace Findexium.Infrastructure.Repositories
                 bidList.Side
             ));
             await _context.SaveChangesAsync();
+            
         }
 
 

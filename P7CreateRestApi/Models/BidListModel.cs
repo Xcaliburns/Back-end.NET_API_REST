@@ -7,6 +7,7 @@ namespace Findexium.Api.Models
 {
     public class BidListModel
     {
+        
         public int BidListId;
         public string Account;
         public string BidType;

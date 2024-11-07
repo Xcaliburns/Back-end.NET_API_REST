@@ -9,6 +9,7 @@ using Findexium.Infrastructure;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Api.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Findexium.Api.Controllers
 {
@@ -45,11 +46,12 @@ namespace Findexium.Api.Controllers
 
         // PUT: api/BidLists/5
         [HttpPut("{id}")]
+        [Authorize] //TODO ajouter les attributs    pour l'authentification
         public async Task<IActionResult> PutBid(int id, BidList bidList)
         {
             if (id != bidList.BidListId)
             {
-                return BadRequest();
+                return BadRequest();//400
             }
 
             try
@@ -60,7 +62,7 @@ namespace Findexium.Api.Controllers
             {
                 if (!await _bidListServices.ExistsAsync(id))
                 {
-                    return NotFound();
+                    return NotFound();//404
                 }
                 else
                 {
@@ -68,15 +70,20 @@ namespace Findexium.Api.Controllers
                 }
             }
 
-            return NoContent();
+            return NoContent();//204
         }
 
         // POST: api/BidLists
+        //TODO : modifier les autres methodes post des controller pour ressembler  à celle ci (modif sur le getBid également)
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<BidList>> PostBidList(BidRequest request)
         {
-            await _bidListServices.AddAsync(request.ToBid());
-            return CreatedAtAction("GetBid",  request);
+            var bidList = request.ToBid();
+            await _bidListServices.AddAsync(bidList);
+
+            // Assuming you have a GetBid action that takes an id parameter
+            return CreatedAtAction(nameof(GetBid), new { id = bidList.BidListId }, bidList);
         }
 
         // DELETE: api/BidLists/5
@@ -86,11 +93,11 @@ namespace Findexium.Api.Controllers
             var bidList = await _bidListServices.GetByIdAsync(id);
             if (bidList == null)
             {
-                return NotFound();
+                return NotFound(); //404
             }
 
             await _bidListServices.DeleteAsync(id);
-            return NoContent();
+            return NoContent();//204
         }
     }
 }

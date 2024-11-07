@@ -12,8 +12,10 @@ using Findexium.Domain.Models;
 using Findexium.Api.Models;
 
 namespace Findexium.Api.Controllers
-{
-    public class TradesController : Controller
+{ //TODO : revoir ce controller , il utilise des vues et non des api
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TradesController : ControllerBase
     {
         private readonly ITradeService _tradeService;
 
@@ -22,21 +24,20 @@ namespace Findexium.Api.Controllers
             _tradeService = tradeService;
         }
 
-        // GET: Trades
-        public async Task<IActionResult> Index()
+        // GET: api/Trades
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Trade>>> GetTrades()
         {
-            return View(await _tradeService.GetAllTradesAsync());
+            var trades = await _tradeService.GetAllTradesAsync();
+            return Ok(trades);
         }
 
-        // GET: Trades/Details/5
-        public async Task<ActionResult<Trade>> Details(int id)
+        // GET: api/Trades/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Trade>> GetTrade(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var trade = await _tradeService.GetTradeByIdAsync(id);
+
             if (trade == null)
             {
                 return NotFound();
@@ -45,99 +46,67 @@ namespace Findexium.Api.Controllers
             return Ok(trade);
         }
 
-        // GET: Trades/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Trades/Create
+        // POST: api/Trades
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult<Trade>> Create(TradeRequest request)
+        public async Task<ActionResult<Trade>> CreateTrade(TradeRequest request)
         {
+            if (!ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    await _tradeService.AddTradeAsync(request.ToTrade());
-                    return RedirectToAction("GetTrade,request");
-                }
-                return View(request);
+                return BadRequest(ModelState);
             }
+
+            var trade = request.ToTrade();
+            await _tradeService.AddTradeAsync(trade);
+
+            return CreatedAtAction(nameof(GetTrade), new { id = trade.TradeId }, trade);
         }
 
-        // GET: Trades/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var trade = await _tradeService.GetTradeByIdAsync(id.Value);
-            if (trade == null)
-            {
-                return NotFound();
-            }
-            return View(trade);
-        }
-
-        // POST: Trades/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TradeId,Account,AccountType,BuyQuantity,SellQuantity,BuyPrice,SellPrice,TradeDate,TradeSecurity,TradeStatus,Trader,Benchmark,Book,CreationName,CreationDate,RevisionName,RevisionDate,DealName,DealType,SourceListId,Side")] Trade trade)
+        // PUT: api/Trades/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateTrade(int id, Trade trade)
         {
             if (id != trade.TradeId)
             {
-                return NotFound();
+                return BadRequest();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                try
-                {
-                    await _tradeService.UpdateTradeAsync(trade);
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!await _tradeService.TradeExistsAsync(trade.TradeId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return BadRequest(ModelState);
             }
-            return View(trade);
+
+            try
+            {
+                await _tradeService.UpdateTradeAsync(trade);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!await _tradeService.TradeExistsAsync(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
-        // GET: Trades/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // DELETE: api/Trades/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTrade(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var trade = await _tradeService.GetTradeByIdAsync(id.Value);
+            var trade = await _tradeService.GetTradeByIdAsync(id);
             if (trade == null)
             {
                 return NotFound();
             }
 
-            return View(trade);
-        }
-
-        // POST: Trades/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
             await _tradeService.DeleteTradeAsync(id);
-            return RedirectToAction(nameof(Index));
+
+            return NoContent();
         }
     }
 }
