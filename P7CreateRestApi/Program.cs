@@ -13,6 +13,8 @@ using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
 using System.Reflection;
 using Serilog;
+using Serilog.Events;
+
 
 
 
@@ -22,10 +24,15 @@ ConfigurationManager configuration = builder.Configuration;
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(configuration)
+    .MinimumLevel.Information()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .Enrich.FromLogContext()
     .WriteTo.Console()
-    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("Logs/logs.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
+
+builder.Host.UseSerilog();
+
 
 // Configure logging
 builder.Logging.ClearProviders();
