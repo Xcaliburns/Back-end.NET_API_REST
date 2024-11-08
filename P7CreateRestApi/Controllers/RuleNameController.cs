@@ -19,61 +19,112 @@ namespace Findexium.Api.Controllers
     public class RuleNameController : ControllerBase
     {
         private readonly IRuleNameServices _ruleNameServices;
-        public RuleNameController(IRuleNameServices ruleNameServices)
+        private readonly ILogger<RuleNameController> _logger;
+
+        public RuleNameController(IRuleNameServices ruleNameServices, ILogger<RuleNameController> logger)
         {
             _ruleNameServices = ruleNameServices;
+            _logger = logger;
         }
+
         // GET: api/RuleName
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RuleName>>> GetRuleName()
         {
-            var ruleNames = await _ruleNameServices.GetAllRatingsAsync();
-            return Ok(ruleNames);
+            try
+            {
+                _logger.LogInformation("Fetching all rule names");
+                var ruleNames = await _ruleNameServices.GetAllRatingsAsync();
+                return Ok(ruleNames);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching all rule names");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
+
         // GET: api/RuleName/5
         [HttpGet("{id}")]
         public async Task<ActionResult<RuleName>> GetRuleName(int id)
         {
-            var ruleName = await _ruleNameServices.GetRuleByIdAsync(id);
-            if (ruleName == null)
+            try
             {
-                return NotFound();
+                _logger.LogInformation("Fetching rule name with id: {Id}", id);
+                var ruleName = await _ruleNameServices.GetRuleByIdAsync(id);
+
+                if (ruleName == null)
+                {
+                    _logger.LogWarning("Rule name with id: {Id} not found", id);
+                    return NotFound();
+                }
+
+                return Ok(ruleName);
             }
-            return Ok(ruleName);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching rule name with id: {Id}", id);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
-        //PUT :api/RuleName/5
+
+        // PUT: api/RuleName/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
         {
             try
             {
+                _logger.LogInformation("Updating rule name with id: {Id}", id);
                 await _ruleNameServices.UpdateRuleAsync(id, ruleName);
             }
-            catch (ArgumentException)
+            catch (ArgumentException ex)
             {
+                _logger.LogWarning(ex, "Invalid argument for rule name with id: {Id}", id);
                 return BadRequest();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                _logger.LogError(ex, "Error occurred while updating rule name with id: {Id}", id);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
+
             return NoContent();
         }
+
         // POST: api/RuleName
         [HttpPost]
         public async Task<ActionResult<RuleName>> PostRuleName(RuleNameRequest request)
         {
-            await _ruleNameServices.AddRuleAsync(request.ToRuleName()  );
-            return Created();
+            try
+            {
+                _logger.LogInformation("Creating a new rule name");
+                var ruleName = request.ToRuleName();
+                await _ruleNameServices.AddRuleAsync(ruleName);
+                return CreatedAtAction(nameof(GetRuleName), new { id = ruleName.Id }, ruleName);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while creating a new rule name");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
+
         // DELETE: api/RuleName/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRuleName(int id)
         {
-            await _ruleNameServices.DeleteRuleAsync(id);
-            return NoContent();
+            try
+            {
+                _logger.LogInformation("Deleting rule name with id: {Id}", id);
+                await _ruleNameServices.DeleteRuleAsync(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting rule name with id: {Id}", id);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
-
     }
 
 
