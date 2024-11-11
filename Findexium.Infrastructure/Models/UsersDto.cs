@@ -15,16 +15,20 @@ namespace Findexium.Infrastructure.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public string FullName { get; set; }
-
         [JsonIgnore] // Ignore this property during serialization/deserialization
-        public string Role { get; set; } = "User"; //attribue le role user par défaut
+        public string Role { get; set; } = "User"; // Default role is "User"
 
-        public UsersDto(string userName, string password, string fullName, string role)
+        public UsersDto(
+            string userName,
+            string password,
+            string fullName,
+            string role
+        )
         {
             UserName = userName;
             Password = password;
             FullName = fullName;
-           
+            Role = role;
         }
 
         internal User ToUser(UserManager<User> userManager)
@@ -36,7 +40,7 @@ namespace Findexium.Infrastructure.Models
                 Role = Role
             };
 
-            // Hash the password using UserManager then the password is always secured
+            // Hash the password using UserManager to ensure it is always secured
             user.PasswordHash = userManager.PasswordHasher.HashPassword(user, Password);
 
             return user;
