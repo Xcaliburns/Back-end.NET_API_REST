@@ -600,3 +600,613 @@ WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
 2024-11-14 11:39:15.410 +01:00 [INF] Executed action Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api) in 41071.4158ms
 2024-11-14 11:39:15.412 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api)'
 2024-11-14 11:39:15.420 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Users - 201 null application/json; charset=utf-8 41219.2811ms
+2024-11-14 12:01:12.135 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 12:01:13.086 +01:00 [INF] Executed DbCommand (32ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 12:01:13.149 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 12:01:13.161 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-14 12:01:13.430 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-14 12:01:13.431 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-14 12:01:13.471 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 12:01:13.473 +01:00 [INF] Hosting environment: Development
+2024-11-14 12:01:13.473 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-14 12:01:13.838 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 12:01:14.049 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 211.709ms
+2024-11-14 12:01:14.073 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 12:01:14.073 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 12:01:14.074 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 12:01:14.105 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 31.2045ms
+2024-11-14 12:01:14.109 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 39.2011ms
+2024-11-14 12:01:14.175 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.6191ms
+2024-11-14 12:01:14.242 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 12:01:14.478 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 236.5686ms
+2024-11-14 12:01:28.039 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Users - null null
+2024-11-14 12:01:28.091 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.UsersController.GetUsers (Findexium.Api)'
+2024-11-14 12:01:28.104 +01:00 [INF] Route matched with {action = "GetUsers", controller = "Users", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.UserResponse]]] GetUsers() on controller Findexium.Api.Controllers.UsersController (Findexium.Api).
+2024-11-14 12:01:28.113 +01:00 [INF] Fetching all users
+2024-11-14 12:01:28.171 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-11-14 12:01:28.181 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.UserResponse, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 12:01:28.191 +01:00 [INF] Executed action Findexium.Api.Controllers.UsersController.GetUsers (Findexium.Api) in 82.5208ms
+2024-11-14 12:01:28.193 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.UsersController.GetUsers (Findexium.Api)'
+2024-11-14 12:01:28.197 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Users - 200 null application/json; charset=utf-8 157.9121ms
+2024-11-14 12:02:27.161 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Users - application/json 83
+2024-11-14 12:02:27.168 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api)'
+2024-11-14 12:02:27.183 +01:00 [INF] Route matched with {action = "PostUser", controller = "Users", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.UserResponse]] PostUser(Findexium.Api.Models.UserRequest) on controller Findexium.Api.Controllers.UsersController (Findexium.Api).
+2024-11-14 12:02:27.205 +01:00 [INF] Creating a new user
+2024-11-14 12:02:27.229 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-14 12:02:27.248 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-14 12:02:27.342 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [Fullname], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [Role], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-11-14 12:02:27.361 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-11-14 12:02:27.392 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-11-14 12:02:27.397 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-11-14 12:02:27.411 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-14 12:02:27.446 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [Fullname] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [Role] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-11-14 12:02:27.459 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Api.Models.UserResponse'.
+2024-11-14 12:02:27.474 +01:00 [INF] Executed action Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api) in 288.3089ms
+2024-11-14 12:02:27.475 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api)'
+2024-11-14 12:02:27.477 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Users - 201 null application/json; charset=utf-8 315.3265ms
+2024-11-14 13:31:07.291 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 13:31:08.321 +01:00 [INF] Executed DbCommand (42ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 13:31:08.395 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 13:31:08.409 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-14 13:31:08.706 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-14 13:31:08.708 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-14 13:31:08.753 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 13:31:08.755 +01:00 [INF] Hosting environment: Development
+2024-11-14 13:31:08.756 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-14 13:31:09.542 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 13:31:09.689 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 150.4422ms
+2024-11-14 13:31:09.702 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 13:31:09.702 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 13:31:09.702 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 13:31:09.734 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 31.7998ms
+2024-11-14 13:31:09.735 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 32.746ms
+2024-11-14 13:31:09.761 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.2367ms
+2024-11-14 13:31:09.843 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 13:31:09.993 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.3665ms
+2024-11-14 13:31:31.519 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:31:31.644 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 13:31:31.655 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 13:31:31.661 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 13:31:31.665 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 13:31:31.666 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 146.2458ms
+2024-11-14 13:35:59.295 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:35:59.315 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 13:35:59.324 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 13:35:59.328 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 13:35:59.329 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 13:35:59.329 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 34.2058ms
+2024-11-14 13:36:09.444 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:36:09.447 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 13:36:09.450 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 13:36:09.452 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 13:36:09.453 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 13:36:09.454 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 10.687ms
+2024-11-14 13:43:21.617 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:43:21.621 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 13:43:21.635 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 13:43:21.643 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 13:43:21.645 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 13:43:21.646 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 28.9869ms
+2024-11-14 13:46:49.422 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 13:46:49.430 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.9486ms
+2024-11-14 13:46:49.440 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 13:46:49.443 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.0886ms
+2024-11-14 13:46:49.443 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 13:46:49.447 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.308ms
+2024-11-14 13:46:49.449 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 13:46:49.461 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.6541ms
+2024-11-14 13:46:49.639 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 13:46:49.677 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.9ms
+2024-11-14 13:47:20.714 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:47:20.718 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 13:47:20.720 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 13:47:20.721 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 13:47:20.722 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 13:47:20.723 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 8.6513ms
+2024-11-14 13:47:38.490 +01:00 [INF] Application is shutting down...
+2024-11-14 13:48:14.468 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 13:48:15.420 +01:00 [INF] Executed DbCommand (31ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 13:48:15.485 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 13:48:15.497 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-14 13:48:15.770 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-14 13:48:15.771 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-14 13:48:15.809 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 13:48:15.810 +01:00 [INF] Hosting environment: Development
+2024-11-14 13:48:15.811 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-14 13:48:16.292 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 13:48:16.478 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 189.1731ms
+2024-11-14 13:48:16.488 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 13:48:16.488 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 13:48:16.488 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 13:48:16.505 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 16.4076ms
+2024-11-14 13:48:16.505 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 16.9049ms
+2024-11-14 13:48:16.555 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.9598ms
+2024-11-14 13:48:16.765 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 13:48:16.883 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.1318ms
+2024-11-14 13:48:34.506 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:48:34.594 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 13:48:34.606 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 13:48:34.612 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 13:48:34.618 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 13:48:34.619 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 112.6581ms
+2024-11-14 13:49:25.893 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-14 13:49:25.902 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-14 13:49:25.923 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-14 13:49:25.950 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-14 13:49:26.012 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-14 13:49:26.067 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-14 13:49:26.078 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-14 13:49:26.082 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-14 13:49:26.088 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 160.6783ms
+2024-11-14 13:49:26.090 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-14 13:49:26.094 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 201.5605ms
+2024-11-14 13:49:59.009 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:49:59.038 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-14 13:49:59.054 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.BidResponse]] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-14 13:49:59.078 +01:00 [INF] Creating a new bid
+2024-11-14 13:49:59.251 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-14 13:49:59.281 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Api.Models.BidResponse'.
+2024-11-14 13:49:59.306 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 249.9549ms
+2024-11-14 13:49:59.307 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-14 13:49:59.308 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 201 null application/json; charset=utf-8 299.0653ms
+2024-11-14 13:56:50.166 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 13:56:50.175 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 9.2286ms
+2024-11-14 13:56:50.187 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 13:56:50.190 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 13:56:50.190 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 2.9889ms
+2024-11-14 13:56:50.192 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 2.5713ms
+2024-11-14 13:56:50.195 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 13:56:50.209 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.0133ms
+2024-11-14 13:56:50.391 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 13:56:50.431 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.3309ms
+2024-11-14 13:57:13.256 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 13:57:13.259 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 13:57:13.262 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 13:57:13.264 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 13:57:13.265 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 13:57:13.266 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 10.1207ms
+2024-11-14 14:04:34.332 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 14:04:34.335 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 14:04:34.353 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 14:04:34.356 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 14:04:34.358 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 14:04:34.359 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 27.161ms
+2024-11-14 14:12:26.860 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 14:12:26.863 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 14:12:26.865 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 14:12:26.867 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 14:12:26.879 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 14:12:26.881 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 20.5344ms
+2024-11-14 14:12:36.579 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-14 14:12:36.582 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 14:12:36.585 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 14:12:36.586 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-14 14:12:36.587 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-14 14:12:36.588 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 8.376ms
+2024-11-14 14:14:27.492 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-14 14:14:27.495 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 14:14:27.497 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'aUqoziYMHyRjeMRQBENjPSZaGER2IdZBuEHfhurfAog'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-11-14 14:14:27.497 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-14 14:14:27.498 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-14 14:14:27.503 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-14 14:14:27.522 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-14 14:14:27.538 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-14 14:14:27.540 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-14 14:14:27.540 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-14 14:14:27.542 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 42.0379ms
+2024-11-14 14:14:27.543 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-14 14:14:27.545 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 52.1582ms
+2024-11-14 14:44:29.501 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 14:44:30.464 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 14:44:30.529 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 14:44:30.542 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-14 14:44:30.865 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-14 14:44:30.866 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-14 14:44:30.903 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 14:44:30.904 +01:00 [INF] Hosting environment: Development
+2024-11-14 14:44:30.905 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-14 14:44:31.602 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:44:31.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 144.6836ms
+2024-11-14 14:44:31.754 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:44:31.756 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:44:31.759 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.8051ms
+2024-11-14 14:44:31.761 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:44:31.768 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 12.0508ms
+2024-11-14 14:44:31.794 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.3575ms
+2024-11-14 14:44:31.967 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:44:32.114 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 146.8879ms
+2024-11-14 14:45:32.443 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 14:45:33.419 +01:00 [INF] Executed DbCommand (32ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 14:45:33.481 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 14:45:33.493 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-14 14:45:33.765 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-14 14:45:33.766 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-14 14:45:33.804 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 14:45:33.805 +01:00 [INF] Hosting environment: Development
+2024-11-14 14:45:33.806 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-14 14:45:34.152 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:45:34.268 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 116.7365ms
+2024-11-14 14:45:34.276 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:45:34.276 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:45:34.276 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:45:34.280 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.0902ms
+2024-11-14 14:45:34.289 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.0699ms
+2024-11-14 14:45:34.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.143ms
+2024-11-14 14:45:34.409 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:45:34.514 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.0988ms
+2024-11-14 14:45:42.221 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:45:42.228 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.2018ms
+2024-11-14 14:45:42.241 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:45:42.241 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:45:42.241 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:45:42.244 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 2.8193ms
+2024-11-14 14:45:42.247 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 6.4923ms
+2024-11-14 14:45:42.251 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.649ms
+2024-11-14 14:45:42.347 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:45:42.403 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.8246ms
+2024-11-14 14:46:00.552 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:46:00.558 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 5.499ms
+2024-11-14 14:46:00.572 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:46:00.572 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:46:00.572 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:46:00.574 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 2.2768ms
+2024-11-14 14:46:00.581 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 8.8909ms
+2024-11-14 14:46:00.588 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.977ms
+2024-11-14 14:46:00.661 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:46:00.696 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.8134ms
+2024-11-14 14:46:04.444 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 14:46:05.374 +01:00 [INF] Executed DbCommand (32ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 14:46:05.440 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-14 14:46:05.454 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-14 14:46:05.733 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-14 14:46:05.734 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-14 14:46:05.775 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 14:46:05.776 +01:00 [INF] Hosting environment: Development
+2024-11-14 14:46:05.777 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-14 14:46:06.186 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:46:06.301 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 115.4163ms
+2024-11-14 14:46:06.309 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:46:06.309 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:46:06.309 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:46:06.314 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.4626ms
+2024-11-14 14:46:06.324 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.1889ms
+2024-11-14 14:46:06.350 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.7743ms
+2024-11-14 14:46:06.397 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:46:06.503 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.0058ms
+2024-11-14 14:53:17.200 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:53:17.210 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 9.9202ms
+2024-11-14 14:53:17.223 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:53:17.223 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:53:17.223 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:53:17.227 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.0424ms
+2024-11-14 14:53:17.228 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.8617ms
+2024-11-14 14:53:17.244 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.1393ms
+2024-11-14 14:53:17.462 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:53:17.518 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.6388ms
+2024-11-14 14:54:16.724 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:54:16.730 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 5.3712ms
+2024-11-14 14:54:16.739 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:54:16.739 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:54:16.740 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:54:16.742 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 2.4015ms
+2024-11-14 14:54:16.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.4407ms
+2024-11-14 14:54:16.753 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.9734ms
+2024-11-14 14:54:16.891 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:54:16.922 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.2331ms
+2024-11-14 14:56:49.101 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:56:49.108 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.4393ms
+2024-11-14 14:56:49.124 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:56:49.125 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:56:49.125 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:56:49.128 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.0645ms
+2024-11-14 14:56:49.130 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.865ms
+2024-11-14 14:56:49.136 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.3743ms
+2024-11-14 14:56:49.249 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:56:49.291 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.1526ms
+2024-11-14 14:56:55.753 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:56:55.759 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 6.4896ms
+2024-11-14 14:56:55.769 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:56:55.769 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:56:55.769 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:56:55.772 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.0842ms
+2024-11-14 14:56:55.774 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.1337ms
+2024-11-14 14:56:55.782 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.2863ms
+2024-11-14 14:56:55.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:56:55.865 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.2206ms
+2024-11-14 14:57:12.779 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:57:12.784 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 4.5172ms
+2024-11-14 14:57:12.796 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:57:12.796 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:57:12.796 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:57:12.801 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.6142ms
+2024-11-14 14:57:12.808 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.9331ms
+2024-11-14 14:57:12.809 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.4925ms
+2024-11-14 14:57:12.879 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:57:12.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.3199ms
+2024-11-14 14:57:21.164 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:57:21.171 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.6554ms
+2024-11-14 14:57:21.180 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:57:21.182 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:57:21.182 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:57:21.183 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.3079ms
+2024-11-14 14:57:21.188 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.8262ms
+2024-11-14 14:57:21.189 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.6158ms
+2024-11-14 14:57:21.251 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:57:21.288 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.9221ms
+2024-11-14 14:58:04.022 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-14 14:58:04.027 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 4.9412ms
+2024-11-14 14:58:04.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-14 14:58:04.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-14 14:58:04.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 14:58:04.044 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.3462ms
+2024-11-14 14:58:04.056 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.5749ms
+2024-11-14 14:58:04.063 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.9298ms
+2024-11-14 14:58:04.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-14 14:58:04.190 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.1819ms

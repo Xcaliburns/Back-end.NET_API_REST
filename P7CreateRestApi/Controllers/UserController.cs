@@ -4,6 +4,7 @@ using Findexium.Domain.Models;
 using Findexium.Domain.Services;
 using Findexium.Infrastructure.Models;
 using Findexium.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ namespace Findexium.Api.Controllers
 
     
     [Route("api/[controller]")]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     public class UsersController : ControllerBase
     {

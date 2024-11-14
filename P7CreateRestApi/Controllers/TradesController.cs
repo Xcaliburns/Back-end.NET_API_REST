@@ -10,10 +10,12 @@ using Findexium.Domain.Interfaces;
 using Findexium.Domain.Services;
 using Findexium.Domain.Models;
 using Findexium.Api.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Findexium.Api.Controllers
 { 
     [Route("api/[controller]")]
+    [Authorize(Roles = "User,Admin")]
     [ApiController]
     public class TradesController : ControllerBase
     {

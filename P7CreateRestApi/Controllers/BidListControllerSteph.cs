@@ -1,9 +1,11 @@
 using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Findexium.Api.Controllers
 {
     [ApiController]
+    [Authorize(Roles = "User,Admin")]
     [Route("[controller]")]
     public class BidListControllerSteph : ControllerBase
     {

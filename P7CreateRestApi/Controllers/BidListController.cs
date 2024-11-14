@@ -11,11 +11,14 @@ using Findexium.Domain.Models;
 using Findexium.Api.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Cryptography;
+using System.Configuration;
 
 namespace Findexium.Api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(Roles = "User,Admin")]
     [ApiController]
+   
     public class BidListController : ControllerBase
     {
         private readonly IBidListServices _bidListServices;
@@ -29,6 +32,7 @@ namespace Findexium.Api.Controllers
 
         // GET: api/BidList
         [HttpGet]
+
         public async Task<ActionResult<IEnumerable<BidResponse>>> GetBids()
         {
             try
@@ -198,6 +202,7 @@ namespace Findexium.Api.Controllers
 
         // DELETE: api/BidLists/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteBidList(int id)
         {
             try
