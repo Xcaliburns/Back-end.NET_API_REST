@@ -10,6 +10,7 @@ using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Api.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Cryptography;
 
 namespace Findexium.Api.Controllers
 {
@@ -28,13 +29,37 @@ namespace Findexium.Api.Controllers
 
         // GET: api/BidList
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BidList>>> GetBids()
+        public async Task<ActionResult<IEnumerable<BidResponse>>> GetBids()
         {
             try
             {
                 _logger.LogInformation("Fetching all bids");
                 var bids = await _bidListServices.GetAllAsync();
-                return Ok(bids);
+                var bidDtos = bids.Select(b => new BidResponse
+                {
+                    Account = b.Account,
+                    BidType = b.BidType,
+                    BidQuantity = b.BidQuantity,
+                    AskQuantity = b.AskQuantity,
+                    Bid = b.Bid,
+                    Ask = b.Ask,
+                    Benchmark = b.Benchmark,
+                    BidListDate = b.BidListDate,
+                    Commentary = b.Commentary,
+                    BidSecurity = b.BidSecurity,
+                    BidStatus = b.BidStatus,
+                    Trader = b.Trader,
+                    Book = b.Book,
+                    CreationName = b.CreationName,
+                    CreationDate = b.CreationDate,
+                    RevisionName = b.RevisionName,
+                    RevisionDate = b.RevisionDate,
+                    DealName = b.DealName,
+                    DealType = b.DealType,
+                    SourceListId = b.SourceListId,
+                    Side = b.Side
+                }).ToList();
+                return Ok(bidDtos);
             }
             catch (Exception ex)
             {
@@ -45,7 +70,7 @@ namespace Findexium.Api.Controllers
 
         // GET: api/BidLists/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BidList>> GetBid(int id)
+        public async Task<ActionResult<BidResponse>> GetBid(int id)
         {
             try
             {
@@ -56,7 +81,31 @@ namespace Findexium.Api.Controllers
                     _logger.LogWarning("Bid with id: {Id} not found", id);
                     return NotFound();
                 }
-                return Ok(bid);
+                var bidDto = new BidResponse
+                {
+                    Account = bid.Account,
+                    BidType = bid.BidType,
+                    BidQuantity = bid.BidQuantity,
+                    AskQuantity = bid.AskQuantity,
+                    Bid = bid.Bid,
+                    Ask = bid.Ask,
+                    Benchmark = bid.Benchmark,
+                    BidListDate = bid.BidListDate,
+                    Commentary = bid.Commentary,
+                    BidSecurity = bid.BidSecurity,
+                    BidStatus = bid.BidStatus,
+                    Trader = bid.Trader,
+                    Book = bid.Book,
+                    CreationName = bid.CreationName,
+                    CreationDate = bid.CreationDate,
+                    RevisionName = bid.RevisionName,
+                    RevisionDate = bid.RevisionDate,
+                    DealName = bid.DealName,
+                    DealType = bid.DealType,
+                    SourceListId = bid.SourceListId,
+                    Side = bid.Side
+                };
+                return Ok(bidDto);
             }
             catch (Exception ex)
             {
@@ -104,14 +153,40 @@ namespace Findexium.Api.Controllers
         // POST: api/BidLists
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<BidList>> PostBidList(BidRequest request)
+        public async Task<ActionResult<BidResponse>> PostBidList(BidRequest request)
         {
             try
             {
                 _logger.LogInformation("Creating a new bid");
-                var bidList = request.ToBid();
-                await _bidListServices.AddAsync(bidList);
-                return CreatedAtAction(nameof(GetBid), new { id = bidList.BidListId }, bidList);
+                var bid = request.ToBid();
+                await _bidListServices.AddAsync(bid);
+
+                var bidDto = new BidResponse
+                {
+                    Account = bid.Account,
+                    BidType = bid.BidType,
+                    BidQuantity = bid.BidQuantity,
+                    AskQuantity = bid.AskQuantity,
+                    Bid = bid.Bid,
+                    Ask = bid.Ask,
+                    Benchmark = bid.Benchmark,
+                    BidListDate = bid.BidListDate,
+                    Commentary = bid.Commentary,
+                    BidSecurity = bid.BidSecurity,
+                    BidStatus = bid.BidStatus,
+                    Trader = bid.Trader,
+                    Book = bid.Book,
+                    CreationName = bid.CreationName,
+                    CreationDate = bid.CreationDate,
+                    RevisionName = bid.RevisionName,
+                    RevisionDate = bid.RevisionDate,
+                    DealName = bid.DealName,
+                    DealType = bid.DealType,
+                    SourceListId = bid.SourceListId,
+                    Side = bid.Side
+                };
+
+                return CreatedAtAction(nameof(GetBid), new { id = bid.BidListId }, bidDto);
             }
             catch (Exception ex)
             {
@@ -119,6 +194,7 @@ namespace Findexium.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
+
 
         // DELETE: api/BidLists/5
         [HttpDelete("{id}")]
