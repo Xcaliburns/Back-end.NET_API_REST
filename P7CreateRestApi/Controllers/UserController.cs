@@ -1,6 +1,7 @@
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
+using Findexium.Domain.Services;
 using Findexium.Infrastructure.Models;
 using Findexium.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
@@ -10,28 +11,35 @@ using Microsoft.EntityFrameworkCore;
 namespace Findexium.Api.Controllers
 {
 
-    //TODO : voir avec Laala pour la séparation DDD
+    
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly UserManager<User> _userManager;
+        private readonly IUserService _userService;
         private readonly ILogger<UsersController> _logger;
 
-        public UsersController(UserManager<User> userManager, ILogger<UsersController> logger)
+        public UsersController(IUserService userService, ILogger<UsersController> logger)
         {
-            _userManager = userManager;
+            _userService = userService;
             _logger = logger;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<UserResponse>>> GetUsers()
         {
             try
             {
                 _logger.LogInformation("Fetching all users");
-                var users = await _userManager.Users.ToListAsync();
-                return Ok(users);
+                var users = await _userService.GetUsersAsync();
+                var userResponses = users.Select(user => new UserResponse
+                {
+                    UserName = user.UserName,
+                    Password = user.PasswordHash, // Assuming PasswordHash is used for Password
+                    FullName = user.Fullname,
+                    Role = user.Role
+                }).ToList();
+                return Ok(userResponses);
             }
             catch (Exception ex)
             {
@@ -41,18 +49,25 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(string id)
+        public async Task<ActionResult<UserResponse>> GetUser(string id)
         {
             try
             {
                 _logger.LogInformation("Fetching user with id: {Id}", id);
-                var user = await _userManager.FindByIdAsync(id);
+                var user = await _userService.GetUserByIdAsync(id);
                 if (user == null)
                 {
                     _logger.LogWarning("User with id: {Id} not found", id);
                     return NotFound();
                 }
-                return Ok(user);
+                var userResponse = new UserResponse
+                {
+                    UserName = user.UserName,
+                    Password = user.PasswordHash, // Assuming PasswordHash is used for Password
+                    FullName = user.Fullname,
+                    Role = user.Role
+                };
+                return Ok(userResponse);
             }
             catch (Exception ex)
             {
@@ -72,7 +87,7 @@ namespace Findexium.Api.Controllers
             try
             {
                 _logger.LogInformation("Updating user with id: {Id}", id);
-                var existingUser = await _userManager.FindByIdAsync(id);
+                var existingUser = await _userService.GetUserByIdAsync(id);
                 if (existingUser == null)
                 {
                     _logger.LogWarning("User with id: {Id} not found", id);
@@ -83,12 +98,7 @@ namespace Findexium.Api.Controllers
                 existingUser.Email = user.Email;
                 // Update other properties as needed
 
-                var result = await _userManager.UpdateAsync(existingUser);
-                if (!result.Succeeded)
-                {
-                    return BadRequest(result.Errors);
-                }
-
+                await _userService.UpdateUserAsync(existingUser);
                 return NoContent();
             }
             catch (Exception ex)
@@ -99,7 +109,7 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(UserRequest request)
+        public async Task<ActionResult<UserResponse>> PostUser(UserRequest request)
         {
             if (request == null)
             {
@@ -110,10 +120,17 @@ namespace Findexium.Api.Controllers
             {
                 _logger.LogInformation("Creating a new user");
                 var user = request.ToUser();
-                var result = await _userManager.CreateAsync(user, request.Password);
+                var result = await _userService.AddUserAsync(user, request.Password);
                 if (result.Succeeded)
                 {
-                    return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+                    var userResponse = new UserResponse
+                    {
+                        UserName = user.UserName,
+                        Password = user.PasswordHash, // Assuming PasswordHash is used for Password
+                        FullName = user.Fullname,
+                        Role = user.Role
+                    };
+                    return CreatedAtAction(nameof(GetUser), new { id = user.Id }, userResponse);
                 }
 
                 return BadRequest(result.Errors);
@@ -131,19 +148,14 @@ namespace Findexium.Api.Controllers
             try
             {
                 _logger.LogInformation("Deleting user with id: {Id}", id);
-                var user = await _userManager.FindByIdAsync(id);
+                var user = await _userService.GetUserByIdAsync(id);
                 if (user == null)
                 {
                     _logger.LogWarning("User with id: {Id} not found", id);
                     return NotFound();
                 }
 
-                var result = await _userManager.DeleteAsync(user);
-                if (!result.Succeeded)
-                {
-                    return BadRequest(result.Errors);
-                }
-
+                await _userService.DeleteUserAsync(id);
                 return NoContent();
             }
             catch (Exception ex)

@@ -14,10 +14,8 @@ namespace Findexium.Api.Models
         {
             return new User
             {
-                UserName = UserName,
-            //    Password = Password,
+                UserName = UserName,            
                 Fullname = FullName
-
             };
         }
     }

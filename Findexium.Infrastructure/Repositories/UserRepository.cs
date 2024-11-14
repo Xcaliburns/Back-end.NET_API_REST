@@ -22,7 +22,7 @@ namespace Findexium.Infrastructure.Repositories
         {
             return await _context.Users.ToListAsync();
         }
-
+        //la méthode n'est pas appelée, la création et gestion des roles est faite depuis le service et se sert de usermanager
         public async Task<User> GetUserByIdAsync(string id)
         {
             return await _context.Users.FindAsync(id);
@@ -30,18 +30,8 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task AddUserAsync(User user)
         {
-            var userDto = new UsersDto(user.UserName, user.PasswordHash, user.Fullname, user.Role);
-            var newUser = userDto.ToUser(_userManager);
-
-            var result = await _userManager.CreateAsync(newUser);
-            if (result.Succeeded)
-            {
-                await _userManager.AddToRoleAsync(newUser, newUser.Role);
-            }
-            else
-            {
-                throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
-            }
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
         }
 
         public async Task UpdateUserAsync(User user)

@@ -32,11 +32,21 @@ namespace Findexium.Domain.Services
 
         public async Task<IdentityResult> AddUserAsync(User user, string password)
         {
-            var result = await _userManager.CreateAsync(user, password);
+            var existingUser = await _userManager.FindByNameAsync(user.UserName);
+            if (existingUser != null)
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "Username is already taken." });
+            }
 
+            var result = await _userManager.CreateAsync(user, password);
             if (result.Succeeded)
             {
-                await _userRepository.AddUserAsync(user);
+                var roleResult = await _userManager.AddToRoleAsync(user, "User");
+                if (!roleResult.Succeeded)
+                {
+                    return roleResult;
+                }
+
             }
 
             return result;

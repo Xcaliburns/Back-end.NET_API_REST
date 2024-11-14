@@ -15,7 +15,6 @@ namespace Findexium.Infrastructure.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public string FullName { get; set; }
-        [JsonIgnore] // Ignore this property during serialization/deserialization
         public string Role { get; set; } = "User"; // Default role is "User"
 
         public UsersDto(
