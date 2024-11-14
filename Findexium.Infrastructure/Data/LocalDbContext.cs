@@ -16,6 +16,9 @@ namespace Findexium.Infrastructure.Data
         {
             base.OnModelCreating(builder);
             builder.Entity<BidDto>().HasKey(b => b.BidListId); // Define primary key
+            builder.Entity<CurvePointsDto>().HasKey(c => c.Id);
+            builder.Entity<RatingDto>().HasKey(r => r.Id);
+            builder.Entity<RuleNameDto>().HasKey(r => r.Id);
             builder.Entity<TradeDto>().HasKey(t => t.TradeId);
         }
 

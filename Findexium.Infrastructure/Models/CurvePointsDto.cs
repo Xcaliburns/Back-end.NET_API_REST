@@ -29,6 +29,7 @@ namespace Findexium.Infrastructure.Models
         {
             return new CurvePoint
             {
+                Id=Id,
                 CurveId = CurveId,
                 AsOfDate = AsOfDate,
                 Term = Term,

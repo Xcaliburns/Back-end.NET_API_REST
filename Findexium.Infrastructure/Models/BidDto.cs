@@ -1,4 +1,5 @@
 ﻿using Findexium.Domain.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace Findexium.Infrastructure.Models
 {
     public class BidDto
     {
+       
         public int BidListId { get; set; } // Define this as the primary key
         public string Account { get; set; }
         public string BidType { get; set; }
@@ -32,9 +34,30 @@ namespace Findexium.Infrastructure.Models
         public string SourceListId { get; set; }
         public string Side { get; set; }
 
-        public BidDto(int bidListId, string account, string bidType, double? bidQuantity, double? askQuantity, double bid, double? ask, string benchmark, DateTime? bidListDate, string commentary, string bidSecurity, string bidStatus, string trader, string book, string creationName, DateTime? creationDate, string revisionName, DateTime? revisionDate, string dealName, string dealType, string sourceListId, string side)
+        public BidDto(
+           // int bidListId,
+            string account,
+            string bidType,
+            double? bidQuantity,
+            double? askQuantity,
+            double bid,
+            double? ask,
+            string benchmark,
+            DateTime? bidListDate,
+            string commentary,
+            string bidSecurity,
+            string bidStatus,
+            string trader,
+            string book,
+            string creationName,
+            DateTime? creationDate,
+            string revisionName,
+            DateTime? revisionDate, string dealName,
+            string dealType,
+            string sourceListId,
+            string side)
         {
-            BidListId = bidListId;
+          //  BidListId = bidListId;
             Account = account;
             BidType = bidType;
             BidQuantity = bidQuantity;
