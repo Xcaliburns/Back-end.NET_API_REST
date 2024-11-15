@@ -30,6 +30,7 @@ namespace Findexium.Infrastructure.Models
         {
             return new Rating
             {
+                Id=Id,
                 MoodysRating = MoodysRating,
                 SandPRating = SandPRating,
                 FitchRating = FitchRating,

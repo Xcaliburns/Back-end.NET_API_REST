@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Findexium.Api.Controllers
 {
 
-    
+
     [Route("api/[controller]")]
     [Authorize(Roles = "Admin")]
     [ApiController]
@@ -36,6 +36,7 @@ namespace Findexium.Api.Controllers
                 var users = await _userService.GetUsersAsync();
                 var userResponses = users.Select(user => new UserResponse
                 {
+                    Id = user.Id,
                     UserName = user.UserName,
                     Password = user.PasswordHash, // Assuming PasswordHash is used for Password
                     FullName = user.Fullname,
@@ -64,6 +65,7 @@ namespace Findexium.Api.Controllers
                 }
                 var userResponse = new UserResponse
                 {
+                    Id = user.Id,
                     UserName = user.UserName,
                     Password = user.PasswordHash, // Assuming PasswordHash is used for Password
                     FullName = user.Fullname,
@@ -127,6 +129,7 @@ namespace Findexium.Api.Controllers
                 {
                     var userResponse = new UserResponse
                     {
+                        Id = user.Id,
                         UserName = user.UserName,
                         Password = user.PasswordHash, // Assuming PasswordHash is used for Password
                         FullName = user.Fullname,

@@ -55,6 +55,7 @@ namespace Findexium.Infrastructure.Models
         {
             return new Trade
             {
+                TradeId=TradeId,
                 Account = Account,
                 AccountType = AccountType,
                 BuyQuantity = BuyQuantity,

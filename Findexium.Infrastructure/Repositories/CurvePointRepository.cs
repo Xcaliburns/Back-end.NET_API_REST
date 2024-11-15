@@ -23,8 +23,16 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<CurvePoint> GetByIdAsync(int id)
         {
-            var curvePointDto = await _context.CurvePoints.FindAsync(id);
-            return curvePointDto.ToCurvePoint();
+            try
+            {
+                var curvePointDto = await _context.CurvePoints.FindAsync(id);
+                return curvePointDto.ToCurvePoint();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error occurred while fetching curve point with id: {id}", ex);
+            }
+
         }
 
         public async Task AddAsync(CurvePoint curvePoint)
@@ -37,6 +45,7 @@ namespace Findexium.Infrastructure.Repositories
                 curvePoint.CreationDate ?? DateTime.Now // Provide a default value if CreationDate is null
             ));
             await _context.SaveChangesAsync();
+            
         }
 
         public async Task UpdateAsync(CurvePoint curvePoint)

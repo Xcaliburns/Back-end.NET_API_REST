@@ -105,14 +105,32 @@ namespace Findexium.Api.Controllers
 
         // POST: api/CurvePoints
         [HttpPost]
-        public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePointRequest request)
+        public async Task<ActionResult<CurvePointRequest>> PostCurvePoint(CurvePointRequest request)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for CurvePointRequest");
+                    return BadRequest(ModelState);
+                }
+
                 _logger.LogInformation("Creating a new curve point");
                 var curvePoint = request.ToCurvePoint();
                 await _curvePointService.AddAsync(curvePoint);
-                return CreatedAtAction(nameof(GetCurvePoint), new { id = curvePoint.Id }, curvePoint);
+
+                var point = new CurvePointRequest
+                {
+                    
+                    CurveId = (int)curvePoint.CurveId,
+                    AsOfDate = (DateTime)curvePoint.AsOfDate,
+                    Term = (double)curvePoint.Term,
+                    CurvePointValue = (double)curvePoint.CurvePointValue,
+                    CreationDate = (DateTime)curvePoint.CreationDate
+                };
+
+                return CreatedAtAction(nameof(GetCurvePoint), new { id = curvePoint.Id }, point);
+                
             }
             catch (Exception ex)
             {

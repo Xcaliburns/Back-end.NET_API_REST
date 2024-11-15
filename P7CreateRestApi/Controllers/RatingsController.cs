@@ -101,14 +101,31 @@ namespace Findexium.Api.Controllers
 
         // POST: api/Ratings
         [HttpPost]
-        public async Task<ActionResult<Rating>> PostRating(RatingRequest request)
+        public async Task<ActionResult<RatingRequest>> PostRating(RatingRequest request)
         {
             try
             {
+                if(!ModelState.IsValid)
+                {
+                    _logger.LogWarning("invalid model state");
+                    return BadRequest(ModelState);
+                }
                 var rating = request.ToRating();
                 _logger.LogInformation("Creating a new rating");
                 await _ratingService.AddRatingAsync(rating);
-                return CreatedAtAction(nameof(GetRating), new { id = rating.Id }, rating);
+
+                var createdRating= new RatingRequest
+                {
+                   
+                    MoodysRating = rating.MoodysRating,
+                    SandPrating = rating.SandPRating,
+                    FitchRating = rating.FitchRating,
+                    OrderNumber = rating.OrderNumber
+                };
+
+
+
+                return CreatedAtAction(nameof(GetRating), new { id = rating.Id }, createdRating);
             }
             catch (Exception ex)
             {

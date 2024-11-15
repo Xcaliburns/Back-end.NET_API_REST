@@ -31,6 +31,7 @@ namespace Findexium.Infrastructure.Models
         {
             return new RuleName
             {
+                Id = Id,
                 Name = Name,
                 Description = Description,
                 Json = Json,
