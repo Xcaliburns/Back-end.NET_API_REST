@@ -20,7 +20,7 @@ namespace Findexium.Api.Models
         [Range(1, int.MaxValue, ErrorMessage = "Order number must be a positive integer.")]
         public int OrderNumber { get; set; }
 
-        internal Rating ToRating()
+        public Rating ToRating()
         {
             return new Rating
             {
