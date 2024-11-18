@@ -30,6 +30,7 @@ namespace Findexium.Infrastructure.Repositories
         public async Task AddAsync(Rating rating)
         {
             _context.Ratings.Add(new RatingDto(
+                rating.Id,
                 rating.MoodysRating,
                 rating.SandPRating, rating.FitchRating,
                 rating.OrderNumber
@@ -39,8 +40,18 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task UpdateAsync(Rating rating)
         {
-            _context.Entry(rating).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            var ratingDto = await _context.Ratings.FindAsync(rating.Id);
+            if (ratingDto != null)
+            {
+                // Modification for the test _context.Entry(rating).State = EntityState.Modified;
+                ratingDto.MoodysRating = rating.MoodysRating;
+                ratingDto.SandPRating = rating.SandPRating;
+                ratingDto.FitchRating = rating.FitchRating;
+                ratingDto.OrderNumber = rating.OrderNumber;
+
+                _context.Entry(ratingDto).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task DeleteAsync(int id)
