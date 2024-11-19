@@ -51,7 +51,7 @@ namespace FindexiumApi.tests
         public async Task GetRating_ById_ReturnsOkResult_WithRating()
         {
             // Arrange
-            var rating = new Rating { Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
+            var rating = new Rating{ Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
             _mockRatingService.Setup(service => service.GetRatingByIdAsync(1)).ReturnsAsync(rating);
 
             // Act
@@ -66,7 +66,7 @@ namespace FindexiumApi.tests
         public async Task PostRating_ReturnsCreatedAtActionResult()
         {
             // Arrange
-            var request = new RatingRequest { MoodysRating = "A1", SandPrating = "A+", FitchRating = "A", OrderNumber = 1 };
+            var request = new RatingRequest { MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
             var rating = request.ToRating();
             _mockRatingService.Setup(service => service.AddRatingAsync(It.IsAny<Rating>())).Returns(Task.CompletedTask);
 

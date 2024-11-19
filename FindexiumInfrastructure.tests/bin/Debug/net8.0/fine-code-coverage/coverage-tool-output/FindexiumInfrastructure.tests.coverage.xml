@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.2011" branch-rate="0.1739" version="1.9" timestamp="1731933468" lines-covered="179" lines-valid="890" branches-covered="8" branches-valid="46">
+<coverage line-rate="0.20079999999999998" branch-rate="0.1739" version="1.9" timestamp="1732027532" lines-covered="179" lines-valid="891" branches-covered="8" branches-valid="46">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -1200,7 +1200,7 @@
         </class>
       </classes>
     </package>
-    <package name="Findexium.Infrastructure" line-rate="0.1356" branch-rate="0.15380000000000002" complexity="145">
+    <package name="Findexium.Infrastructure" line-rate="0.1354" branch-rate="0.15380000000000002" complexity="145">
       <classes>
         <class name="Findexium.Infrastructure.Repositories.BidRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -2527,7 +2527,7 @@
                 <line number="111" hits="0" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="(System.String,System.String,System.Nullable`1&lt;System.Double&gt;,System.Nullable`1&lt;System.Double&gt;,System.Double,System.Nullable`1&lt;System.Double&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Int32,System.String,System.String,System.Nullable`1&lt;System.Double&gt;,System.Nullable`1&lt;System.Double&gt;,System.Double,System.Nullable`1&lt;System.Double&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="37" hits="0" branch="False" />
                 <line number="38" hits="0" branch="False" />
@@ -2552,6 +2552,7 @@
                 <line number="57" hits="0" branch="False" />
                 <line number="58" hits="0" branch="False" />
                 <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
                 <line number="61" hits="0" branch="False" />
                 <line number="62" hits="0" branch="False" />
                 <line number="63" hits="0" branch="False" />
@@ -2650,6 +2651,7 @@
             <line number="57" hits="0" branch="False" />
             <line number="58" hits="0" branch="False" />
             <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
             <line number="61" hits="0" branch="False" />
             <line number="62" hits="0" branch="False" />
             <line number="63" hits="0" branch="False" />

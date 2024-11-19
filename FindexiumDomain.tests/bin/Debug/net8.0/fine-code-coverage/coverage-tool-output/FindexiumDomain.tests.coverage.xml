@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.0866" branch-rate="0.1041" version="1.9" timestamp="1731933476" lines-covered="73" lines-valid="842" branches-covered="5" branches-valid="48">
+<coverage line-rate="0.08650000000000001" branch-rate="0.1041" version="1.9" timestamp="1732027539" lines-covered="73" lines-valid="843" branches-covered="5" branches-valid="48">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -2527,7 +2527,7 @@
                 <line number="111" hits="0" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="(System.String,System.String,System.Nullable`1&lt;System.Double&gt;,System.Nullable`1&lt;System.Double&gt;,System.Double,System.Nullable`1&lt;System.Double&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Int32,System.String,System.String,System.Nullable`1&lt;System.Double&gt;,System.Nullable`1&lt;System.Double&gt;,System.Double,System.Nullable`1&lt;System.Double&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.String,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="37" hits="0" branch="False" />
                 <line number="38" hits="0" branch="False" />
@@ -2552,6 +2552,7 @@
                 <line number="57" hits="0" branch="False" />
                 <line number="58" hits="0" branch="False" />
                 <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
                 <line number="61" hits="0" branch="False" />
                 <line number="62" hits="0" branch="False" />
                 <line number="63" hits="0" branch="False" />
@@ -2650,6 +2651,7 @@
             <line number="57" hits="0" branch="False" />
             <line number="58" hits="0" branch="False" />
             <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
             <line number="61" hits="0" branch="False" />
             <line number="62" hits="0" branch="False" />
             <line number="63" hits="0" branch="False" />

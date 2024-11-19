@@ -118,7 +118,7 @@ namespace Findexium.Api.Controllers
                 {
                    
                     MoodysRating = rating.MoodysRating,
-                    SandPrating = rating.SandPRating,
+                    SandPRating = rating.SandPRating,
                     FitchRating = rating.FitchRating,
                     OrderNumber = rating.OrderNumber
                 };

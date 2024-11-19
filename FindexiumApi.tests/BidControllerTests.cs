@@ -1,0 +1,229 @@
+﻿using System.Collections.Generic;
+using System.Net.NetworkInformation;
+using System.Threading.Tasks;
+using Findexium.Api.Controllers;
+using Findexium.Api.Models;
+using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Moq;
+using Xunit;
+
+namespace FindexiumApi.tests
+{
+    public class BidControllerTests
+    {
+        private readonly Mock<IBidListServices> _mockBidService;
+        private readonly Mock<ILogger<BidListController>> _mockLogger;
+        private readonly BidListController _controller;
+
+        public BidControllerTests()
+        {
+            _mockBidService = new Mock<IBidListServices>();
+            _mockLogger = new Mock<ILogger<BidListController>>();
+            _controller = new BidListController(_mockBidService.Object, _mockLogger.Object);
+        }
+
+        [Fact]
+        public async Task GetBidList_ReturnsOkResult_WithListOfThreeBids()
+        {
+            // Arrange
+            var bids = new List<BidList>
+            {
+                new BidList { Account = "Account1", BidType = "Type1", BidQuantity = 1, AskQuantity = 1, Bid = 1.0, Ask = 1.0, Benchmark = "Benchmark1", BidListDate = new DateTime(2021, 1, 1),Commentary = "comment1",BidSecurity="Secure1",BidStatus ="status1",Trader="Trader1",Book="Book1",CreationName="name1",CreationDate= new DateTime(2021,1,1), RevisionName="name1",RevisionDate=new DateTime(2022,1,1), DealName="name1", DealType="type1",SourceListId="Id1",Side="Side1" },
+                new BidList { Account = "Account2", BidType = "Type2", BidQuantity = 2, AskQuantity = 2, Bid = 2.0, Ask = 2.0, Benchmark = "Benchmark2",  BidListDate = new DateTime(2021, 1, 2),Commentary = "comment2",BidSecurity="Secure2",BidStatus ="status2",Trader="Trader2",Book="Book2",CreationName="name2",CreationDate= new DateTime(2021,1,1), RevisionName="name2",RevisionDate=new DateTime(2022,1,2), DealName="name2", DealType="type2",SourceListId="Id2",Side="Side2"  },
+                new BidList { Account = "Account3", BidType = "Type3", BidQuantity = 3, AskQuantity = 3, Bid = 3.0, Ask = 3.0, Benchmark = "Benchmark3",  BidListDate = new DateTime(2021, 1, 3),Commentary = "comment3",BidSecurity="Secure3",BidStatus ="status3",Trader="Trader3",Book="Book3",CreationName="name3",CreationDate= new DateTime(2021,1,1), RevisionName="name3",RevisionDate=new DateTime(2022,1,3), DealName="name3", DealType="type3",SourceListId="Id3",Side="Side3"  }
+            };
+            _mockBidService.Setup(service => service.GetAllAsync()).ReturnsAsync(bids);
+
+            // Act
+            var result = await _controller.GetBids();
+
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result.Result);
+            var returnBids = Assert.IsType<List<BidResponse>>(okResult.Value);
+            Assert.Equal(3, returnBids.Count);
+            Assert.Collection(returnBids,
+                item => Assert.Equal("Account1", item.Account),
+                item => Assert.Equal("Account2", item.Account),
+                item => Assert.Equal("Account3", item.Account));
+        }
+
+        [Fact]
+        public async Task GetBid_ById_ReturnsOkResult_WithBidResponse()
+        {
+            // Arrange
+            var bid = new BidList { BidListId = -1, Account = "Account1", BidType = "Type1", BidQuantity = 1, AskQuantity = 1, Bid = 1.0, Ask = 1.0, Benchmark = "Benchmark1", BidListDate = new DateTime(2021, 1, 1), Commentary = "comment1", BidSecurity = "Secure1", BidStatus = "status1", Trader = "Trader1", Book = "Book1", CreationName = "name1", CreationDate = new DateTime(2021, 1, 1), RevisionName = "name1", RevisionDate = new DateTime(2022, 1, 1), DealName = "name1", DealType = "type1", SourceListId = "Id1", Side = "Side1" };
+
+            _mockBidService.Setup(service => service.GetByIdAsync(-1)).ReturnsAsync(bid);
+
+            // Act
+            var result = await _controller.GetBid(-1);
+
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result.Result);
+            var returnBid = Assert.IsType<BidList>(okResult.Value);
+            Assert.Equal("Account1", returnBid.Account);
+        }
+
+        [Fact]
+        public async Task PostBid_ReturnsCreatedAtActionResult()
+        {
+            // Arrange
+            var bidRequest = new BidRequest
+            {
+                Account = "TestAccount",
+                BidType = "TestType",
+                BidQuantity = 100,
+                AskQuantity = 200,
+                Bid = 50,
+                Ask = 60,
+                Benchmark = "TestBenchmark",
+                BidListDate = DateTime.Now,
+                Commentary = "TestCommentary",
+                BidSecurity = "TestSecurity",
+                BidStatus = "TestStatus",
+                Trader = "TestTrader",
+                Book = "TestBook",
+                CreationName = "TestCreationName",
+                CreationDate = DateTime.Now,
+                RevisionName = "TestRevisionName",
+                RevisionDate = DateTime.Now,
+                DealName = "TestDealName",
+                DealType = "TestDealType",
+                SourceListId = "TestSourceListId",
+                Side = "TestSide"
+            };
+
+            var bidResponse = new BidResponse
+            {
+                Account = bidRequest.Account,
+                BidType = bidRequest.BidType,
+                BidQuantity = bidRequest.BidQuantity,
+                AskQuantity = bidRequest.AskQuantity,
+                Bid = bidRequest.Bid,
+                Ask = bidRequest.Ask,
+                Benchmark = bidRequest.Benchmark,
+                BidListDate = bidRequest.BidListDate,
+                Commentary = bidRequest.Commentary,
+                BidSecurity = bidRequest.BidSecurity,
+                BidStatus = bidRequest.BidStatus,
+                Trader = bidRequest.Trader,
+                Book = bidRequest.Book,
+                CreationName = bidRequest.CreationName,
+                CreationDate = bidRequest.CreationDate,
+                RevisionName = bidRequest.RevisionName,
+                RevisionDate = bidRequest.RevisionDate,
+                DealName = bidRequest.DealName,
+                DealType = bidRequest.DealType,
+                SourceListId = bidRequest.SourceListId,
+                Side = bidRequest.Side
+            };
+
+            _mockBidService.Setup(service => service.AddAsync(It.IsAny<BidList>())).Returns(Task.CompletedTask);
+            _mockBidService.Setup(service => service.ExistsAsync(It.IsAny<int>())).ReturnsAsync(false);
+
+            // Act
+            var result = await _controller.PostBidList(bidRequest);
+
+            // Assert
+            var createdAtActionResult = Assert.IsType<CreatedAtActionResult>(result.Result);
+            var returnValue = Assert.IsType<BidResponse>(createdAtActionResult.Value);
+            Assert.Equal(bidRequest.Account, returnValue.Account);
+            
+        }
+
+        [Fact]
+        public async Task PutBid_ReturnsNoContent_WhenBidIsUpdated()
+        {
+            // Arrange
+            var bidListId = 1;
+            var bidList = new BidList
+            {
+                BidListId = bidListId,
+                Account = "TestAccount",
+                BidType = "TestType",
+                BidQuantity = 100,
+                AskQuantity = 200,
+                Bid = 50,
+                Ask = 60,
+                Benchmark = "TestBenchmark",
+                BidListDate = DateTime.Now,
+                Commentary = "TestCommentary",
+                BidSecurity = "TestSecurity",
+                BidStatus = "TestStatus",
+                Trader = "TestTrader",
+                Book = "TestBook",
+                CreationName = "TestCreationName",
+                CreationDate = DateTime.Now,
+                RevisionName = "TestRevisionName",
+                RevisionDate = DateTime.Now,
+                DealName = "TestDealName",
+                DealType = "TestDealType",
+                SourceListId = "TestSourceListId",
+                Side = "TestSide"
+            };
+
+            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(true);
+            _mockBidService.Setup(service => service.UpdateAsync(bidList)).Returns(Task.CompletedTask);
+
+            // Act
+            var result = await _controller.PutBid(bidListId, bidList);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+        }
+
+        [Fact]
+        public async Task PutBid_ReturnsBadRequest_WhenIdDoesNotMatch()
+        {
+            // Arrange
+            var bidListId = 1;
+            var bidList = new BidList { BidListId = 2 };
+
+            // Act
+            var result = await _controller.PutBid(bidListId, bidList);
+
+            // Assert
+            Assert.IsType<BadRequestResult>(result);
+        }
+
+        [Fact]
+        public async Task PutBid_ReturnsNotFound_WhenBidDoesNotExist()
+        {
+            // Arrange
+            var bidListId = 1;
+            var bidList = new BidList { BidListId = bidListId };
+
+            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(false);
+
+            // Act
+            var result = await _controller.PutBid(bidListId, bidList);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+        }
+
+        [Fact]
+        public async Task PutBid_ReturnsInternalServerError_WhenExceptionIsThrown()
+        {
+            // Arrange
+            var bidListId = 1;
+            var bidList = new BidList { BidListId = bidListId };
+
+            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(true);
+            _mockBidService.Setup(service => service.UpdateAsync(bidList)).ThrowsAsync(new Exception());
+
+            // Act
+            var result = await _controller.PutBid(bidListId, bidList);
+
+            // Assert
+            var statusCodeResult = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
+        }
+
+
+    }
+}

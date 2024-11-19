@@ -37,7 +37,7 @@ namespace Findexium.Infrastructure.Repositories
             try
             {
                 _context.Bids.Add(new BidDto(
-                  //  bidList.BidListId,
+                    bidList.BidListId,
                     bidList.Account,
                     bidList.BidType,
                     bidList.BidQuantity,
