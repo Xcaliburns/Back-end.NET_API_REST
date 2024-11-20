@@ -29,12 +29,21 @@ namespace Findexium.Api.Controllers
 
         // GET: api/CurvePoints
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CurvePoint>>> GetCurvePoints()
+        public async Task<ActionResult<IEnumerable<CurvePointResponse>>> GetCurvePoints()
         {
             try
             {
                 _logger.LogInformation("Fetching all curve points");
                 var curvePoints = await _curvePointService.GetAllAsync();
+                var curvePointDtos = curvePoints.Select(c => new CurvePointResponse
+                {
+                    Id = c.Id,
+                    CurveId = c.CurveId,
+                    AsOfDate = c.AsOfDate,
+                    Term = c.Term,
+                    CurvePointValue = c.CurvePointValue,
+                    CreationDate = c.CreationDate
+                });
                 return Ok(curvePoints);
             }
             catch (Exception ex)
@@ -105,7 +114,7 @@ namespace Findexium.Api.Controllers
 
         // POST: api/CurvePoints
         [HttpPost]
-        public async Task<ActionResult<CurvePointRequest>> PostCurvePoint(CurvePointRequest request)
+        public async Task<IActionResult> PostCurvePoint(CurvePointRequest request)
         {
             try
             {
@@ -119,17 +128,7 @@ namespace Findexium.Api.Controllers
                 var curvePoint = request.ToCurvePoint();
                 await _curvePointService.AddAsync(curvePoint);
 
-                var point = new CurvePointRequest
-                {
-                    
-                    CurveId = (int)curvePoint.CurveId,
-                    AsOfDate = (DateTime)curvePoint.AsOfDate,
-                    Term = (double)curvePoint.Term,
-                    CurvePointValue = (double)curvePoint.CurvePointValue,
-                    CreationDate = (DateTime)curvePoint.CreationDate
-                };
-
-                return CreatedAtAction(nameof(GetCurvePoint), new { id = curvePoint.Id }, point);
+                return Created();
                 
             }
             catch (Exception ex)

@@ -34,7 +34,7 @@ namespace Findexium.Api.Controllers
             {
                 _logger.LogInformation("Fetching all users");
                 var users = await _userService.GetUsersAsync();
-                var userResponses = users.Select(user => new UserResponse
+                var userDto = users.Select(user => new UserResponse
                 {
                     Id = user.Id,
                     UserName = user.UserName,
@@ -42,7 +42,7 @@ namespace Findexium.Api.Controllers
                     FullName = user.Fullname,
                     Role = user.Role
                 }).ToList();
-                return Ok(userResponses);
+                return Ok(userDto);
             }
             catch (Exception ex)
             {
@@ -63,15 +63,8 @@ namespace Findexium.Api.Controllers
                     _logger.LogWarning("User with id: {Id} not found", id);
                     return NotFound();
                 }
-                var userResponse = new UserResponse
-                {
-                    Id = user.Id,
-                    UserName = user.UserName,
-                    Password = user.PasswordHash, // Assuming PasswordHash is used for Password
-                    FullName = user.Fullname,
-                    Role = user.Role
-                };
-                return Ok(userResponse);
+               
+                return Ok(user);
             }
             catch (Exception ex)
             {
