@@ -43,6 +43,7 @@ namespace Findexium.Api.Controllers
                 var bids = await _bidListServices.GetAllAsync();
                 var bidDtos = bids.Select(b => new BidResponse
                 {
+                    BidListId = b.BidListId,
                     Account = b.Account,
                     BidType = b.BidType,
                     BidQuantity = b.BidQuantity,
@@ -136,41 +137,15 @@ namespace Findexium.Api.Controllers
         // POST: api/BidLists
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<BidResponse>> PostBidList(BidRequest request)
+        public async Task<IActionResult> PostBidList(BidRequest request)
         {
             try
             {
                 _logger.LogInformation("Creating a new bid");
                 var bid = request.ToBid();
                 await _bidListServices.AddAsync(bid);
-
-                var createdBid = new BidResponse
-                {
-                    Account = bid.Account,
-                    BidType = bid.BidType,
-                    BidQuantity = bid.BidQuantity,
-                    AskQuantity = bid.AskQuantity,
-                    Bid = bid.Bid,
-                    Ask = bid.Ask,
-                    Benchmark = bid.Benchmark,
-                    BidListDate = (DateTime)bid.BidListDate,
-                    Commentary = bid.Commentary,
-                    BidSecurity = bid.BidSecurity,
-                    BidStatus = bid.BidStatus,
-                    Trader = bid.Trader,
-                    Book = bid.Book,
-                    CreationName = bid.CreationName,
-                    CreationDate = (DateTime)bid.CreationDate,
-                    RevisionName = bid.RevisionName,
-                    RevisionDate = (DateTime)bid.RevisionDate,
-                    DealName = bid.DealName,
-                    DealType = bid.DealType,
-                    SourceListId = bid.SourceListId,
-                    Side = bid.Side
-                };
-
-                // Return the created bid along with its ID
-                return CreatedAtAction(nameof(GetBid), new { id = bid.BidListId }, createdBid);
+                
+                return Created();
             }
             catch (Exception ex)
             {
