@@ -141,6 +141,11 @@ namespace Findexium.Api.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for BidRequest");
+                    return BadRequest(ModelState);
+                }
                 _logger.LogInformation("Creating a new bid");
                 var bid = request.ToBid();
                 await _bidListServices.AddAsync(bid);

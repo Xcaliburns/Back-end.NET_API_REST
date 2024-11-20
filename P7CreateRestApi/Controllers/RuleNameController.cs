@@ -31,13 +31,20 @@ namespace Findexium.Api.Controllers
 
         // GET: api/RuleName
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RuleName>>> GetRuleName()
+        public async Task<ActionResult<IEnumerable<RuleNameResponse>>> GetRuleName()
         {
             try
             {
                 _logger.LogInformation("Fetching all rule names");
                 var ruleNames = await _ruleNameServices.GetAllRatingsAsync();
-                return Ok(ruleNames);
+                var ruleNameDtos = ruleNames.Select(r => new RuleName
+                {
+                    Id = r.Id,
+                    Name = r.Name,
+                    Description = r.Description,
+                    Json = r.Json
+                }).ToList();
+                return Ok(ruleNameDtos);
             }
             catch (Exception ex)
             {
@@ -95,14 +102,20 @@ namespace Findexium.Api.Controllers
 
         // POST: api/RuleName
         [HttpPost]
-        public async Task<ActionResult<RuleName>> PostRuleName(RuleNameRequest request)
+        public async Task<IActionResult> PostRuleName(RuleNameRequest request)
         {
             try
             {
+                if(!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for ruleNameRequest");
+                    return BadRequest(ModelState);
+                }
                 _logger.LogInformation("Creating a new rule name");
                 var ruleName = request.ToRuleName();
                 await _ruleNameServices.AddRuleAsync(ruleName);
-                return CreatedAtAction(nameof(GetRuleName), new { id = ruleName.Id }, ruleName);
+
+                return Created();
             }
             catch (Exception ex)
             {

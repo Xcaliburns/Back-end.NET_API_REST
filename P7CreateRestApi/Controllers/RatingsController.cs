@@ -29,43 +29,29 @@ namespace Findexium.Api.Controllers
             _logger = logger;
         }
 
-        // GET: api/Ratings
+       
+
+        // GET: api/Ratings/5
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Rating>>> GetRating()
+        public async Task<ActionResult<IEnumerable<RatingResponse>>> GetRating()
         {
             try
             {
                 _logger.LogInformation("Getting all ratings");
                 var ratings = await _ratingService.GetAllRatingsAsync();
-                return Ok(ratings);
+                var ratingDtos = ratings.Select(r => new RatingResponse
+                {
+                    Id = r.Id,
+                    MoodysRating = r.MoodysRating,
+                    SandPRating = r.SandPRating,
+                    FitchRating = r.FitchRating,
+                    OrderNumber = r.OrderNumber
+                }).ToList();
+                return Ok(ratingDtos);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error getting all ratings");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
-        }
-
-        // GET: api/Ratings/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Rating>> GetRating(int id)
-        {
-            try
-            {
-                _logger.LogInformation("Getting rating with id {Id}", id);
-                var rating = await _ratingService.GetRatingByIdAsync(id);
-
-                if (rating == null)
-                {
-                    _logger.LogWarning("Rating with id {Id} not found", id);
-                    return NotFound();
-                }
-
-                return Ok(rating);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting rating with id {Id}", id);
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
@@ -101,7 +87,7 @@ namespace Findexium.Api.Controllers
 
         // POST: api/Ratings
         [HttpPost]
-        public async Task<ActionResult<RatingRequest>> PostRating(RatingRequest request)
+        public async Task<IActionResult> PostRating(RatingRequest request)
         {
             try
             {
@@ -114,18 +100,7 @@ namespace Findexium.Api.Controllers
                 _logger.LogInformation("Creating a new rating");
                 await _ratingService.AddRatingAsync(rating);
 
-                var createdRating= new RatingRequest
-                {
-                   
-                    MoodysRating = rating.MoodysRating,
-                    SandPRating = rating.SandPRating,
-                    FitchRating = rating.FitchRating,
-                    OrderNumber = rating.OrderNumber
-                };
-
-
-
-                return CreatedAtAction(nameof(GetRating), new { id = rating.Id }, createdRating);
+                return Created();
             }
             catch (Exception ex)
             {

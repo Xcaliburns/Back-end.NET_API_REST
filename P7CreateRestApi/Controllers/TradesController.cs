@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-
+using Findexium.Infrastructure;
 using Findexium.Domain.Interfaces;
-using Findexium.Domain.Services;
 using Findexium.Domain.Models;
 using Findexium.Api.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Cryptography;
+using System.Configuration;
+using System.Data;
+using System.Net.NetworkInformation;
 
 namespace Findexium.Api.Controllers
 { 
@@ -30,13 +33,37 @@ namespace Findexium.Api.Controllers
 
         // GET: api/Trades
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Trade>>> GetTrades()
+        public async Task<ActionResult<IEnumerable<TradeResponse>>> GetTrades()
         {
             try
             {
                 _logger.LogInformation("Fetching all trades");
                 var trades = await _tradeService.GetAllTradesAsync();
-                return Ok(trades);
+                var tradeDtos = trades.Select(t => new TradeResponse
+                {
+                    TradeId = t.TradeId,
+                    Account = t.Account,
+                    AccountType = t.AccountType,
+                    BuyQuantity = t.BuyQuantity,
+                    SellQuantity = t.SellQuantity,
+                    BuyPrice = t.BuyPrice,
+                    SellPrice = t.SellPrice,
+                    Benchmark = t.Benchmark,
+                    TradeDate = t.TradeDate,
+                    TradeSecurity = t.TradeSecurity,
+                    TradeStatus = t.TradeStatus,
+                    Trader = t.Trader,
+                    Book = t.Book,
+                    CreationName = t.CreationName,
+                    CreationDate = t.CreationDate,
+                    RevisionName = t.RevisionName,
+                    RevisionDate = t.RevisionDate,
+                    DealName = t.DealName,
+                    DealType = t.DealType,
+                    SourceListId = t.SourceListId,
+                    Side = t.Side
+                }).ToList();
+                return Ok(tradeDtos);
             }
             catch (Exception ex)
             {
@@ -71,10 +98,11 @@ namespace Findexium.Api.Controllers
 
         // POST: api/Trades
         [HttpPost]
-        public async Task<ActionResult<Trade>> CreateTrade(TradeRequest request)
+        public async Task<IActionResult> CreateTrade(TradeRequest request)
         {
             if (!ModelState.IsValid)
             {
+                _logger.LogWarning("Invalid model state for TradeRequest");
                 return BadRequest(ModelState);
             }
 
@@ -83,7 +111,7 @@ namespace Findexium.Api.Controllers
                 _logger.LogInformation("Creating a new trade");
                 var trade = request.ToTrade();
                 await _tradeService.AddTradeAsync(trade);
-                return CreatedAtAction(nameof(GetTrade), new { id = trade.TradeId }, trade);
+                return Created ();
             }
             catch (Exception ex)
             {
