@@ -11,7 +11,7 @@ namespace Findexium.Api.Models
 
         [Required]
         [StringLength(10, ErrorMessage = "S&P rating cannot be longer than 10 characters.")]
-        public string SandPrating { get; set; }
+        public string SandPRating { get; set; }
 
         [Required]
         [StringLength(10, ErrorMessage = "Fitch rating cannot be longer than 10 characters.")]
@@ -25,7 +25,7 @@ namespace Findexium.Api.Models
             return new Rating
             {
                 MoodysRating = MoodysRating,
-                SandPRating = SandPrating,
+                SandPRating = SandPRating,
                 FitchRating = FitchRating,
                 OrderNumber = OrderNumber
             };

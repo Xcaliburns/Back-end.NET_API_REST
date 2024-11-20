@@ -35,7 +35,7 @@ namespace Findexium.Infrastructure.Models
         public string Side { get; set; }
 
         public BidDto(
-           // int bidListId,
+            int bidListId,
             string account,
             string bidType,
             double? bidQuantity,
@@ -57,7 +57,7 @@ namespace Findexium.Infrastructure.Models
             string sourceListId,
             string side)
         {
-          //  BidListId = bidListId;
+           BidListId = bidListId;
             Account = account;
             BidType = bidType;
             BidQuantity = bidQuantity;
