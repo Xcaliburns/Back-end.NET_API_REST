@@ -37,7 +37,7 @@ namespace Findexium.Infrastructure.Repositories
             try
             {
                 _context.Bids.Add(new BidDto(
-                  //  bidList.BidListId,
+                    bidList.BidListId,
                     bidList.Account,
                     bidList.BidType,
                     bidList.BidQuantity,
@@ -71,11 +71,7 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task UpdateAsync(BidList bidList)
         {
-            var existingBid = await _context.Bids.FindAsync(bidList.BidListId);
-            if (existingBid == null)
-            {
-                throw new Exception("Bid not found.");
-            }
+            var existingBid = await _context.Bids.FindAsync(bidList.BidListId) ?? throw new Exception("Bid not found.");
 
             // Update properties
             existingBid.Account = bidList.Account;
@@ -105,12 +101,7 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var bidList = await _context.Bids.FindAsync(id);
-            if (bidList == null)
-            {
-                throw new Exception("Bid not found.");
-            }
-
+            var bidList = await _context.Bids.FindAsync(id) ?? throw new Exception("Bid not found.");
             _context.Bids.Remove(bidList);
             await _context.SaveChangesAsync();
         }

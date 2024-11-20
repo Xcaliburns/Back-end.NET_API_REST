@@ -67,10 +67,10 @@ namespace Findexium.Api.Models
         [Required(ErrorMessage = "Side is required.")]
         public string Side { get; set; }
 
-        [Required(ErrorMessage = "Traffic is required.")]
-        public string Traffic { get; set; }
+    //    [Required(ErrorMessage = "Traffic is required.")]
+      //  public string Traffic { get; set; }
 
-        internal BidList ToBid()
+        public BidList ToBid()
         {
             return new BidList
             {
