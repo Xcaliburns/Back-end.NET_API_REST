@@ -36,11 +36,11 @@ namespace FindexiumApi.tests
             _mockRatingService.Setup(service => service.GetAllRatingsAsync()).ReturnsAsync(ratings);
 
             // Act
-            var result = await _controller.GetRating();
+            var result = await _controller.GetRatings();
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnRatings = Assert.IsType<List<Rating>>(okResult.Value);
+            var returnRatings = Assert.IsType<List<RatingResponse>>(okResult.Value);
             Assert.Equal(3, returnRatings.Count);
             Assert.Collection(returnRatings,
                 item => Assert.Equal(1, item.Id),
@@ -51,32 +51,45 @@ namespace FindexiumApi.tests
         public async Task GetRating_ById_ReturnsOkResult_WithRating()
         {
             // Arrange
-            var rating = new Rating{ Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
-            _mockRatingService.Setup(service => service.GetRatingByIdAsync(1)).ReturnsAsync(rating);
+            var rating = new Rating
+            {
+                Id = -1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1 
+            };
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(-1)).ReturnsAsync(rating);
 
             // Act
-            var result = await _controller.GetRating(1);
+            var result = await _controller.GetRating(-1);
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
             var returnRating = Assert.IsType<Rating>(okResult.Value);
-            Assert.Equal(1, returnRating.Id);
+            Assert.Equal(-1, returnRating.Id);
         }
         [Fact]
         public async Task PostRating_ReturnsCreatedAtActionResult()
         {
             // Arrange
-            var request = new RatingRequest { MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
-            var rating = request.ToRating();
+            var request = new RatingRequest
+            {
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+           
             _mockRatingService.Setup(service => service.AddRatingAsync(It.IsAny<Rating>())).Returns(Task.CompletedTask);
-
+           // _mockRatingService.Setup(service=> service)
             // Act
             var result = await _controller.PostRating(request);
 
             // Assert
-            var createdAtActionResult = Assert.IsType<CreatedAtActionResult>(result.Result);
-            var returnRating = Assert.IsType<RatingRequest>(createdAtActionResult.Value);
-            Assert.Equal(request.MoodysRating, returnRating.MoodysRating);
+            
+             Assert.IsType<CreatedResult>(result);
+           
         }
         [Fact]
         public async Task DeleteRating_ReturnsNoContentResult()

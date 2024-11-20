@@ -11,6 +11,7 @@ using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Api.Models;
 using Microsoft.AspNetCore.Authorization;
+using Findexium.Domain.Services;
 
 
 namespace Findexium.Api.Controllers
@@ -33,7 +34,7 @@ namespace Findexium.Api.Controllers
 
         // GET: api/Ratings/5
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RatingResponse>>> GetRating()
+        public async Task<ActionResult<IEnumerable<RatingResponse>>> GetRatings()
         {
             try
             {
@@ -52,6 +53,28 @@ namespace Findexium.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error getting all ratings");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
+        }
+        // GET: api/BidLists/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Rating>> GetRating(int id)
+        {
+            try
+            {
+                _logger.LogInformation("Fetching bid with id: {Id}", id);
+                var bid = await _ratingService.GetRatingByIdAsync(id);
+                if (bid == null)
+                {
+                    _logger.LogWarning("Bid with id: {Id} not found", id);
+                    return NotFound();
+                }
+
+                return Ok(bid);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching bid with id: {Id}", id);
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }

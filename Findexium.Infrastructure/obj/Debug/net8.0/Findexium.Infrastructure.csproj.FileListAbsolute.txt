@@ -1,3 +1,4 @@
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\CoverletSourceRootsMapping_Findexium.Infrastructure
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Infrastructure.deps.json
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Infrastructure.runtimeconfig.json
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\Findexium.Infrastructure.dll
@@ -16,4 +17,3 @@ C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructu
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.pdb
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\Findexium.Infrastructure.genruntimeconfig.cache
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\obj\Debug\net8.0\ref\Findexium.Infrastructure.dll
-C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\bin\Debug\net8.0\CoverletSourceRootsMapping_Findexium.Infrastructure

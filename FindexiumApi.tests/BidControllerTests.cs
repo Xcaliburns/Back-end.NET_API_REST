@@ -74,7 +74,30 @@ namespace FindexiumApi.tests
         public async Task GetBid_ById_ReturnsOkResult_WithBidResponse()
         {
             // Arrange
-            var bid = new BidList { BidListId = -1, Account = "Account1", BidType = "Type1", BidQuantity = 1, AskQuantity = 1, Bid = 1.0, Ask = 1.0, Benchmark = "Benchmark1", BidListDate = new DateTime(2021, 1, 1), Commentary = "comment1", BidSecurity = "Secure1", BidStatus = "status1", Trader = "Trader1", Book = "Book1", CreationName = "name1", CreationDate = new DateTime(2021, 1, 1), RevisionName = "name1", RevisionDate = new DateTime(2022, 1, 1), DealName = "name1", DealType = "type1", SourceListId = "Id1", Side = "Side1" };
+            var bid = new BidList
+            { 
+                BidListId = -1,
+                Account = "Account1",
+                BidType = "Type1",
+                BidQuantity = 1,
+                AskQuantity = 1,
+                Bid = 1.0,
+                Ask = 1.0,
+                Benchmark = "Benchmark1",
+                BidListDate = new DateTime(2021, 1, 1),
+                Commentary = "comment1",
+                BidSecurity = "Secure1", BidStatus = "status1",
+                Trader = "Trader1",
+                Book = "Book1",
+                CreationName = "name1",
+                CreationDate = new DateTime(2021, 1, 1),
+                RevisionName = "name1",
+                RevisionDate = new DateTime(2022, 1, 1),
+                DealName = "name1",
+                DealType = "type1",
+                SourceListId = "Id1",
+                Side = "Side1"
+            };
 
             _mockBidService.Setup(service => service.GetByIdAsync(-1)).ReturnsAsync(bid);
 
@@ -160,15 +183,13 @@ namespace FindexiumApi.tests
           
 
             _mockBidService.Setup(service => service.AddAsync(It.IsAny<BidList>())).Returns(Task.CompletedTask);
-            _mockBidService.Setup(service => service.ExistsAsync(It.IsAny<int>())).ReturnsAsync(false);
+           // _mockBidService.Setup(service => service.ExistsAsync(It.IsAny<int>())).ReturnsAsync(false);
 
             // Act
             var result = await _controller.PostBidList(bidRequest);
 
             // Assert
-         
-           // var returnValue = Assert.IsType<BidResponse>(createdAtActionResult.Value);
-            //Assert.Equal(bidRequest.Account, bidRequest.Account);
+                    
             Assert.IsType<CreatedResult>(result);
         }
 
