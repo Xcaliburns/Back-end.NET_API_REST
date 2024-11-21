@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.288446215139442" branch-rate="0.050561797752809" lines-covered="1086" lines-valid="3765" branches-covered="36" branches-valid="712" complexity="1288" version="0" timestamp="1732197922">
+<coverage line-rate="0.291467938526762" branch-rate="0.050561797752809" lines-covered="1100" lines-valid="3774" branches-covered="36" branches-valid="712" complexity="1289" version="0" timestamp="1732209111">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Api" line-rate="0.135389888603256" branch-rate="0.0333333333333333" complexity="965">
+    <package name="Findexium.Api" line-rate="0.137103684661525" branch-rate="0.0333333333333333" complexity="965">
       <classes>
         <class name="AspNetCoreGeneratedDocument.Areas_Identity_Pages__ViewStart" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\_ViewStart.cshtml" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -4504,15 +4504,15 @@
             <line number="186" hits="3" branch="false" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.CurvePointsController" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\CurvePointsController.cs" line-rate="0.377777777777778" branch-rate="0.2" complexity="12">
+        <class name="Findexium.Api.Controllers.CurvePointsController" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\CurvePointsController.cs" line-rate="0.422222222222222" branch-rate="0.2" complexity="12">
           <methods>
             <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="4" branch="false" />
-                <line number="25" hits="4" branch="false" />
-                <line number="26" hits="4" branch="false" />
-                <line number="27" hits="4" branch="false" />
-                <line number="28" hits="4" branch="false" />
+                <line number="24" hits="5" branch="false" />
+                <line number="25" hits="5" branch="false" />
+                <line number="26" hits="5" branch="false" />
+                <line number="27" hits="5" branch="false" />
+                <line number="28" hits="5" branch="false" />
               </lines>
             </method>
             <method name="DeleteCurvePoint" signature="()" line-rate="0" branch-rate="0" complexity="2">
@@ -4534,22 +4534,22 @@
                 <line number="163" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="GetCurvePoint" signature="()" line-rate="0.714285714285714" branch-rate="1" complexity="2">
+            <method name="GetCurvePoint" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="59" hits="2" branch="false" />
-                <line number="61" hits="2" branch="false" />
-                <line number="62" hits="2" branch="false" />
-                <line number="63" hits="2" branch="false" />
+                <line number="59" hits="3" branch="false" />
+                <line number="61" hits="3" branch="false" />
+                <line number="62" hits="3" branch="false" />
+                <line number="63" hits="3" branch="false" />
                 <line number="65" hits="2" branch="true" condition-coverage="100% (2/2)" />
                 <line number="66" hits="1" branch="false" />
                 <line number="67" hits="1" branch="false" />
                 <line number="68" hits="1" branch="false" />
                 <line number="71" hits="1" branch="false" />
-                <line number="73" hits="0" branch="false" />
-                <line number="74" hits="0" branch="false" />
-                <line number="75" hits="0" branch="false" />
-                <line number="76" hits="0" branch="false" />
-                <line number="78" hits="2" branch="false" />
+                <line number="73" hits="1" branch="false" />
+                <line number="74" hits="1" branch="false" />
+                <line number="75" hits="1" branch="false" />
+                <line number="76" hits="1" branch="false" />
+                <line number="78" hits="3" branch="false" />
               </lines>
             </method>
             <method name="GetCurvePoints" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -4622,11 +4622,11 @@
             </method>
           </methods>
           <lines>
-            <line number="24" hits="4" branch="false" />
-            <line number="25" hits="4" branch="false" />
-            <line number="26" hits="4" branch="false" />
-            <line number="27" hits="4" branch="false" />
-            <line number="28" hits="4" branch="false" />
+            <line number="24" hits="5" branch="false" />
+            <line number="25" hits="5" branch="false" />
+            <line number="26" hits="5" branch="false" />
+            <line number="27" hits="5" branch="false" />
+            <line number="28" hits="5" branch="false" />
             <line number="33" hits="2" branch="false" />
             <line number="35" hits="2" branch="false" />
             <line number="36" hits="2" branch="false" />
@@ -4646,20 +4646,20 @@
             <line number="51" hits="1" branch="false" />
             <line number="52" hits="1" branch="false" />
             <line number="54" hits="2" branch="false" />
-            <line number="59" hits="2" branch="false" />
-            <line number="61" hits="2" branch="false" />
-            <line number="62" hits="2" branch="false" />
-            <line number="63" hits="2" branch="false" />
+            <line number="59" hits="3" branch="false" />
+            <line number="61" hits="3" branch="false" />
+            <line number="62" hits="3" branch="false" />
+            <line number="63" hits="3" branch="false" />
             <line number="65" hits="2" branch="true" condition-coverage="100% (2/2)" />
             <line number="66" hits="1" branch="false" />
             <line number="67" hits="1" branch="false" />
             <line number="68" hits="1" branch="false" />
             <line number="71" hits="1" branch="false" />
-            <line number="73" hits="0" branch="false" />
-            <line number="74" hits="0" branch="false" />
-            <line number="75" hits="0" branch="false" />
-            <line number="76" hits="0" branch="false" />
-            <line number="78" hits="2" branch="false" />
+            <line number="73" hits="1" branch="false" />
+            <line number="74" hits="1" branch="false" />
+            <line number="75" hits="1" branch="false" />
+            <line number="76" hits="1" branch="false" />
+            <line number="78" hits="3" branch="false" />
             <line number="83" hits="0" branch="false" />
             <line number="84" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="85" hits="0" branch="false" />
@@ -7164,7 +7164,7 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="11" branch="false" />
+                <line number="9" hits="12" branch="false" />
               </lines>
             </method>
             <method name="get_CurveId" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -7194,7 +7194,7 @@
             </method>
           </methods>
           <lines>
-            <line number="9" hits="11" branch="false" />
+            <line number="9" hits="12" branch="false" />
             <line number="10" hits="4" branch="false" />
             <line number="11" hits="4" branch="false" />
             <line number="12" hits="4" branch="false" />
@@ -9660,7 +9660,7 @@
         </class>
       </classes>
     </package>
-    <package name="FindexiumApi.tests" line-rate="0.992" branch-rate="1" complexity="49">
+    <package name="FindexiumApi.tests" line-rate="0.994106090373281" branch-rate="1" complexity="50">
       <classes>
         <class name="AutoGeneratedProgram" filename="C:\Users\David Abruzzo\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -10224,16 +10224,29 @@
             <line number="418" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="FindexiumApi.tests.CurvePointsTests" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="0.981818181818182" branch-rate="1" complexity="5">
+        <class name="FindexiumApi.tests.CurvePointsTests" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="4" branch="false" />
-                <line number="23" hits="4" branch="false" />
-                <line number="25" hits="4" branch="false" />
-                <line number="26" hits="4" branch="false" />
-                <line number="27" hits="4" branch="false" />
-                <line number="28" hits="4" branch="false" />
+                <line number="22" hits="5" branch="false" />
+                <line number="23" hits="5" branch="false" />
+                <line number="25" hits="5" branch="false" />
+                <line number="26" hits="5" branch="false" />
+                <line number="27" hits="5" branch="false" />
+                <line number="28" hits="5" branch="false" />
+              </lines>
+            </method>
+            <method name="GetCurvePoint_ReturnsInternalServerError" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="113" hits="1" branch="false" />
+                <line number="115" hits="1" branch="false" />
+                <line number="116" hits="1" branch="false" />
+                <line number="117" hits="1" branch="false" />
+                <line number="120" hits="1" branch="false" />
+                <line number="123" hits="1" branch="false" />
+                <line number="124" hits="1" branch="false" />
+                <line number="125" hits="1" branch="false" />
+                <line number="126" hits="1" branch="false" />
               </lines>
             </method>
             <method name="GetCurvePoint_ReturnsNotFoundWhenCurvePointIsNull" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -10247,7 +10260,7 @@
                 <line number="109" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="GetCurvePoint_ReturnsOkResult" signature="()" line-rate="0.9375" branch-rate="1" complexity="1">
+            <method name="GetCurvePoint_ReturnsOkResult" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="75" hits="1" branch="false" />
                 <line number="77" hits="1" branch="false" />
@@ -10264,7 +10277,7 @@
                 <line number="92" hits="1" branch="false" />
                 <line number="93" hits="1" branch="false" />
                 <line number="94" hits="1" branch="false" />
-                <line number="95" hits="0" branch="false" />
+                <line number="95" hits="1" branch="false" />
               </lines>
             </method>
             <method name="GetCurvePoints_ReturnsInternalServerError" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -10303,12 +10316,12 @@
             </method>
           </methods>
           <lines>
-            <line number="22" hits="4" branch="false" />
-            <line number="23" hits="4" branch="false" />
-            <line number="25" hits="4" branch="false" />
-            <line number="26" hits="4" branch="false" />
-            <line number="27" hits="4" branch="false" />
-            <line number="28" hits="4" branch="false" />
+            <line number="22" hits="5" branch="false" />
+            <line number="23" hits="5" branch="false" />
+            <line number="25" hits="5" branch="false" />
+            <line number="26" hits="5" branch="false" />
+            <line number="27" hits="5" branch="false" />
+            <line number="28" hits="5" branch="false" />
             <line number="32" hits="1" branch="false" />
             <line number="34" hits="1" branch="false" />
             <line number="35" hits="1" branch="false" />
@@ -10350,7 +10363,7 @@
             <line number="92" hits="1" branch="false" />
             <line number="93" hits="1" branch="false" />
             <line number="94" hits="1" branch="false" />
-            <line number="95" hits="0" branch="false" />
+            <line number="95" hits="1" branch="false" />
             <line number="98" hits="1" branch="false" />
             <line number="100" hits="1" branch="false" />
             <line number="101" hits="1" branch="false" />
@@ -10358,6 +10371,15 @@
             <line number="105" hits="1" branch="false" />
             <line number="108" hits="1" branch="false" />
             <line number="109" hits="1" branch="false" />
+            <line number="113" hits="1" branch="false" />
+            <line number="115" hits="1" branch="false" />
+            <line number="116" hits="1" branch="false" />
+            <line number="117" hits="1" branch="false" />
+            <line number="120" hits="1" branch="false" />
+            <line number="123" hits="1" branch="false" />
+            <line number="124" hits="1" branch="false" />
+            <line number="125" hits="1" branch="false" />
+            <line number="126" hits="1" branch="false" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.Helpers.LogEntry" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\Helpers\TestLogger.cs" line-rate="1" branch-rate="1" complexity="3">

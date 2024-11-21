@@ -6,6 +6,7 @@ using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
@@ -125,6 +126,111 @@ namespace FindexiumApi.tests
             Assert.Equal("Internal server error", actionResult.Value);
         }
 
+      
+
+        [Fact]
+        public async Task PutCurvePoint_ValidIdAndCurvePoint_ReturnsNoContent()
+        {
+            // Arrange
+            var curvePoint = new CurvePoint
+            { Id = 1,
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 1.0,
+                CreationDate = DateTime.Now
+            };
+            _mockCurvePointService.Setup(service => service.UpdateAsync(curvePoint.Id, curvePoint))
+                .Returns(Task.CompletedTask);
+           
+
+            // Act
+            var result = await _controller.PutCurvePoint(curvePoint.Id, curvePoint);
+
+            // Assert
+            var noContentResult = Assert.IsType<NoContentResult>(result);
+            
+           
+        }
+
+        [Fact]
+        public async Task PutCurvePoint_ReturnsBadRequestWhenIdIsNotEqual()
+        {
+            //Arrange
+            var curvePointId = 1;
+            var curvePoint = new CurvePoint
+            {
+                Id = 2
+            };
+
+            //Act
+            var result = await _controller.PutCurvePoint(curvePointId, curvePoint);
+
+            //Assert
+            Assert.IsType<BadRequestResult>(result);
+        }
+
+        [Fact]
+        public async Task PutCurvePoint_DbUpdateConcurrencyException_CurvePointNotFound_ReturnsNotFound()
+        {
+            // Arrange
+            var curvePoint = new CurvePoint
+            { 
+                Id = 1,
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 1.0,
+                CreationDate = DateTime.Now
+            };
+            _mockCurvePointService.Setup(service => service.UpdateAsync(curvePoint.Id, curvePoint))
+                .ThrowsAsync(new DbUpdateConcurrencyException());
+            
+
+            // Act
+            var result = await _controller.PutCurvePoint(curvePoint.Id, curvePoint);
+
+            // Assert
+            var notFoundResult = Assert.IsType<NotFoundResult>(result);
+            
+        }
+
+        [Fact]
+        public async Task PutCurvePoint_DbUpdateConcurrencyException_CurvePointExists_ThrowsException()
+        {
+            // Arrange
+            var curvePoint = new CurvePoint { Id = 1, CurveId = 1, AsOfDate = DateTime.Now, Term = 1.0, CurvePointValue = 1.0, CreationDate = DateTime.Now };
+            _mockCurvePointService.Setup(service => service.UpdateAsync(curvePoint.Id, curvePoint)).ThrowsAsync(new DbUpdateConcurrencyException());
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(curvePoint.Id)).ReturnsAsync(curvePoint);
+
+            // Act & Assert
+            await Assert.ThrowsAsync<DbUpdateConcurrencyException>(() => _controller.PutCurvePoint(curvePoint.Id, curvePoint));
+        }
+
+        [Fact]
+        public async Task PutCurvePoint_GeneralException_ReturnsInternalServerError()
+        {
+            // Arrange
+            var curvePoint = new CurvePoint
+            {
+                Id = 1,
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 1.0,
+                CreationDate = DateTime.Now
+            };
+            _mockCurvePointService.Setup(service => service.UpdateAsync(curvePoint.Id, curvePoint))
+                .ThrowsAsync(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.PutCurvePoint(curvePoint.Id, curvePoint);
+
+            // Assert
+            var statusCodeResult = Assert.IsType<ObjectResult>(result);           
+            Assert.Equal("Internal server error", statusCodeResult.Value);
+           
+        }
 
 
     }

@@ -246,7 +246,8 @@ namespace FindexiumApi.tests
                 FitchRating = "A",
                 OrderNumber = 1
             };
-            _mockRatingService.Setup(service => service.UpdateRatingAsync( rating)).Returns(Task.CompletedTask);
+            _mockRatingService.Setup(service => service.UpdateRatingAsync( rating))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _controller.PutRating(1, rating);
