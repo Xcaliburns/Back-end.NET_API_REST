@@ -32,13 +32,9 @@ namespace Findexium.Domain.Services
             await _ratingRepository.AddAsync(rating);
         }
 
-        public async Task UpdateRatingAsync(int id, Rating rating)
+        public async Task UpdateRatingAsync( Rating rating)
         {
-            if (id != rating.Id)
-            {
-                throw new ArgumentException("ID mismatch");
-            }
-
+           
             await _ratingRepository.UpdateAsync(rating);
         }
 

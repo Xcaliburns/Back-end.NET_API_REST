@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.0872" branch-rate="0.1041" version="1.9" timestamp="1732114646" lines-covered="73" lines-valid="837" branches-covered="5" branches-valid="48">
+<coverage line-rate="0.0863" branch-rate="0.08689999999999999" version="1.9" timestamp="1732180358" lines-covered="72" lines-valid="834" branches-covered="4" branches-valid="46">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Domain" line-rate="0.11460000000000001" branch-rate="0.0625" complexity="115">
+    <package name="Findexium.Domain" line-rate="0.1116" branch-rate="0" complexity="114">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -270,16 +270,16 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="46" hits="1" branch="False" />
-                <line number="47" hits="1" branch="False" />
-                <line number="48" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="46" hits="1" branch="False" />
-            <line number="47" hits="1" branch="False" />
-            <line number="48" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.RatingService/&lt;GetAllRatingsAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RatingService.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -314,34 +314,20 @@
             <line number="28" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.RatingService/&lt;UpdateRatingAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RatingService.cs" line-rate="0.6666" branch-rate="0.5" complexity="2">
+        <class name="Findexium.Domain.Services.RatingService/&lt;UpdateRatingAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RatingService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0.6666" branch-rate="0.5" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="36" hits="1" branch="False" />
-                <line number="37" hits="1" branch="True" condition-coverage="50% (1/2)">
-                  <conditions>
-                    <condition number="39" type="jump" coverage="50%" />
-                  </conditions>
-                </line>
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="42" hits="1" branch="False" />
-                <line number="43" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="36" hits="1" branch="False" />
-            <line number="37" hits="1" branch="True" condition-coverage="50% (1/2)">
-              <conditions>
-                <condition number="39" type="jump" coverage="50%" />
-              </conditions>
-            </line>
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="42" hits="1" branch="False" />
-            <line number="43" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.RuleNameService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -968,7 +954,7 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="11" branch="False" />
+                <line number="8" hits="10" branch="False" />
               </lines>
             </method>
             <method name="get_MoodysRating" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -993,7 +979,7 @@
             </method>
           </methods>
           <lines>
-            <line number="8" hits="11" branch="False" />
+            <line number="8" hits="10" branch="False" />
             <line number="9" hits="7" branch="False" />
             <line number="10" hits="6" branch="False" />
             <line number="11" hits="6" branch="False" />
@@ -3479,7 +3465,7 @@
                 <line number="83" hits="1" branch="False" />
                 <line number="86" hits="1" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="573" type="jump" coverage="100%" />
+                    <condition number="572" type="jump" coverage="100%" />
                   </conditions>
                 </line>
                 <line number="87" hits="1" branch="False" />
@@ -3494,7 +3480,7 @@
             <line number="83" hits="1" branch="False" />
             <line number="86" hits="1" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="573" type="jump" coverage="100%" />
+                <condition number="572" type="jump" coverage="100%" />
               </conditions>
             </line>
             <line number="87" hits="1" branch="False" />

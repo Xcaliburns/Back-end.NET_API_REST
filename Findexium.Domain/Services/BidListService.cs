@@ -32,9 +32,9 @@ namespace Findexium.Domain.Services
             await _bidRepository.AddAsync(bidList);
         }
 
-        public async Task UpdateAsync(BidList bidList)
+        public async Task UpdateAsync( BidList bidList)
         {
-            await _bidRepository.UpdateAsync(bidList);
+          await _bidRepository.UpdateAsync(bidList);
         }
 
         public async Task DeleteAsync(int id)

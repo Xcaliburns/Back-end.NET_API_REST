@@ -80,7 +80,7 @@ namespace FindexiumDomain.tests
             _mockRatingRepository.Setup(repo => repo.UpdateAsync(rating)).Returns(Task.CompletedTask);
 
             // Act
-            await _ratingServices.UpdateRatingAsync(1, rating);
+            await _ratingServices.UpdateRatingAsync(rating);
 
             // Assert
             _mockRatingRepository.Verify(repo => repo.UpdateAsync(rating), Times.Once);
