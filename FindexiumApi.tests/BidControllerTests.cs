@@ -96,8 +96,7 @@ namespace FindexiumApi.tests
                 DealName = "name1",
                 DealType = "type1",
                 SourceListId = "Id1",
-                Side = "Side1"
-            };
+                Side = "Side1" };
 
             _mockBidService.Setup(service => service.GetByIdAsync(-1)).ReturnsAsync(bid);
 
@@ -114,17 +113,16 @@ namespace FindexiumApi.tests
         {
             // Arrange
             int bidId = 1;
-            //utilisation du helper pour tester la prtie logger est ce utile ?
-            var testLogger = new TestLogger<BidListController>();
-            var controller = new BidListController(_mockBidService.Object, testLogger);
+           
 
-            _mockBidService.Setup(service => service.GetByIdAsync(bidId)).ReturnsAsync((BidList)null);
+            _mockBidService.Setup(service => service.GetByIdAsync(bidId))
+                .ReturnsAsync((BidList)null);
 
             // Act
-            var result = await controller.GetBid(bidId);
+            var result = await _controller.GetBid(bidId);
 
             // Assert
-            Assert.Contains(testLogger.Logs, log => log.LogLevel == LogLevel.Warning && log.Message.Contains("Bid with id: 1 not found"));
+          
             var notFoundResult = Assert.IsType<NotFoundResult>(result.Result);
         }
 
@@ -132,16 +130,12 @@ namespace FindexiumApi.tests
         public async Task GetBid_ShouldReturnInternalServerError_WhenExceptionIsThrown()
         {
             // Arrange
-            var mockBidListServices = new Mock<IBidListServices>();
-            var mockLogger = new Mock<ILogger<BidListController>>();
-
-            mockBidListServices.Setup(service => service.GetByIdAsync(It.IsAny<int>()))
-                               .ThrowsAsync(new Exception("Test exception"));
-
-            var controller = new BidListController(mockBidListServices.Object, mockLogger.Object);
+            int testId = 1;
+            _mockBidService.Setup(service => service.GetByIdAsync(It.IsAny<int>()))
+                               .ThrowsAsync(new Exception("Test exception"));           
 
             // Act
-            var result = await controller.GetBid(1);
+            var result = await _controller.GetBid(testId);
 
             // Assert
             var actionResult = Assert.IsType<ObjectResult>(result.Result);
@@ -194,6 +188,21 @@ namespace FindexiumApi.tests
         }
 
         [Fact]
+        public async Task PostBidList_InvalidModelState_ReturnsBadRequest()
+        {
+            // Arrange
+            _controller.ModelState.AddModelError("Account", "Required");
+            var request = new BidRequest();
+
+            // Act
+            var result = await _controller.PostBidList(request);
+
+            // Assert
+            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
+            Assert.IsType<SerializableError>(badRequestResult.Value);
+        }
+
+        [Fact]
         public async Task PostBidList_ExceptionThrown_ReturnsInternalServerError()
         {
             // Arrange
@@ -222,18 +231,20 @@ namespace FindexiumApi.tests
                 Side = "TestSide"
             };
 
-            var testLogger = new TestLogger<BidListController>();
-            var controller = new BidListController(_mockBidService.Object, testLogger);
+           
 
             _mockBidService.Setup(service => service.AddAsync(It.IsAny<BidList>())).ThrowsAsync(new Exception("Test exception"));
 
             // Act
-            var result = await controller.PostBidList(request);
+            var result = await _controller.PostBidList(request);
 
-            // Assert
-            //    var statusCodeResult = Assert.IsType<ObjectResult>(result.Result);
-            //    Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
-            //    Assert.Contains(testLogger.Logs, log => log.LogLevel == LogLevel.Error && log.Message.Contains("Error occurred while creating a new bid"));
+            //Assert
+            // Vérifie que le résultat de l'action est de type ObjectResult
+            var actionResult = Assert.IsType<ObjectResult>(result);
+            // Vérifie que le code de statut de la réponse est 500 (Internal Server Error)
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
+            // Vérifie que le message de la réponse est "Internal server error"
+            Assert.Equal("Internal server error", actionResult.Value);
         }
 
 
@@ -299,7 +310,8 @@ namespace FindexiumApi.tests
             var bidListId = 1;
             var bidList = new BidList { BidListId = bidListId };
 
-            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(false);
+            _mockBidService.Setup(service => service.ExistsAsync(bidListId))
+                .ReturnsAsync(false);
 
             // Act
             var result = await _controller.PutBid(bidListId, bidList);

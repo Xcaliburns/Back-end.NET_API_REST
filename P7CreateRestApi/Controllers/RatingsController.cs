@@ -32,7 +32,7 @@ namespace Findexium.Api.Controllers
 
        
 
-        // GET: api/Ratings/5
+        // GET: api/Ratings
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RatingResponse>>> GetRatings()
         {
@@ -56,7 +56,7 @@ namespace Findexium.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
-        // GET: api/BidLists/5
+        // GET: api/Ratings/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Rating>> GetRating(int id)
         {
@@ -83,11 +83,15 @@ namespace Findexium.Api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRating(int id, Rating rating)
         {
+            if (id != rating.Id)
+            {
+                return BadRequest();
+            }
             try
             {
                 _logger.LogInformation("Updating rating with id {Id}", id);
-                await _ratingService.UpdateRatingAsync(id, rating);
-                return NoContent();
+                await _ratingService.UpdateRatingAsync( rating);
+               
             }
             catch (ArgumentException ex)
             {
@@ -105,7 +109,9 @@ namespace Findexium.Api.Controllers
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
                 }
+              
             }
+            return NoContent();
         }
 
         // POST: api/Ratings
@@ -123,7 +129,8 @@ namespace Findexium.Api.Controllers
                 _logger.LogInformation("Creating a new rating");
                 await _ratingService.AddRatingAsync(rating);
 
-                return Created();
+               return Created();
+               
             }
             catch (Exception ex)
             {

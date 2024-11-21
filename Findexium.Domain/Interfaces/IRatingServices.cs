@@ -13,7 +13,7 @@ namespace Findexium.Domain.Interfaces
         Task<IEnumerable<Rating>> GetAllRatingsAsync();
         Task<Rating> GetRatingByIdAsync(int id);
         Task AddRatingAsync(Rating rating);
-        Task UpdateRatingAsync(int id, Rating rating);
+        Task UpdateRatingAsync( Rating rating);
         Task DeleteRatingAsync(int id);
     }
 }

@@ -4,6 +4,7 @@ using Findexium.Api.Controllers;
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -47,6 +48,25 @@ namespace FindexiumApi.tests
                 item => Assert.Equal(2, item.Id),
                 item => Assert.Equal(3, item.Id));
         }
+
+        [Fact]
+        public async Task GetRatings_ReturnsInternalServerError_OnException()
+        {
+            // Arrange
+            var mockRatingServices = new Mock<IRatingServices>();
+
+            _mockRatingService.Setup(service => service.GetAllRatingsAsync())
+                .ThrowsAsync(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.GetRatings();
+
+            // Assert
+            var actionResult = Assert.IsType<ObjectResult>(result.Result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
+            Assert.Equal("Internal server error", actionResult.Value);
+        }
+
         [Fact]
         public async Task GetRating_ById_ReturnsOkResult_WithRating()
         {
@@ -57,7 +77,7 @@ namespace FindexiumApi.tests
                 MoodysRating = "A1",
                 SandPRating = "A+",
                 FitchRating = "A",
-                OrderNumber = 1 
+                OrderNumber = 1
             };
             _mockRatingService.Setup(service => service.GetRatingByIdAsync(-1)).ReturnsAsync(rating);
 
@@ -70,6 +90,38 @@ namespace FindexiumApi.tests
             Assert.Equal(-1, returnRating.Id);
         }
         [Fact]
+        public async Task GetRating_ReturnsNotFound_WhenRatingIsNull()
+        {
+            // Arrange
+            int testId = 1;
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(testId))
+                .ReturnsAsync((Rating)null);
+
+            // Act
+            var result = await _controller.GetRating(testId);
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result.Result);
+        }
+
+        [Fact]
+        public async Task GetRating_ReturnsInternalServerError_OnException()
+        {
+            // Arrange
+            int testId = 1;
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(testId))
+                .ThrowsAsync(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.GetRating(testId);
+
+            // Assert
+            var actionResult = Assert.IsType<ObjectResult>(result.Result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
+            Assert.Equal("Internal server error", actionResult.Value);
+        }
+
+        [Fact]
         public async Task PostRating_ReturnsCreatedAtActionResult()
         {
             // Arrange
@@ -80,17 +132,62 @@ namespace FindexiumApi.tests
                 FitchRating = "A",
                 OrderNumber = 1
             };
-           
+
             _mockRatingService.Setup(service => service.AddRatingAsync(It.IsAny<Rating>())).Returns(Task.CompletedTask);
-           // _mockRatingService.Setup(service=> service)
+            // _mockRatingService.Setup(service=> service)
             // Act
             var result = await _controller.PostRating(request);
 
             // Assert
-            
-             Assert.IsType<CreatedResult>(result);
-           
+
+            Assert.IsType<CreatedResult>(result);
+
         }
+        [Fact]
+        public async Task PostRating_ReturnsBadRequestResult_WhenRatingIsNull()
+        {
+            // Arrange
+            _controller.ModelState.AddModelError("MoodysRating", "Required");
+            var request = new RatingRequest
+            {
+                MoodysRating = null,
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+
+            // Act
+            var result = await _controller.PostRating(request);
+
+            // Assert
+            Assert.IsType<BadRequestObjectResult>(result);
+        }
+
+        [Fact]
+        public async Task PostRating_ReturnsInternalServerError_OnException()
+        {
+            // Arrange
+            var request = new RatingRequest
+            {
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+
+            _mockRatingService.Setup(service => service.AddRatingAsync(It.IsAny<Rating>()))
+                .ThrowsAsync(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.PostRating(request);
+
+            // Assert
+            var actionResult = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
+            Assert.Equal("Internal server error", actionResult.Value);
+        }
+
+
         [Fact]
         public async Task DeleteRating_ReturnsNoContentResult()
         {
@@ -100,17 +197,56 @@ namespace FindexiumApi.tests
             _mockRatingService.Setup(service => service.DeleteRatingAsync(1)).Returns(Task.CompletedTask);
 
             // Act
-            var result = await _controller.DeleteRating(1);
+            var result = await _controller.DeleteRating(rating.Id);
 
             // Assert
             Assert.IsType<NoContentResult>(result);
         }
+
+        [Fact]
+        public async Task DeleteRating_ReturnsNotFound_WhenRatingIsNull()
+        {
+            // Arrange
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(1)).ReturnsAsync((Rating)null);
+
+            // Act
+            var result = await _controller.DeleteRating(1);
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
+        public async Task DeleteRating_ReturnsInternalServerError_OnException()
+        {
+            // Arrange
+            var rating = new Rating { Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(1)).ReturnsAsync(rating);
+            _mockRatingService.Setup(service => service.DeleteRatingAsync(1))
+                .ThrowsAsync(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.DeleteRating(1);
+
+            // Assert
+            var actionResult = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
+            Assert.Equal("Internal server error", actionResult.Value);
+        }
+
         [Fact]
         public async Task PutRating_ReturnsNoContentResult()
         {
             // Arrange
-            var rating = new Rating { Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
-            _mockRatingService.Setup(service => service.UpdateRatingAsync(1, rating)).Returns(Task.CompletedTask);
+            var rating = new Rating
+            {
+                Id = 1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+            _mockRatingService.Setup(service => service.UpdateRatingAsync( rating)).Returns(Task.CompletedTask);
 
             // Act
             var result = await _controller.PutRating(1, rating);
@@ -118,5 +254,95 @@ namespace FindexiumApi.tests
             // Assert
             Assert.IsType<NoContentResult>(result);
         }
-    }
+        [Fact]
+        public async Task PutRating_ReturnsBadRequestResult_WhenIdMismatch()
+        {
+            // Arrange
+            var ratingId = 1;
+            var rating = new Rating { Id = 2 };
+
+            // Act
+            var result = await _controller.PutRating(ratingId, rating);
+
+            // Assert
+            Assert.IsType<BadRequestResult>(result);
+        }
+
+        [Fact]
+        public async Task PutRating_ShouldReturnBadRequest_WhenArgumentExceptionIsThrown()
+        {
+            // Arrange
+            var rating = new Rating
+            {
+                Id = 1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+
+            _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
+                .ThrowsAsync(new ArgumentException("Invalid argument"));
+
+            // Act
+            var result = await _controller.PutRating(rating.Id, rating);
+
+            // Assert
+            var actionResult = Assert.IsType<BadRequestObjectResult>(result);
+            Assert.Equal("Invalid argument", actionResult.Value);
+        }
+        [Fact]
+        public async Task PutRating_ShouldReturnNotFound_WhenExceptionIsThrownAndRatingDoesNotExist()
+        {
+            // Arrange
+            var rating = new Rating
+            {
+                Id = 1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+
+            _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
+                .ThrowsAsync(new Exception("Some error"));
+
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(It.IsAny<int>()))
+                .ReturnsAsync((Rating)null);
+
+            // Act
+            var result = await _controller.PutRating(rating.Id, rating);
+
+            // Assert
+            var actionResult = Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
+        public async Task PutRating_ShouldReturnInternalServerError_WhenExceptionIsThrownAndRatingExists()
+        {
+            // Arrange
+            var rating = new Rating
+            {
+                Id = 1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+
+            _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
+                .ThrowsAsync(new Exception("Some error"));
+
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(It.IsAny<int>()))
+                .ReturnsAsync(rating);
+
+            // Act
+            var result = await _controller.PutRating(rating.Id, rating);
+
+            // Assert
+            var actionResult = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
+            Assert.Equal("Internal server error", actionResult.Value);
+        }
+    } 
 }
