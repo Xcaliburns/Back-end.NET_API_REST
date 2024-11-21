@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.22579999999999997" branch-rate="0.031200000000000002" version="1.9" timestamp="1732184282" lines-covered="812" lines-valid="3595" branches-covered="22" branches-valid="704">
+<coverage line-rate="0.23670000000000002" branch-rate="0.034" version="1.9" timestamp="1732194752" lines-covered="859" lines-valid="3628" branches-covered="24" branches-valid="704">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Api" line-rate="0.1311" branch-rate="0.0302" complexity="974">
+    <package name="Findexium.Api" line-rate="0.1371" branch-rate="0.0332" complexity="974">
       <classes>
         <class name="Program/&lt;&lt;Main&gt;$&gt;d__0" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Program.cs" line-rate="0" branch-rate="0" complexity="8">
           <methods>
@@ -3738,20 +3738,20 @@
           <methods>
             <method name=".ctor" signature="(Findexium.Domain.Interfaces.ICurvePointServices,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Controllers.CurvePointsController&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="2" branch="False" />
-                <line number="25" hits="2" branch="False" />
-                <line number="26" hits="2" branch="False" />
-                <line number="27" hits="2" branch="False" />
-                <line number="28" hits="2" branch="False" />
+                <line number="24" hits="5" branch="False" />
+                <line number="25" hits="5" branch="False" />
+                <line number="26" hits="5" branch="False" />
+                <line number="27" hits="5" branch="False" />
+                <line number="28" hits="5" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="24" hits="2" branch="False" />
-            <line number="25" hits="2" branch="False" />
-            <line number="26" hits="2" branch="False" />
-            <line number="27" hits="2" branch="False" />
-            <line number="28" hits="2" branch="False" />
+            <line number="24" hits="5" branch="False" />
+            <line number="25" hits="5" branch="False" />
+            <line number="26" hits="5" branch="False" />
+            <line number="27" hits="5" branch="False" />
+            <line number="28" hits="5" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.CurvePointsController/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\CurvePointsController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -3830,50 +3830,50 @@
             <line number="163" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.CurvePointsController/&lt;GetCurvePoint&gt;d__4" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\CurvePointsController.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Api.Controllers.CurvePointsController/&lt;GetCurvePoint&gt;d__4" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\CurvePointsController.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="59" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="62" hits="0" branch="False" />
-                <line number="63" hits="0" branch="False" />
-                <line number="65" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="59" hits="3" branch="False" />
+                <line number="61" hits="3" branch="False" />
+                <line number="62" hits="3" branch="False" />
+                <line number="63" hits="3" branch="False" />
+                <line number="65" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="215" type="jump" coverage="0%" />
+                    <condition number="215" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="66" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="68" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-                <line number="74" hits="0" branch="False" />
-                <line number="75" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
-                <line number="78" hits="0" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="78" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="59" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="62" hits="0" branch="False" />
-            <line number="63" hits="0" branch="False" />
-            <line number="65" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="59" hits="3" branch="False" />
+            <line number="61" hits="3" branch="False" />
+            <line number="62" hits="3" branch="False" />
+            <line number="63" hits="3" branch="False" />
+            <line number="65" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="215" type="jump" coverage="0%" />
+                <condition number="215" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="66" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-            <line number="74" hits="0" branch="False" />
-            <line number="75" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="78" hits="0" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="78" hits="3" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.CurvePointsController/&lt;GetCurvePoints&gt;d__3" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\CurvePointsController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -10804,49 +10804,49 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="6" branch="False" />
+                <line number="9" hits="12" branch="False" />
               </lines>
             </method>
             <method name="get_CurveId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="3" branch="False" />
+                <line number="10" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_AsOfDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="3" branch="False" />
+                <line number="11" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_Term" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="3" branch="False" />
+                <line number="12" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_CurvePointValue" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="3" branch="False" />
+                <line number="13" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_CreationDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="3" branch="False" />
+                <line number="14" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="9" hits="6" branch="False" />
-            <line number="10" hits="3" branch="False" />
-            <line number="11" hits="3" branch="False" />
-            <line number="12" hits="3" branch="False" />
-            <line number="13" hits="3" branch="False" />
-            <line number="14" hits="3" branch="False" />
+            <line number="9" hits="12" branch="False" />
+            <line number="10" hits="4" branch="False" />
+            <line number="11" hits="4" branch="False" />
+            <line number="12" hits="4" branch="False" />
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Models.Rating" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\Rating.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="24" branch="False" />
+                <line number="8" hits="27" branch="False" />
               </lines>
             </method>
             <method name="get_MoodysRating" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -10871,7 +10871,7 @@
             </method>
           </methods>
           <lines>
-            <line number="8" hits="24" branch="False" />
+            <line number="8" hits="27" branch="False" />
             <line number="9" hits="15" branch="False" />
             <line number="10" hits="15" branch="False" />
             <line number="11" hits="15" branch="False" />
@@ -13170,7 +13170,7 @@
         </class>
       </classes>
     </package>
-    <package name="FindexiumApi.tests" line-rate="0.9936" branch-rate="1" complexity="59">
+    <package name="FindexiumApi.tests" line-rate="0.9941" branch-rate="1" complexity="62">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -13886,22 +13886,22 @@
           <methods>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="2" branch="False" />
-                <line number="23" hits="2" branch="False" />
-                <line number="25" hits="2" branch="False" />
-                <line number="26" hits="2" branch="False" />
-                <line number="27" hits="2" branch="False" />
-                <line number="28" hits="2" branch="False" />
+                <line number="22" hits="5" branch="False" />
+                <line number="23" hits="5" branch="False" />
+                <line number="25" hits="5" branch="False" />
+                <line number="26" hits="5" branch="False" />
+                <line number="27" hits="5" branch="False" />
+                <line number="28" hits="5" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="22" hits="2" branch="False" />
-            <line number="23" hits="2" branch="False" />
-            <line number="25" hits="2" branch="False" />
-            <line number="26" hits="2" branch="False" />
-            <line number="27" hits="2" branch="False" />
-            <line number="28" hits="2" branch="False" />
+            <line number="22" hits="5" branch="False" />
+            <line number="23" hits="5" branch="False" />
+            <line number="25" hits="5" branch="False" />
+            <line number="26" hits="5" branch="False" />
+            <line number="27" hits="5" branch="False" />
+            <line number="28" hits="5" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.CurvePointsTests/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="1" branch-rate="1" complexity="3">
@@ -13928,6 +13928,100 @@
             <line number="52" hits="1" branch="False" />
           </lines>
         </class>
+        <class name="FindexiumApi.tests.CurvePointsTests/&lt;GetCurvePoint_ReturnsInternalServerError&gt;d__8" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="113" hits="1" branch="False" />
+                <line number="115" hits="1" branch="False" />
+                <line number="116" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="124" hits="1" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="113" hits="1" branch="False" />
+            <line number="115" hits="1" branch="False" />
+            <line number="116" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="124" hits="1" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.CurvePointsTests/&lt;GetCurvePoint_ReturnsNotFoundWhenCurvePointIsNull&gt;d__7" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="98" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
+                <line number="101" hits="1" branch="False" />
+                <line number="102" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="109" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="98" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
+            <line number="102" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="109" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.CurvePointsTests/&lt;GetCurvePoint_ReturnsOkResult&gt;d__6" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="75" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
+                <line number="79" hits="1" branch="False" />
+                <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="75" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
+            <line number="79" hits="1" branch="False" />
+            <line number="80" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+          </lines>
+        </class>
         <class name="FindexiumApi.tests.CurvePointsTests/&lt;GetCurvePoints_ReturnsInternalServerError&gt;d__5" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -13939,6 +14033,7 @@
                 <line number="68" hits="1" branch="False" />
                 <line number="69" hits="1" branch="False" />
                 <line number="70" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -13950,6 +14045,7 @@
             <line number="68" hits="1" branch="False" />
             <line number="69" hits="1" branch="False" />
             <line number="70" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.CurvePointsTests/&lt;GetCurvePoints_ReturnsOkResult&gt;d__4" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\CurvePointsTests.cs" line-rate="1" branch-rate="1" complexity="1">

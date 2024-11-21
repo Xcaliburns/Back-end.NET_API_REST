@@ -79,10 +79,10 @@ namespace FindexiumApi.tests
                 FitchRating = "A",
                 OrderNumber = 1
             };
-            _mockRatingService.Setup(service => service.GetRatingByIdAsync(-1)).ReturnsAsync(rating);
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(rating.Id)).ReturnsAsync(rating);
 
             // Act
-            var result = await _controller.GetRating(-1);
+            var result = await _controller.GetRating(rating.Id);
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);

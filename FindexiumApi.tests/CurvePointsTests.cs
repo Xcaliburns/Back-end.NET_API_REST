@@ -70,6 +70,62 @@ namespace FindexiumApi.tests
             Assert.Equal("Internal server error", actionResult.Value);
         }
 
+        [Fact]
+        public async Task GetCurvePoint_ReturnsOkResult()
+        {
+            //Arrange
+            var curvePoint = new CurvePoint
+            { 
+                Id = -1,
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1,
+                CurvePointValue = 1,
+                CreationDate = DateTime.Now
+            };
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(curvePoint.Id)).ReturnsAsync(curvePoint);
+
+            //Act
+            var result = await _controller.GetCurvePoint(curvePoint.Id);
+
+            //Assert
+            var okResult = Assert.IsType<OkObjectResult>(result.Result);
+            var returnCurvePoint = Assert.IsType<CurvePoint>(okResult.Value);
+            Assert.Equal(curvePoint.Id, returnCurvePoint.Id);
+        }
+        [Fact]
+        public async Task GetCurvePoint_ReturnsNotFoundWhenCurvePointIsNull()
+        {
+            //Arrange
+            int testId = 1;
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(testId))
+                .ReturnsAsync((CurvePoint)null);
+
+            //Act
+            var result = await _controller.GetCurvePoint(testId);
+
+            //Assert
+            Assert.IsType<NotFoundResult>(result.Result);
+        }
+
+        [Fact]
+        public async Task GetCurvePoint_ReturnsInternalServerError()
+        {
+            //Arrange
+            int testId = 1;
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(testId))
+                .ThrowsAsync(new Exception("Test exception"));
+
+            //Act
+            var result = await _controller.GetCurvePoint(testId);
+
+            //Assert
+            var actionResult = Assert.IsType<ObjectResult>(result.Result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, (result.Result as ObjectResult).StatusCode);
+            Assert.Equal("Internal server error", actionResult.Value);
+        }
+
+
 
     }
 }
