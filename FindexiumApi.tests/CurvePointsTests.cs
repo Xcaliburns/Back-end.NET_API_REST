@@ -191,15 +191,27 @@ namespace FindexiumApi.tests
             var result = await _controller.PutCurvePoint(curvePoint.Id, curvePoint);
 
             // Assert
-            var notFoundResult = Assert.IsType<NotFoundResult>(result);
-            
+              var notFoundResult = Assert.IsType<NotFoundResult>(result);
+            Assert.Equal(StatusCodes.Status404NotFound, notFoundResult.StatusCode);
+             
+
+
+
         }
 
         [Fact]
         public async Task PutCurvePoint_DbUpdateConcurrencyException_CurvePointExists_ThrowsException()
         {
             // Arrange
-            var curvePoint = new CurvePoint { Id = 1, CurveId = 1, AsOfDate = DateTime.Now, Term = 1.0, CurvePointValue = 1.0, CreationDate = DateTime.Now };
+            var curvePoint = new CurvePoint
+            {
+                Id = 1,
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 1.0,
+                CreationDate = DateTime.Now
+            };
             _mockCurvePointService.Setup(service => service.UpdateAsync(curvePoint.Id, curvePoint)).ThrowsAsync(new DbUpdateConcurrencyException());
             _mockCurvePointService.Setup(service => service.GetByIdAsync(curvePoint.Id)).ReturnsAsync(curvePoint);
 
@@ -208,7 +220,7 @@ namespace FindexiumApi.tests
         }
 
         [Fact]
-        public async Task PutCurvePoint_GeneralException_ReturnsInternalServerError()
+        public async Task PutCurvePoint_ReturnsInternalServerError()
         {
             // Arrange
             var curvePoint = new CurvePoint
@@ -227,9 +239,128 @@ namespace FindexiumApi.tests
             var result = await _controller.PutCurvePoint(curvePoint.Id, curvePoint);
 
             // Assert
-            var statusCodeResult = Assert.IsType<ObjectResult>(result);           
+            var statusCodeResult = Assert.IsType<ObjectResult>(result);  
+            Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
             Assert.Equal("Internal server error", statusCodeResult.Value);
            
+        }
+        [Fact]
+        public async Task PostCurvePoint_ValidRequest()
+        {
+            // Arrange
+            var request = new CurvePointRequest
+            {
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 100.0,
+                CreationDate = DateTime.Now
+            };
+
+            _mockCurvePointService.Setup(service => service.AddAsync(It.IsAny<CurvePoint>()))
+                .Returns(Task.CompletedTask);
+
+            // Act
+            var result = await _controller.PostCurvePoint(request);
+
+            // Assert
+           Assert.IsType<CreatedResult>(result);
+
+
+        }
+
+        [Fact]
+        public async Task PostCurvePoint_InvalidModelState_ReturnsBadRequest()
+        {
+            // Arrange
+            _controller.ModelState.AddModelError("CurveId", "Required");
+
+            var request = new CurvePointRequest
+            {
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 100.0,
+                CreationDate = DateTime.Now
+            };
+
+            // Act
+            var result = await _controller.PostCurvePoint(request);
+
+            // Assert
+            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
+            //Assert.Equal(400, badRequestResult.StatusCode);
+            Assert.Equal(StatusCodes.Status400BadRequest, badRequestResult.StatusCode);
+        }
+
+        [Fact]
+        public async Task PostCurvePoint_ReturnsInternalServerError()
+        {
+            // Arrange
+            var request = new CurvePointRequest
+            {
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 100.0,
+                CreationDate = DateTime.Now
+            };
+
+            _mockCurvePointService.Setup(service => service.AddAsync(It.IsAny<CurvePoint>()))
+                .Throws(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.PostCurvePoint(request);
+
+            // Assert
+            var actionResult = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
+            Assert.Equal("Internal server error", actionResult.Value);
+        }
+
+        [Fact]
+        public async Task DeleteCurvePoint_ExistingId_ReturnsNoContent()
+        {
+            // Arrange
+            var curvePoint = new CurvePoint { Id = 1 };
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(1)).ReturnsAsync(curvePoint);
+            _mockCurvePointService.Setup(service => service.DeleteAsync(1)).Returns(Task.CompletedTask);
+
+            // Act
+            var result = await _controller.DeleteCurvePoint(1);
+
+            // Assert            
+            var noContentResult=Assert.IsType<NoContentResult>(result);
+            Assert.Equal(StatusCodes.Status204NoContent, noContentResult.StatusCode);
+        }
+
+        [Fact]
+        public async Task DeleteCurvePoint_ReturnsNotFound_WhenRatingIsNull()
+        {
+            // Arrange
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(1))
+                .ReturnsAsync((CurvePoint)null);
+
+            // Act
+            var result = await _controller.DeleteCurvePoint(1);
+
+            // Assert
+            var notFoundResult = Assert.IsType<NotFoundResult>(result);
+            Assert.Equal(StatusCodes.Status404NotFound, notFoundResult.StatusCode);
+        }
+
+        [Fact]
+        public async Task DeleteCurvePoint_ServiceThrowsException_ReturnsInternalServerError()
+        {
+            // Arrange
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(1)).ReturnsAsync(new CurvePoint { Id = 1 });
+            _mockCurvePointService.Setup(service => service.DeleteAsync(1)).Throws(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.DeleteCurvePoint(1);
+
+            // Assert
+            var internalServerErrorResult = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, internalServerErrorResult.StatusCode);
         }
 
 

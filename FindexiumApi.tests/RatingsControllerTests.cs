@@ -122,7 +122,7 @@ namespace FindexiumApi.tests
         }
 
         [Fact]
-        public async Task PostRating_ReturnsCreatedAtActionResult()
+        public async Task PostRating_ValidRequest()
         {
             // Arrange
             var request = new RatingRequest
@@ -133,8 +133,9 @@ namespace FindexiumApi.tests
                 OrderNumber = 1
             };
 
-            _mockRatingService.Setup(service => service.AddRatingAsync(It.IsAny<Rating>())).Returns(Task.CompletedTask);
-            // _mockRatingService.Setup(service=> service)
+            _mockRatingService.Setup(service => service.AddRatingAsync(It.IsAny<Rating>()))
+                .Returns(Task.CompletedTask);
+           
             // Act
             var result = await _controller.PostRating(request);
 
@@ -144,7 +145,7 @@ namespace FindexiumApi.tests
 
         }
         [Fact]
-        public async Task PostRating_ReturnsBadRequestResult_WhenRatingIsNull()
+        public async Task PostRating_InvalidModelState_WhenRatingIsNull()
         {
             // Arrange
             _controller.ModelState.AddModelError("MoodysRating", "Required");
@@ -164,7 +165,7 @@ namespace FindexiumApi.tests
         }
 
         [Fact]
-        public async Task PostRating_ReturnsInternalServerError_OnException()
+        public async Task PostRating_ReturnsInternalServerError()
         {
             // Arrange
             var request = new RatingRequest
@@ -192,7 +193,14 @@ namespace FindexiumApi.tests
         public async Task DeleteRating_ReturnsNoContentResult()
         {
             // Arrange
-            var rating = new Rating { Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
+            var rating = new Rating
+            { 
+                Id = 1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
             _mockRatingService.Setup(service => service.GetRatingByIdAsync(1)).ReturnsAsync(rating);
             _mockRatingService.Setup(service => service.DeleteRatingAsync(1)).Returns(Task.CompletedTask);
 
@@ -207,13 +215,15 @@ namespace FindexiumApi.tests
         public async Task DeleteRating_ReturnsNotFound_WhenRatingIsNull()
         {
             // Arrange
-            _mockRatingService.Setup(service => service.GetRatingByIdAsync(1)).ReturnsAsync((Rating)null);
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(1))
+                .ReturnsAsync((Rating)null);
 
             // Act
             var result = await _controller.DeleteRating(1);
 
             // Assert
-            Assert.IsType<NotFoundResult>(result);
+            var notFoundResult=Assert.IsType<NotFoundResult>(result);
+            Assert.Equal(StatusCodes.Status404NotFound, notFoundResult.StatusCode);
         }
 
         [Fact]
