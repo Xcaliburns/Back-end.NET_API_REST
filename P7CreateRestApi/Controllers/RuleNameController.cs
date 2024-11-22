@@ -81,15 +81,22 @@ namespace Findexium.Api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
         {
+
+            // TODO : verifier si le model est valide
+            if (id != ruleName.Id)
+            {
+                _logger.LogWarning("ID mismatch for rule name with id: {Id}", id);
+                return BadRequest();
+            }
             try
             {
                 _logger.LogInformation("Updating rule name with id: {Id}", id);
-                await _ruleNameServices.UpdateRuleAsync(id, ruleName);
+                await _ruleNameServices.UpdateRuleAsync(ruleName);
             }
             catch (ArgumentException ex)
             {
                 _logger.LogWarning(ex, "Invalid argument for rule name with id: {Id}", id);
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {
@@ -131,6 +138,13 @@ namespace Findexium.Api.Controllers
             try
             {
                 _logger.LogInformation("Deleting rule name with id: {Id}", id);
+                var ruleName = await _ruleNameServices.GetRuleByIdAsync(id);
+                if (ruleName == null)
+                {
+                    _logger.LogWarning("Rule name with id: {Id} not found", id);
+                    return NotFound();
+                }
+
                 await _ruleNameServices.DeleteRuleAsync(id);
                 return NoContent();
             }
