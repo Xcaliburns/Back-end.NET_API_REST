@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
+
+
 namespace FindexiumApi.tests
 {
     public class RatingsControllerTests
@@ -52,8 +54,7 @@ namespace FindexiumApi.tests
         [Fact]
         public async Task GetRatings_ReturnsInternalServerError_OnException()
         {
-            // Arrange
-            var mockRatingServices = new Mock<IRatingServices>();
+            // Arrange            
 
             _mockRatingService.Setup(service => service.GetAllRatingsAsync())
                 .ThrowsAsync(new Exception("Test exception"));
@@ -79,7 +80,8 @@ namespace FindexiumApi.tests
                 FitchRating = "A",
                 OrderNumber = 1
             };
-            _mockRatingService.Setup(service => service.GetRatingByIdAsync(rating.Id)).ReturnsAsync(rating);
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(rating.Id))
+                .ReturnsAsync(rating);
 
             // Act
             var result = await _controller.GetRating(rating.Id);
@@ -88,6 +90,8 @@ namespace FindexiumApi.tests
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
             var returnRating = Assert.IsType<Rating>(okResult.Value);
             Assert.Equal(-1, returnRating.Id);
+            Assert.Equal("A1", returnRating.MoodysRating);
+            Assert.Equal("A+", returnRating.SandPRating);
         }
         [Fact]
         public async Task GetRating_ReturnsNotFound_WhenRatingIsNull()
@@ -144,6 +148,7 @@ namespace FindexiumApi.tests
             Assert.IsType<CreatedResult>(result);
 
         }
+
         [Fact]
         public async Task PostRating_InvalidModelState_WhenRatingIsNull()
         {
@@ -230,8 +235,16 @@ namespace FindexiumApi.tests
         public async Task DeleteRating_ReturnsInternalServerError_OnException()
         {
             // Arrange
-            var rating = new Rating { Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 };
-            _mockRatingService.Setup(service => service.GetRatingByIdAsync(1)).ReturnsAsync(rating);
+            var rating = new Rating
+            { 
+                Id = 1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(1))
+                .ReturnsAsync(rating);
             _mockRatingService.Setup(service => service.DeleteRatingAsync(1))
                 .ThrowsAsync(new Exception("Test exception"));
 
@@ -256,9 +269,7 @@ namespace FindexiumApi.tests
                 FitchRating = "A",
                 OrderNumber = 1
             };
-            _mockRatingService.Setup(service => service.UpdateRatingAsync( rating))
-                .Returns(Task.CompletedTask);
-
+          
             // Act
             var result = await _controller.PutRating(1, rating);
 

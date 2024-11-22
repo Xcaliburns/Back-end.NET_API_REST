@@ -12,7 +12,7 @@ namespace Findexium.Domain.Interfaces
         Task<IEnumerable<RuleName>> GetAllRatingsAsync();
         Task<RuleName> GetRuleByIdAsync(int id);
         Task AddRuleAsync(RuleName ruleName);
-        Task UpdateRuleAsync(int id, RuleName ruleName);
+        Task UpdateRuleAsync( RuleName ruleName);
         Task DeleteRuleAsync(int id);
     }
 }

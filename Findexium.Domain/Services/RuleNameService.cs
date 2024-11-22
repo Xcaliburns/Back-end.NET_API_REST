@@ -30,14 +30,10 @@ namespace Findexium.Domain.Services
             await _ruleNameRepository.AddAsync(ruleName);
         }
 
-        public async Task UpdateRuleAsync(int id, RuleName ruleName)
+        public async Task UpdateRuleAsync ( RuleName ruleName)
         {
-            if (id != ruleName.Id)
-            {
-                throw new ArgumentException("ID mismatch");
-            }
-
-            await _ruleNameRepository.UpdateAsync(ruleName);
+           
+            await _ruleNameRepository.UpdateAsync( ruleName);
         }
 
         public async Task DeleteRuleAsync(int id)

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.284" branch-rate="0.0454" version="1.9" timestamp="1732273878" lines-covered="1072" lines-valid="3774" branches-covered="32" branches-valid="704">
+<coverage line-rate="0.3456" branch-rate="0.056600000000000004" version="1.9" timestamp="1732283598" lines-covered="1373" lines-valid="3972" branches-covered="40" branches-valid="706">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Api" line-rate="0.16579999999999998" branch-rate="0.0453" complexity="974">
+    <package name="Findexium.Api" line-rate="0.2087" branch-rate="0.057" complexity="976">
       <classes>
         <class name="Program/&lt;&lt;Main&gt;$&gt;d__0" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Program.cs" line-rate="0" branch-rate="0" complexity="8">
           <methods>
@@ -2676,72 +2676,72 @@
             <line number="9" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Models.RuleNameRequest" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\RuleNameRequest.cs" line-rate="0" branch-rate="1" complexity="7">
+        <class name="Findexium.Api.Models.RuleNameRequest" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\RuleNameRequest.cs" line-rate="1" branch-rate="1" complexity="7">
           <methods>
-            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="0" branch="False" />
+                <line number="9" hits="5" branch="False" />
               </lines>
             </method>
-            <method name="get_Description" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="0" branch="False" />
+                <line number="12" hits="5" branch="False" />
               </lines>
             </method>
-            <method name="get_Json" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Json" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="0" branch="False" />
+                <line number="15" hits="5" branch="False" />
               </lines>
             </method>
-            <method name="get_Template" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Template" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="0" branch="False" />
+                <line number="18" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_SqlStr" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_SqlStr" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="0" branch="False" />
+                <line number="21" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_SqlPart" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_SqlPart" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="0" branch="False" />
+                <line number="24" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="ToRuleName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="ToRuleName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
+                <line number="30" hits="2" branch="False" />
+                <line number="31" hits="2" branch="False" />
+                <line number="32" hits="2" branch="False" />
+                <line number="33" hits="2" branch="False" />
+                <line number="34" hits="2" branch="False" />
+                <line number="35" hits="2" branch="False" />
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="9" hits="0" branch="False" />
-            <line number="12" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
+            <line number="9" hits="5" branch="False" />
+            <line number="12" hits="5" branch="False" />
+            <line number="15" hits="5" branch="False" />
+            <line number="18" hits="2" branch="False" />
+            <line number="21" hits="2" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
+            <line number="30" hits="2" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="2" branch="False" />
+            <line number="33" hits="2" branch="False" />
+            <line number="34" hits="2" branch="False" />
+            <line number="35" hits="2" branch="False" />
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Models.RuleNameResponse" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\RuleNameResponse.cs" line-rate="0" branch-rate="1" complexity="7">
@@ -4354,242 +4354,276 @@
             <line number="115" hits="5" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.RuleNameController" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Api.Controllers.RuleNameController" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(Findexium.Domain.Interfaces.IRuleNameServices,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Controllers.RuleNameController&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(Findexium.Domain.Interfaces.IRuleNameServices,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Controllers.RuleNameController&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
+                <line number="26" hits="15" branch="False" />
+                <line number="27" hits="15" branch="False" />
+                <line number="28" hits="15" branch="False" />
+                <line number="29" hits="15" branch="False" />
+                <line number="30" hits="15" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
+            <line number="26" hits="15" branch="False" />
+            <line number="27" hits="15" branch="False" />
+            <line number="28" hits="15" branch="False" />
+            <line number="29" hits="15" branch="False" />
+            <line number="30" hits="15" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.RuleNameController/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Api.Controllers.RuleNameController/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="&lt;GetRuleName&gt;b__3_0" signature="(Findexium.Domain.Models.RuleName)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="&lt;GetRuleName&gt;b__3_0" signature="(Findexium.Domain.Models.RuleName)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
+                <line number="40" hits="4" branch="False" />
+                <line number="41" hits="4" branch="False" />
+                <line number="42" hits="4" branch="False" />
+                <line number="43" hits="4" branch="False" />
+                <line number="44" hits="4" branch="False" />
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
+            <line number="40" hits="4" branch="False" />
+            <line number="41" hits="4" branch="False" />
+            <line number="42" hits="4" branch="False" />
+            <line number="43" hits="4" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.RuleNameController/&lt;DeleteRuleName&gt;d__7" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Api.Controllers.RuleNameController/&lt;DeleteRuleName&gt;d__7" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="130" hits="0" branch="False" />
-                <line number="132" hits="0" branch="False" />
-                <line number="133" hits="0" branch="False" />
-                <line number="134" hits="0" branch="False" />
-                <line number="135" hits="0" branch="False" />
-                <line number="137" hits="0" branch="False" />
-                <line number="138" hits="0" branch="False" />
-                <line number="139" hits="0" branch="False" />
-                <line number="140" hits="0" branch="False" />
-                <line number="142" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="130" hits="0" branch="False" />
-            <line number="132" hits="0" branch="False" />
-            <line number="133" hits="0" branch="False" />
-            <line number="134" hits="0" branch="False" />
-            <line number="135" hits="0" branch="False" />
-            <line number="137" hits="0" branch="False" />
-            <line number="138" hits="0" branch="False" />
-            <line number="139" hits="0" branch="False" />
-            <line number="140" hits="0" branch="False" />
-            <line number="142" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="Findexium.Api.Controllers.RuleNameController/&lt;GetRuleName&gt;d__3" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="35" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="47" hits="0" branch="False" />
-                <line number="49" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
-                <line number="51" hits="0" branch="False" />
-                <line number="52" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="35" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
-            <line number="49" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
-            <line number="51" hits="0" branch="False" />
-            <line number="52" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="Findexium.Api.Controllers.RuleNameController/&lt;GetRuleName&gt;d__4" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="0" branch-rate="0" complexity="2">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
-              <lines>
-                <line number="59" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="62" hits="0" branch="False" />
-                <line number="63" hits="0" branch="False" />
-                <line number="65" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="137" hits="3" branch="False" />
+                <line number="139" hits="3" branch="False" />
+                <line number="140" hits="3" branch="False" />
+                <line number="141" hits="3" branch="False" />
+                <line number="142" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="215" type="jump" coverage="0%" />
+                    <condition number="227" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="66" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="68" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-                <line number="74" hits="0" branch="False" />
-                <line number="75" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
-                <line number="78" hits="0" branch="False" />
+                <line number="143" hits="1" branch="False" />
+                <line number="144" hits="1" branch="False" />
+                <line number="145" hits="1" branch="False" />
+                <line number="148" hits="1" branch="False" />
+                <line number="149" hits="1" branch="False" />
+                <line number="151" hits="1" branch="False" />
+                <line number="152" hits="1" branch="False" />
+                <line number="153" hits="1" branch="False" />
+                <line number="154" hits="1" branch="False" />
+                <line number="156" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="59" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="62" hits="0" branch="False" />
-            <line number="63" hits="0" branch="False" />
-            <line number="65" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="137" hits="3" branch="False" />
+            <line number="139" hits="3" branch="False" />
+            <line number="140" hits="3" branch="False" />
+            <line number="141" hits="3" branch="False" />
+            <line number="142" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="215" type="jump" coverage="0%" />
+                <condition number="227" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="66" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-            <line number="74" hits="0" branch="False" />
-            <line number="75" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="78" hits="0" branch="False" />
+            <line number="143" hits="1" branch="False" />
+            <line number="144" hits="1" branch="False" />
+            <line number="145" hits="1" branch="False" />
+            <line number="148" hits="1" branch="False" />
+            <line number="149" hits="1" branch="False" />
+            <line number="151" hits="1" branch="False" />
+            <line number="152" hits="1" branch="False" />
+            <line number="153" hits="1" branch="False" />
+            <line number="154" hits="1" branch="False" />
+            <line number="156" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.RuleNameController/&lt;PostRuleName&gt;d__6" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Api.Controllers.RuleNameController/&lt;GetRuleName&gt;d__3" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="106" hits="0" branch="False" />
-                <line number="108" hits="0" branch="False" />
-                <line number="109" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="35" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="54" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="54" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Findexium.Api.Controllers.RuleNameController/&lt;GetRuleName&gt;d__4" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="59" hits="3" branch="False" />
+                <line number="61" hits="3" branch="False" />
+                <line number="62" hits="3" branch="False" />
+                <line number="63" hits="3" branch="False" />
+                <line number="65" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="48" type="jump" coverage="0%" />
+                    <condition number="215" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="110" hits="0" branch="False" />
-                <line number="111" hits="0" branch="False" />
-                <line number="112" hits="0" branch="False" />
-                <line number="114" hits="0" branch="False" />
-                <line number="115" hits="0" branch="False" />
-                <line number="116" hits="0" branch="False" />
-                <line number="118" hits="0" branch="False" />
-                <line number="120" hits="0" branch="False" />
-                <line number="121" hits="0" branch="False" />
-                <line number="122" hits="0" branch="False" />
-                <line number="123" hits="0" branch="False" />
-                <line number="125" hits="0" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="78" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="106" hits="0" branch="False" />
-            <line number="108" hits="0" branch="False" />
-            <line number="109" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="59" hits="3" branch="False" />
+            <line number="61" hits="3" branch="False" />
+            <line number="62" hits="3" branch="False" />
+            <line number="63" hits="3" branch="False" />
+            <line number="65" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="48" type="jump" coverage="0%" />
+                <condition number="215" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="110" hits="0" branch="False" />
-            <line number="111" hits="0" branch="False" />
-            <line number="112" hits="0" branch="False" />
-            <line number="114" hits="0" branch="False" />
-            <line number="115" hits="0" branch="False" />
-            <line number="116" hits="0" branch="False" />
-            <line number="118" hits="0" branch="False" />
-            <line number="120" hits="0" branch="False" />
-            <line number="121" hits="0" branch="False" />
-            <line number="122" hits="0" branch="False" />
-            <line number="123" hits="0" branch="False" />
-            <line number="125" hits="0" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="78" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.RuleNameController/&lt;PutRuleName&gt;d__5" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Api.Controllers.RuleNameController/&lt;PostRuleName&gt;d__6" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="83" hits="0" branch="False" />
-                <line number="85" hits="0" branch="False" />
-                <line number="86" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="False" />
-                <line number="89" hits="0" branch="False" />
-                <line number="90" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
-                <line number="92" hits="0" branch="False" />
-                <line number="94" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
-                <line number="96" hits="0" branch="False" />
-                <line number="97" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
-                <line number="101" hits="0" branch="False" />
+                <line number="113" hits="3" branch="False" />
+                <line number="115" hits="3" branch="False" />
+                <line number="116" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="48" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="117" hits="1" branch="False" />
+                <line number="118" hits="1" branch="False" />
+                <line number="119" hits="1" branch="False" />
+                <line number="121" hits="2" branch="False" />
+                <line number="122" hits="2" branch="False" />
+                <line number="123" hits="2" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="127" hits="1" branch="False" />
+                <line number="128" hits="1" branch="False" />
+                <line number="129" hits="1" branch="False" />
+                <line number="130" hits="1" branch="False" />
+                <line number="132" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="83" hits="0" branch="False" />
-            <line number="85" hits="0" branch="False" />
-            <line number="86" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
-            <line number="88" hits="0" branch="False" />
-            <line number="89" hits="0" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
-            <line number="92" hits="0" branch="False" />
-            <line number="94" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
-            <line number="96" hits="0" branch="False" />
-            <line number="97" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
-            <line number="101" hits="0" branch="False" />
+            <line number="113" hits="3" branch="False" />
+            <line number="115" hits="3" branch="False" />
+            <line number="116" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="48" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="117" hits="1" branch="False" />
+            <line number="118" hits="1" branch="False" />
+            <line number="119" hits="1" branch="False" />
+            <line number="121" hits="2" branch="False" />
+            <line number="122" hits="2" branch="False" />
+            <line number="123" hits="2" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="127" hits="1" branch="False" />
+            <line number="128" hits="1" branch="False" />
+            <line number="129" hits="1" branch="False" />
+            <line number="130" hits="1" branch="False" />
+            <line number="132" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Findexium.Api.Controllers.RuleNameController/&lt;PutRuleName&gt;d__5" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="83" hits="4" branch="False" />
+                <line number="86" hits="4" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="39" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="87" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
+                <line number="92" hits="3" branch="False" />
+                <line number="93" hits="3" branch="False" />
+                <line number="94" hits="3" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="96" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="98" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
+                <line number="101" hits="1" branch="False" />
+                <line number="102" hits="1" branch="False" />
+                <line number="103" hits="1" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="108" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="83" hits="4" branch="False" />
+            <line number="86" hits="4" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="39" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="87" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
+            <line number="92" hits="3" branch="False" />
+            <line number="93" hits="3" branch="False" />
+            <line number="94" hits="3" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="96" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="98" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
+            <line number="102" hits="1" branch="False" />
+            <line number="103" hits="1" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="108" hits="4" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.TradesController" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\TradesController.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -9896,7 +9930,7 @@
         </class>
       </classes>
     </package>
-    <package name="Findexium.Domain" line-rate="0.1534" branch-rate="0" complexity="114">
+    <package name="Findexium.Domain" line-rate="0.1886" branch-rate="0" complexity="113">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -10260,16 +10294,16 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="44" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="44" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.RuleNameService/&lt;GetAllRatingsAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -10304,34 +10338,20 @@
             <line number="27" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.RuleNameService/&lt;UpdateRuleAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Domain.Services.RuleNameService/&lt;UpdateRuleAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="39" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
                 <line number="36" hits="0" branch="False" />
                 <line number="37" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="39" type="jump" coverage="0%" />
-              </conditions>
-            </line>
             <line number="36" hits="0" branch="False" />
             <line number="37" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -10851,12 +10871,12 @@
             </method>
             <method name="get_MoodysRating" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="15" branch="False" />
+                <line number="9" hits="16" branch="False" />
               </lines>
             </method>
             <method name="get_SandPRating" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="15" branch="False" />
+                <line number="10" hits="16" branch="False" />
               </lines>
             </method>
             <method name="get_FitchRating" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -10872,58 +10892,58 @@
           </methods>
           <lines>
             <line number="8" hits="27" branch="False" />
-            <line number="9" hits="15" branch="False" />
-            <line number="10" hits="15" branch="False" />
+            <line number="9" hits="16" branch="False" />
+            <line number="10" hits="16" branch="False" />
             <line number="11" hits="15" branch="False" />
             <line number="12" hits="15" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Models.RuleName" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\RuleName.cs" line-rate="0" branch-rate="1" complexity="7">
+        <class name="Findexium.Domain.Models.RuleName" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\RuleName.cs" line-rate="1" branch-rate="1" complexity="7">
           <methods>
-            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="0" branch="False" />
+                <line number="7" hits="20" branch="False" />
               </lines>
             </method>
-            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="0" branch="False" />
+                <line number="8" hits="21" branch="False" />
               </lines>
             </method>
-            <method name="get_Description" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="0" branch="False" />
+                <line number="9" hits="18" branch="False" />
               </lines>
             </method>
-            <method name="get_Json" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Json" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="0" branch="False" />
+                <line number="10" hits="17" branch="False" />
               </lines>
             </method>
-            <method name="get_Template" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Template" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="0" branch="False" />
+                <line number="11" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_SqlStr" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_SqlStr" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="0" branch="False" />
+                <line number="12" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_SqlPart" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_SqlPart" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="0" branch="False" />
+                <line number="13" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="7" hits="0" branch="False" />
-            <line number="8" hits="0" branch="False" />
-            <line number="9" hits="0" branch="False" />
-            <line number="10" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
-            <line number="12" hits="0" branch="False" />
-            <line number="13" hits="0" branch="False" />
+            <line number="7" hits="20" branch="False" />
+            <line number="8" hits="21" branch="False" />
+            <line number="9" hits="18" branch="False" />
+            <line number="10" hits="17" branch="False" />
+            <line number="11" hits="2" branch="False" />
+            <line number="12" hits="2" branch="False" />
+            <line number="13" hits="2" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Models.Trade" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\Trade.cs" line-rate="0" branch-rate="1" complexity="21">
@@ -13170,7 +13190,7 @@
         </class>
       </classes>
     </package>
-    <package name="FindexiumApi.tests" line-rate="0.9954000000000001" branch-rate="1" complexity="74">
+    <package name="FindexiumApi.tests" line-rate="0.9964" branch-rate="1" complexity="93">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -14482,146 +14502,161 @@
           <methods>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="20" hits="16" branch="False" />
-                <line number="21" hits="16" branch="False" />
                 <line number="22" hits="16" branch="False" />
                 <line number="23" hits="16" branch="False" />
                 <line number="24" hits="16" branch="False" />
                 <line number="25" hits="16" branch="False" />
+                <line number="26" hits="16" branch="False" />
+                <line number="27" hits="16" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="20" hits="16" branch="False" />
-            <line number="21" hits="16" branch="False" />
             <line number="22" hits="16" branch="False" />
             <line number="23" hits="16" branch="False" />
             <line number="24" hits="16" branch="False" />
             <line number="25" hits="16" branch="False" />
+            <line number="26" hits="16" branch="False" />
+            <line number="27" hits="16" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
             <method name="&lt;GetRating_ReturnsOkResult_WithListOfThreeRatings&gt;b__4_1" signature="(Findexium.Api.Models.RatingResponse)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
               </lines>
             </method>
             <method name="&lt;GetRating_ReturnsOkResult_WithListOfThreeRatings&gt;b__4_2" signature="(Findexium.Api.Models.RatingResponse)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="48" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
               </lines>
             </method>
             <method name="&lt;GetRating_ReturnsOkResult_WithListOfThreeRatings&gt;b__4_3" signature="(Findexium.Api.Models.RatingResponse)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="49" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="47" hits="1" branch="False" />
-            <line number="48" hits="1" branch="False" />
-            <line number="49" hits="2" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="2" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;DeleteRating_ReturnsInternalServerError_OnException&gt;d__14" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="231" hits="1" branch="False" />
-                <line number="233" hits="1" branch="False" />
-                <line number="234" hits="1" branch="False" />
-                <line number="235" hits="1" branch="False" />
                 <line number="236" hits="1" branch="False" />
+                <line number="238" hits="1" branch="False" />
                 <line number="239" hits="1" branch="False" />
+                <line number="240" hits="1" branch="False" />
+                <line number="241" hits="1" branch="False" />
                 <line number="242" hits="1" branch="False" />
                 <line number="243" hits="1" branch="False" />
                 <line number="244" hits="1" branch="False" />
                 <line number="245" hits="1" branch="False" />
+                <line number="246" hits="1" branch="False" />
+                <line number="247" hits="1" branch="False" />
+                <line number="248" hits="1" branch="False" />
+                <line number="249" hits="1" branch="False" />
+                <line number="252" hits="1" branch="False" />
+                <line number="255" hits="1" branch="False" />
+                <line number="256" hits="1" branch="False" />
+                <line number="257" hits="1" branch="False" />
+                <line number="258" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="231" hits="1" branch="False" />
-            <line number="233" hits="1" branch="False" />
-            <line number="234" hits="1" branch="False" />
-            <line number="235" hits="1" branch="False" />
             <line number="236" hits="1" branch="False" />
+            <line number="238" hits="1" branch="False" />
             <line number="239" hits="1" branch="False" />
+            <line number="240" hits="1" branch="False" />
+            <line number="241" hits="1" branch="False" />
             <line number="242" hits="1" branch="False" />
             <line number="243" hits="1" branch="False" />
             <line number="244" hits="1" branch="False" />
             <line number="245" hits="1" branch="False" />
+            <line number="246" hits="1" branch="False" />
+            <line number="247" hits="1" branch="False" />
+            <line number="248" hits="1" branch="False" />
+            <line number="249" hits="1" branch="False" />
+            <line number="252" hits="1" branch="False" />
+            <line number="255" hits="1" branch="False" />
+            <line number="256" hits="1" branch="False" />
+            <line number="257" hits="1" branch="False" />
+            <line number="258" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;DeleteRating_ReturnsNoContentResult&gt;d__12" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="194" hits="1" branch="False" />
-                <line number="196" hits="1" branch="False" />
-                <line number="197" hits="1" branch="False" />
-                <line number="198" hits="1" branch="False" />
                 <line number="199" hits="1" branch="False" />
-                <line number="200" hits="1" branch="False" />
                 <line number="201" hits="1" branch="False" />
                 <line number="202" hits="1" branch="False" />
                 <line number="203" hits="1" branch="False" />
                 <line number="204" hits="1" branch="False" />
                 <line number="205" hits="1" branch="False" />
+                <line number="206" hits="1" branch="False" />
+                <line number="207" hits="1" branch="False" />
                 <line number="208" hits="1" branch="False" />
-                <line number="211" hits="1" branch="False" />
-                <line number="212" hits="1" branch="False" />
+                <line number="209" hits="1" branch="False" />
+                <line number="210" hits="1" branch="False" />
+                <line number="213" hits="1" branch="False" />
+                <line number="216" hits="1" branch="False" />
+                <line number="217" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="194" hits="1" branch="False" />
-            <line number="196" hits="1" branch="False" />
-            <line number="197" hits="1" branch="False" />
-            <line number="198" hits="1" branch="False" />
             <line number="199" hits="1" branch="False" />
-            <line number="200" hits="1" branch="False" />
             <line number="201" hits="1" branch="False" />
             <line number="202" hits="1" branch="False" />
             <line number="203" hits="1" branch="False" />
             <line number="204" hits="1" branch="False" />
             <line number="205" hits="1" branch="False" />
+            <line number="206" hits="1" branch="False" />
+            <line number="207" hits="1" branch="False" />
             <line number="208" hits="1" branch="False" />
-            <line number="211" hits="1" branch="False" />
-            <line number="212" hits="1" branch="False" />
+            <line number="209" hits="1" branch="False" />
+            <line number="210" hits="1" branch="False" />
+            <line number="213" hits="1" branch="False" />
+            <line number="216" hits="1" branch="False" />
+            <line number="217" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;DeleteRating_ReturnsNotFound_WhenRatingIsNull&gt;d__13" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="216" hits="1" branch="False" />
-                <line number="218" hits="1" branch="False" />
-                <line number="219" hits="1" branch="False" />
-                <line number="222" hits="1" branch="False" />
-                <line number="225" hits="1" branch="False" />
-                <line number="226" hits="1" branch="False" />
+                <line number="221" hits="1" branch="False" />
+                <line number="223" hits="1" branch="False" />
+                <line number="224" hits="1" branch="False" />
                 <line number="227" hits="1" branch="False" />
+                <line number="230" hits="1" branch="False" />
+                <line number="231" hits="1" branch="False" />
+                <line number="232" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="216" hits="1" branch="False" />
-            <line number="218" hits="1" branch="False" />
-            <line number="219" hits="1" branch="False" />
-            <line number="222" hits="1" branch="False" />
-            <line number="225" hits="1" branch="False" />
-            <line number="226" hits="1" branch="False" />
+            <line number="221" hits="1" branch="False" />
+            <line number="223" hits="1" branch="False" />
+            <line number="224" hits="1" branch="False" />
             <line number="227" hits="1" branch="False" />
+            <line number="230" hits="1" branch="False" />
+            <line number="231" hits="1" branch="False" />
+            <line number="232" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;GetRating_ById_ReturnsOkResult_WithRating&gt;d__6" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="72" hits="1" branch="False" />
-                <line number="74" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
                 <line number="75" hits="1" branch="False" />
                 <line number="76" hits="1" branch="False" />
                 <line number="77" hits="1" branch="False" />
@@ -14630,17 +14665,20 @@
                 <line number="80" hits="1" branch="False" />
                 <line number="81" hits="1" branch="False" />
                 <line number="82" hits="1" branch="False" />
-                <line number="85" hits="1" branch="False" />
-                <line number="88" hits="1" branch="False" />
-                <line number="89" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="87" hits="1" branch="False" />
                 <line number="90" hits="1" branch="False" />
                 <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="72" hits="1" branch="False" />
-            <line number="74" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
             <line number="75" hits="1" branch="False" />
             <line number="76" hits="1" branch="False" />
             <line number="77" hits="1" branch="False" />
@@ -14649,136 +14687,733 @@
             <line number="80" hits="1" branch="False" />
             <line number="81" hits="1" branch="False" />
             <line number="82" hits="1" branch="False" />
-            <line number="85" hits="1" branch="False" />
-            <line number="88" hits="1" branch="False" />
-            <line number="89" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="87" hits="1" branch="False" />
             <line number="90" hits="1" branch="False" />
             <line number="91" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;GetRating_ReturnsInternalServerError_OnException&gt;d__8" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="109" hits="1" branch="False" />
-                <line number="111" hits="1" branch="False" />
-                <line number="112" hits="1" branch="False" />
                 <line number="113" hits="1" branch="False" />
+                <line number="115" hits="1" branch="False" />
                 <line number="116" hits="1" branch="False" />
-                <line number="119" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
                 <line number="120" hits="1" branch="False" />
-                <line number="121" hits="1" branch="False" />
-                <line number="122" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="124" hits="1" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="109" hits="1" branch="False" />
-            <line number="111" hits="1" branch="False" />
-            <line number="112" hits="1" branch="False" />
             <line number="113" hits="1" branch="False" />
+            <line number="115" hits="1" branch="False" />
             <line number="116" hits="1" branch="False" />
-            <line number="119" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
             <line number="120" hits="1" branch="False" />
-            <line number="121" hits="1" branch="False" />
-            <line number="122" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="124" hits="1" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;GetRating_ReturnsNotFound_WhenRatingIsNull&gt;d__7" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="94" hits="1" branch="False" />
-                <line number="96" hits="1" branch="False" />
-                <line number="97" hits="1" branch="False" />
                 <line number="98" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
                 <line number="101" hits="1" branch="False" />
-                <line number="104" hits="1" branch="False" />
+                <line number="102" hits="1" branch="False" />
                 <line number="105" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="109" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="94" hits="1" branch="False" />
-            <line number="96" hits="1" branch="False" />
-            <line number="97" hits="1" branch="False" />
             <line number="98" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
             <line number="101" hits="1" branch="False" />
-            <line number="104" hits="1" branch="False" />
+            <line number="102" hits="1" branch="False" />
             <line number="105" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="109" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;GetRating_ReturnsOkResult_WithListOfThreeRatings&gt;d__4" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="29" hits="1" branch="False" />
                 <line number="31" hits="1" branch="False" />
-                <line number="32" hits="1" branch="False" />
                 <line number="33" hits="1" branch="False" />
                 <line number="34" hits="1" branch="False" />
                 <line number="35" hits="1" branch="False" />
                 <line number="36" hits="1" branch="False" />
                 <line number="37" hits="1" branch="False" />
-                <line number="40" hits="1" branch="False" />
-                <line number="43" hits="1" branch="False" />
-                <line number="44" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
                 <line number="45" hits="1" branch="False" />
                 <line number="46" hits="1" branch="False" />
-                <line number="50" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="29" hits="1" branch="False" />
             <line number="31" hits="1" branch="False" />
-            <line number="32" hits="1" branch="False" />
             <line number="33" hits="1" branch="False" />
             <line number="34" hits="1" branch="False" />
             <line number="35" hits="1" branch="False" />
             <line number="36" hits="1" branch="False" />
             <line number="37" hits="1" branch="False" />
-            <line number="40" hits="1" branch="False" />
-            <line number="43" hits="1" branch="False" />
-            <line number="44" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
             <line number="45" hits="1" branch="False" />
             <line number="46" hits="1" branch="False" />
-            <line number="50" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;GetRatings_ReturnsInternalServerError_OnException&gt;d__5" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="54" hits="1" branch="False" />
                 <line number="56" hits="1" branch="False" />
-                <line number="58" hits="1" branch="False" />
                 <line number="59" hits="1" branch="False" />
-                <line number="62" hits="1" branch="False" />
-                <line number="65" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="63" hits="1" branch="False" />
                 <line number="66" hits="1" branch="False" />
                 <line number="67" hits="1" branch="False" />
                 <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="54" hits="1" branch="False" />
             <line number="56" hits="1" branch="False" />
-            <line number="58" hits="1" branch="False" />
             <line number="59" hits="1" branch="False" />
-            <line number="62" hits="1" branch="False" />
-            <line number="65" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="63" hits="1" branch="False" />
             <line number="66" hits="1" branch="False" />
             <line number="67" hits="1" branch="False" />
             <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PostRating_InvalidModelState_WhenRatingIsNull&gt;d__10" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="149" hits="1" branch="False" />
+                <line number="154" hits="1" branch="False" />
+                <line number="156" hits="1" branch="False" />
+                <line number="157" hits="1" branch="False" />
+                <line number="158" hits="1" branch="False" />
+                <line number="159" hits="1" branch="False" />
+                <line number="160" hits="1" branch="False" />
+                <line number="161" hits="1" branch="False" />
+                <line number="162" hits="1" branch="False" />
+                <line number="163" hits="1" branch="False" />
+                <line number="166" hits="1" branch="False" />
+                <line number="169" hits="1" branch="False" />
+                <line number="170" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="154" hits="1" branch="False" />
+            <line number="156" hits="1" branch="False" />
+            <line number="157" hits="1" branch="False" />
+            <line number="158" hits="1" branch="False" />
+            <line number="159" hits="1" branch="False" />
+            <line number="160" hits="1" branch="False" />
+            <line number="161" hits="1" branch="False" />
+            <line number="162" hits="1" branch="False" />
+            <line number="163" hits="1" branch="False" />
+            <line number="166" hits="1" branch="False" />
+            <line number="169" hits="1" branch="False" />
+            <line number="170" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PostRating_ReturnsInternalServerError&gt;d__11" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="174" hits="1" branch="False" />
+                <line number="176" hits="1" branch="False" />
+                <line number="177" hits="1" branch="False" />
+                <line number="178" hits="1" branch="False" />
+                <line number="179" hits="1" branch="False" />
+                <line number="180" hits="1" branch="False" />
+                <line number="181" hits="1" branch="False" />
+                <line number="182" hits="1" branch="False" />
+                <line number="184" hits="1" branch="False" />
+                <line number="185" hits="1" branch="False" />
+                <line number="188" hits="1" branch="False" />
+                <line number="191" hits="1" branch="False" />
+                <line number="192" hits="1" branch="False" />
+                <line number="193" hits="1" branch="False" />
+                <line number="194" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="174" hits="1" branch="False" />
+            <line number="176" hits="1" branch="False" />
+            <line number="177" hits="1" branch="False" />
+            <line number="178" hits="1" branch="False" />
+            <line number="179" hits="1" branch="False" />
+            <line number="180" hits="1" branch="False" />
+            <line number="181" hits="1" branch="False" />
+            <line number="182" hits="1" branch="False" />
+            <line number="184" hits="1" branch="False" />
+            <line number="185" hits="1" branch="False" />
+            <line number="188" hits="1" branch="False" />
+            <line number="191" hits="1" branch="False" />
+            <line number="192" hits="1" branch="False" />
+            <line number="193" hits="1" branch="False" />
+            <line number="194" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PostRating_ValidRequest&gt;d__9" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="130" hits="1" branch="False" />
+                <line number="132" hits="1" branch="False" />
+                <line number="133" hits="1" branch="False" />
+                <line number="134" hits="1" branch="False" />
+                <line number="135" hits="1" branch="False" />
+                <line number="136" hits="1" branch="False" />
+                <line number="137" hits="1" branch="False" />
+                <line number="138" hits="1" branch="False" />
+                <line number="140" hits="1" branch="False" />
+                <line number="141" hits="1" branch="False" />
+                <line number="144" hits="1" branch="False" />
+                <line number="148" hits="1" branch="False" />
+                <line number="150" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="130" hits="1" branch="False" />
+            <line number="132" hits="1" branch="False" />
+            <line number="133" hits="1" branch="False" />
+            <line number="134" hits="1" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="136" hits="1" branch="False" />
+            <line number="137" hits="1" branch="False" />
+            <line number="138" hits="1" branch="False" />
+            <line number="140" hits="1" branch="False" />
+            <line number="141" hits="1" branch="False" />
+            <line number="144" hits="1" branch="False" />
+            <line number="148" hits="1" branch="False" />
+            <line number="150" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ReturnsBadRequestResult_WhenIdMismatch&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="281" hits="1" branch="False" />
+                <line number="283" hits="1" branch="False" />
+                <line number="284" hits="1" branch="False" />
+                <line number="287" hits="1" branch="False" />
+                <line number="290" hits="1" branch="False" />
+                <line number="291" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="281" hits="1" branch="False" />
+            <line number="283" hits="1" branch="False" />
+            <line number="284" hits="1" branch="False" />
+            <line number="287" hits="1" branch="False" />
+            <line number="290" hits="1" branch="False" />
+            <line number="291" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ReturnsNoContentResult&gt;d__15" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="262" hits="1" branch="False" />
+                <line number="264" hits="1" branch="False" />
+                <line number="265" hits="1" branch="False" />
+                <line number="266" hits="1" branch="False" />
+                <line number="267" hits="1" branch="False" />
+                <line number="268" hits="1" branch="False" />
+                <line number="269" hits="1" branch="False" />
+                <line number="270" hits="1" branch="False" />
+                <line number="271" hits="1" branch="False" />
+                <line number="274" hits="1" branch="False" />
+                <line number="277" hits="1" branch="False" />
+                <line number="278" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="262" hits="1" branch="False" />
+            <line number="264" hits="1" branch="False" />
+            <line number="265" hits="1" branch="False" />
+            <line number="266" hits="1" branch="False" />
+            <line number="267" hits="1" branch="False" />
+            <line number="268" hits="1" branch="False" />
+            <line number="269" hits="1" branch="False" />
+            <line number="270" hits="1" branch="False" />
+            <line number="271" hits="1" branch="False" />
+            <line number="274" hits="1" branch="False" />
+            <line number="277" hits="1" branch="False" />
+            <line number="278" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ShouldReturnBadRequest_WhenArgumentExceptionIsThrown&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="295" hits="1" branch="False" />
+                <line number="297" hits="1" branch="False" />
+                <line number="298" hits="1" branch="False" />
+                <line number="299" hits="1" branch="False" />
+                <line number="300" hits="1" branch="False" />
+                <line number="301" hits="1" branch="False" />
+                <line number="302" hits="1" branch="False" />
+                <line number="303" hits="1" branch="False" />
+                <line number="304" hits="1" branch="False" />
+                <line number="306" hits="1" branch="False" />
+                <line number="307" hits="1" branch="False" />
+                <line number="310" hits="1" branch="False" />
+                <line number="313" hits="1" branch="False" />
+                <line number="314" hits="1" branch="False" />
+                <line number="315" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="295" hits="1" branch="False" />
+            <line number="297" hits="1" branch="False" />
+            <line number="298" hits="1" branch="False" />
+            <line number="299" hits="1" branch="False" />
+            <line number="300" hits="1" branch="False" />
+            <line number="301" hits="1" branch="False" />
+            <line number="302" hits="1" branch="False" />
+            <line number="303" hits="1" branch="False" />
+            <line number="304" hits="1" branch="False" />
+            <line number="306" hits="1" branch="False" />
+            <line number="307" hits="1" branch="False" />
+            <line number="310" hits="1" branch="False" />
+            <line number="313" hits="1" branch="False" />
+            <line number="314" hits="1" branch="False" />
+            <line number="315" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ShouldReturnInternalServerError_WhenExceptionIsThrownAndRatingExists&gt;d__19" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="344" hits="1" branch="False" />
+                <line number="346" hits="1" branch="False" />
+                <line number="347" hits="1" branch="False" />
+                <line number="348" hits="1" branch="False" />
+                <line number="349" hits="1" branch="False" />
+                <line number="350" hits="1" branch="False" />
+                <line number="351" hits="1" branch="False" />
+                <line number="352" hits="1" branch="False" />
+                <line number="353" hits="1" branch="False" />
+                <line number="355" hits="1" branch="False" />
+                <line number="356" hits="1" branch="False" />
+                <line number="358" hits="1" branch="False" />
+                <line number="359" hits="1" branch="False" />
+                <line number="362" hits="1" branch="False" />
+                <line number="365" hits="1" branch="False" />
+                <line number="366" hits="1" branch="False" />
+                <line number="367" hits="1" branch="False" />
+                <line number="368" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="344" hits="1" branch="False" />
+            <line number="346" hits="1" branch="False" />
+            <line number="347" hits="1" branch="False" />
+            <line number="348" hits="1" branch="False" />
+            <line number="349" hits="1" branch="False" />
+            <line number="350" hits="1" branch="False" />
+            <line number="351" hits="1" branch="False" />
+            <line number="352" hits="1" branch="False" />
+            <line number="353" hits="1" branch="False" />
+            <line number="355" hits="1" branch="False" />
+            <line number="356" hits="1" branch="False" />
+            <line number="358" hits="1" branch="False" />
+            <line number="359" hits="1" branch="False" />
+            <line number="362" hits="1" branch="False" />
+            <line number="365" hits="1" branch="False" />
+            <line number="366" hits="1" branch="False" />
+            <line number="367" hits="1" branch="False" />
+            <line number="368" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ShouldReturnNotFound_WhenExceptionIsThrownAndRatingDoesNotExist&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="318" hits="1" branch="False" />
+                <line number="320" hits="1" branch="False" />
+                <line number="321" hits="1" branch="False" />
+                <line number="322" hits="1" branch="False" />
+                <line number="323" hits="1" branch="False" />
+                <line number="324" hits="1" branch="False" />
+                <line number="325" hits="1" branch="False" />
+                <line number="326" hits="1" branch="False" />
+                <line number="327" hits="1" branch="False" />
+                <line number="329" hits="1" branch="False" />
+                <line number="330" hits="1" branch="False" />
+                <line number="332" hits="1" branch="False" />
+                <line number="333" hits="1" branch="False" />
+                <line number="336" hits="1" branch="False" />
+                <line number="339" hits="1" branch="False" />
+                <line number="340" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="318" hits="1" branch="False" />
+            <line number="320" hits="1" branch="False" />
+            <line number="321" hits="1" branch="False" />
+            <line number="322" hits="1" branch="False" />
+            <line number="323" hits="1" branch="False" />
+            <line number="324" hits="1" branch="False" />
+            <line number="325" hits="1" branch="False" />
+            <line number="326" hits="1" branch="False" />
+            <line number="327" hits="1" branch="False" />
+            <line number="329" hits="1" branch="False" />
+            <line number="330" hits="1" branch="False" />
+            <line number="332" hits="1" branch="False" />
+            <line number="333" hits="1" branch="False" />
+            <line number="336" hits="1" branch="False" />
+            <line number="339" hits="1" branch="False" />
+            <line number="340" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="15" branch="False" />
+                <line number="23" hits="15" branch="False" />
+                <line number="24" hits="15" branch="False" />
+                <line number="25" hits="15" branch="False" />
+                <line number="26" hits="15" branch="False" />
+                <line number="27" hits="15" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="15" branch="False" />
+            <line number="23" hits="15" branch="False" />
+            <line number="24" hits="15" branch="False" />
+            <line number="25" hits="15" branch="False" />
+            <line number="26" hits="15" branch="False" />
+            <line number="27" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="&lt;GetRuleNames_ReturnsOkResult&gt;b__4_1" signature="(Findexium.Domain.Models.RuleName)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="50" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetRuleNames_ReturnsOkResult&gt;b__4_2" signature="(Findexium.Domain.Models.RuleName)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="51" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetRuleNames_ReturnsOkResult&gt;b__4_3" signature="(Findexium.Domain.Models.RuleName)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;DeleteRuleName_ReturnsInternalServerError_WhenExceptionIsThrown&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="320" hits="1" branch="False" />
+                <line number="322" hits="1" branch="False" />
+                <line number="323" hits="1" branch="False" />
+                <line number="324" hits="1" branch="False" />
+                <line number="327" hits="1" branch="False" />
+                <line number="330" hits="1" branch="False" />
+                <line number="331" hits="1" branch="False" />
+                <line number="332" hits="1" branch="False" />
+                <line number="333" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="320" hits="1" branch="False" />
+            <line number="322" hits="1" branch="False" />
+            <line number="323" hits="1" branch="False" />
+            <line number="324" hits="1" branch="False" />
+            <line number="327" hits="1" branch="False" />
+            <line number="330" hits="1" branch="False" />
+            <line number="331" hits="1" branch="False" />
+            <line number="332" hits="1" branch="False" />
+            <line number="333" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;DeleteRuleName_ReturnsNoContent&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="278" hits="1" branch="False" />
+                <line number="280" hits="1" branch="False" />
+                <line number="281" hits="1" branch="False" />
+                <line number="282" hits="1" branch="False" />
+                <line number="283" hits="1" branch="False" />
+                <line number="284" hits="1" branch="False" />
+                <line number="285" hits="1" branch="False" />
+                <line number="286" hits="1" branch="False" />
+                <line number="287" hits="1" branch="False" />
+                <line number="289" hits="1" branch="False" />
+                <line number="290" hits="1" branch="False" />
+                <line number="292" hits="1" branch="False" />
+                <line number="293" hits="1" branch="False" />
+                <line number="296" hits="1" branch="False" />
+                <line number="299" hits="1" branch="False" />
+                <line number="300" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="278" hits="1" branch="False" />
+            <line number="280" hits="1" branch="False" />
+            <line number="281" hits="1" branch="False" />
+            <line number="282" hits="1" branch="False" />
+            <line number="283" hits="1" branch="False" />
+            <line number="284" hits="1" branch="False" />
+            <line number="285" hits="1" branch="False" />
+            <line number="286" hits="1" branch="False" />
+            <line number="287" hits="1" branch="False" />
+            <line number="289" hits="1" branch="False" />
+            <line number="290" hits="1" branch="False" />
+            <line number="292" hits="1" branch="False" />
+            <line number="293" hits="1" branch="False" />
+            <line number="296" hits="1" branch="False" />
+            <line number="299" hits="1" branch="False" />
+            <line number="300" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;DeleteRuleName_ReturnsNotFound_WhenRuleNameIsNull&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="304" hits="1" branch="False" />
+                <line number="306" hits="1" branch="False" />
+                <line number="307" hits="1" branch="False" />
+                <line number="308" hits="1" branch="False" />
+                <line number="311" hits="1" branch="False" />
+                <line number="314" hits="1" branch="False" />
+                <line number="315" hits="1" branch="False" />
+                <line number="316" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="304" hits="1" branch="False" />
+            <line number="306" hits="1" branch="False" />
+            <line number="307" hits="1" branch="False" />
+            <line number="308" hits="1" branch="False" />
+            <line number="311" hits="1" branch="False" />
+            <line number="314" hits="1" branch="False" />
+            <line number="315" hits="1" branch="False" />
+            <line number="316" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;GetRuleNameList_ReturnsInternalServerError_OnException&gt;d__5" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="58" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="64" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="58" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="64" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;GetRuleName_ById_ReturnInternalServorError_OnException&gt;d__8" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="115" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
+                <line number="118" hits="1" branch="False" />
+                <line number="119" hits="1" branch="False" />
+                <line number="122" hits="1" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
+                <line number="127" hits="1" branch="False" />
+                <line number="128" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="115" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="118" hits="1" branch="False" />
+            <line number="119" hits="1" branch="False" />
+            <line number="122" hits="1" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
+            <line number="127" hits="1" branch="False" />
+            <line number="128" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;GetRuleName_ById_ReturnsNotFound_WhenRuleNameIsNull&gt;d__7" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="100" hits="1" branch="False" />
+                <line number="102" hits="1" branch="False" />
+                <line number="103" hits="1" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="111" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="100" hits="1" branch="False" />
+            <line number="102" hits="1" branch="False" />
+            <line number="103" hits="1" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="111" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;GetRuleName_ById_ReturnsOkResult_WithRuleName&gt;d__6" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="75" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
+                <line number="79" hits="1" branch="False" />
+                <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="96" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="75" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
+            <line number="79" hits="1" branch="False" />
+            <line number="80" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="91" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="96" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;GetRuleNames_ReturnsOkResult&gt;d__4" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;PostRuleName_InvalidModelState_WhenRatingIsNull&gt;d__10" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
                 <line number="151" hits="1" branch="False" />
                 <line number="152" hits="1" branch="False" />
                 <line number="153" hits="1" branch="False" />
@@ -14794,7 +15429,6 @@
             </method>
           </methods>
           <lines>
-            <line number="149" hits="1" branch="False" />
             <line number="151" hits="1" branch="False" />
             <line number="152" hits="1" branch="False" />
             <line number="153" hits="1" branch="False" />
@@ -14808,7 +15442,7 @@
             <line number="165" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PostRating_ReturnsInternalServerError&gt;d__11" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;PostRuleName_ReturnsInternalServerError&gt;d__11" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -14819,10 +15453,9 @@
                 <line number="174" hits="1" branch="False" />
                 <line number="175" hits="1" branch="False" />
                 <line number="176" hits="1" branch="False" />
-                <line number="177" hits="1" branch="False" />
+                <line number="178" hits="1" branch="False" />
                 <line number="179" hits="1" branch="False" />
-                <line number="180" hits="1" branch="False" />
-                <line number="183" hits="1" branch="False" />
+                <line number="182" hits="1" branch="False" />
                 <line number="186" hits="1" branch="False" />
                 <line number="187" hits="1" branch="False" />
                 <line number="188" hits="1" branch="False" />
@@ -14838,238 +15471,187 @@
             <line number="174" hits="1" branch="False" />
             <line number="175" hits="1" branch="False" />
             <line number="176" hits="1" branch="False" />
-            <line number="177" hits="1" branch="False" />
+            <line number="178" hits="1" branch="False" />
             <line number="179" hits="1" branch="False" />
-            <line number="180" hits="1" branch="False" />
-            <line number="183" hits="1" branch="False" />
+            <line number="182" hits="1" branch="False" />
             <line number="186" hits="1" branch="False" />
             <line number="187" hits="1" branch="False" />
             <line number="188" hits="1" branch="False" />
             <line number="189" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PostRating_ValidRequest&gt;d__9" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;PostRuleName_ValiRequest&gt;d__9" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="126" hits="1" branch="False" />
-                <line number="128" hits="1" branch="False" />
-                <line number="129" hits="1" branch="False" />
-                <line number="130" hits="1" branch="False" />
-                <line number="131" hits="1" branch="False" />
                 <line number="132" hits="1" branch="False" />
-                <line number="133" hits="1" branch="False" />
                 <line number="134" hits="1" branch="False" />
+                <line number="135" hits="1" branch="False" />
                 <line number="136" hits="1" branch="False" />
                 <line number="137" hits="1" branch="False" />
-                <line number="140" hits="1" branch="False" />
-                <line number="144" hits="1" branch="False" />
-                <line number="146" hits="1" branch="False" />
+                <line number="138" hits="1" branch="False" />
+                <line number="139" hits="1" branch="False" />
+                <line number="142" hits="1" branch="False" />
+                <line number="145" hits="1" branch="False" />
+                <line number="147" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="126" hits="1" branch="False" />
-            <line number="128" hits="1" branch="False" />
-            <line number="129" hits="1" branch="False" />
-            <line number="130" hits="1" branch="False" />
-            <line number="131" hits="1" branch="False" />
             <line number="132" hits="1" branch="False" />
-            <line number="133" hits="1" branch="False" />
             <line number="134" hits="1" branch="False" />
+            <line number="135" hits="1" branch="False" />
             <line number="136" hits="1" branch="False" />
             <line number="137" hits="1" branch="False" />
-            <line number="140" hits="1" branch="False" />
-            <line number="144" hits="1" branch="False" />
-            <line number="146" hits="1" branch="False" />
+            <line number="138" hits="1" branch="False" />
+            <line number="139" hits="1" branch="False" />
+            <line number="142" hits="1" branch="False" />
+            <line number="145" hits="1" branch="False" />
+            <line number="147" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ReturnsBadRequestResult_WhenIdMismatch&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;PutRuleName_ReturnsBadRequest_WhenIdMismatch&gt;d__13" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="270" hits="1" branch="False" />
-                <line number="272" hits="1" branch="False" />
-                <line number="273" hits="1" branch="False" />
-                <line number="276" hits="1" branch="False" />
-                <line number="279" hits="1" branch="False" />
-                <line number="280" hits="1" branch="False" />
+                <line number="212" hits="1" branch="False" />
+                <line number="214" hits="1" branch="False" />
+                <line number="215" hits="1" branch="False" />
+                <line number="216" hits="1" branch="False" />
+                <line number="217" hits="1" branch="False" />
+                <line number="218" hits="1" branch="False" />
+                <line number="219" hits="1" branch="False" />
+                <line number="220" hits="1" branch="False" />
+                <line number="221" hits="1" branch="False" />
+                <line number="224" hits="1" branch="False" />
+                <line number="227" hits="1" branch="False" />
+                <line number="228" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="270" hits="1" branch="False" />
-            <line number="272" hits="1" branch="False" />
-            <line number="273" hits="1" branch="False" />
-            <line number="276" hits="1" branch="False" />
-            <line number="279" hits="1" branch="False" />
-            <line number="280" hits="1" branch="False" />
+            <line number="212" hits="1" branch="False" />
+            <line number="214" hits="1" branch="False" />
+            <line number="215" hits="1" branch="False" />
+            <line number="216" hits="1" branch="False" />
+            <line number="217" hits="1" branch="False" />
+            <line number="218" hits="1" branch="False" />
+            <line number="219" hits="1" branch="False" />
+            <line number="220" hits="1" branch="False" />
+            <line number="221" hits="1" branch="False" />
+            <line number="224" hits="1" branch="False" />
+            <line number="227" hits="1" branch="False" />
+            <line number="228" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ReturnsNoContentResult&gt;d__15" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;PutRuleName_ReturnsNoContent&gt;d__12" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
+                <line number="193" hits="1" branch="False" />
+                <line number="195" hits="1" branch="False" />
+                <line number="196" hits="1" branch="False" />
+                <line number="197" hits="1" branch="False" />
+                <line number="198" hits="1" branch="False" />
+                <line number="199" hits="1" branch="False" />
+                <line number="200" hits="1" branch="False" />
+                <line number="201" hits="1" branch="False" />
+                <line number="204" hits="1" branch="False" />
+                <line number="207" hits="1" branch="False" />
+                <line number="208" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="193" hits="1" branch="False" />
+            <line number="195" hits="1" branch="False" />
+            <line number="196" hits="1" branch="False" />
+            <line number="197" hits="1" branch="False" />
+            <line number="198" hits="1" branch="False" />
+            <line number="199" hits="1" branch="False" />
+            <line number="200" hits="1" branch="False" />
+            <line number="201" hits="1" branch="False" />
+            <line number="204" hits="1" branch="False" />
+            <line number="207" hits="1" branch="False" />
+            <line number="208" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;PutRuleName_ShouldReturnBadRequest_WhenArgumentExceptionIsThrown&gt;d__14" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="232" hits="1" branch="False" />
+                <line number="234" hits="1" branch="False" />
+                <line number="235" hits="1" branch="False" />
+                <line number="236" hits="1" branch="False" />
+                <line number="237" hits="1" branch="False" />
+                <line number="238" hits="1" branch="False" />
+                <line number="239" hits="1" branch="False" />
+                <line number="240" hits="1" branch="False" />
+                <line number="242" hits="1" branch="False" />
+                <line number="243" hits="1" branch="False" />
+                <line number="246" hits="1" branch="False" />
                 <line number="249" hits="1" branch="False" />
+                <line number="250" hits="1" branch="False" />
                 <line number="251" hits="1" branch="False" />
-                <line number="252" hits="1" branch="False" />
-                <line number="253" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="232" hits="1" branch="False" />
+            <line number="234" hits="1" branch="False" />
+            <line number="235" hits="1" branch="False" />
+            <line number="236" hits="1" branch="False" />
+            <line number="237" hits="1" branch="False" />
+            <line number="238" hits="1" branch="False" />
+            <line number="239" hits="1" branch="False" />
+            <line number="240" hits="1" branch="False" />
+            <line number="242" hits="1" branch="False" />
+            <line number="243" hits="1" branch="False" />
+            <line number="246" hits="1" branch="False" />
+            <line number="249" hits="1" branch="False" />
+            <line number="250" hits="1" branch="False" />
+            <line number="251" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.tests.RuleNameControllerTests/&lt;PutRuleName_ShouldReturnInternalServerError_WhenExceptionIsThrown&gt;d__15" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RuleNameControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
                 <line number="254" hits="1" branch="False" />
-                <line number="255" hits="1" branch="False" />
                 <line number="256" hits="1" branch="False" />
                 <line number="257" hits="1" branch="False" />
                 <line number="258" hits="1" branch="False" />
                 <line number="259" hits="1" branch="False" />
                 <line number="260" hits="1" branch="False" />
-                <line number="263" hits="1" branch="False" />
-                <line number="266" hits="1" branch="False" />
-                <line number="267" hits="1" branch="False" />
+                <line number="261" hits="1" branch="False" />
+                <line number="262" hits="1" branch="False" />
+                <line number="264" hits="1" branch="False" />
+                <line number="265" hits="1" branch="False" />
+                <line number="268" hits="1" branch="False" />
+                <line number="271" hits="1" branch="False" />
+                <line number="272" hits="1" branch="False" />
+                <line number="273" hits="1" branch="False" />
+                <line number="274" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="249" hits="1" branch="False" />
-            <line number="251" hits="1" branch="False" />
-            <line number="252" hits="1" branch="False" />
-            <line number="253" hits="1" branch="False" />
             <line number="254" hits="1" branch="False" />
-            <line number="255" hits="1" branch="False" />
             <line number="256" hits="1" branch="False" />
             <line number="257" hits="1" branch="False" />
             <line number="258" hits="1" branch="False" />
             <line number="259" hits="1" branch="False" />
             <line number="260" hits="1" branch="False" />
-            <line number="263" hits="1" branch="False" />
-            <line number="266" hits="1" branch="False" />
-            <line number="267" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ShouldReturnBadRequest_WhenArgumentExceptionIsThrown&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="284" hits="1" branch="False" />
-                <line number="286" hits="1" branch="False" />
-                <line number="287" hits="1" branch="False" />
-                <line number="288" hits="1" branch="False" />
-                <line number="289" hits="1" branch="False" />
-                <line number="290" hits="1" branch="False" />
-                <line number="291" hits="1" branch="False" />
-                <line number="292" hits="1" branch="False" />
-                <line number="293" hits="1" branch="False" />
-                <line number="295" hits="1" branch="False" />
-                <line number="296" hits="1" branch="False" />
-                <line number="299" hits="1" branch="False" />
-                <line number="302" hits="1" branch="False" />
-                <line number="303" hits="1" branch="False" />
-                <line number="304" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="284" hits="1" branch="False" />
-            <line number="286" hits="1" branch="False" />
-            <line number="287" hits="1" branch="False" />
-            <line number="288" hits="1" branch="False" />
-            <line number="289" hits="1" branch="False" />
-            <line number="290" hits="1" branch="False" />
-            <line number="291" hits="1" branch="False" />
-            <line number="292" hits="1" branch="False" />
-            <line number="293" hits="1" branch="False" />
-            <line number="295" hits="1" branch="False" />
-            <line number="296" hits="1" branch="False" />
-            <line number="299" hits="1" branch="False" />
-            <line number="302" hits="1" branch="False" />
-            <line number="303" hits="1" branch="False" />
-            <line number="304" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ShouldReturnInternalServerError_WhenExceptionIsThrownAndRatingExists&gt;d__19" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="333" hits="1" branch="False" />
-                <line number="335" hits="1" branch="False" />
-                <line number="336" hits="1" branch="False" />
-                <line number="337" hits="1" branch="False" />
-                <line number="338" hits="1" branch="False" />
-                <line number="339" hits="1" branch="False" />
-                <line number="340" hits="1" branch="False" />
-                <line number="341" hits="1" branch="False" />
-                <line number="342" hits="1" branch="False" />
-                <line number="344" hits="1" branch="False" />
-                <line number="345" hits="1" branch="False" />
-                <line number="347" hits="1" branch="False" />
-                <line number="348" hits="1" branch="False" />
-                <line number="351" hits="1" branch="False" />
-                <line number="354" hits="1" branch="False" />
-                <line number="355" hits="1" branch="False" />
-                <line number="356" hits="1" branch="False" />
-                <line number="357" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="333" hits="1" branch="False" />
-            <line number="335" hits="1" branch="False" />
-            <line number="336" hits="1" branch="False" />
-            <line number="337" hits="1" branch="False" />
-            <line number="338" hits="1" branch="False" />
-            <line number="339" hits="1" branch="False" />
-            <line number="340" hits="1" branch="False" />
-            <line number="341" hits="1" branch="False" />
-            <line number="342" hits="1" branch="False" />
-            <line number="344" hits="1" branch="False" />
-            <line number="345" hits="1" branch="False" />
-            <line number="347" hits="1" branch="False" />
-            <line number="348" hits="1" branch="False" />
-            <line number="351" hits="1" branch="False" />
-            <line number="354" hits="1" branch="False" />
-            <line number="355" hits="1" branch="False" />
-            <line number="356" hits="1" branch="False" />
-            <line number="357" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumApi.tests.RatingsControllerTests/&lt;PutRating_ShouldReturnNotFound_WhenExceptionIsThrownAndRatingDoesNotExist&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\RatingsControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="307" hits="1" branch="False" />
-                <line number="309" hits="1" branch="False" />
-                <line number="310" hits="1" branch="False" />
-                <line number="311" hits="1" branch="False" />
-                <line number="312" hits="1" branch="False" />
-                <line number="313" hits="1" branch="False" />
-                <line number="314" hits="1" branch="False" />
-                <line number="315" hits="1" branch="False" />
-                <line number="316" hits="1" branch="False" />
-                <line number="318" hits="1" branch="False" />
-                <line number="319" hits="1" branch="False" />
-                <line number="321" hits="1" branch="False" />
-                <line number="322" hits="1" branch="False" />
-                <line number="325" hits="1" branch="False" />
-                <line number="328" hits="1" branch="False" />
-                <line number="329" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="307" hits="1" branch="False" />
-            <line number="309" hits="1" branch="False" />
-            <line number="310" hits="1" branch="False" />
-            <line number="311" hits="1" branch="False" />
-            <line number="312" hits="1" branch="False" />
-            <line number="313" hits="1" branch="False" />
-            <line number="314" hits="1" branch="False" />
-            <line number="315" hits="1" branch="False" />
-            <line number="316" hits="1" branch="False" />
-            <line number="318" hits="1" branch="False" />
-            <line number="319" hits="1" branch="False" />
-            <line number="321" hits="1" branch="False" />
-            <line number="322" hits="1" branch="False" />
-            <line number="325" hits="1" branch="False" />
-            <line number="328" hits="1" branch="False" />
-            <line number="329" hits="1" branch="False" />
+            <line number="261" hits="1" branch="False" />
+            <line number="262" hits="1" branch="False" />
+            <line number="264" hits="1" branch="False" />
+            <line number="265" hits="1" branch="False" />
+            <line number="268" hits="1" branch="False" />
+            <line number="271" hits="1" branch="False" />
+            <line number="272" hits="1" branch="False" />
+            <line number="273" hits="1" branch="False" />
+            <line number="274" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.UnitTest1" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UnitTest1.cs" line-rate="1" branch-rate="1" complexity="1">
