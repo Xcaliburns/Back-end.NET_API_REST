@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.08689999999999999" branch-rate="0.09519999999999999" version="1.9" timestamp="1732536965" lines-covered="72" lines-valid="828" branches-covered="4" branches-valid="42">
+<coverage line-rate="0.0867" branch-rate="0.09519999999999999" version="1.9" timestamp="1732547656" lines-covered="72" lines-valid="830" branches-covered="4" branches-valid="42">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Domain" line-rate="0.1148" branch-rate="0" complexity="112">
+    <package name="Findexium.Domain" line-rate="0.1137" branch-rate="0" complexity="114">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -1006,7 +1006,7 @@
             <line number="13" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Models.Trade" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\Trade.cs" line-rate="0" branch-rate="1" complexity="21">
+        <class name="Findexium.Domain.Models.Trade" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\Trade.cs" line-rate="0" branch-rate="1" complexity="23">
           <methods>
             <method name="get_TradeId" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1043,74 +1043,84 @@
                 <line number="13" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_TradeDate" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_BuyCurrency" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="14" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_TradeSecurity" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_SellCurrency" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="15" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_TradeStatus" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_TradeDate" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="16" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_Trader" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_TradeSecurity" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="17" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_Benchmark" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_TradeStatus" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="18" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_Book" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Trader" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="19" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_CreationName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Benchmark" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="20" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_CreationDate" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Book" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="21" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_RevisionName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CreationName" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="22" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_RevisionDate" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CreationDate" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="23" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_DealName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_RevisionName" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="24" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_DealType" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_RevisionDate" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="25" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_SourceListId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_DealName" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="26" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_Side" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_DealType" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="27" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_SourceListId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Side" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -1136,6 +1146,8 @@
             <line number="25" hits="0" branch="False" />
             <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Models.User" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\User.cs" line-rate="0" branch-rate="1" complexity="2">
