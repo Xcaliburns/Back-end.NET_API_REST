@@ -15,6 +15,14 @@ namespace Findexium.Api.Models
         [StringLength(50, ErrorMessage = "Account type cannot be longer than 50 characters.")]
         public string AccountType { get; set; }
 
+        [Required]
+        [StringLength(50, ErrorMessage = "Buy currency cannot be longer than 50 characters.")]
+        public string? BuyCurrency { get; set; }
+
+        [Required]
+        [StringLength(50, ErrorMessage = "Buy currency cannot be longer than 50 characters.")]
+        public string? SellCurrency { get; set; }
+
         [Range(0, double.MaxValue, ErrorMessage = "Buy quantity must be a non-negative number.")]
         public float BuyQuantity { get; set; }
 
