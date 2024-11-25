@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.2036" branch-rate="0.19039999999999999" version="1.9" timestamp="1732283515" lines-covered="179" lines-valid="879" branches-covered="8" branches-valid="42">
+<coverage line-rate="0.2043" branch-rate="0.2" version="1.9" timestamp="1732536957" lines-covered="179" lines-valid="876" branches-covered="8" branches-valid="40">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Domain" line-rate="0.0235" branch-rate="0" complexity="113">
+    <package name="Findexium.Domain" line-rate="0.0239" branch-rate="0" complexity="112">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -158,16 +158,16 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="47" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="49" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="47" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="49" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.CurvePointService/&lt;GetAllAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\CurvePointServices.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -202,34 +202,20 @@
             <line number="29" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.CurvePointService/&lt;UpdateAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\CurvePointServices.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Domain.Services.CurvePointService/&lt;UpdateAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\CurvePointServices.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="37" hits="0" branch="False" />
-                <line number="38" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="39" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
+                <line number="38" hits="0" branch="False" />
                 <line number="39" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="37" hits="0" branch="False" />
-            <line number="38" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="39" type="jump" coverage="0%" />
-              </conditions>
-            </line>
+            <line number="38" hits="0" branch="False" />
             <line number="39" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.RatingService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RatingService.cs" line-rate="0" branch-rate="1" complexity="1">

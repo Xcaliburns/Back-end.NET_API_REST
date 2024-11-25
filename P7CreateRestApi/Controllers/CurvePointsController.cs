@@ -89,7 +89,7 @@ namespace Findexium.Api.Controllers
             try
             {
                 _logger.LogInformation("Updating curve point with id: {Id}", id);
-                await _curvePointService.UpdateAsync(id, curvePoint);
+                await _curvePointService.UpdateAsync(curvePoint);
             }
             catch (DbUpdateConcurrencyException)
             {
