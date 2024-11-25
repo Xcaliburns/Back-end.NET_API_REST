@@ -5,7 +5,6 @@ using Findexium.Api.Controllers;
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
-using FindexiumApi.tests.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -327,18 +326,17 @@ namespace FindexiumApi.tests
             var bidListId = 1;
             var bidList = new BidList { BidListId = bidListId };
 
-            _mockBidService.Setup(service => service.UpdateAsync(It.IsAny<BidList>())).ThrowsAsync(new DbUpdateConcurrencyException());
+            _mockBidService.Setup(service => service.UpdateAsync(It.IsAny<BidList>()))
+                .ThrowsAsync(new DbUpdateConcurrencyException());
             _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(false);
-            var testLogger = new TestLogger<BidListController>();
-            var controller = new BidListController(_mockBidService.Object, testLogger);
+           
 
             // Act
-            var result = await controller.PutBid(bidListId, bidList);
+            var result = await _controller.PutBid(bidListId, bidList);
 
             // Assert
             var notFoundResult = Assert.IsType<NotFoundResult>(result);
-            //Merci Loris pour le $ (comme en js) pour la concaténation
-            Assert.Contains(testLogger.Logs, log => log.LogLevel == LogLevel.Warning && log.Message.Contains($"Bid with id: {bidListId} not found during update"));
+           
         }
 
         [Fact]

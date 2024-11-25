@@ -5,6 +5,8 @@ namespace Findexium.Api.Models
 {
     public class TradeRequest
     {
+
+       
         [Required]
         [StringLength(50, ErrorMessage = "Account cannot be longer than 50 characters.")]
         public string Account { get; set; }

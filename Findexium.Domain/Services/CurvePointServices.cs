@@ -33,13 +33,8 @@ namespace Findexium.Domain.Services
             await _repository.AddAsync(curvePoint);
         }
 
-        public async Task UpdateAsync(int id, CurvePoint curvePoint)
+        public async Task UpdateAsync( CurvePoint curvePoint)
         {
-            if (id != curvePoint.Id)
-            {
-                throw new ArgumentException("ID mismatch");
-            }
-
             await _repository.UpdateAsync(curvePoint);
         }
 

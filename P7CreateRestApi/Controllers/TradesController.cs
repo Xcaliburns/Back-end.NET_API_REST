@@ -144,7 +144,7 @@ namespace Findexium.Api.Controllers
                 if (!await _tradeService.TradeExistsAsync(id))
                 {
                     _logger.LogWarning("Trade with id: {Id} not found", id);
-                    return NotFound();
+                    return NotFound()   ;
                 }
                 else
                 {
