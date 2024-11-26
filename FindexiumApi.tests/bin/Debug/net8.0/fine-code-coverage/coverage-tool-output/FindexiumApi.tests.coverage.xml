@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.4964" branch-rate="0.0932" version="1.9" timestamp="1732547998" lines-covered="2246" lines-valid="4524" branches-covered="66" branches-valid="708">
+<coverage line-rate="0.49560000000000004" branch-rate="0.0929" version="1.9" timestamp="1732618503" lines-covered="2246" lines-valid="4531" branches-covered="66" branches-valid="710">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Api" line-rate="0.3337" branch-rate="0.09300000000000001" complexity="978">
+    <package name="Findexium.Api" line-rate="0.33270000000000005" branch-rate="0.0928" complexity="980">
       <classes>
         <class name="Program/&lt;&lt;Main&gt;$&gt;d__0" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Program.cs" line-rate="0" branch-rate="0" complexity="8">
           <methods>
@@ -436,24 +436,24 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="67" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="521" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="69" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="67" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="521" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="69" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
           </lines>
         </class>
         <class name="AspNetCoreGeneratedDocument.Areas_Identity_Pages_Account_Login/&lt;ExecuteAsync&gt;d__35" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\Login.cshtml" line-rate="0" branch-rate="0" complexity="10">
@@ -465,21 +465,21 @@
                     <condition number="537" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="54" hits="0" branch="True" condition-coverage="0% (0/4)">
+                <line number="53" hits="0" branch="True" condition-coverage="0% (0/4)">
                   <conditions>
                     <condition number="739" type="jump" coverage="0%" />
                     <condition number="757" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="55" hits="0" branch="False" />
-                <line number="62" hits="0" branch="False" />
-                <line number="64" hits="0" branch="True" condition-coverage="0% (0/4)">
+                <line number="54" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="63" hits="0" branch="True" condition-coverage="0% (0/4)">
                   <conditions>
                     <condition number="1055" type="jump" coverage="0%" />
                     <condition number="1463" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="75" hits="0" branch="False" />
+                <line number="74" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -489,21 +489,21 @@
                 <condition number="537" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="54" hits="0" branch="True" condition-coverage="0% (0/4)">
+            <line number="53" hits="0" branch="True" condition-coverage="0% (0/4)">
               <conditions>
                 <condition number="739" type="jump" coverage="0%" />
                 <condition number="757" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="55" hits="0" branch="False" />
-            <line number="62" hits="0" branch="False" />
-            <line number="64" hits="0" branch="True" condition-coverage="0% (0/4)">
+            <line number="54" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="63" hits="0" branch="True" condition-coverage="0% (0/4)">
               <conditions>
                 <condition number="1055" type="jump" coverage="0%" />
                 <condition number="1463" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="75" hits="0" branch="False" />
+            <line number="74" hits="0" branch="False" />
           </lines>
         </class>
         <class name="AspNetCoreGeneratedDocument.Areas_Identity_Pages_Account_LoginWith2fa/&lt;ExecuteAsync&gt;d__24" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\LoginWith2fa.cshtml" line-rate="0" branch-rate="0" complexity="8">
@@ -6094,208 +6094,230 @@
           <methods>
             <method name="get_Input" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="36" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_ExternalLogins" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="42" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_ReturnUrl" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="48" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_ErrorMessage" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="55" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="(Microsoft.AspNetCore.Identity.SignInManager`1&lt;Microsoft.AspNetCore.Identity.IdentityUser&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Areas.Identity.Pages.Account.LoginModel&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(Microsoft.AspNetCore.Identity.SignInManager`1&lt;Microsoft.AspNetCore.Identity.IdentityUser&gt;,Microsoft.AspNetCore.Identity.UserManager`1&lt;Microsoft.AspNetCore.Identity.IdentityUser&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Areas.Identity.Pages.Account.LoginModel&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="0" branch="False" />
                 <line number="26" hits="0" branch="False" />
                 <line number="27" hits="0" branch="False" />
                 <line number="28" hits="0" branch="False" />
                 <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="36" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="55" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
             <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Areas.Identity.Pages.Account.LoginModel/InputModel" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\Login.cshtml.cs" line-rate="0" branch-rate="1" complexity="3">
           <methods>
-            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_UserName" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="69" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_Password" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="77" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_RememberMe" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="84" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="69" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
-            <line number="84" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
+            <line number="88" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Areas.Identity.Pages.Account.LoginModel/&lt;OnGetAsync&gt;d__20" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\Login.cshtml.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="Findexium.Api.Areas.Identity.Pages.Account.LoginModel/&lt;OnGetAsync&gt;d__21" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\Login.cshtml.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="88" hits="0" branch="False" />
-                <line number="89" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="92" hits="0" branch="False" />
+                <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="50" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="90" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
-                <line number="92" hits="0" branch="False" />
-                <line number="94" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="94" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+                <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="93" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="97" hits="0" branch="False" />
-                <line number="99" hits="0" branch="False" />
                 <line number="101" hits="0" branch="False" />
-                <line number="102" hits="0" branch="False" />
+                <line number="103" hits="0" branch="False" />
+                <line number="105" hits="0" branch="False" />
+                <line number="106" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="88" hits="0" branch="False" />
-            <line number="89" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="92" hits="0" branch="False" />
+            <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="50" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="90" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
-            <line number="92" hits="0" branch="False" />
-            <line number="94" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="94" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+            <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="93" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="97" hits="0" branch="False" />
-            <line number="99" hits="0" branch="False" />
             <line number="101" hits="0" branch="False" />
-            <line number="102" hits="0" branch="False" />
+            <line number="103" hits="0" branch="False" />
+            <line number="105" hits="0" branch="False" />
+            <line number="106" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Areas.Identity.Pages.Account.LoginModel/&lt;OnPostAsync&gt;d__21" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\Login.cshtml.cs" line-rate="0" branch-rate="0" complexity="10">
+        <class name="Findexium.Api.Areas.Identity.Pages.Account.LoginModel/&lt;OnPostAsync&gt;d__22" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\Login.cshtml.cs" line-rate="0" branch-rate="0" complexity="12">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="10">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="12">
               <lines>
-                <line number="105" hits="0" branch="False" />
-                <line number="106" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="32" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="108" hits="0" branch="False" />
+                <line number="109" hits="0" branch="False" />
                 <line number="110" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="222" type="jump" coverage="0%" />
+                    <condition number="46" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="111" hits="0" branch="False" />
-                <line number="114" hits="0" branch="False" />
-                <line number="115" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="112" hits="0" branch="False" />
+                <line number="114" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="425" type="jump" coverage="0%" />
+                    <condition number="236" type="jump" coverage="0%" />
                   </conditions>
                 </line>
+                <line number="115" hits="0" branch="False" />
                 <line number="116" hits="0" branch="False" />
-                <line number="117" hits="0" branch="False" />
+                <line number="117" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="404" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
                 <line number="118" hits="0" branch="False" />
+                <line number="119" hits="0" branch="False" />
                 <line number="120" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="493" type="jump" coverage="0%" />
+                    <condition number="597" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="121" hits="0" branch="False" />
                 <line number="122" hits="0" branch="False" />
-                <line number="124" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="123" hits="0" branch="False" />
+                <line number="125" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="560" type="jump" coverage="0%" />
+                    <condition number="665" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="125" hits="0" branch="False" />
                 <line number="126" hits="0" branch="False" />
                 <line number="127" hits="0" branch="False" />
+                <line number="129" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="732" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
                 <line number="130" hits="0" branch="False" />
                 <line number="131" hits="0" branch="False" />
                 <line number="132" hits="0" branch="False" />
+                <line number="135" hits="0" branch="False" />
+                <line number="136" hits="0" branch="False" />
                 <line number="137" hits="0" branch="False" />
-                <line number="138" hits="0" branch="False" />
+                <line number="141" hits="0" branch="False" />
+                <line number="142" hits="0" branch="False" />
+                <line number="143" hits="0" branch="False" />
+                <line number="148" hits="0" branch="False" />
+                <line number="149" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="105" hits="0" branch="False" />
-            <line number="106" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="32" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="108" hits="0" branch="False" />
+            <line number="109" hits="0" branch="False" />
             <line number="110" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="222" type="jump" coverage="0%" />
+                <condition number="46" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="111" hits="0" branch="False" />
-            <line number="114" hits="0" branch="False" />
-            <line number="115" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="112" hits="0" branch="False" />
+            <line number="114" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="425" type="jump" coverage="0%" />
+                <condition number="236" type="jump" coverage="0%" />
               </conditions>
             </line>
+            <line number="115" hits="0" branch="False" />
             <line number="116" hits="0" branch="False" />
-            <line number="117" hits="0" branch="False" />
+            <line number="117" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="404" type="jump" coverage="0%" />
+              </conditions>
+            </line>
             <line number="118" hits="0" branch="False" />
+            <line number="119" hits="0" branch="False" />
             <line number="120" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="493" type="jump" coverage="0%" />
+                <condition number="597" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="121" hits="0" branch="False" />
             <line number="122" hits="0" branch="False" />
-            <line number="124" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="123" hits="0" branch="False" />
+            <line number="125" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="560" type="jump" coverage="0%" />
+                <condition number="665" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="125" hits="0" branch="False" />
             <line number="126" hits="0" branch="False" />
             <line number="127" hits="0" branch="False" />
+            <line number="129" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="732" type="jump" coverage="0%" />
+              </conditions>
+            </line>
             <line number="130" hits="0" branch="False" />
             <line number="131" hits="0" branch="False" />
             <line number="132" hits="0" branch="False" />
+            <line number="135" hits="0" branch="False" />
+            <line number="136" hits="0" branch="False" />
             <line number="137" hits="0" branch="False" />
-            <line number="138" hits="0" branch="False" />
+            <line number="141" hits="0" branch="False" />
+            <line number="142" hits="0" branch="False" />
+            <line number="143" hits="0" branch="False" />
+            <line number="148" hits="0" branch="False" />
+            <line number="149" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Areas.Identity.Pages.Account.LoginWith2faModel" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Account\LoginWith2fa.cshtml.cs" line-rate="0" branch-rate="1" complexity="4">
