@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.4841" branch-rate="0.08990000000000001" version="1.9" timestamp="1732625788" lines-covered="2246" lines-valid="4639" branches-covered="66" branches-valid="734">
+<coverage line-rate="0.48009999999999997" branch-rate="0.0889" version="1.9" timestamp="1732629746" lines-covered="2246" lines-valid="4678" branches-covered="66" branches-valid="742">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -9960,7 +9960,7 @@
         </class>
       </classes>
     </package>
-    <package name="Findexium.Domain" line-rate="0.20370000000000002" branch-rate="0" complexity="130">
+    <package name="Findexium.Domain" line-rate="0.1815" branch-rate="0" complexity="135">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -10710,36 +10710,84 @@
             <line number="19" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.TradeService/&lt;AddTradeAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.TradeService/&lt;AddTradeAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="26" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="26" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.TradeService/&lt;DeleteTradeAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.TradeService/&lt;DeleteTradeAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
+                <line number="87" hits="0" branch="False" />
+                <line number="88" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="164" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="89" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
+                <line number="93" hits="0" branch="False" />
+                <line number="94" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+                <line number="97" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
+            <line number="87" hits="0" branch="False" />
+            <line number="88" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="164" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="89" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
+            <line number="93" hits="0" branch="False" />
+            <line number="94" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+            <line number="97" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;GetAllTradesAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -10747,63 +10795,125 @@
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
                 <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
             <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;GetTradeByIdAsync&gt;d__3" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;TradeExistsAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="47" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="49" hits="0" branch="False" />
+                <line number="102" hits="0" branch="False" />
+                <line number="104" hits="0" branch="False" />
+                <line number="105" hits="0" branch="False" />
+                <line number="107" hits="0" branch="False" />
+                <line number="108" hits="0" branch="False" />
+                <line number="109" hits="0" branch="False" />
+                <line number="111" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="47" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="49" hits="0" branch="False" />
+            <line number="102" hits="0" branch="False" />
+            <line number="104" hits="0" branch="False" />
+            <line number="105" hits="0" branch="False" />
+            <line number="107" hits="0" branch="False" />
+            <line number="108" hits="0" branch="False" />
+            <line number="109" hits="0" branch="False" />
+            <line number="111" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.TradeService/&lt;UpdateTradeAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.TradeService/&lt;UpdateTradeAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="37" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="37" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="69" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="185" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
+                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
+                <line number="79" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="82" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="37" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="37" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="69" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="185" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
+            <line number="79" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="82" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.UserService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
