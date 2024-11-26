@@ -19,26 +19,87 @@ namespace Findexium.Domain.Services
 
         public async Task<IEnumerable<RuleName>> GetAllRatingsAsync()
         {
-            return await _ruleNameRepository.GetAllAsync();
-        }
-        public async Task<RuleName> GetRuleByIdAsync(int id)
-        {
-            return await _ruleNameRepository.GetByIdAsync(id);
-        }
-        public async Task AddRuleAsync(RuleName ruleName)
-        {
-            await _ruleNameRepository.AddAsync(ruleName);
+            try
+            {
+                return await _ruleNameRepository.GetAllAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while retrieving all rule names.", ex);
+            }
         }
 
-        public async Task UpdateRuleAsync ( RuleName ruleName)
+        public async Task<RuleName> GetRuleByIdAsync(int id)
         {
-           
-            await _ruleNameRepository.UpdateAsync( ruleName);
+            try
+            {
+                return await _ruleNameRepository.GetByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException($"An error occurred while retrieving the rule name with ID {id}.", ex);
+            }
+        }
+
+        public async Task AddRuleAsync(RuleName ruleName)
+        {
+            if (ruleName == null)
+            {
+                throw new ArgumentNullException(nameof(ruleName));
+            }
+
+            try
+            {
+                await _ruleNameRepository.AddAsync(ruleName);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while adding a new rule name.", ex);
+            }
+        }
+
+        public async Task UpdateRuleAsync(RuleName ruleName)
+        {
+            if (ruleName == null)
+            {
+                throw new ArgumentNullException(nameof(ruleName));
+            }
+
+            if (!await _ruleNameRepository.ExistsAsync(ruleName.Id))
+            {
+                throw new InvalidOperationException($"Rule name with ID {ruleName.Id} does not exist.");
+            }
+
+            try
+            {
+                await _ruleNameRepository.UpdateAsync(ruleName);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException($"An error occurred while updating the rule name with ID {ruleName.Id}.", ex);
+            }
         }
 
         public async Task DeleteRuleAsync(int id)
         {
-            await _ruleNameRepository.DeleteAsync(id);
+            if (!await _ruleNameRepository.ExistsAsync(id))
+            {
+                throw new InvalidOperationException($"Rule name with ID {id} does not exist.");
+            }
+
+            try
+            {
+                await _ruleNameRepository.DeleteAsync(id);
+            }
+            catch (Exception ex) when (!(ex is InvalidOperationException))
+            {
+                throw new ApplicationException($"An error occurred while deleting the rule name with ID {id}.", ex);
+            }
+        }
+
+        public async Task<bool> ExistsAsync(int id)
+        {
+            return await _ruleNameRepository.ExistsAsync(id);
         }
     }
 }
