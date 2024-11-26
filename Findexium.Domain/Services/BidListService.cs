@@ -19,27 +19,82 @@ namespace Findexium.Domain.Services
 
         public async Task<IEnumerable<BidList>> GetAllAsync()
         {
-            return await _bidRepository.GetAllAsync();
+            try
+            {
+                return await _bidRepository.GetAllAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while retrieving all bid lists.", ex);
+            }
         }
 
         public async Task<BidList> GetByIdAsync(int id)
         {
-            return await _bidRepository.GetByIdAsync(id);
+            try
+            {
+                return await _bidRepository.GetByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException($"An error occurred while retrieving the bid list with ID {id}.", ex);
+            }
         }
 
         public async Task AddAsync(BidList bidList)
         {
-            await _bidRepository.AddAsync(bidList);
+            if (bidList == null)
+            {
+                throw new ArgumentNullException(nameof(bidList));
+            }
+
+            try
+            {
+                await _bidRepository.AddAsync(bidList);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while adding a new bid list.", ex);
+            }
         }
 
-        public async Task UpdateAsync( BidList bidList)
+        public async Task UpdateAsync(BidList bidList)
         {
-          await _bidRepository.UpdateAsync(bidList);
+            if (bidList == null)
+            {
+                throw new ArgumentNullException(nameof(bidList));
+            }
+
+            if (!await _bidRepository.ExistsAsync(bidList.BidListId))
+            {
+                throw new InvalidOperationException($"Bid list with ID {bidList.BidListId} does not exist.");
+            }
+
+            try
+            {
+                await _bidRepository.UpdateAsync(bidList);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException($"An error occurred while updating the bid list with ID {bidList.BidListId}.", ex);
+            }
         }
 
         public async Task DeleteAsync(int id)
         {
-            await _bidRepository.DeleteAsync(id);
+            if (!await _bidRepository.ExistsAsync(id))
+            {
+                throw new InvalidOperationException($"Bid list with ID {id} does not exist.");
+            }
+
+            try
+            {
+                await _bidRepository.DeleteAsync(id);
+            }
+            catch (Exception ex) when (!(ex is InvalidOperationException))
+            {
+                throw new ApplicationException($"An error occurred while deleting the bid list with ID {id}.", ex);
+            }
         }
 
         public async Task<bool> ExistsAsync(int id)
