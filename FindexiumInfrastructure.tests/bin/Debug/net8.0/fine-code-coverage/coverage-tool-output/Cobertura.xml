@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.569061876247505" branch-rate="0.144736842105263" lines-covered="2851" lines-valid="5010" branches-covered="110" branches-valid="760" complexity="1418" version="0" timestamp="1732629392">
+<coverage line-rate="0.584740827023879" branch-rate="0.156330749354005" lines-covered="3012" lines-valid="5151" branches-covered="121" branches-valid="774" complexity="1443" version="0" timestamp="1732633350">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -7060,7 +7060,7 @@
         </class>
       </classes>
     </package>
-    <package name="Findexium.Domain" line-rate="0.699059561128527" branch-rate="0.588235294117647" complexity="130">
+    <package name="Findexium.Domain" line-rate="0.787709497206704" branch-rate="0.642857142857143" complexity="135">
       <classes>
         <class name="Findexium.Domain.Models.BidList" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\BidList.cs" line-rate="1" branch-rate="1" complexity="22">
           <methods>
@@ -7330,12 +7330,12 @@
           <methods>
             <method name="get_TradeId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="22" branch="false" />
+                <line number="7" hits="38" branch="false" />
               </lines>
             </method>
             <method name="get_Account" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="15" branch="false" />
+                <line number="8" hits="24" branch="false" />
               </lines>
             </method>
             <method name="get_AccountType" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -7380,7 +7380,7 @@
             </method>
             <method name="get_TradeSecurity" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="15" branch="false" />
+                <line number="17" hits="23" branch="false" />
               </lines>
             </method>
             <method name="get_TradeStatus" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -7445,8 +7445,8 @@
             </method>
           </methods>
           <lines>
-            <line number="7" hits="22" branch="false" />
-            <line number="8" hits="15" branch="false" />
+            <line number="7" hits="38" branch="false" />
+            <line number="8" hits="24" branch="false" />
             <line number="9" hits="14" branch="false" />
             <line number="10" hits="14" branch="false" />
             <line number="11" hits="14" branch="false" />
@@ -7455,7 +7455,7 @@
             <line number="14" hits="9" branch="false" />
             <line number="15" hits="9" branch="false" />
             <line number="16" hits="15" branch="false" />
-            <line number="17" hits="15" branch="false" />
+            <line number="17" hits="23" branch="false" />
             <line number="18" hits="14" branch="false" />
             <line number="19" hits="14" branch="false" />
             <line number="20" hits="14" branch="false" />
@@ -7990,82 +7990,160 @@
             <line number="103" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.TradeService" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="7">
+        <class name="Findexium.Domain.Services.TradeService" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0.967213114754098" branch-rate="0.875" complexity="12">
           <methods>
-            <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
+                <line number="16" hits="16" branch="false" />
+                <line number="17" hits="16" branch="false" />
+                <line number="18" hits="16" branch="false" />
+                <line number="19" hits="16" branch="false" />
               </lines>
             </method>
-            <method name="AddTradeAsync" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="AddTradeAsync" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="32" hits="0" branch="false" />
-                <line number="33" hits="0" branch="false" />
-                <line number="34" hits="0" branch="false" />
+                <line number="46" hits="3" branch="false" />
+                <line number="47" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="48" hits="1" branch="false" />
+                <line number="49" hits="1" branch="false" />
+                <line number="53" hits="2" branch="false" />
+                <line number="54" hits="2" branch="false" />
+                <line number="55" hits="1" branch="false" />
+                <line number="56" hits="1" branch="false" />
+                <line number="57" hits="1" branch="false" />
+                <line number="58" hits="1" branch="false" />
+                <line number="60" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="DeleteTradeAsync" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="DeleteTradeAsync" signature="()" line-rate="0.818181818181818" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="42" hits="0" branch="false" />
-                <line number="43" hits="0" branch="false" />
-                <line number="44" hits="0" branch="false" />
+                <line number="85" hits="2" branch="false" />
+                <line number="87" hits="2" branch="false" />
+                <line number="88" hits="2" branch="true" condition-coverage="50% (1/2)" />
+                <line number="89" hits="0" branch="false" />
+                <line number="90" hits="0" branch="false" />
+                <line number="93" hits="2" branch="false" />
+                <line number="94" hits="1" branch="false" />
+                <line number="95" hits="1" branch="false" />
+                <line number="96" hits="1" branch="false" />
+                <line number="97" hits="1" branch="false" />
+                <line number="99" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="GetAllTradesAsync" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="GetAllTradesAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="false" />
-                <line number="23" hits="0" branch="false" />
-                <line number="24" hits="0" branch="false" />
+                <line number="22" hits="2" branch="false" />
+                <line number="24" hits="2" branch="false" />
+                <line number="25" hits="2" branch="false" />
+                <line number="27" hits="1" branch="false" />
+                <line number="28" hits="1" branch="false" />
+                <line number="29" hits="1" branch="false" />
+                <line number="31" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="GetTradeByIdAsync" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="GetTradeByIdAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="false" />
-                <line number="28" hits="0" branch="false" />
-                <line number="29" hits="0" branch="false" />
+                <line number="34" hits="2" branch="false" />
+                <line number="36" hits="2" branch="false" />
+                <line number="37" hits="2" branch="false" />
+                <line number="39" hits="1" branch="false" />
+                <line number="40" hits="1" branch="false" />
+                <line number="41" hits="1" branch="false" />
+                <line number="43" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="TradeExistsAsync" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="TradeExistsAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="47" hits="0" branch="false" />
-                <line number="48" hits="0" branch="false" />
-                <line number="49" hits="0" branch="false" />
+                <line number="102" hits="3" branch="false" />
+                <line number="104" hits="3" branch="false" />
+                <line number="105" hits="3" branch="false" />
+                <line number="107" hits="1" branch="false" />
+                <line number="108" hits="1" branch="false" />
+                <line number="109" hits="1" branch="false" />
+                <line number="111" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="UpdateTradeAsync" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="UpdateTradeAsync" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="37" hits="0" branch="false" />
-                <line number="38" hits="0" branch="false" />
-                <line number="39" hits="0" branch="false" />
+                <line number="63" hits="4" branch="false" />
+                <line number="64" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="65" hits="1" branch="false" />
+                <line number="66" hits="1" branch="false" />
+                <line number="69" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="70" hits="1" branch="false" />
+                <line number="71" hits="1" branch="false" />
+                <line number="75" hits="2" branch="false" />
+                <line number="76" hits="2" branch="false" />
+                <line number="77" hits="1" branch="false" />
+                <line number="78" hits="1" branch="false" />
+                <line number="79" hits="1" branch="false" />
+                <line number="80" hits="1" branch="false" />
+                <line number="82" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="19" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="24" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
-            <line number="28" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
-            <line number="32" hits="0" branch="false" />
-            <line number="33" hits="0" branch="false" />
-            <line number="34" hits="0" branch="false" />
-            <line number="37" hits="0" branch="false" />
-            <line number="38" hits="0" branch="false" />
-            <line number="39" hits="0" branch="false" />
-            <line number="42" hits="0" branch="false" />
-            <line number="43" hits="0" branch="false" />
-            <line number="44" hits="0" branch="false" />
-            <line number="47" hits="0" branch="false" />
-            <line number="48" hits="0" branch="false" />
-            <line number="49" hits="0" branch="false" />
+            <line number="16" hits="16" branch="false" />
+            <line number="17" hits="16" branch="false" />
+            <line number="18" hits="16" branch="false" />
+            <line number="19" hits="16" branch="false" />
+            <line number="22" hits="2" branch="false" />
+            <line number="24" hits="2" branch="false" />
+            <line number="25" hits="2" branch="false" />
+            <line number="27" hits="1" branch="false" />
+            <line number="28" hits="1" branch="false" />
+            <line number="29" hits="1" branch="false" />
+            <line number="31" hits="1" branch="false" />
+            <line number="34" hits="2" branch="false" />
+            <line number="36" hits="2" branch="false" />
+            <line number="37" hits="2" branch="false" />
+            <line number="39" hits="1" branch="false" />
+            <line number="40" hits="1" branch="false" />
+            <line number="41" hits="1" branch="false" />
+            <line number="43" hits="1" branch="false" />
+            <line number="46" hits="3" branch="false" />
+            <line number="47" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="48" hits="1" branch="false" />
+            <line number="49" hits="1" branch="false" />
+            <line number="53" hits="2" branch="false" />
+            <line number="54" hits="2" branch="false" />
+            <line number="55" hits="1" branch="false" />
+            <line number="56" hits="1" branch="false" />
+            <line number="57" hits="1" branch="false" />
+            <line number="58" hits="1" branch="false" />
+            <line number="60" hits="1" branch="false" />
+            <line number="63" hits="4" branch="false" />
+            <line number="64" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="65" hits="1" branch="false" />
+            <line number="66" hits="1" branch="false" />
+            <line number="69" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="70" hits="1" branch="false" />
+            <line number="71" hits="1" branch="false" />
+            <line number="75" hits="2" branch="false" />
+            <line number="76" hits="2" branch="false" />
+            <line number="77" hits="1" branch="false" />
+            <line number="78" hits="1" branch="false" />
+            <line number="79" hits="1" branch="false" />
+            <line number="80" hits="1" branch="false" />
+            <line number="82" hits="1" branch="false" />
+            <line number="85" hits="2" branch="false" />
+            <line number="87" hits="2" branch="false" />
+            <line number="88" hits="2" branch="true" condition-coverage="50% (1/2)" />
+            <line number="89" hits="0" branch="false" />
+            <line number="90" hits="0" branch="false" />
+            <line number="93" hits="2" branch="false" />
+            <line number="94" hits="1" branch="false" />
+            <line number="95" hits="1" branch="false" />
+            <line number="96" hits="1" branch="false" />
+            <line number="97" hits="1" branch="false" />
+            <line number="99" hits="1" branch="false" />
+            <line number="102" hits="3" branch="false" />
+            <line number="104" hits="3" branch="false" />
+            <line number="105" hits="3" branch="false" />
+            <line number="107" hits="1" branch="false" />
+            <line number="108" hits="1" branch="false" />
+            <line number="109" hits="1" branch="false" />
+            <line number="111" hits="2" branch="false" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.UserService" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="0" complexity="17">
@@ -13210,7 +13288,7 @@
         </class>
       </classes>
     </package>
-    <package name="FindexiumDomain.tests" line-rate="0.996350364963504" branch-rate="0.666666666666667" complexity="57">
+    <package name="FindexiumDomain.tests" line-rate="0.997340425531915" branch-rate="0.666666666666667" complexity="77">
       <classes>
         <class name="AutoGeneratedProgram" filename="C:\Users\David Abruzzo\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -13960,6 +14038,284 @@
             <line number="226" hits="2" branch="false" />
             <line number="227" hits="1" branch="false" />
             <line number="228" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.TradeServiceTests" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="0.666666666666667" complexity="20">
+          <methods>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="16" branch="false" />
+                <line number="18" hits="16" branch="false" />
+                <line number="19" hits="16" branch="false" />
+                <line number="20" hits="16" branch="false" />
+                <line number="21" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="AddTradeAsync_AddsTrade" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="93" hits="1" branch="false" />
+                <line number="95" hits="1" branch="false" />
+                <line number="96" hits="1" branch="false" />
+                <line number="99" hits="1" branch="false" />
+                <line number="102" hits="1" branch="true" condition-coverage="100% (2/2)" />
+                <line number="103" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="AddTradeAsync_ThrowsApplicationException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="107" hits="1" branch="false" />
+                <line number="109" hits="1" branch="false" />
+                <line number="110" hits="1" branch="false" />
+                <line number="113" hits="2" branch="false" />
+                <line number="114" hits="1" branch="false" />
+                <line number="115" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="AddTradeAsync_ThrowsArgumentNullException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="119" hits="1" branch="false" />
+                <line number="121" hits="2" branch="false" />
+                <line number="124" hits="1" branch="false" />
+                <line number="125" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="DeleteTradeAsync_DeletesTrade" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="189" hits="1" branch="false" />
+                <line number="191" hits="1" branch="false" />
+                <line number="192" hits="1" branch="false" />
+                <line number="195" hits="1" branch="false" />
+                <line number="198" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="199" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="DeleteTradeAsync_ThrowsApplicationException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="203" hits="1" branch="false" />
+                <line number="205" hits="1" branch="false" />
+                <line number="206" hits="1" branch="false" />
+                <line number="209" hits="2" branch="false" />
+                <line number="210" hits="1" branch="false" />
+                <line number="211" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetAllTradesAsync_ReturnsListOfTrades" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="1" branch="false" />
+                <line number="29" hits="1" branch="false" />
+                <line number="30" hits="1" branch="false" />
+                <line number="31" hits="1" branch="false" />
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="false" />
+                <line number="34" hits="1" branch="false" />
+                <line number="37" hits="1" branch="false" />
+                <line number="40" hits="1" branch="false" />
+                <line number="41" hits="1" branch="false" />
+                <line number="42" hits="1" branch="false" />
+                <line number="43" hits="2" branch="false" />
+                <line number="44" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetAllTradesAsync_ThrowsApplicationException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="48" hits="1" branch="false" />
+                <line number="50" hits="1" branch="false" />
+                <line number="53" hits="2" branch="false" />
+                <line number="54" hits="1" branch="false" />
+                <line number="55" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetTradeByIdAsync_ReturnsTrade" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="63" hits="1" branch="false" />
+                <line number="65" hits="1" branch="false" />
+                <line number="66" hits="1" branch="false" />
+                <line number="69" hits="1" branch="false" />
+                <line number="72" hits="1" branch="false" />
+                <line number="73" hits="1" branch="false" />
+                <line number="74" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetTradeByIdAsync_ThrowsApplicationException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="78" hits="1" branch="false" />
+                <line number="80" hits="1" branch="false" />
+                <line number="83" hits="2" branch="false" />
+                <line number="84" hits="1" branch="false" />
+                <line number="85" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="TradeExistsAsync_ReturnsFalse_WhenTradeDoesNotExist" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="232" hits="1" branch="false" />
+                <line number="234" hits="1" branch="false" />
+                <line number="237" hits="1" branch="false" />
+                <line number="240" hits="1" branch="false" />
+                <line number="241" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="TradeExistsAsync_ReturnsTrue_WhenTradeExists" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="219" hits="1" branch="false" />
+                <line number="221" hits="1" branch="false" />
+                <line number="224" hits="1" branch="false" />
+                <line number="227" hits="1" branch="false" />
+                <line number="228" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="TradeExistsAsync_ThrowsApplicationException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="245" hits="1" branch="false" />
+                <line number="247" hits="1" branch="false" />
+                <line number="250" hits="2" branch="false" />
+                <line number="253" hits="1" branch="false" />
+                <line number="254" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="UpdateTradeAsync_ThrowsApplicationException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="148" hits="1" branch="false" />
+                <line number="150" hits="1" branch="false" />
+                <line number="151" hits="1" branch="false" />
+                <line number="152" hits="1" branch="false" />
+                <line number="155" hits="2" branch="false" />
+                <line number="156" hits="1" branch="false" />
+                <line number="157" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="UpdateTradeAsync_ThrowsArgumentNullException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="161" hits="1" branch="false" />
+                <line number="163" hits="2" branch="false" />
+                <line number="166" hits="1" branch="false" />
+                <line number="167" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="UpdateTradeAsync_ThrowsInvalidOperationException" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="171" hits="1" branch="false" />
+                <line number="173" hits="1" branch="false" />
+                <line number="174" hits="1" branch="false" />
+                <line number="177" hits="2" branch="false" />
+                <line number="180" hits="1" branch="false" />
+                <line number="181" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="UpdateTradeAsync_UpdatesTrade" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="133" hits="1" branch="false" />
+                <line number="135" hits="1" branch="false" />
+                <line number="136" hits="1" branch="false" />
+                <line number="137" hits="1" branch="false" />
+                <line number="140" hits="1" branch="false" />
+                <line number="143" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="144" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="16" branch="false" />
+            <line number="18" hits="16" branch="false" />
+            <line number="19" hits="16" branch="false" />
+            <line number="20" hits="16" branch="false" />
+            <line number="21" hits="16" branch="false" />
+            <line number="27" hits="1" branch="false" />
+            <line number="29" hits="1" branch="false" />
+            <line number="30" hits="1" branch="false" />
+            <line number="31" hits="1" branch="false" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="false" />
+            <line number="34" hits="1" branch="false" />
+            <line number="37" hits="1" branch="false" />
+            <line number="40" hits="1" branch="false" />
+            <line number="41" hits="1" branch="false" />
+            <line number="42" hits="1" branch="false" />
+            <line number="43" hits="2" branch="false" />
+            <line number="44" hits="1" branch="false" />
+            <line number="48" hits="1" branch="false" />
+            <line number="50" hits="1" branch="false" />
+            <line number="53" hits="2" branch="false" />
+            <line number="54" hits="1" branch="false" />
+            <line number="55" hits="1" branch="false" />
+            <line number="63" hits="1" branch="false" />
+            <line number="65" hits="1" branch="false" />
+            <line number="66" hits="1" branch="false" />
+            <line number="69" hits="1" branch="false" />
+            <line number="72" hits="1" branch="false" />
+            <line number="73" hits="1" branch="false" />
+            <line number="74" hits="1" branch="false" />
+            <line number="78" hits="1" branch="false" />
+            <line number="80" hits="1" branch="false" />
+            <line number="83" hits="2" branch="false" />
+            <line number="84" hits="1" branch="false" />
+            <line number="85" hits="1" branch="false" />
+            <line number="93" hits="1" branch="false" />
+            <line number="95" hits="1" branch="false" />
+            <line number="96" hits="1" branch="false" />
+            <line number="99" hits="1" branch="false" />
+            <line number="102" hits="1" branch="true" condition-coverage="100% (2/2)" />
+            <line number="103" hits="1" branch="false" />
+            <line number="107" hits="1" branch="false" />
+            <line number="109" hits="1" branch="false" />
+            <line number="110" hits="1" branch="false" />
+            <line number="113" hits="2" branch="false" />
+            <line number="114" hits="1" branch="false" />
+            <line number="115" hits="1" branch="false" />
+            <line number="119" hits="1" branch="false" />
+            <line number="121" hits="2" branch="false" />
+            <line number="124" hits="1" branch="false" />
+            <line number="125" hits="1" branch="false" />
+            <line number="133" hits="1" branch="false" />
+            <line number="135" hits="1" branch="false" />
+            <line number="136" hits="1" branch="false" />
+            <line number="137" hits="1" branch="false" />
+            <line number="140" hits="1" branch="false" />
+            <line number="143" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="144" hits="1" branch="false" />
+            <line number="148" hits="1" branch="false" />
+            <line number="150" hits="1" branch="false" />
+            <line number="151" hits="1" branch="false" />
+            <line number="152" hits="1" branch="false" />
+            <line number="155" hits="2" branch="false" />
+            <line number="156" hits="1" branch="false" />
+            <line number="157" hits="1" branch="false" />
+            <line number="161" hits="1" branch="false" />
+            <line number="163" hits="2" branch="false" />
+            <line number="166" hits="1" branch="false" />
+            <line number="167" hits="1" branch="false" />
+            <line number="171" hits="1" branch="false" />
+            <line number="173" hits="1" branch="false" />
+            <line number="174" hits="1" branch="false" />
+            <line number="177" hits="2" branch="false" />
+            <line number="180" hits="1" branch="false" />
+            <line number="181" hits="1" branch="false" />
+            <line number="189" hits="1" branch="false" />
+            <line number="191" hits="1" branch="false" />
+            <line number="192" hits="1" branch="false" />
+            <line number="195" hits="1" branch="false" />
+            <line number="198" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="199" hits="1" branch="false" />
+            <line number="203" hits="1" branch="false" />
+            <line number="205" hits="1" branch="false" />
+            <line number="206" hits="1" branch="false" />
+            <line number="209" hits="2" branch="false" />
+            <line number="210" hits="1" branch="false" />
+            <line number="211" hits="1" branch="false" />
+            <line number="219" hits="1" branch="false" />
+            <line number="221" hits="1" branch="false" />
+            <line number="224" hits="1" branch="false" />
+            <line number="227" hits="1" branch="false" />
+            <line number="228" hits="1" branch="false" />
+            <line number="232" hits="1" branch="false" />
+            <line number="234" hits="1" branch="false" />
+            <line number="237" hits="1" branch="false" />
+            <line number="240" hits="1" branch="false" />
+            <line number="241" hits="1" branch="false" />
+            <line number="245" hits="1" branch="false" />
+            <line number="247" hits="1" branch="false" />
+            <line number="250" hits="2" branch="false" />
+            <line number="253" hits="1" branch="false" />
+            <line number="254" hits="1" branch="false" />
           </lines>
         </class>
         <class name="FindexiumDomain.tests.UnitTest1" filename="C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UnitTest1.cs" line-rate="1" branch-rate="1" complexity="1">
