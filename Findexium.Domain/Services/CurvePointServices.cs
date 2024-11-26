@@ -20,27 +20,87 @@ namespace Findexium.Domain.Services
 
         public async Task<IEnumerable<CurvePoint>> GetAllAsync()
         {
-            return await _repository.GetAllAsync();
+            try
+            {
+                return await _repository.GetAllAsync();
+            }
+            catch (Exception ex)
+            {
+                
+                throw new ApplicationException("An error occurred while retrieving all curve points.", ex);
+            }
         }
 
         public async Task<CurvePoint> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            try
+            {
+                return await _repository.GetByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+               
+                throw new ApplicationException($"An error occurred while retrieving the curve point with ID {id}.", ex);
+            }
         }
 
         public async Task AddAsync(CurvePoint curvePoint)
         {
-            await _repository.AddAsync(curvePoint);
+            if (curvePoint == null)
+            {
+                throw new ArgumentNullException(nameof(curvePoint));
+            }
+
+            try
+            {
+                await _repository.AddAsync(curvePoint);
+            }
+            catch (Exception ex)
+            {
+                
+                throw new ApplicationException("An error occurred while adding a new curve point.", ex);
+            }
         }
 
-        public async Task UpdateAsync( CurvePoint curvePoint)
+        public async Task UpdateAsync(CurvePoint curvePoint)
         {
-            await _repository.UpdateAsync(curvePoint);
+            if (curvePoint == null)
+            {
+                throw new ArgumentNullException(nameof(curvePoint));
+            }
+
+            if (!await _repository.ExistsAsync(curvePoint.Id))
+            {
+                throw new InvalidOperationException($"Curve point with ID {curvePoint.Id} does not exist.");
+            }
+
+            try
+            {
+                await _repository.UpdateAsync(curvePoint);
+            }
+            catch (Exception ex)
+            {
+               
+                throw new ApplicationException($"An error occurred while updating the curve point with ID {curvePoint.Id}.", ex);
+            }
         }
 
         public async Task DeleteAsync(int id)
         {
-            await _repository.DeleteAsync(id);
+            if (!await _repository.ExistsAsync(id))
+            {
+                throw new InvalidOperationException($"Curve point with ID {id} does not exist.");
+            }
+
+            try
+            {
+                await _repository.DeleteAsync(id);
+            }
+            catch (Exception ex) when (!(ex is InvalidOperationException))
+            {
+               
+                throw new ApplicationException($"An error occurred while deleting the curve point with ID {id}.", ex);
+            }
         }
     }
 }
