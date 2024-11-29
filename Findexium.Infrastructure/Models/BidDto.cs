@@ -42,20 +42,21 @@ namespace Findexium.Infrastructure.Models
             double? askQuantity,
             double bid,
             double? ask,
-            string benchmark,
+            string? benchmark,
             DateTime? bidListDate,
-            string commentary,
-            string bidSecurity,
-            string bidStatus,
-            string trader,
-            string book,
-            string creationName,
+            string? commentary,
+            string? bidSecurity,
+            string? bidStatus,
+            string? trader,
+            string? book,
+            string? creationName,
             DateTime? creationDate,
-            string revisionName,
-            DateTime? revisionDate, string dealName,
-            string dealType,
-            string sourceListId,
-            string side)
+            string? revisionName,
+            DateTime? revisionDate, string? dealName,
+
+            string? dealType,
+            string? sourceListId,
+            string? side)
         {
            BidListId = bidListId;
             Account = account;

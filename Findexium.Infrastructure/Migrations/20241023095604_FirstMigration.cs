@@ -23,21 +23,21 @@ namespace P7CreateRestApi.Migrations
                     AskQuantity = table.Column<double>(type: "float", nullable: true),
                     Bid = table.Column<double>(type: "float", nullable: false),
                     Ask = table.Column<double>(type: "float", nullable: true),
-                    Benchmark = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Benchmark = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BidListDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Commentary = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BidSecurity = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BidStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Trader = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Book = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreationName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Commentary = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BidSecurity = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BidStatus = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Trader = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Book = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreationName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    RevisionName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RevisionName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RevisionDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DealName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DealType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SourceListId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Side = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DealName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DealType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SourceListId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Side = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -50,11 +50,11 @@ namespace P7CreateRestApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CurveId = table.Column<byte>(type: "tinyint", nullable: true),
-                    AsOfDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Term = table.Column<double>(type: "float", nullable: true),
-                    CurvePointValue = table.Column<double>(type: "float", nullable: true),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    CurveId = table.Column<byte>(type: "tinyint", nullable: false),
+                    AsOfDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Term = table.Column<double>(type: "float", nullable: false),
+                    CurvePointValue = table.Column<double>(type: "float", nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
