@@ -46,7 +46,7 @@ namespace Findexium.Api.Controllers
                     BidListId = b.BidListId,
                     Account = b.Account,
                     BidType = b.BidType,
-                   
+                    BidQuantity = b.BidQuantity,
                 }).ToList();
                 return Ok(bidDtos);
             }
