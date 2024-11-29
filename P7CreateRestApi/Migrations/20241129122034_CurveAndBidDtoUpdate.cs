@@ -5,7 +5,7 @@
 namespace Findexium.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class BidDtoUpdate : Migration
+    public partial class CurveAndBidDtoUpdate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
