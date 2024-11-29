@@ -113,21 +113,10 @@ namespace FindexiumApi.tests
             var returnTrade = Assert.IsType<List<TradeResponse>>(okResult.Value);
             Assert.Equal(3, returnTrade.Count());
             Assert.Collection(returnTrade,
-                item =>
-                {
-                    Assert.Equal(1, item.TradeId);
-                  
-                },
-                item =>
-                {
-                    Assert.Equal(2, item.TradeId);
-                   
-                },
-                item =>
-                {
-                    Assert.Equal(3, item.TradeId);
-                  
-                }
+                item => { Assert.Equal(1, item.TradeId); },
+                item => { Assert.Equal(2, item.TradeId); },
+                item => { Assert.Equal(3, item.TradeId); }
+
             );
         }
 
@@ -225,7 +214,7 @@ namespace FindexiumApi.tests
             // Arrange
             var request = new TradeRequest
             {
-              
+
                 Account = "Account1",
                 AccountType = "AccountType1",
                 BuyQuantity = 1,
@@ -252,8 +241,8 @@ namespace FindexiumApi.tests
             // Act
             var result = await _controller.CreateTrade(request);
 
-           //Assert
-           Assert.IsType<CreatedResult>(result);
+            //Assert
+            Assert.IsType<CreatedResult>(result);
         }
 
         [Fact]
@@ -283,7 +272,7 @@ namespace FindexiumApi.tests
                 SellCurrency = "EUR"
             };
 
-            
+
             // Act
             var result = await _controller.CreateTrade(request);
 
@@ -452,7 +441,7 @@ namespace FindexiumApi.tests
         }
 
         [Fact]
-        public async Task    UpdateTrade_DbUpdateConcurrencyException_TradeNotFound_ReturnsNotFound()
+        public async Task UpdateTrade_DbUpdateConcurrencyException_TradeNotFound_ReturnsNotFound()
         {
             // Arrange
             int id = 1;
@@ -567,7 +556,7 @@ namespace FindexiumApi.tests
 
             // Assert
             Assert.IsType<NoContentResult>(result);
-           
+
         }
 
         [Fact]
@@ -582,7 +571,7 @@ namespace FindexiumApi.tests
 
             // Assert
             Assert.IsType<NotFoundResult>(result);
-          
+
         }
 
         [Fact]
@@ -598,7 +587,7 @@ namespace FindexiumApi.tests
             // Assert
             var statusCodeResult = Assert.IsType<ObjectResult>(result);
             Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
-           
+
         }
 
 

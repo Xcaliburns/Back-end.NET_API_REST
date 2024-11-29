@@ -36,13 +36,16 @@ namespace Findexium.Api.Controllers
             try
             {
                 _logger.LogInformation("Fetching all rule names");
-                var ruleNames = await _ruleNameServices.GetAllRatingsAsync();
-                var ruleNameDtos = ruleNames.Select(r => new RuleName
+                var ruleNames = await _ruleNameServices.GetAllRulesAsync();
+                var ruleNameDtos = ruleNames.Select(r => new RuleNameResponse
                 {
                     Id = r.Id,
                     Name = r.Name,
                     Description = r.Description,
-                    Json = r.Json
+                    Json = r.Json,
+                    Template = r.Template,
+                    SqlStr = r.SqlStr,
+                    SqlPart = r.SqlPart,
                 }).ToList();
                 return Ok(ruleNameDtos);
             }

@@ -17,7 +17,7 @@ namespace Findexium.Domain.Services
             _ruleNameRepository = ruleNameRepository;
         }
 
-        public async Task<IEnumerable<RuleName>> GetAllRatingsAsync()
+        public async Task<IEnumerable<RuleName>> GetAllRulesAsync()
         {
             try
             {

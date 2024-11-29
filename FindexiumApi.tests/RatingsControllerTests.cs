@@ -139,7 +139,7 @@ namespace FindexiumApi.tests
 
             _mockRatingService.Setup(service => service.AddRatingAsync(It.IsAny<Rating>()))
                 .Returns(Task.CompletedTask);
-           
+
             // Act
             var result = await _controller.PostRating(request);
 
@@ -199,7 +199,7 @@ namespace FindexiumApi.tests
         {
             // Arrange
             var rating = new Rating
-            { 
+            {
                 Id = 1,
                 MoodysRating = "A1",
                 SandPRating = "A+",
@@ -227,7 +227,7 @@ namespace FindexiumApi.tests
             var result = await _controller.DeleteRating(1);
 
             // Assert
-            var notFoundResult=Assert.IsType<NotFoundResult>(result);
+            var notFoundResult = Assert.IsType<NotFoundResult>(result);
             Assert.Equal(StatusCodes.Status404NotFound, notFoundResult.StatusCode);
         }
 
@@ -236,7 +236,7 @@ namespace FindexiumApi.tests
         {
             // Arrange
             var rating = new Rating
-            { 
+            {
                 Id = 1,
                 MoodysRating = "A1",
                 SandPRating = "A+",
@@ -269,7 +269,7 @@ namespace FindexiumApi.tests
                 FitchRating = "A",
                 OrderNumber = 1
             };
-          
+
             // Act
             var result = await _controller.PutRating(1, rating);
 
@@ -366,5 +366,5 @@ namespace FindexiumApi.tests
             Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
             Assert.Equal("Internal server error", actionResult.Value);
         }
-    } 
+    }
 }

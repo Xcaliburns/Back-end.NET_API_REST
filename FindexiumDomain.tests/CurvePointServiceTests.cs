@@ -118,8 +118,11 @@ namespace FindexiumDomain.tests
         [Fact]
         public async Task UpdateAsync_ThrowsArgumentNullException_WhenCurvePointIsNull()
         {
-            // Act & Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(() => _service.UpdateAsync(null));
+            // Act
+            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => _service.UpdateAsync(null));
+
+            // Assert
+            Assert.Equal("Value cannot be null. (Parameter 'curvePoint')", exception.Message);
         }
 
         [Fact]
@@ -129,8 +132,10 @@ namespace FindexiumDomain.tests
             var curvePoint = new CurvePoint { Id = 1 };
             _mockRepository.Setup(repo => repo.ExistsAsync(curvePoint.Id)).ReturnsAsync(false);
 
-            // Act & Assert
+            // Act
             var exception = await Assert.ThrowsAsync<InvalidOperationException>(() => _service.UpdateAsync(curvePoint));
+
+            // Assert
             Assert.Equal("Curve point with ID 1 does not exist.", exception.Message);
         }
 
@@ -142,8 +147,10 @@ namespace FindexiumDomain.tests
             _mockRepository.Setup(repo => repo.ExistsAsync(curvePoint.Id)).ReturnsAsync(true);
             _mockRepository.Setup(repo => repo.UpdateAsync(curvePoint)).ThrowsAsync(new Exception("Database error"));
 
-            // Act & Assert
+            // Act
             var exception = await Assert.ThrowsAsync<ApplicationException>(() => _service.UpdateAsync(curvePoint));
+            // Assert
+
             Assert.Equal("An error occurred while updating the curve point with ID 1.", exception.Message);
         }
 
@@ -181,8 +188,9 @@ namespace FindexiumDomain.tests
             _mockRepository.Setup(repo => repo.ExistsAsync(id)).ReturnsAsync(true);
             _mockRepository.Setup(repo => repo.DeleteAsync(id)).ThrowsAsync(new Exception("Database error"));
 
-            // Act & Assert
-            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _service.DeleteAsync(id));
+            // Act
+           var exception = await Assert.ThrowsAsync<ApplicationException>(() => _service.DeleteAsync(id));
+            //  Assert            
             Assert.Equal("An error occurred while deleting the curve point with ID 1.", exception.Message);
         }
     }

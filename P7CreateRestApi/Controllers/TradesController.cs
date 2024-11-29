@@ -61,7 +61,9 @@ namespace Findexium.Api.Controllers
                     DealName = t.DealName,
                     DealType = t.DealType,
                     SourceListId = t.SourceListId,
-                    Side = t.Side
+                    Side = t.Side,
+                    BuyCurrency = t.BuyCurrency,
+                    SellCurrency = t.SellCurrency
                 }).ToList();
                 return Ok(tradeDtos);
             }

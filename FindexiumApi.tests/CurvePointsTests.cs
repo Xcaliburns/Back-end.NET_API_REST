@@ -44,7 +44,7 @@ namespace FindexiumApi.tests
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnCurvePoints = Assert.IsType<List<CurvePoint>>(okResult.Value);
+            var returnCurvePoints = Assert.IsType<List<CurvePointResponse>>(okResult.Value);
             Assert.Equal(3, returnCurvePoints.Count);
             Assert.Collection(returnCurvePoints,
                 item => Assert.Equal(1, item.Id),

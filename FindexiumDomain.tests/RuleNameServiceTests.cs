@@ -33,7 +33,7 @@ namespace FindexiumDomain.tests
             _mockRuleNameRepository.Setup(repo => repo.GetAllAsync()).ReturnsAsync(ruleNames);
 
             // Act
-            var result = (await _ruleNameService.GetAllRatingsAsync()).ToList();
+            var result = (await _ruleNameService.GetAllRulesAsync()).ToList();
 
             // Assert
             Assert.Equal(2, result.Count);
@@ -49,7 +49,7 @@ namespace FindexiumDomain.tests
             _mockRuleNameRepository.Setup(repo => repo.GetAllAsync()).ThrowsAsync(new Exception("Database error"));
 
             // Act & Assert
-            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _ruleNameService.GetAllRatingsAsync());
+            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _ruleNameService.GetAllRulesAsync());
             Assert.Equal("An error occurred while retrieving all rule names.", exception.Message);
         }
 

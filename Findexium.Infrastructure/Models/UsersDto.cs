@@ -13,7 +13,7 @@ namespace Findexium.Infrastructure.Models
     {
         public int Id { get; internal set; }
         public string UserName { get; set; }
-        public string Password { get; set; }
+        public string PasswordHash { get; set; }
         public string FullName { get; set; }
         public string Role { get; set; } = "User"; // Default role is "User"
 
@@ -25,7 +25,7 @@ namespace Findexium.Infrastructure.Models
         )
         {
             UserName = userName;
-            Password = password;
+            PasswordHash = password;
             FullName = fullName;
             Role = role;
         }
@@ -40,7 +40,7 @@ namespace Findexium.Infrastructure.Models
             };
 
             // Hash the password using UserManager to ensure it is always secured
-            user.PasswordHash = userManager.PasswordHasher.HashPassword(user, Password);
+            user.PasswordHash = userManager.PasswordHasher.HashPassword(user, PasswordHash);
 
             return user;
         }

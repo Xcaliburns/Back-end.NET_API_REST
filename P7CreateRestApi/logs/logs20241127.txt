@@ -1,0 +1,755 @@
+2024-11-27 11:00:53.825 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 11:00:54.960 +01:00 [INF] Executed DbCommand (42ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 11:00:55.032 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 11:00:55.047 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 11:00:55.465 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 11:00:55.466 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 11:00:55.510 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 11:00:55.511 +01:00 [INF] Hosting environment: Development
+2024-11-27 11:00:55.512 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 11:00:56.147 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-27 11:00:56.344 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 198.5032ms
+2024-11-27 11:00:56.354 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-27 11:00:56.354 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-27 11:00:56.368 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-27 11:00:56.375 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 20.7092ms
+2024-11-27 11:00:56.376 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 22.3987ms
+2024-11-27 11:00:56.459 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.1761ms
+2024-11-27 11:00:56.668 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-27 11:00:56.857 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 188.6539ms
+2024-11-27 11:01:17.200 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Users - null null
+2024-11-27 11:01:17.310 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-11-27 11:01:17.315 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-27 11:01:17.316 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Users - 401 0 null 116.2006ms
+2024-11-27 11:02:02.763 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 52
+2024-11-27 11:02:02.774 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-27 11:02:02.797 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-27 11:02:02.824 +01:00 [INF] Attempting to log in user with login: toto
+2024-11-27 11:02:02.888 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-27 11:02:02.947 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-27 11:02:02.977 +01:00 [INF] User toto logged in successfully
+2024-11-27 11:02:02.983 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-27 11:02:02.991 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 190.2557ms
+2024-11-27 11:02:02.993 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-27 11:02:02.997 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 234.686ms
+2024-11-27 11:02:28.263 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Users - null null
+2024-11-27 11:02:28.295 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-11-27 11:02:28.307 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-11-27 11:02:28.309 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-11-27 11:02:28.311 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-27 11:02:28.313 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Users - 401 0 null 49.0857ms
+2024-11-27 11:02:40.058 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Users - null null
+2024-11-27 11:02:40.061 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-11-27 11:02:40.062 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-11-27 11:02:40.065 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-11-27 11:02:40.066 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-27 11:02:40.067 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Users - 401 0 null 8.888ms
+2024-11-27 11:02:52.946 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList - null null
+2024-11-27 11:02:52.949 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-11-27 11:02:52.952 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-11-27 11:02:52.953 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User|Admin)
+2024-11-27 11:02:52.954 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-27 11:02:52.956 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList - 401 0 null 9.1628ms
+2024-11-27 11:03:05.535 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CurvePoints - null null
+2024-11-27 11:03:05.538 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-11-27 11:03:05.540 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-11-27 11:03:05.541 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User|Admin)
+2024-11-27 11:03:05.541 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-27 11:03:05.542 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CurvePoints - 401 0 null 6.6115ms
+2024-11-27 11:03:59.915 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList - null null
+2024-11-27 11:03:59.959 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-27 11:03:59.965 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.BidResponse]]] GetBids() on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-27 11:03:59.969 +01:00 [INF] Fetching all bids
+2024-11-27 11:03:59.995 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2024-11-27 11:04:00.052 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.BidResponse, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-27 11:04:00.071 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api) in 104.2536ms
+2024-11-27 11:04:00.071 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-27 11:04:00.072 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList - 200 null application/json; charset=utf-8 157.2384ms
+2024-11-27 11:04:17.960 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Users - null null
+2024-11-27 11:04:17.964 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-11-27 11:04:17.966 +01:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-11-27 11:04:17.967 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Users - 403 0 null 6.5903ms
+2024-11-27 11:28:41.279 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 11:28:42.587 +01:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 11:28:42.678 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 11:28:42.692 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 11:28:43.136 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 11:28:43.138 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 11:28:43.189 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 11:28:43.191 +01:00 [INF] Hosting environment: Development
+2024-11-27 11:28:43.192 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 12:13:56.431 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 12:13:57.435 +01:00 [INF] Executed DbCommand (43ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:13:57.517 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:13:57.533 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 12:13:57.873 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 12:13:57.875 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 12:13:57.923 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 12:13:57.924 +01:00 [INF] Hosting environment: Development
+2024-11-27 12:13:57.925 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 12:14:48.305 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 12:14:49.304 +01:00 [INF] Executed DbCommand (47ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:14:49.384 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:14:49.399 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 12:14:49.732 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 12:14:49.736 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 12:14:49.787 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 12:14:49.789 +01:00 [INF] Hosting environment: Development
+2024-11-27 12:14:49.789 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 12:15:52.710 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 12:15:53.706 +01:00 [INF] Executed DbCommand (45ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:15:53.773 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:15:53.788 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 12:15:54.084 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 12:15:54.085 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 12:15:54.136 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 12:15:54.138 +01:00 [INF] Hosting environment: Development
+2024-11-27 12:15:54.139 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 12:16:15.249 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 12:16:16.221 +01:00 [INF] Executed DbCommand (33ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:16:16.298 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 12:16:16.311 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 12:16:16.632 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 12:16:16.634 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 12:16:16.680 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 12:16:16.682 +01:00 [INF] Hosting environment: Development
+2024-11-27 12:16:16.683 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 13:29:55.661 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 13:29:57.018 +01:00 [INF] Executed DbCommand (56ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:29:57.102 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:29:57.120 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 13:29:57.447 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 13:29:57.448 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 13:29:57.494 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 13:29:57.496 +01:00 [INF] Hosting environment: Development
+2024-11-27 13:29:57.497 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 13:29:57.812 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-27 13:29:58.117 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 309.0059ms
+2024-11-27 13:29:58.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-27 13:29:58.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-27 13:29:58.140 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 8.9009ms
+2024-11-27 13:29:58.147 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-27 13:29:58.161 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 29.9109ms
+2024-11-27 13:29:58.257 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.9125ms
+2024-11-27 13:29:58.347 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-27 13:29:58.653 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 305.6335ms
+2024-11-27 13:30:34.023 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 57
+2024-11-27 13:30:34.186 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-27 13:30:34.220 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-27 13:30:34.270 +01:00 [INF] Attempting to log in user with login: admin@example
+2024-11-27 13:30:34.433 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-27 13:30:34.442 +01:00 [WRN] Invalid login attempt for user: admin@example
+2024-11-27 13:30:34.458 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-11-27 13:30:34.500 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 268.7038ms
+2024-11-27 13:30:34.503 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-27 13:30:34.517 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 401 null application/problem+json; charset=utf-8 493.8317ms
+2024-11-27 13:30:50.057 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-27 13:30:50.069 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-27 13:30:50.080 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-27 13:30:50.090 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-27 13:30:50.111 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-27 13:30:50.188 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-27 13:30:50.220 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-27 13:30:50.222 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-27 13:30:50.226 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 141.4348ms
+2024-11-27 13:30:50.228 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-27 13:30:50.229 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 172.309ms
+2024-11-27 13:33:10.054 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 97
+2024-11-27 13:33:10.077 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-11-27 13:33:10.087 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-11-27 13:33:10.095 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User|Admin)
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-27 13:33:10.100 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-27 13:33:10.101 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 46.8722ms
+2024-11-27 13:33:36.551 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 97
+2024-11-27 13:33:36.609 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:33:36.617 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-27 13:33:36.647 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-27 13:33:36.653 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 33.3439ms
+2024-11-27 13:33:36.654 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:33:36.655 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 400 null application/problem+json; charset=utf-8 104.0665ms
+2024-11-27 13:33:59.548 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 96
+2024-11-27 13:33:59.560 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:33:59.561 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-27 13:33:59.573 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-27 13:33:59.575 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 9.6669ms
+2024-11-27 13:33:59.576 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:33:59.579 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 400 null application/problem+json; charset=utf-8 30.4461ms
+2024-11-27 13:35:17.719 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 13:35:19.605 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:35:19.705 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:35:19.729 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 13:35:20.220 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 13:35:20.221 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 13:35:20.275 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 13:35:20.277 +01:00 [INF] Hosting environment: Development
+2024-11-27 13:35:20.278 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 13:35:20.661 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-27 13:35:20.822 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 162.2193ms
+2024-11-27 13:35:20.834 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-27 13:35:20.834 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-27 13:35:20.834 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-27 13:35:20.841 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 7.5755ms
+2024-11-27 13:35:20.857 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 23.5772ms
+2024-11-27 13:35:20.896 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.1595ms
+2024-11-27 13:35:20.985 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-27 13:35:21.001 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/favicon-32x32.png - null null
+2024-11-27 13:35:21.018 +01:00 [INF] The file /favicon-32x32.png was not modified
+2024-11-27 13:35:21.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/favicon-32x32.png - 304 null image/png 19.7708ms
+2024-11-27 13:35:21.195 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 209.4969ms
+2024-11-27 13:36:22.485 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-27 13:36:22.497 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 11.4801ms
+2024-11-27 13:36:22.524 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-27 13:36:22.524 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-27 13:36:22.524 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-27 13:36:22.561 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 36.2823ms
+2024-11-27 13:36:22.563 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.6939ms
+2024-11-27 13:36:22.564 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 39.2267ms
+2024-11-27 13:36:22.779 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-27 13:36:22.808 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate schema for type - Findexium.Api.Models.BidRequest. See inner exception
+ ---> System.TypeLoadException: Could not load type 'AspNetCoreGeneratedDocument.Areas_Identity_Pages_Account_Manage__StatusMessage' from assembly 'Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' due to value type mismatch.
+   at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal fieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimeMethodInfo.<get_Signature>g__LazyCreateSignature|25_0()
+   at System.Reflection.RuntimeMethodInfo.FetchNonReturnParameters()
+   at System.Reflection.RuntimePropertyInfo.GetIndexParametersNoCopy()
+   at System.Reflection.RuntimePropertyInfo.GetIndexParameters()
+   at System.Attribute.GetIndexParameterTypes(PropertyInfo element)
+   at System.Attribute.InternalGetCustomAttributes(PropertyInfo element, Type type, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttribute[T](MemberInfo element)
+   at Swashbuckle.AspNetCore.SwaggerGen.JsonSerializerDataContractResolver.<GetDataPropertiesFor>b__6_1(PropertyInfo property)
+   at System.Linq.Enumerable.WhereArrayIterator`1.ToArray()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.OrderedEnumerable`1.GetEnumerator()+MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.JsonSerializerDataContractResolver.GetDataPropertiesFor(Type objectType, Type& extensionDataType)
+   at Swashbuckle.AspNetCore.SwaggerGen.JsonSerializerDataContractResolver.GetDataContractForType(Type type)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GetDataContractFor(Type modelType)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchemaForParameter(Type modelType, SchemaRepository schemaRepository, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchema(Type modelType, SchemaRepository schemaRepository, MemberInfo memberInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyFromBodyParameter(ApiDescription apiDescription, SchemaRepository schemaRepository, ApiParameterDescription bodyParameter)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyAndFilterContext(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyAsync(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, Func`3 parametersGenerator, Func`3 bodyGenerator, Func`3 applyFilters)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, Func`3 parametersGenerator, Func`3 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-11-27 13:36:22.928 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate schema for type - Findexium.Api.Models.BidRequest. See inner exception
+ ---> System.TypeLoadException: Could not load type 'AspNetCoreGeneratedDocument.Areas_Identity_Pages_Account_Manage__StatusMessage' from assembly 'Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' due to value type mismatch.
+   at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal fieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimeMethodInfo.<get_Signature>g__LazyCreateSignature|25_0()
+   at System.Reflection.RuntimeMethodInfo.FetchNonReturnParameters()
+   at System.Reflection.RuntimePropertyInfo.GetIndexParametersNoCopy()
+   at System.Reflection.RuntimePropertyInfo.GetIndexParameters()
+   at System.Attribute.GetIndexParameterTypes(PropertyInfo element)
+   at System.Attribute.InternalGetCustomAttributes(PropertyInfo element, Type type, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttribute[T](MemberInfo element)
+   at Swashbuckle.AspNetCore.SwaggerGen.JsonSerializerDataContractResolver.<GetDataPropertiesFor>b__6_1(PropertyInfo property)
+   at System.Linq.Enumerable.WhereArrayIterator`1.ToArray()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.OrderedEnumerable`1.GetEnumerator()+MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.JsonSerializerDataContractResolver.GetDataPropertiesFor(Type objectType, Type& extensionDataType)
+   at Swashbuckle.AspNetCore.SwaggerGen.JsonSerializerDataContractResolver.GetDataContractForType(Type type)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GetDataContractFor(Type modelType)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchemaForParameter(Type modelType, SchemaRepository schemaRepository, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchema(Type modelType, SchemaRepository schemaRepository, MemberInfo memberInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyFromBodyParameter(ApiDescription apiDescription, SchemaRepository schemaRepository, ApiParameterDescription bodyParameter)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyAndFilterContext(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyAsync(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, Func`3 parametersGenerator, Func`3 bodyGenerator, Func`3 applyFilters)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, Func`3 parametersGenerator, Func`3 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-27 13:36:22.952 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 173.4143ms
+2024-11-27 13:36:22.966 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7210/swagger/v1/swagger.json, Response status code: 500
+2024-11-27 13:36:31.030 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 13:36:32.689 +01:00 [INF] Executed DbCommand (66ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:36:32.799 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:36:32.813 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 13:36:33.197 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 13:36:33.200 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 13:36:33.258 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 13:36:33.260 +01:00 [INF] Hosting environment: Development
+2024-11-27 13:36:33.261 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 13:36:33.482 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-27 13:36:33.662 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 178.9205ms
+2024-11-27 13:36:33.668 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-27 13:36:33.669 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-27 13:36:33.669 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-27 13:36:33.677 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 9.6956ms
+2024-11-27 13:36:33.695 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 26.5193ms
+2024-11-27 13:36:33.739 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.9264ms
+2024-11-27 13:36:33.797 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-27 13:36:34.037 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 240.3193ms
+2024-11-27 13:36:56.166 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 94
+2024-11-27 13:36:56.280 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:36:56.298 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-27 13:36:56.334 +01:00 [INF] Creating a new bid
+2024-11-27 13:36:56.606 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-27 13:36:56.635 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'Findexium.Infrastructure.Data.LocalDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Impossible d'insérer la valeur NULL dans la colonne 'Benchmark', table 'Findexium.dbo.Bids'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:962cd940-a31f-4e01-8a0c-f3d328399d7d
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Impossible d'insérer la valeur NULL dans la colonne 'Benchmark', table 'Findexium.dbo.Bids'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:962cd940-a31f-4e01-8a0c-f3d328399d7d
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-11-27 13:36:56.645 +01:00 [ERR] Error occurred while creating a new bid
+System.ApplicationException: An error occurred while adding a new bid list.
+ ---> System.Exception: An error occurred while adding the bid.
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Impossible d'insérer la valeur NULL dans la colonne 'Benchmark', table 'Findexium.dbo.Bids'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:962cd940-a31f-4e01-8a0c-f3d328399d7d
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Findexium.Infrastructure.Repositories.BidRepository.AddAsync(BidList bidList) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs:line 63
+   --- End of inner exception stack trace ---
+   at Findexium.Infrastructure.Repositories.BidRepository.AddAsync(BidList bidList) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs:line 68
+   at Findexium.Domain.Services.BidListService.AddAsync(BidList bidList) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs:line 53
+   --- End of inner exception stack trace ---
+   at Findexium.Domain.Services.BidListService.AddAsync(BidList bidList) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs:line 57
+   at Findexium.Api.Controllers.BidListController.PostBidList(BidRequest request) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\BidListController.cs:line 152
+2024-11-27 13:36:56.730 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-11-27 13:36:56.737 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 432.8475ms
+2024-11-27 13:36:56.739 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:36:56.746 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 500 null text/plain; charset=utf-8 580.3103ms
+2024-11-27 13:37:24.722 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 13:37:27.208 +01:00 [INF] Executed DbCommand (63ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:37:27.297 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:37:27.314 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 13:37:27.937 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 13:37:27.939 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 13:37:27.999 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 13:37:28.001 +01:00 [INF] Hosting environment: Development
+2024-11-27 13:37:28.002 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 13:37:28.905 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-27 13:37:29.399 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 507.5215ms
+2024-11-27 13:37:29.420 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-27 13:37:29.420 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-27 13:37:29.421 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-27 13:37:29.470 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 53.9023ms
+2024-11-27 13:37:29.488 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 72.8112ms
+2024-11-27 13:37:29.570 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 149.9029ms
+2024-11-27 13:37:29.648 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-27 13:37:30.086 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 438.7148ms
+2024-11-27 13:37:47.251 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 94
+2024-11-27 13:37:47.440 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:37:47.465 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-27 13:37:58.172 +01:00 [INF] Creating a new bid
+2024-11-27 13:38:25.219 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-27 13:38:25.291 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'Findexium.Infrastructure.Data.LocalDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Impossible d'insérer la valeur NULL dans la colonne 'Benchmark', table 'Findexium.dbo.Bids'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:11385bd1-7e72-4dc7-8630-76b1cd57a486
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Impossible d'insérer la valeur NULL dans la colonne 'Benchmark', table 'Findexium.dbo.Bids'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:11385bd1-7e72-4dc7-8630-76b1cd57a486
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-11-27 13:38:59.924 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-27 13:39:01.458 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:39:01.546 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-27 13:39:01.559 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-27 13:39:02.183 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-27 13:39:02.184 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-27 13:39:02.274 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 13:39:02.284 +01:00 [INF] Hosting environment: Development
+2024-11-27 13:39:02.286 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-27 13:39:02.620 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-27 13:39:02.956 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 341.9611ms
+2024-11-27 13:39:02.993 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-27 13:39:02.994 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-27 13:39:02.999 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-27 13:39:03.064 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 70.5057ms
+2024-11-27 13:39:03.068 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 75.7118ms
+2024-11-27 13:39:03.247 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 247.512ms
+2024-11-27 13:39:03.328 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-27 13:39:03.558 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 229.9747ms
+2024-11-27 13:39:19.940 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 94
+2024-11-27 13:39:20.164 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-27 13:39:20.197 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-27 13:39:28.167 +01:00 [INF] Creating a new bid
+2024-11-27 13:39:40.550 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-27 13:39:40.641 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'Findexium.Infrastructure.Data.LocalDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Impossible d'insérer la valeur NULL dans la colonne 'Benchmark', table 'Findexium.dbo.Bids'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:4d694399-8b35-4fa5-91e2-e4701a5c2945
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Impossible d'insérer la valeur NULL dans la colonne 'Benchmark', table 'Findexium.dbo.Bids'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:4d694399-8b35-4fa5-91e2-e4701a5c2945
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)

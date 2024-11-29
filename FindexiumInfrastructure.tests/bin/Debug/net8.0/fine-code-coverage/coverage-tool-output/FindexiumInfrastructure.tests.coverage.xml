@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.1746" branch-rate="0.11109999999999999" version="1.9" timestamp="1732629741" lines-covered="179" lines-valid="1025" branches-covered="8" branches-valid="72">
+<coverage line-rate="0.1746" branch-rate="0.11109999999999999" version="1.9" timestamp="1732709312" lines-covered="179" lines-valid="1025" branches-covered="8" branches-valid="72">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -634,7 +634,7 @@
             <line number="103" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.RuleNameService/&lt;GetAllRatingsAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.RuleNameService/&lt;GetAllRulesAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>

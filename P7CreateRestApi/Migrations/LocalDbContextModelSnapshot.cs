@@ -59,10 +59,6 @@ namespace Findexium.Api.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
@@ -118,7 +114,6 @@ namespace Findexium.Api.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("Benchmark")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Bid")
@@ -131,11 +126,9 @@ namespace Findexium.Api.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("BidSecurity")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BidStatus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BidType")
@@ -143,45 +136,36 @@ namespace Findexium.Api.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Book")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Commentary")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DealName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DealType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("RevisionDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RevisionName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Side")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SourceListId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Trader")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("BidListId");

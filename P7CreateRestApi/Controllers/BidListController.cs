@@ -46,25 +46,7 @@ namespace Findexium.Api.Controllers
                     BidListId = b.BidListId,
                     Account = b.Account,
                     BidType = b.BidType,
-                    BidQuantity = b.BidQuantity,
-                    AskQuantity = b.AskQuantity,
-                    Bid = b.Bid,
-                    Ask = b.Ask,
-                    Benchmark = b.Benchmark,
-                    BidListDate = b.BidListDate,
-                    Commentary = b.Commentary,
-                    BidSecurity = b.BidSecurity,
-                    BidStatus = b.BidStatus,
-                    Trader = b.Trader,
-                    Book = b.Book,
-                    CreationName = b.CreationName,
-                    CreationDate = b.CreationDate,
-                    RevisionName = b.RevisionName,
-                    RevisionDate = b.RevisionDate,
-                    DealName = b.DealName,
-                    DealType = b.DealType,
-                    SourceListId = b.SourceListId,
-                    Side = b.Side
+                   
                 }).ToList();
                 return Ok(bidDtos);
             }
@@ -113,6 +95,7 @@ namespace Findexium.Api.Controllers
                 _logger.LogInformation("Updating bid with id: {Id}", id);
                 await _bidListServices.UpdateAsync(bidList);
             }
+            //TODO :a placer dans l'infrastructure
             catch (DbUpdateConcurrencyException)
             {
                 if (!await _bidListServices.ExistsAsync(id))

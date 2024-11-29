@@ -51,7 +51,7 @@ namespace FindexiumApi.tests
                 item => Assert.Equal("Account2", item.Account),
                 item => Assert.Equal("Account3", item.Account));
         }
-           
+
 
 
         [Fact]
@@ -74,7 +74,7 @@ namespace FindexiumApi.tests
         {
             // Arrange
             var bid = new BidList
-            { 
+            {
                 BidListId = -1,
                 Account = "Account1",
                 BidType = "Type1",
@@ -85,7 +85,8 @@ namespace FindexiumApi.tests
                 Benchmark = "Benchmark1",
                 BidListDate = new DateTime(2021, 1, 1),
                 Commentary = "comment1",
-                BidSecurity = "Secure1", BidStatus = "status1",
+                BidSecurity = "Secure1",
+                BidStatus = "status1",
                 Trader = "Trader1",
                 Book = "Book1",
                 CreationName = "name1",
@@ -95,7 +96,8 @@ namespace FindexiumApi.tests
                 DealName = "name1",
                 DealType = "type1",
                 SourceListId = "Id1",
-                Side = "Side1" };
+                Side = "Side1"
+            };
 
             _mockBidService.Setup(service => service.GetByIdAsync(-1)).ReturnsAsync(bid);
 
@@ -112,7 +114,7 @@ namespace FindexiumApi.tests
         {
             // Arrange
             int bidId = 1;
-           
+
 
             _mockBidService.Setup(service => service.GetByIdAsync(bidId))
                 .ReturnsAsync((BidList)null);
@@ -121,7 +123,7 @@ namespace FindexiumApi.tests
             var result = await _controller.GetBid(bidId);
 
             // Assert
-          
+
             var notFoundResult = Assert.IsType<NotFoundResult>(result.Result);
         }
 
@@ -131,7 +133,7 @@ namespace FindexiumApi.tests
             // Arrange
             int testId = 1;
             _mockBidService.Setup(service => service.GetByIdAsync(It.IsAny<int>()))
-                               .ThrowsAsync(new Exception("Test exception"));           
+                               .ThrowsAsync(new Exception("Test exception"));
 
             // Act
             var result = await _controller.GetBid(testId);
@@ -153,36 +155,19 @@ namespace FindexiumApi.tests
                 Account = "TestAccount",
                 BidType = "TestType",
                 BidQuantity = 100,
-                AskQuantity = 200,
-                Bid = 50,
-                Ask = 60,
-                Benchmark = "TestBenchmark",
-                BidListDate = DateTime.Now,
-                Commentary = "TestCommentary",
-                BidSecurity = "TestSecurity",
-                BidStatus = "TestStatus",
-                Trader = "TestTrader",
-                Book = "TestBook",
-                CreationName = "TestCreationName",
-                CreationDate = DateTime.Now,
-                RevisionName = "TestRevisionName",
-                RevisionDate = DateTime.Now,
-                DealName = "TestDealName",
-                DealType = "TestDealType",
-                SourceListId = "TestSourceListId",
-                Side = "TestSide"
+              
             };
 
-          
+
 
             _mockBidService.Setup(service => service.AddAsync(It.IsAny<BidList>())).Returns(Task.CompletedTask);
-           // _mockBidService.Setup(service => service.ExistsAsync(It.IsAny<int>())).ReturnsAsync(false);
+            // _mockBidService.Setup(service => service.ExistsAsync(It.IsAny<int>())).ReturnsAsync(false);
 
             // Act
             var result = await _controller.PostBidList(bidRequest);
 
             // Assert
-                    
+
             Assert.IsType<CreatedResult>(result);
         }
 
@@ -210,27 +195,10 @@ namespace FindexiumApi.tests
                 Account = "TestAccount",
                 BidType = "TestType",
                 BidQuantity = 100,
-                AskQuantity = 200,
-                Bid = 50,
-                Ask = 60,
-                Benchmark = "TestBenchmark",
-                BidListDate = DateTime.Now,
-                Commentary = "TestCommentary",
-                BidSecurity = "TestSecurity",
-                BidStatus = "TestStatus",
-                Trader = "TestTrader",
-                Book = "TestBook",
-                CreationName = "TestCreationName",
-                CreationDate = DateTime.Now,
-                RevisionName = "TestRevisionName",
-                RevisionDate = DateTime.Now,
-                DealName = "TestDealName",
-                DealType = "TestDealType",
-                SourceListId = "TestSourceListId",
-                Side = "TestSide"
+             
             };
 
-           
+
 
             _mockBidService.Setup(service => service.AddAsync(It.IsAny<BidList>())).ThrowsAsync(new Exception("Test exception"));
 
@@ -329,14 +297,14 @@ namespace FindexiumApi.tests
             _mockBidService.Setup(service => service.UpdateAsync(It.IsAny<BidList>()))
                 .ThrowsAsync(new DbUpdateConcurrencyException());
             _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(false);
-           
+
 
             // Act
             var result = await _controller.PutBid(bidListId, bidList);
 
             // Assert
             var notFoundResult = Assert.IsType<NotFoundResult>(result);
-           
+
         }
 
         [Fact]

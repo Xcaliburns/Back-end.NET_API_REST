@@ -32,11 +32,11 @@ namespace FindexiumApi.tests
             // Arrange
             var ruleNames = new List<RuleName>
             {
-                new RuleName { Id = 1, Name = "Rule1", Description = "Rule1 Description", Json = "Rule1 Json" },
-                new RuleName { Id = 2, Name = "Rule2", Description = "Rule2 Description", Json = "Rule2 Json" },
-                new RuleName { Id = 3, Name = "Rule3", Description = "Rule3 Description", Json = "Rule3 Json" }
+                new RuleName { Id = 1, Name = "Rule1", Description = "Rule1 Description", Json = "Rule1 Json",Template="template1",SqlStr="SqlStr 1",SqlPart="SqlPart 1" },
+                new RuleName { Id = 2, Name = "Rule2", Description = "Rule2 Description", Json = "Rule2 Json",Template="template2",SqlStr="SqlStr 2",SqlPart="SqlPart 2"  },
+                new RuleName { Id = 3, Name = "Rule3", Description = "Rule3 Description", Json = "Rule3 Json",Template="template3",SqlStr="SqlStr 3",SqlPart="SqlPart 3"  }
             };
-            _mockRuleNameService.Setup(service => service.GetAllRatingsAsync()).ReturnsAsync(ruleNames);
+            _mockRuleNameService.Setup(service => service.GetAllRulesAsync()).ReturnsAsync(ruleNames);
 
             // Act
             var result = await _mockRuleNameController.GetRuleName();
@@ -44,7 +44,7 @@ namespace FindexiumApi.tests
             // Assert
 
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnRuleNames = Assert.IsType<List<RuleName>>(okResult.Value);
+            var returnRuleNames = Assert.IsType<List<RuleNameResponse>>(okResult.Value);
             Assert.Equal(3, returnRuleNames.Count);
             Assert.Collection(returnRuleNames,
                 item => Assert.Equal("Rule1", item.Name),
@@ -57,7 +57,7 @@ namespace FindexiumApi.tests
         public async Task GetRuleNameList_ReturnsInternalServerError_OnException()
         {
             //Arrange
-            _mockRuleNameService.Setup(service => service.GetAllRatingsAsync())
+            _mockRuleNameService.Setup(service => service.GetAllRulesAsync())
                 .ThrowsAsync(new System.Exception("An error occurred"));
 
             //Act
@@ -79,7 +79,10 @@ namespace FindexiumApi.tests
                 Id = 1,
                 Name = "Rule1",
                 Description = "Rule1 Description",
-                Json = "Rule1 Json"
+                Json = "Rule1 Json",
+                Template = "template1",
+                SqlStr = "SqlStr 1",
+                SqlPart = "SqlPart 1"
             };
             _mockRuleNameService.Setup(service => service.GetRuleByIdAsync(1))
                 .ReturnsAsync(ruleName);
@@ -250,7 +253,7 @@ namespace FindexiumApi.tests
             Assert.Equal("Invalid argument", actionResult.Value);
         }
         [Fact]
-       public async Task PutRuleName_ShouldReturnInternalServerError_WhenExceptionIsThrown()
+        public async Task PutRuleName_ShouldReturnInternalServerError_WhenExceptionIsThrown()
         {
             //Arrange
             var ruleName = new RuleName

@@ -43,8 +43,8 @@ namespace Findexium.Api.Controllers
                     Term = c.Term,
                     CurvePointValue = c.CurvePointValue,
                     CreationDate = c.CreationDate
-                });
-                return Ok(curvePoints);
+                }).ToList();
+                return Ok(curvePointDtos);
             }
             catch (Exception ex)
             {
