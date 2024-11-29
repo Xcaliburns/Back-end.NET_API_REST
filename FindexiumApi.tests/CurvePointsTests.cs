@@ -240,11 +240,9 @@ namespace FindexiumApi.tests
             // Arrange
             var request = new CurvePointRequest
             {
-                CurveId = 1,
-                AsOfDate = DateTime.Now,
+                CurveId = 1,             
                 Term = 1.0,
-                CurvePointValue = 100.0,
-                CreationDate = DateTime.Now
+                CurvePointValue = 100.0,              
             };
 
             _mockCurvePointService.Setup(service => service.AddAsync(It.IsAny<CurvePoint>()))
@@ -265,10 +263,10 @@ namespace FindexiumApi.tests
 
             var request = new CurvePointRequest
             {
-                AsOfDate = DateTime.Now,
+               
                 Term = 1.0,
                 CurvePointValue = 100.0,
-                CreationDate = DateTime.Now
+              
             };
 
             // Act
@@ -285,11 +283,9 @@ namespace FindexiumApi.tests
             // Arrange
             var request = new CurvePointRequest
             {
-                CurveId = 1,
-                AsOfDate = DateTime.Now,
+                CurveId = 1,              
                 Term = 1.0,
-                CurvePointValue = 100.0,
-                CreationDate = DateTime.Now
+                CurvePointValue = 100.0,              
             };
 
             _mockCurvePointService.Setup(service => service.AddAsync(It.IsAny<CurvePoint>()))

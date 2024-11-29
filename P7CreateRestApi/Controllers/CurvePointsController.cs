@@ -39,10 +39,10 @@ namespace Findexium.Api.Controllers
                 {
                     Id = c.Id,
                     CurveId = c.CurveId,
-                    AsOfDate = c.AsOfDate,
+                 
                     Term = c.Term,
                     CurvePointValue = c.CurvePointValue,
-                    CreationDate = c.CreationDate
+                  
                 }).ToList();
                 return Ok(curvePointDtos);
             }

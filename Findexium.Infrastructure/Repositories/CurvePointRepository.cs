@@ -38,11 +38,11 @@ namespace Findexium.Infrastructure.Repositories
         public async Task AddAsync(CurvePoint curvePoint)
         {
             _context.CurvePoints.Add(new CurvePointsDto(
-                curvePoint.CurveId ?? 0, // Provide a default value if CurveId is null
-                curvePoint.AsOfDate ?? DateTime.Now, // Provide a default value if AsOfDate is null
-                curvePoint.Term ?? 0, // Provide a default value if Term is null
-                curvePoint.CurvePointValue ?? 0, // Provide a default value if CurvePointValue is null
-                curvePoint.CreationDate ?? DateTime.Now // Provide a default value if CreationDate is null
+                curvePoint.CurveId , 
+                curvePoint.AsOfDate , 
+                curvePoint.Term , 
+                curvePoint.CurvePointValue , 
+                curvePoint.CreationDate 
             ));
             await _context.SaveChangesAsync();
             

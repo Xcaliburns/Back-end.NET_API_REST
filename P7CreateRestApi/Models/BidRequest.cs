@@ -7,8 +7,7 @@ namespace Findexium.Api.Models
     {
         [Required(ErrorMessage = "Account is required.")]
         public string Account { get; set; }
-
-        [Required(ErrorMessage = "BidType is required.")]
+    
         public string BidType { get; set; }
 
         [Range(0.01, double.MaxValue, ErrorMessage = "BidQuantity must be a positive number.")]
@@ -24,8 +23,7 @@ namespace Findexium.Api.Models
             {
                 Account = Account,
                 BidType = BidType,
-                BidQuantity = BidQuantity,
-             
+                BidQuantity = BidQuantity,           
                
              
             };

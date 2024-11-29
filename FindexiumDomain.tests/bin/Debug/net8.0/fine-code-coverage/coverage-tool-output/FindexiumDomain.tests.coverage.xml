@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.4697" branch-rate="0.47950000000000004" version="1.9" timestamp="1732709950" lines-covered="613" lines-valid="1305" branches-covered="47" branches-valid="98">
+<coverage line-rate="0.4697" branch-rate="0.47950000000000004" version="1.9" timestamp="1732877499" lines-covered="613" lines-valid="1305" branches-covered="47" branches-valid="98">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -3554,7 +3554,7 @@
                 <line number="15" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_Password" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_PasswordHash" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="16" hits="0" branch="False" />
               </lines>

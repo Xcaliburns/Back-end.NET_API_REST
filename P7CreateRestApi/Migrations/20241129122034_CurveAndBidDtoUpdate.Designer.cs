@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Findexium.Api.Migrations
 {
     [DbContext(typeof(LocalDbContext))]
-    [Migration("20241129103855_BidDtoUpdate")]
-    partial class BidDtoUpdate
+    [Migration("20241129122034_CurveAndBidDtoUpdate")]
+    partial class CurveAndBidDtoUpdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
