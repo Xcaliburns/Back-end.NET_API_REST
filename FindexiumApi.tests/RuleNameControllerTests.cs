@@ -204,85 +204,109 @@ namespace FindexiumApi.tests
         [Fact]
         public async Task PutRuleName_ReturnsNoContent()
         {
-            //Arrange
+            // Arrange
+            var ruleNameRequest = new RuleNameRequest
+            {
+                Name = "Rule1",
+                Description = "Rule1 Description",
+                Json = "Rule1 Json",
+                Template = "template1",
+                SqlStr = "SqlStr 1",
+                SqlPart = "SqlPart 1"
+            };
+
             var ruleName = new RuleName
             {
                 Id = 1,
                 Name = "Rule1",
                 Description = "Rule1 Description",
-                Json = "Rule1 Json"
+                Json = "Rule1 Json",
+                Template = "template1",
+                SqlStr = "SqlStr 1",
+                SqlPart = "SqlPart 1"
             };
 
-            //Act
-            var result = await _mockRuleNameController.PutRuleName(1, ruleName);
+            _mockRuleNameService.Setup(service => service.UpdateRuleAsync(It.IsAny<RuleName>()))
+                .Returns(Task.CompletedTask);
 
-            //Assert
+            // Act
+            var result = await _mockRuleNameController.PutRuleName(1, ruleNameRequest);
+
+            // Assert
             Assert.IsType<NoContentResult>(result);
         }
 
         [Fact]
         public async Task PutRuleName_ReturnsBadRequest_WhenIdMismatch()
         {
-            //Arrange
+            // Arrange
             var ruleNameId = 2;
-            var ruleName = new RuleName
+            var ruleNameRequest = new RuleNameRequest
             {
-                Id = 1,
                 Name = "Rule1",
                 Description = "Rule1 Description",
-                Json = "Rule1 Json"
+                Json = "Rule1 Json",
+                Template = "template1",
+                SqlStr = "SqlStr 1",
+                SqlPart = "SqlPart 1"
             };
 
-            //Act
-            var result = await _mockRuleNameController.PutRuleName(ruleNameId, ruleName);
+            // Act
+            var result = await _mockRuleNameController.PutRuleName(ruleNameId, ruleNameRequest);
 
-            //Assert
+            // Assert
             Assert.IsType<BadRequestResult>(result);
         }
 
         [Fact]
         public async Task PutRuleName_ShouldReturnBadRequest_WhenArgumentExceptionIsThrown()
         {
-            //Arrange
-            var ruleName = new RuleName
+            // Arrange
+            var ruleNameRequest = new RuleNameRequest
             {
-                Id = 1,
                 Name = "Rule1",
                 Description = "Rule1 Description",
-                Json = "Rule1 Json"
+                Json = "Rule1 Json",
+                Template = "template1",
+                SqlStr = "SqlStr 1",
+                SqlPart = "SqlPart 1"
             };
 
             _mockRuleNameService.Setup(service => service.UpdateRuleAsync(It.IsAny<RuleName>()))
                 .ThrowsAsync(new ArgumentException("Invalid argument"));
 
-            //Act
-            var result = await _mockRuleNameController.PutRuleName(1, ruleName);
+            // Act
+            var result = await _mockRuleNameController.PutRuleName(1, ruleNameRequest);
 
-            //Assert
+            // Assert
             var actionResult = Assert.IsType<BadRequestObjectResult>(result);
             Assert.Equal("Invalid argument", actionResult.Value);
         }
+
+
         [Fact]
         public async Task PutRuleName_ShouldReturnInternalServerError_WhenExceptionIsThrown()
         {
-            //Arrange
-            var ruleName = new RuleName
+            // Arrange
+            var ruleNameRequest = new RuleNameRequest
             {
-                Id = 1,
                 Name = "Rule1",
                 Description = "Rule1 Description",
-                Json = "Rule1 Json"
+                Json = "Rule1 Json",
+                Template = "template1",
+                SqlStr = "SqlStr 1",
+                SqlPart = "SqlPart 1"
             };
 
             _mockRuleNameService.Setup(service => service.UpdateRuleAsync(It.IsAny<RuleName>()))
                 .ThrowsAsync(new System.Exception("An error occurred"));
 
-            //Act
-            var result = await _mockRuleNameController.PutRuleName(1, ruleName);
+            // Act
+            var result = await _mockRuleNameController.PutRuleName(1, ruleNameRequest);
 
-            //Assert
+            // Assert
             var actionResult = Assert.IsType<ObjectResult>(result);
-            Assert.Equal(StatusCodes.Status500InternalServerError, ((ObjectResult)actionResult).StatusCode);
+            Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
             Assert.Equal("Internal server error", actionResult.Value);
         }
 

@@ -94,25 +94,33 @@ namespace Findexium.Api.Controllers
         [Authorize]
         public async Task<IActionResult> PutBid(int id, BidRequest request)
         {
-           if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                _logger.LogWarning("Invalid model state for BidRequest");
                 return BadRequest(ModelState);
             }
 
             try
             {
                 _logger.LogInformation("Updating bid with id: {Id}", id);
-                await _bidListServices.UpdateAsync(id,request.ToBid());
+                var existingBid = await _bidListServices.GetByIdAsync(id);
+                if (existingBid == null)
+                {
+                    _logger.LogWarning("Bid with id: {Id} not found", id);
+                    return NotFound();
+                }
+
+                var updatedBid = request.ToBid();
+                updatedBid.BidListId = id; // Ensure the ID remains the same
+
+                await _bidListServices.UpdateAsync(id, updatedBid);
+                return NoContent();
             }
-           
-         
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while updating bid with id: {Id}", id);
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
-
-            return NoContent();
         }
 
         // POST: api/BidLists
