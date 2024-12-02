@@ -60,7 +60,7 @@ namespace Findexium.Api.Controllers
 
         // GET: api/BidLists/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BidList>> GetBid(int id)
+        public async Task<ActionResult<BidResponse>> GetBid(int id)
         {
             try
             {
@@ -71,8 +71,16 @@ namespace Findexium.Api.Controllers
                     _logger.LogWarning("Bid with id: {Id} not found", id);
                     return NotFound();
                 }
-               
-                return Ok(bid);
+
+                var bidResponse = new BidResponse
+                {
+                    BidListId = bid.BidListId,
+                    Account = bid.Account,
+                    BidType = bid.BidType,
+                    BidQuantity = bid.BidQuantity
+                };
+
+                return Ok(bidResponse);
             }
             catch (Exception ex)
             {
