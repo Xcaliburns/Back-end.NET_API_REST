@@ -60,10 +60,7 @@ namespace Findexium.Api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<RuleNameResponse>> GetRuleName(int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            };
+           
 
             try
             {
@@ -101,6 +98,10 @@ namespace Findexium.Api.Controllers
         public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
         {
 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            };
 
             if (id != ruleName.Id)
             {

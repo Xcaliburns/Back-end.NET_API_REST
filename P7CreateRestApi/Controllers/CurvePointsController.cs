@@ -55,7 +55,7 @@ namespace Findexium.Api.Controllers
 
         // GET: api/CurvePoints/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<CurvePoint>> GetCurvePoint(int id)
+        public async Task<ActionResult<CurvePointResponse>> GetCurvePoint(int id)
         {
             try
             {
@@ -68,7 +68,15 @@ namespace Findexium.Api.Controllers
                     return NotFound();
                 }
 
-                return Ok(curvePoint);
+                var curvePointResponse = new CurvePointResponse
+                {
+                    Id = curvePoint.Id,
+                    CurveId = curvePoint.CurveId,
+                    Term = curvePoint.Term,
+                    CurvePointValue = curvePoint.CurvePointValue
+                };
+
+                return Ok(curvePointResponse);
             }
             catch (Exception ex)
             {

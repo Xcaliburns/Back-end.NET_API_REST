@@ -76,7 +76,7 @@ namespace Findexium.Api.Controllers
 
         // GET: api/Trades/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Trade>> GetTrade(int id)
+        public async Task<ActionResult<TradeResponse>> GetTrade(int id)
         {
             try
             {
@@ -89,7 +89,34 @@ namespace Findexium.Api.Controllers
                     return NotFound();
                 }
 
-                return Ok(trade);
+                var tradeResponse = new TradeResponse
+                {
+                    TradeId = trade.TradeId,
+                    Account = trade.Account,
+                    AccountType = trade.AccountType,
+                    BuyQuantity = trade.BuyQuantity,
+                    SellQuantity = trade.SellQuantity,
+                    BuyPrice = trade.BuyPrice,
+                    SellPrice = trade.SellPrice,
+                    Benchmark = trade.Benchmark,
+                    TradeDate = trade.TradeDate,
+                    TradeSecurity = trade.TradeSecurity,
+                    TradeStatus = trade.TradeStatus,
+                    Trader = trade.Trader,
+                    Book = trade.Book,
+                    CreationName = trade.CreationName,
+                    CreationDate = trade.CreationDate,
+                    RevisionName = trade.RevisionName,
+                    RevisionDate = trade.RevisionDate,
+                    DealName = trade.DealName,
+                    DealType = trade.DealType,
+                    SourceListId = trade.SourceListId,
+                    Side = trade.Side,
+                    BuyCurrency = trade.BuyCurrency,
+                    SellCurrency = trade.SellCurrency
+                };
+
+                return Ok(tradeResponse);
             }
             catch (Exception ex)
             {

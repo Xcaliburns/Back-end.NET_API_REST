@@ -58,23 +58,32 @@ namespace Findexium.Api.Controllers
         }
         // GET: api/Ratings/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Rating>> GetRating(int id)
+        public async Task<ActionResult<RatingResponse>> GetRating(int id)
         {
             try
             {
-                _logger.LogInformation("Fetching bid with id: {Id}", id);
-                var bid = await _ratingService.GetRatingByIdAsync(id);
-                if (bid == null)
+                _logger.LogInformation("Fetching rating with id: {Id}", id);
+                var rating = await _ratingService.GetRatingByIdAsync(id);
+                if (rating == null)
                 {
-                    _logger.LogWarning("Bid with id: {Id} not found", id);
+                    _logger.LogWarning("Rating with id: {Id} not found", id);
                     return NotFound();
                 }
 
-                return Ok(bid);
+                var ratingResponse = new RatingResponse
+                {
+                    Id = rating.Id,
+                    MoodysRating = rating.MoodysRating,
+                    SandPRating = rating.SandPRating,
+                    FitchRating = rating.FitchRating,
+                    OrderNumber = rating.OrderNumber
+                };
+
+                return Ok(ratingResponse);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while fetching bid with id: {Id}", id);
+                _logger.LogError(ex, "Error occurred while fetching rating with id: {Id}", id);
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
