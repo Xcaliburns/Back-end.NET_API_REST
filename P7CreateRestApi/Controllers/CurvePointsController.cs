@@ -87,17 +87,34 @@ namespace Findexium.Api.Controllers
 
         // PUT: api/CurvePoints/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCurvePoint(int id, CurvePoint curvePoint)
+        public async Task<IActionResult> PutCurvePoint(int id, CurvePointRequest request)
         {
-            if (id != curvePoint.Id)
+            if (!ModelState.IsValid)
             {
-                return BadRequest();
+                _logger.LogWarning("Invalid model state for CurvePointRequest");
+                return BadRequest(ModelState);
+            }
+
+            if (id != request.CurveId)
+            {
+                return BadRequest("ID in the URL does not match ID in the request body");
             }
 
             try
             {
                 _logger.LogInformation("Updating curve point with id: {Id}", id);
-                await _curvePointService.UpdateAsync(curvePoint);
+                var existingCurvePoint = await _curvePointService.GetByIdAsync(id);
+                if (existingCurvePoint == null)
+                {
+                    _logger.LogWarning("Curve point with id: {Id} not found", id);
+                    return NotFound();
+                }
+
+                var updatedCurvePoint = request.ToCurvePoint();
+                updatedCurvePoint.Id = id; // Ensure the ID remains the same
+
+                await _curvePointService.UpdateAsync(updatedCurvePoint);
+                return NoContent();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -116,8 +133,6 @@ namespace Findexium.Api.Controllers
                 _logger.LogError(ex, "Error occurred while updating curve point with id: {Id}", id);
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
-
-            return NoContent();
         }
 
         // POST: api/CurvePoints

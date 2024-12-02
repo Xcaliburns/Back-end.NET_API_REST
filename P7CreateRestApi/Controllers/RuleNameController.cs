@@ -95,23 +95,33 @@ namespace Findexium.Api.Controllers
 
         // PUT: api/RuleName/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
+        public async Task<IActionResult> PutRuleName(int id, RuleNameRequest request)
         {
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            };
-
-            if (id != ruleName.Id)
-            {
-                _logger.LogWarning("ID mismatch for rule name with id: {Id}", id);
-                return BadRequest();
             }
+
             try
             {
                 _logger.LogInformation("Updating rule name with id: {Id}", id);
-                await _ruleNameServices.UpdateRuleAsync(ruleName);
+                var existingRuleName = await _ruleNameServices.GetRuleByIdAsync(id);
+                if (existingRuleName == null)
+                {
+                    _logger.LogWarning("Rule name with id: {Id} not found", id);
+                    return NotFound($"Rule name with id {id} not found.");
+                }
+
+                // Mettre à jour les propriétés de l'entité existante avec les valeurs de la requête
+                existingRuleName.Name = request.Name;
+                existingRuleName.Description = request.Description;
+                existingRuleName.Json = request.Json;
+                existingRuleName.Template = request.Template;
+                existingRuleName.SqlStr = request.SqlStr;
+                existingRuleName.SqlPart = request.SqlPart;
+
+                await _ruleNameServices.UpdateRuleAsync(existingRuleName);
+                return NoContent();
             }
             catch (ArgumentException ex)
             {
@@ -123,8 +133,6 @@ namespace Findexium.Api.Controllers
                 _logger.LogError(ex, "Error occurred while updating rule name with id: {Id}", id);
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
-
-            return NoContent();
         }
 
         // POST: api/RuleName
