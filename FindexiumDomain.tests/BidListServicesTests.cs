@@ -75,15 +75,16 @@ namespace FindexiumDomain.tests
         public async Task UpdateBidListAsync_UpdatesBidList()
         {
             // Arrange
-            var bidList = new BidList { BidListId = 1, Account = "Account1", BidType = "Type1", Bid = 100 };
+            var Id = 1;
+            var bidList = new BidList {  Account = "Account1", BidType = "Type1", Bid = 100 };
             _mockBidListRepository.Setup(repo => repo.ExistsAsync(1)).ReturnsAsync(true);
-            _mockBidListRepository.Setup(repo => repo.UpdateAsync(bidList)).Returns(Task.CompletedTask);
+            _mockBidListRepository.Setup(repo => repo.UpdateAsync(Id,bidList)).Returns(Task.CompletedTask);
 
             // Act
-            await _bidListServices.UpdateAsync(bidList);
+            await _bidListServices.UpdateAsync(Id, bidList);
 
             // Assert
-            _mockBidListRepository.Verify(repo => repo.UpdateAsync(bidList), Times.Once);
+            _mockBidListRepository.Verify(repo => repo.UpdateAsync(Id, bidList), Times.Once);
         }
 
         [Fact]

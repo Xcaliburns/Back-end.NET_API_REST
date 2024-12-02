@@ -141,19 +141,7 @@ namespace Findexium.Api.Controllers
                 _logger.LogInformation("Updating trade with id: {Id}", id);
                 await _tradeService.UpdateTradeAsync(trade);
             }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                if (!await _tradeService.TradeExistsAsync(id))
-                {
-                    _logger.LogWarning("Trade with id: {Id} not found", id);
-                    return NotFound()   ;
-                }
-                else
-                {
-                    _logger.LogError(ex, "Concurrency error occurred while updating trade with id: {Id}", id);
-                    throw;
-                }
-            }
+          
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while updating trade with id: {Id}", id);

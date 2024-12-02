@@ -440,64 +440,11 @@ namespace FindexiumApi.tests
             Assert.True(modelState.ContainsKey("Account"));
         }
 
-        [Fact]
-        public async Task UpdateTrade_DbUpdateConcurrencyException_TradeNotFound_ReturnsNotFound()
-        {
-            // Arrange
-            int id = 1;
-            var trade = new Trade
-            {
-                TradeId = id,
-                Account = "Account1",
-                AccountType = "AccountType1",
-                BuyQuantity = 1,
-                SellQuantity = 1,
-                BuyPrice = 1,
-                SellPrice = 1,
-                Benchmark = "Benchmark1",
-                TradeDate = DateTime.Now,
-                TradeSecurity = "TradeSecurity1",
-                TradeStatus = "TradeStatus1",
-                Trader = "Trader1",
-                Book = "Book1",
-                CreationName = "CreationName1",
-                CreationDate = DateTime.Now,
-                RevisionName = "RevisionName1",
-                RevisionDate = DateTime.Now,
-                DealName = "DealName1",
-                DealType = "DealType1",
-                SourceListId = "SourceListId1",
-                Side = "Side1",
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
-            };
+       
 
-            _tradeService.Setup(service => service.UpdateTradeAsync(It.IsAny<Trade>()))
-       .ThrowsAsync(new DbUpdateConcurrencyException());
+           
 
-
-            // Act
-            var result = await _controller.UpdateTrade(id, trade);
-
-            // Assert
-            Assert.IsType<NotFoundResult>(result);
-        }
-
-        [Fact]
-        public async Task UpdateTrade_ConcurrencyException_TradeExists_ThrowsException()
-        {
-            // Arrange
-            var tradeServiceMock = new Mock<ITradeService>();
-            var loggerMock = new Mock<ILogger<TradesController>>();
-            var controller = new TradesController(tradeServiceMock.Object, loggerMock.Object);
-
-            var trade = new Trade { TradeId = 1, Account = "Account1", TradeSecurity = "Security1", TradeDate = DateTime.Now };
-            tradeServiceMock.Setup(s => s.TradeExistsAsync(It.IsAny<int>())).ReturnsAsync(true);
-            tradeServiceMock.Setup(s => s.UpdateTradeAsync(It.IsAny<Trade>())).ThrowsAsync(new DbUpdateConcurrencyException());
-
-            // Act & Assert
-            await Assert.ThrowsAsync<DbUpdateConcurrencyException>(() => controller.UpdateTrade(trade.TradeId, trade));
-        }
+       
         [Fact]
         public async Task UpdateTrade_ThrowsException_ReturnsInternalServerError()
         {

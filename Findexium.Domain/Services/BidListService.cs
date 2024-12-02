@@ -40,6 +40,7 @@ namespace Findexium.Domain.Services
                 throw new ApplicationException($"An error occurred while retrieving the bid list with ID {id}.", ex);
             }
         }
+      
 
         public async Task AddAsync(BidList bidList)
         {
@@ -58,21 +59,21 @@ namespace Findexium.Domain.Services
             }
         }
 
-        public async Task UpdateAsync(BidList bidList)
+        public async Task UpdateAsync(int Id,BidList bidList)
         {
             if (bidList == null)
             {
                 throw new ArgumentNullException(nameof(bidList));
             }
 
-            if (!await _bidRepository.ExistsAsync(bidList.BidListId))
+            if (!await _bidRepository.ExistsAsync(Id))
             {
-                throw new InvalidOperationException($"Bid list with ID {bidList.BidListId} does not exist.");
+                throw new InvalidOperationException($"Bid list with ID {Id} does not exist.");
             }
 
             try
             {
-                await _bidRepository.UpdateAsync(bidList);
+                await _bidRepository.UpdateAsync(Id,bidList);
             }
             catch (Exception ex)
             {

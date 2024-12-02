@@ -58,8 +58,13 @@ namespace Findexium.Api.Controllers
 
         // GET: api/RuleName/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<RuleName>> GetRuleName(int id)
+        public async Task<ActionResult<RuleNameResponse>> GetRuleName(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            };
+
             try
             {
                 _logger.LogInformation("Fetching rule name with id: {Id}", id);
@@ -71,7 +76,18 @@ namespace Findexium.Api.Controllers
                     return NotFound();
                 }
 
-                return Ok(ruleName);
+                var ruleNameResponse = new RuleNameResponse
+                {
+                    Id = ruleName.Id,
+                    Name = ruleName.Name,
+                    Description = ruleName.Description,
+                    Json = ruleName.Json,
+                    Template = ruleName.Template,
+                    SqlStr = ruleName.SqlStr,
+                    SqlPart = ruleName.SqlPart
+                };
+
+                return Ok(ruleNameResponse);
             }
             catch (Exception ex)
             {
@@ -85,7 +101,7 @@ namespace Findexium.Api.Controllers
         public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
         {
 
-            // TODO : verifier si le model est valide
+
             if (id != ruleName.Id)
             {
                 _logger.LogWarning("ID mismatch for rule name with id: {Id}", id);
@@ -116,7 +132,7 @@ namespace Findexium.Api.Controllers
         {
             try
             {
-                if(!ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
                     _logger.LogWarning("Invalid model state for ruleNameRequest");
                     return BadRequest(ModelState);

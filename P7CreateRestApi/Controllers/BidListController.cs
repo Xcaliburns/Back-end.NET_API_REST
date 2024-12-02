@@ -14,6 +14,7 @@ using System.Security.Cryptography;
 using System.Configuration;
 using System.Data;
 using System.Net.NetworkInformation;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Findexium.Api.Controllers
 {
@@ -83,31 +84,20 @@ namespace Findexium.Api.Controllers
         // PUT: api/BidLists/5
         [HttpPut("{id}")]
         [Authorize]
-        public async Task<IActionResult> PutBid(int id, BidList bidList)
+        public async Task<IActionResult> PutBid(int id, BidRequest request)
         {
-            if (id != bidList.BidListId)
+           if(!ModelState.IsValid)
             {
-                return BadRequest();
+                return BadRequest(ModelState);
             }
 
             try
             {
                 _logger.LogInformation("Updating bid with id: {Id}", id);
-                await _bidListServices.UpdateAsync(bidList);
+                await _bidListServices.UpdateAsync(id,request.ToBid());
             }
-            //TODO :a placer dans l'infrastructure
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await _bidListServices.ExistsAsync(id))
-                {
-                    _logger.LogWarning("Bid with id: {Id} not found during update", id);
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+           
+         
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while updating bid with id: {Id}", id);

@@ -261,9 +261,40 @@ namespace FindexiumApi.tests
         public async Task PutRating_ReturnsNoContentResult()
         {
             // Arrange
-            var rating = new Rating
+            var id = 1;
+            var ratingRequest = new RatingRequest
             {
-                Id = 1,
+                MoodysRating = "A1",
+                SandPRating = "A+",
+                FitchRating = "A",
+                OrderNumber = 1
+            };
+
+            var rating = ratingRequest.ToRating();
+            
+
+            _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
+                .Returns(Task.CompletedTask);
+
+            // Act
+            var result = await _controller.PutRating(id, ratingRequest);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+            _mockRatingService.Verify(service => service.UpdateRatingAsync(It.Is<Rating>(r => r.Id == 1)), Times.Once);
+        }
+
+
+
+
+        [Fact]
+        public async Task PutRating_ReturnsBadRequestResult_WhenIdMismatch()
+        {
+            // Arrange
+            var id = 1;
+            var ratingRequest = new RatingRequest
+            {
+               
                 MoodysRating = "A1",
                 SandPRating = "A+",
                 FitchRating = "A",
@@ -271,20 +302,7 @@ namespace FindexiumApi.tests
             };
 
             // Act
-            var result = await _controller.PutRating(1, rating);
-
-            // Assert
-            Assert.IsType<NoContentResult>(result);
-        }
-        [Fact]
-        public async Task PutRating_ReturnsBadRequestResult_WhenIdMismatch()
-        {
-            // Arrange
-            var ratingId = 1;
-            var rating = new Rating { Id = 2 };
-
-            // Act
-            var result = await _controller.PutRating(ratingId, rating);
+            var result = await _controller.PutRating(id, ratingRequest);
 
             // Assert
             Assert.IsType<BadRequestResult>(result);
@@ -294,9 +312,10 @@ namespace FindexiumApi.tests
         public async Task PutRating_ShouldReturnBadRequest_WhenArgumentExceptionIsThrown()
         {
             // Arrange
-            var rating = new Rating
+            var id = 1;
+            var ratingRequest = new RatingRequest
             {
-                Id = 1,
+               
                 MoodysRating = "A1",
                 SandPRating = "A+",
                 FitchRating = "A",
@@ -307,7 +326,7 @@ namespace FindexiumApi.tests
                 .ThrowsAsync(new ArgumentException("Invalid argument"));
 
             // Act
-            var result = await _controller.PutRating(rating.Id, rating);
+            var result = await _controller.PutRating(id, ratingRequest);
 
             // Assert
             var actionResult = Assert.IsType<BadRequestObjectResult>(result);
@@ -317,9 +336,9 @@ namespace FindexiumApi.tests
         public async Task PutRating_ShouldReturnNotFound_WhenExceptionIsThrownAndRatingDoesNotExist()
         {
             // Arrange
-            var rating = new Rating
+            var id = 1;
+            var ratingRequest = new RatingRequest
             {
-                Id = 1,
                 MoodysRating = "A1",
                 SandPRating = "A+",
                 FitchRating = "A",
@@ -333,38 +352,44 @@ namespace FindexiumApi.tests
                 .ReturnsAsync((Rating)null);
 
             // Act
-            var result = await _controller.PutRating(rating.Id, rating);
+            var result = await _controller.PutRating(id, ratingRequest);
 
             // Assert
-            var actionResult = Assert.IsType<NotFoundResult>(result);
+            Assert.IsType<NotFoundResult>(result);
         }
+
+
 
         [Fact]
         public async Task PutRating_ShouldReturnInternalServerError_WhenExceptionIsThrownAndRatingExists()
         {
             // Arrange
-            var rating = new Rating
+            var id = 1;
+            var ratingRequest = new RatingRequest
             {
-                Id = 1,
                 MoodysRating = "A1",
                 SandPRating = "A+",
                 FitchRating = "A",
                 OrderNumber = 1
             };
 
+            var rating = ratingRequest.ToRating(); // Conversion en Rating avec l'ID défini
+            rating.Id = id;
+
             _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
                 .ThrowsAsync(new Exception("Some error"));
 
             _mockRatingService.Setup(service => service.GetRatingByIdAsync(It.IsAny<int>()))
-                .ReturnsAsync(rating);
+                .ReturnsAsync(rating); // Retourne une entité existante pour simuler le cas où la mise à jour échoue, mais l'entité existe
 
             // Act
-            var result = await _controller.PutRating(rating.Id, rating);
+            var result = await _controller.PutRating(id, ratingRequest);
 
             // Assert
             var actionResult = Assert.IsType<ObjectResult>(result);
             Assert.Equal(StatusCodes.Status500InternalServerError, actionResult.StatusCode);
             Assert.Equal("Internal server error", actionResult.Value);
         }
+
     }
 }

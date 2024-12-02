@@ -219,120 +219,93 @@ namespace FindexiumApi.tests
         public async Task PutBid_ReturnsNoContent_WhenBidIsUpdated()
         {
             // Arrange
-            var bidListId = 1;
-            var bidList = new BidList
+            var Id = 1;
+            var bidRequest = new BidRequest
             {
-                BidListId = bidListId,
+               
                 Account = "TestAccount",
                 BidType = "TestType",
                 BidQuantity = 100,
-                AskQuantity = 200,
-                Bid = 50,
-                Ask = 60,
-                Benchmark = "TestBenchmark",
-                BidListDate = DateTime.Now,
-                Commentary = "TestCommentary",
-                BidSecurity = "TestSecurity",
-                BidStatus = "TestStatus",
-                Trader = "TestTrader",
-                Book = "TestBook",
-                CreationName = "TestCreationName",
-                CreationDate = DateTime.Now,
-                RevisionName = "TestRevisionName",
-                RevisionDate = DateTime.Now,
-                DealName = "TestDealName",
-                DealType = "TestDealType",
-                SourceListId = "TestSourceListId",
-                Side = "TestSide"
+               
             };
 
-            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(true);
-            _mockBidService.Setup(service => service.UpdateAsync(bidList)).Returns(Task.CompletedTask);
+            _mockBidService.Setup(service => service.ExistsAsync(Id)).ReturnsAsync(true);
+            _mockBidService.Setup(service => service.UpdateAsync(Id,bidRequest.ToBid())).Returns(Task.CompletedTask);
 
             // Act
-            var result = await _controller.PutBid(bidListId, bidList);
+            var result = await _controller.PutBid(Id, bidRequest);
 
             // Assert
             Assert.IsType<NoContentResult>(result);
         }
 
-        [Fact]
-        public async Task PutBid_ReturnsBadRequest_WhenIdDoesNotMatch()
-        {
-            // Arrange
-            var bidListId = 1;
-            var bidList = new BidList { BidListId = 2 };
-
-            // Act
-            var result = await _controller.PutBid(bidListId, bidList);
-
-            // Assert
-            Assert.IsType<BadRequestResult>(result);
-        }
+      
 
         [Fact]
         public async Task PutBid_ReturnsNotFound_WhenBidDoesNotExist()
         {
             // Arrange
-            var bidListId = 1;
-            var bidList = new BidList { BidListId = bidListId };
+            var Id = 1;
+            var bidrequest = new BidRequest
+            {
+                Account = "TestAccount",
+                BidType = "TestType",
+                BidQuantity = 100,
+            };
 
-            _mockBidService.Setup(service => service.ExistsAsync(bidListId))
+            _mockBidService.Setup(service => service.ExistsAsync(Id))
                 .ReturnsAsync(false);
 
             // Act
-            var result = await _controller.PutBid(bidListId, bidList);
+            var result = await _controller.PutBid(Id, bidrequest);
 
             // Assert
             Assert.IsType<NoContentResult>(result);
         }
 
         [Fact]
-        public async Task PutBid_DbUpdateConcurrencyException_BidNotFound_ReturnsNotFound()
+        public async Task PutBid_ModelInvalid()
         {
-            // Arrange
-            var bidListId = 1;
-            var bidList = new BidList { BidListId = bidListId };
+            //Arrange
+            var id = 1;
+            var bidRequest = new BidRequest
+            {
+               
+                BidType = "TestType",
+                BidQuantity = 100
+            };
 
-            _mockBidService.Setup(service => service.UpdateAsync(It.IsAny<BidList>()))
-                .ThrowsAsync(new DbUpdateConcurrencyException());
-            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(false);
-
+            _controller.ModelState.AddModelError("Account", "Required");
 
             // Act
-            var result = await _controller.PutBid(bidListId, bidList);
+            var result = await _controller.PutBid(id, bidRequest);
 
-            // Assert
-            var notFoundResult = Assert.IsType<NotFoundResult>(result);
-
+            //Assert
+            Assert.IsType<BadRequestObjectResult>(result);
+            
         }
 
-        [Fact]
-        public async Task PutBid_DbUpdateConcurrencyException_BidExists_ThrowsException()
-        {
-            // Arrange
-            var bidListId = 1;
-            var bidList = new BidList { BidListId = bidListId };
+       
 
-            _mockBidService.Setup(service => service.UpdateAsync(It.IsAny<BidList>())).ThrowsAsync(new DbUpdateConcurrencyException());
-            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(true);
-
-            // Act & Assert
-            await Assert.ThrowsAsync<DbUpdateConcurrencyException>(() => _controller.PutBid(bidListId, bidList));
-        }
+     
 
         [Fact]
         public async Task PutBid_ReturnsInternalServerError_WhenExceptionIsThrown()
         {
             // Arrange
-            var bidListId = 1;
-            var bidList = new BidList { BidListId = bidListId };
+            var Id = 1;
+            var bidRequest = new BidRequest
+            {
+                Account = "TestAccount",
+                BidType = "TestType",
+                BidQuantity = 100
+            };
 
-            _mockBidService.Setup(service => service.ExistsAsync(bidListId)).ReturnsAsync(true);
-            _mockBidService.Setup(service => service.UpdateAsync(bidList)).ThrowsAsync(new Exception());
+            _mockBidService.Setup(service => service.ExistsAsync(Id)).ReturnsAsync(true);
+            _mockBidService.Setup(service => service.UpdateAsync(Id, It.IsAny<BidList>())).ThrowsAsync(new Exception());
 
             // Act
-            var result = await _controller.PutBid(bidListId, bidList);
+            var result = await _controller.PutBid(Id, bidRequest);
 
             // Assert
             var statusCodeResult = Assert.IsType<ObjectResult>(result);

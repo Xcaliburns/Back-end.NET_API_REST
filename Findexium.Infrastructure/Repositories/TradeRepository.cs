@@ -3,6 +3,7 @@ using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,12 @@ namespace Findexium.Infrastructure.Repositories
     public class TradeRepository : ITradeRepository
     {
         private readonly LocalDbContext _context;
+        private readonly ILogger<TradeRepository> _logger;
 
-        public TradeRepository(LocalDbContext context)
+        public TradeRepository(LocalDbContext context,ILogger<TradeRepository> logger )
         {
             _context = context;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<Trade>> GetAllTradesAsync()
@@ -58,8 +61,49 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task UpdateTradeAsync(Trade trade)
         {
-          _context.Entry(trade).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            if (trade == null)
+            {
+                throw new ArgumentNullException(nameof(trade), "Trade cannot be null");
+            }
+
+            if (!await TradeExistsAsync(trade.TradeId))
+            {
+                _logger.LogWarning("Trade with id: {Id} not found", trade.TradeId);
+                throw new KeyNotFoundException("Trade not found");
+            }
+
+            try
+            {
+                var tradeDto = new TradeDto(
+                    trade.Account,
+                    trade.AccountType,
+                    trade.BuyQuantity,
+                    trade.SellQuantity,
+                    trade.BuyPrice,
+                    trade.SellPrice,
+                    trade.TradeDate,
+                    trade.TradeSecurity,
+                    trade.TradeStatus,
+                    trade.Trader,
+                    trade.Benchmark,
+                    trade.Book,
+                    trade.CreationName,
+                    trade.CreationDate,
+                    trade.RevisionName,
+                    trade.RevisionDate,
+                    trade.DealName
+                )
+                {
+                    TradeId = trade.TradeId
+                };
+
+                _context.Entry(tradeDto).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
         }
 
         public async Task DeleteTradeAsync(int id)

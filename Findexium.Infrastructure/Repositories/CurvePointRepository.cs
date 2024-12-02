@@ -32,26 +32,52 @@ namespace Findexium.Infrastructure.Repositories
             {
                 throw new Exception($"Error occurred while fetching curve point with id: {id}", ex);
             }
-
         }
 
         public async Task AddAsync(CurvePoint curvePoint)
         {
             _context.CurvePoints.Add(new CurvePointsDto(
-                curvePoint.CurveId , 
-                curvePoint.AsOfDate , 
-                curvePoint.Term , 
-                curvePoint.CurvePointValue , 
-                curvePoint.CreationDate 
+                curvePoint.CurveId,
+                curvePoint.AsOfDate,
+                curvePoint.Term,
+                curvePoint.CurvePointValue,
+                curvePoint.CreationDate
             ));
             await _context.SaveChangesAsync();
-            
         }
 
-        public async Task UpdateAsync(CurvePoint curvePoint)
+        public async Task<bool> UpdateAsync(CurvePoint curvePoint)
         {
-            _context.Entry(curvePoint).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            var curvePointDto = await _context.CurvePoints.FindAsync(curvePoint.Id);
+            if (curvePointDto == null)
+            {
+                return false;
+            }
+
+            curvePointDto.CurveId = curvePoint.CurveId;
+            curvePointDto.AsOfDate = curvePoint.AsOfDate;
+            curvePointDto.Term = curvePoint.Term;
+            curvePointDto.CurvePointValue = curvePoint.CurvePointValue;
+            curvePointDto.CreationDate = curvePoint.CreationDate;
+
+            _context.Entry(curvePointDto).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!await ExistsAsync(curvePoint.Id))
+                {
+                    return false;
+                }
+                else
+                {
+                    throw;
+                }
+            }
         }
 
         public async Task DeleteAsync(int id)

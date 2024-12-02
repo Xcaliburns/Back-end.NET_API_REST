@@ -79,19 +79,26 @@ namespace Findexium.Api.Controllers
             }
         }
 
-        // PUT: api/Ratings/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRating(int id, Rating rating)
+        public async Task<IActionResult> PutRating(int id, RatingRequest ratingRequest)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var rating = ratingRequest.ToRating();
+            rating.Id = id; // Assurez-vous de synchroniser l'ID
+
             if (id != rating.Id)
             {
-                return BadRequest();
+                return BadRequest("ID mismatch between route and payload.");
             }
+
             try
             {
                 _logger.LogInformation("Updating rating with id {Id}", id);
-                await _ratingService.UpdateRatingAsync( rating);
-               
+                await _ratingService.UpdateRatingAsync(rating);
             }
             catch (ArgumentException ex)
             {
@@ -103,14 +110,11 @@ namespace Findexium.Api.Controllers
                 _logger.LogError(ex, "Error updating rating with id {Id}", id);
                 if (await _ratingService.GetRatingByIdAsync(id) == null)
                 {
-                    return NotFound();
+                    return NotFound($"Rating with id {id} not found.");
                 }
-                else
-                {
-                    return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-                }
-              
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
+
             return NoContent();
         }
 

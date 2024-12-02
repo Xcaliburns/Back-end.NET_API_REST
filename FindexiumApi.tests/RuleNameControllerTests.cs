@@ -71,9 +71,9 @@ namespace FindexiumApi.tests
         }
 
         [Fact]
-        public async Task GetRuleName_ById_ReturnsOkResult_WithRuleName()
+        public async Task GetRuleName_ById_ReturnsOkResult_WithRuleNameResponse()
         {
-            //Arrange
+            // Arrange
             var ruleName = new RuleName
             {
                 Id = 1,
@@ -84,19 +84,29 @@ namespace FindexiumApi.tests
                 SqlStr = "SqlStr 1",
                 SqlPart = "SqlPart 1"
             };
-            _mockRuleNameService.Setup(service => service.GetRuleByIdAsync(1))
-                .ReturnsAsync(ruleName);
 
-            //Act
+            // Mocking the service to return ruleNameResponse when GetRuleByIdAsync is called
+            //  _mockRuleNameService.Setup(service => service.GetRuleByIdAsync(It.IsAny<int>()))  // Match any integer input
+            _mockRuleNameService.Setup(service => service.GetRuleByIdAsync(1))  
+                .ReturnsAsync(ruleName); // Return the mocked RuleNameResponse
+
+            // Act
             var result = await _mockRuleNameController.GetRuleName(1);
 
-            //Assert
-            var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnRuleName = Assert.IsType<RuleName>(okResult.Value);
-            Assert.Equal("Rule1", returnRuleName.Name);
-            Assert.True(returnRuleName.Id == 1);
-            Assert.Equal("Rule1 Description", returnRuleName.Description);
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result.Result); // Check that it's an OkObjectResult
+            var returnRuleNameResponse = Assert.IsType<RuleNameResponse>(okResult.Value); // Ensure it's a RuleNameResponse
+
+            // Validate the returned RuleNameResponse
+            Assert.Equal("Rule1", returnRuleNameResponse.Name);
+            Assert.Equal(1, returnRuleNameResponse.Id);
+            Assert.Equal("Rule1 Description", returnRuleNameResponse.Description);
+            Assert.Equal("Rule1 Json", returnRuleNameResponse.Json);
+            Assert.Equal("template1", returnRuleNameResponse.Template);
+            Assert.Equal("SqlStr 1", returnRuleNameResponse.SqlStr);
+            Assert.Equal("SqlPart 1", returnRuleNameResponse.SqlPart);
         }
+
 
         [Fact]
         public async Task GetRuleName_ById_ReturnsNotFound_WhenRuleNameIsNull()
