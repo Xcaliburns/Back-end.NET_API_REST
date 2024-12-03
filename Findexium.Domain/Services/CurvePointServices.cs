@@ -76,7 +76,7 @@ namespace Findexium.Domain.Services
 
             try
             {
-                await _repository.UpdateAsync(curvePoint);
+                await _repository.UpdateAsync(curvePoint.Id,curvePoint);
             }
             catch (Exception ex)
             {

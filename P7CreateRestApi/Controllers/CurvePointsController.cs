@@ -38,8 +38,7 @@ namespace Findexium.Api.Controllers
                 var curvePointDtos = curvePoints.Select(c => new CurvePointResponse
                 {
                     Id = c.Id,
-                    CurveId = c.CurveId,
-                 
+                    CurveId = c.CurveId,                 
                     Term = c.Term,
                     CurvePointValue = c.CurvePointValue,
                   
@@ -93,12 +92,7 @@ namespace Findexium.Api.Controllers
             {
                 _logger.LogWarning("Invalid model state for CurvePointRequest");
                 return BadRequest(ModelState);
-            }
-
-            if (id != request.CurveId)
-            {
-                return BadRequest("ID in the URL does not match ID in the request body");
-            }
+            }           
 
             try
             {
@@ -116,18 +110,7 @@ namespace Findexium.Api.Controllers
                 await _curvePointService.UpdateAsync(updatedCurvePoint);
                 return NoContent();
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (await _curvePointService.GetByIdAsync(id) == null)
-                {
-                    _logger.LogWarning("Curve point with id: {Id} not found during update", id);
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+           
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while updating curve point with id: {Id}", id);

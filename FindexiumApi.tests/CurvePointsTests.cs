@@ -140,8 +140,8 @@ namespace FindexiumApi.tests
                 Id = 1,
                 CurveId = curvePointRequest.CurveId,
                 AsOfDate = DateTime.Now,
-                Term = curvePointRequest.Term,
-                CurvePointValue = curvePointRequest.CurvePointValue,
+   //             Term = curvePointRequest.Term,
+ //               CurvePointValue = curvePointRequest.CurvePointValue,
                 CreationDate = DateTime.Now
             };
             _mockCurvePointService.Setup(service => service.UpdateAsync(It.IsAny<CurvePoint>()))

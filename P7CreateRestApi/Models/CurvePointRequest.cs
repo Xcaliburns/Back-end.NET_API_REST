@@ -8,14 +8,14 @@ namespace Findexium.Api.Models
         [Required(ErrorMessage = "CurveId is required.")]
         [Range(1, int.MaxValue, ErrorMessage = "CurveId must be a positive number.")]
         public int CurveId { get; set; }
+       // public DateTime? AsOfDate { get; set; }
 
-      
 
         [Range(0, double.MaxValue, ErrorMessage = "Term must be a positive number.")]
-        public double Term { get; set; }
+        public double? Term { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "CurvePointValue must be a positive number.")]
-        public double CurvePointValue { get; set; }
+        public double? CurvePointValue { get; set; }
 
        
 
@@ -24,10 +24,9 @@ namespace Findexium.Api.Models
             return new CurvePoint
             {
                 CurveId = CurveId,              
-                Term = Term,
-                CurvePointValue = CurvePointValue,
+                Term = Term ?? 0 ,
+                CurvePointValue = CurvePointValue ?? 0,
                 //test
-                AsOfDate = DateTime.Now,
                 CreationDate = DateTime.Now
 
             };

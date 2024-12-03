@@ -12,7 +12,7 @@ namespace Findexium.Domain.Interfaces
         Task<IEnumerable<CurvePoint>> GetAllAsync();
         Task<CurvePoint> GetByIdAsync(int id);
         Task AddAsync(CurvePoint curvePoint);
-        Task<bool> UpdateAsync(CurvePoint curvePoint); // Return a boolean indicating success or failure
+        Task<bool> UpdateAsync(int id,CurvePoint curvePoint); // Return a boolean indicating success or failure
         Task DeleteAsync(int id);
         Task<bool> ExistsAsync(int id);
     }
