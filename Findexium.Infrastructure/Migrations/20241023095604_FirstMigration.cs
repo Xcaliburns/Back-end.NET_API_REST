@@ -21,7 +21,7 @@ namespace P7CreateRestApi.Migrations
                     BidType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BidQuantity = table.Column<double>(type: "float", nullable: true),
                     AskQuantity = table.Column<double>(type: "float", nullable: true),
-                    Bid = table.Column<double>(type: "float", nullable: false),
+                    Bid = table.Column<double>(type: "float", nullable: true),
                     Ask = table.Column<double>(type: "float", nullable: true),
                     Benchmark = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BidListDate = table.Column<DateTime>(type: "datetime2", nullable: true),

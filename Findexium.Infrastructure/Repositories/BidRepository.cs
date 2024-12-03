@@ -46,7 +46,7 @@ namespace Findexium.Infrastructure.Repositories
                     bidList.BidType,
                     bidList.BidQuantity,
                     bidList.AskQuantity,
-                    bidList.Bid,
+                    bidList.Bid ?? 0.0,
                     bidList.Ask,
                     bidList.Benchmark,
                     bidList.BidListDate,
@@ -56,7 +56,7 @@ namespace Findexium.Infrastructure.Repositories
                     bidList.Trader,
                     bidList.Book,
                     bidList.CreationName,
-                    bidList.CreationDate,
+                    bidList.CreationDate ?? DateTime.Now,
                     bidList.RevisionName,
                     bidList.RevisionDate,
                     bidList.DealName,
@@ -93,24 +93,24 @@ namespace Findexium.Infrastructure.Repositories
                     existingBid.Account = bidList.Account;
                     existingBid.BidType = bidList.BidType;
                     existingBid.BidQuantity = bidList.BidQuantity;
-                    existingBid.AskQuantity = bidList.AskQuantity;
-                    existingBid.Bid = bidList.Bid;
-                    existingBid.Ask = bidList.Ask;
-                    existingBid.Benchmark = bidList.Benchmark;
-                    existingBid.BidListDate = bidList.BidListDate;
-                    existingBid.Commentary = bidList.Commentary;
-                    existingBid.BidSecurity = bidList.BidSecurity;
-                    existingBid.BidStatus = bidList.BidStatus;
-                    existingBid.Trader = bidList.Trader;
-                    existingBid.Book = bidList.Book;
-                    existingBid.CreationName = bidList.CreationName;
-                    existingBid.CreationDate = bidList.CreationDate;
-                    existingBid.RevisionName = bidList.RevisionName;
-                    existingBid.RevisionDate = bidList.RevisionDate;
-                    existingBid.DealName = bidList.DealName;
-                    existingBid.DealType = bidList.DealType;
-                    existingBid.SourceListId = bidList.SourceListId;
-                    existingBid.Side = bidList.Side;
+                    //existingBid.AskQuantity = bidList.AskQuantity;
+                    //existingBid.Bid = bidList.Bid;
+                    //existingBid.Ask = bidList.Ask;
+                    //existingBid.Benchmark = bidList.Benchmark;
+                    //existingBid.BidListDate = bidList.BidListDate;
+                    //existingBid.Commentary = bidList.Commentary;
+                    //existingBid.BidSecurity = bidList.BidSecurity;
+                    //existingBid.BidStatus = bidList.BidStatus;
+                    //existingBid.Trader = bidList.Trader;
+                    //existingBid.Book = bidList.Book;
+                    //existingBid.CreationName = bidList.CreationName;
+                    //existingBid.CreationDate = bidList.CreationDate;
+                    //existingBid.RevisionName = bidList.RevisionName;
+                    existingBid.RevisionDate = DateTime.Now;
+                    //existingBid.DealName = bidList.DealName;
+                    //existingBid.DealType = bidList.DealType;
+                    //existingBid.SourceListId = bidList.SourceListId;
+                    //existingBid.Side = bidList.Side;
 
                     _context.Bids.Update(existingBid);
                     await _context.SaveChangesAsync();
