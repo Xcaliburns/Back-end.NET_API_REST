@@ -22,18 +22,35 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<IEnumerable<BidList>> GetAllAsync()
         {
-            var bidDtos = await _context.Bids.ToListAsync();
-            return bidDtos.ConvertAll(b => b.ToBidList());
+            try
+            {
+                var bidDtos = await _context.Bids.ToListAsync();
+                return bidDtos.ConvertAll(b => b.ToBidList());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while retrieving all bids.");
+                throw new ApplicationException("An error occurred while retrieving all bids.", ex);
+            }
         }
 
         public async Task<BidList> GetByIdAsync(int id)
         {
-            var bidDto = await _context.Bids.FindAsync(id);
-            if (bidDto == null)
+            
+            try
             {
-                return null;
+                var bidDto = await _context.Bids.FindAsync(id);
+                if (bidDto == null)
+                {
+                    return null;
+                }
+                return bidDto.ToBidList();
             }
-            return bidDto.ToBidList();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while retrieving the bid with ID {Id}.", id);
+                throw new Exception($"An error occurred while retrieving the bid with ID {id}.", ex);
+            }
         }
 
         public async Task AddAsync(BidList bidList)
@@ -41,7 +58,6 @@ namespace Findexium.Infrastructure.Repositories
             try
             {
                 _context.Bids.Add(new BidDto(
-                  //  bidList.BidListId,
                     bidList.Account,
                     bidList.BidType,
                     bidList.BidQuantity,
@@ -68,8 +84,8 @@ namespace Findexium.Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                // Log the exception
-                throw new Exception("An error occurred while adding the bid.", ex);
+                _logger.LogError(ex, "An error occurred while adding the bid.");
+                throw new ApplicationException("An error occurred while adding the bid.", ex);
             }
         }
 
@@ -84,61 +100,44 @@ namespace Findexium.Infrastructure.Repositories
                 _logger.LogWarning("Bid with id: {Id} not found during update", id);
                 throw new KeyNotFoundException("Bid not found");
             }
-            try
-            {
+           
                 var existingBid = await _context.Bids.FindAsync(id);
-                if (existingBid != null)
-                {
-                    // Update properties
-                    existingBid.Account = bidList.Account;
-                    existingBid.BidType = bidList.BidType;
-                    existingBid.BidQuantity = bidList.BidQuantity;
-                    //existingBid.AskQuantity = bidList.AskQuantity;
-                    //existingBid.Bid = bidList.Bid;
-                    //existingBid.Ask = bidList.Ask;
-                    //existingBid.Benchmark = bidList.Benchmark;
-                    //existingBid.BidListDate = bidList.BidListDate;
-                    //existingBid.Commentary = bidList.Commentary;
-                    //existingBid.BidSecurity = bidList.BidSecurity;
-                    //existingBid.BidStatus = bidList.BidStatus;
-                    //existingBid.Trader = bidList.Trader;
-                    //existingBid.Book = bidList.Book;
-                    //existingBid.CreationName = bidList.CreationName;
-                    //existingBid.CreationDate = bidList.CreationDate;
-                    //existingBid.RevisionName = bidList.RevisionName;
-                    existingBid.RevisionDate = DateTime.Now;
-                    //existingBid.DealName = bidList.DealName;
-                    //existingBid.DealType = bidList.DealType;
-                    //existingBid.SourceListId = bidList.SourceListId;
-                    //existingBid.Side = bidList.Side;
+            if (existingBid != null)
+            {
+                // Update properties
+                existingBid.Account = bidList.Account;
+                existingBid.BidType = bidList.BidType;
+                existingBid.BidQuantity = bidList.BidQuantity;
+                existingBid.RevisionDate = DateTime.Now;
 
-                    _context.Bids.Update(existingBid);
-                    await _context.SaveChangesAsync();
-                }
-            }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                _logger.LogError(ex, "Concurrency error occurred while updating bid with id: {Id}", id);
-                throw;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while updating bid with id: {Id}", id);
-                throw;
-            }
+                _context.Bids.Update(existingBid);
+                await _context.SaveChangesAsync();
+            }     
+          
         }
 
         public async Task DeleteAsync(int id)
         {
-            var bidList = await _context.Bids.FindAsync(id) ?? throw new Exception("Bid not found.");
-            _context.Bids.Remove(bidList);
-            await _context.SaveChangesAsync();
+            //le catch est dans ExistsAsync
+            if (await ExistsAsync(id))
+            {
+                var bidList = await _context.Bids.FindAsync(id);
+                _context.Bids.Remove(bidList);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<bool> ExistsAsync(int id)
         {
-            return await _context.Bids.AnyAsync(e => e.BidListId == id);
+            try
+            {
+                return await _context.Bids.AnyAsync(e => e.BidListId == id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while checking the existence of the bid with ID {Id}.", id);
+                throw new ApplicationException($"An error occurred while checking the existence of the bid with ID {id}.", ex);
+            }
         }
-         
     }
 }

@@ -100,7 +100,14 @@ namespace Findexium.Domain.Services
 
         public async Task<bool> ExistsAsync(int id)
         {
-            return await _bidRepository.ExistsAsync(id);
+            try
+            {
+                return await _bidRepository.ExistsAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException($"An error occurred while checking the existence of the bid list with ID {id}.", ex);
+            }
         }
     }
 }
