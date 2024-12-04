@@ -43,6 +43,18 @@ namespace FindexiumDomain.tests
         }
 
         [Fact]
+        public async Task GetAllAsync_ThrowsApplicationException_WhenRepositoryThrowsException()
+        {
+            // Arrange
+            _mockBidListRepository.Setup(repo => repo.GetAllAsync()).ThrowsAsync(new Exception("Test exception"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _bidListServices.GetAllAsync());
+            Assert.Equal("An error occurred while retrieving all bid lists.", exception.Message);
+            Assert.Equal("Test exception", exception.InnerException.Message);
+        }
+
+        [Fact]
         public async Task GetBidListByIdAsync_ReturnsBidList()
         {
             // Arrange
@@ -58,6 +70,19 @@ namespace FindexiumDomain.tests
         }
 
         [Fact]
+        public async Task GetByIdAsync_ThrowsApplicationException_WhenRepositoryThrowsException()
+        {
+            // Arrange
+            var id = 1;
+            _mockBidListRepository.Setup(repo => repo.GetByIdAsync(id)).ThrowsAsync(new Exception("Test exception"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _bidListServices.GetByIdAsync(id));
+            Assert.Equal($"An error occurred while retrieving the bid list with ID {id}.", exception.Message);
+            Assert.Equal("Test exception", exception.InnerException.Message);
+        }
+
+        [Fact]
         public async Task AddBidListAsync_AddsBidList()
         {
             // Arrange
@@ -70,6 +95,27 @@ namespace FindexiumDomain.tests
             // Assert
             _mockBidListRepository.Verify(repo => repo.AddAsync(bidList), Times.Once);
         }
+
+        [Fact]
+        public async Task AddAsync_ThrowsArgumentNullException_WhenBidListIsNull()
+        {
+            // Act & Assert
+            await Assert.ThrowsAsync<ArgumentNullException>(() => _bidListServices.AddAsync(null));
+        }
+
+        [Fact]
+        public async Task AddAsync_ThrowsApplicationException_WhenRepositoryThrowsException()
+        {
+            // Arrange
+            var bidList = new BidList { BidListId = 1, Account = "TestAccount" };
+            _mockBidListRepository.Setup(repo => repo.AddAsync(bidList)).ThrowsAsync(new Exception("Test exception"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _bidListServices.AddAsync(bidList));
+            Assert.Equal("An error occurred while adding a new bid list.", exception.Message);
+            Assert.Equal("Test exception", exception.InnerException.Message);
+        }
+
 
         [Fact]
         public async Task UpdateBidListAsync_UpdatesBidList()
@@ -88,6 +134,44 @@ namespace FindexiumDomain.tests
         }
 
         [Fact]
+        public async Task UpdateAsync_ThrowsArgumentNullException_WhenBidListIsNull()
+        {
+            // Arrange
+            int id = 1;
+
+            // Act & Assert
+            await Assert.ThrowsAsync<ArgumentNullException>(() => _bidListServices.UpdateAsync(id, null));
+        }
+
+        [Fact]
+        public async Task UpdateAsync_ThrowsInvalidOperationException_WhenBidListDoesNotExist()
+        {
+            // Arrange
+            int id = 1;
+            var bidList = new BidList { BidListId = id, Account = "TestAccount" };
+            _mockBidListRepository.Setup(repo => repo.ExistsAsync(id)).ReturnsAsync(false);
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<InvalidOperationException>(() => _bidListServices.UpdateAsync(id, bidList));
+            Assert.Equal($"Bid list with ID {id} does not exist.", exception.Message);
+        }
+
+        [Fact]
+        public async Task UpdateAsync_ThrowsApplicationException_WhenRepositoryThrowsException()
+        {
+            // Arrange
+            int id = 1;
+            var bidList = new BidList { BidListId = id, Account = "TestAccount" };
+            _mockBidListRepository.Setup(repo => repo.ExistsAsync(id)).ReturnsAsync(true);
+            _mockBidListRepository.Setup(repo => repo.UpdateAsync(id, bidList)).ThrowsAsync(new Exception("Test exception"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _bidListServices.UpdateAsync(id, bidList));
+            Assert.Equal($"An error occurred while updating the bid list with ID {bidList.BidListId}.", exception.Message);
+            Assert.Equal("Test exception", exception.InnerException.Message);
+        }
+
+        [Fact]
         public async Task DeleteBidListAsync_DeletesBidList()
         {
             // Arrange
@@ -99,6 +183,75 @@ namespace FindexiumDomain.tests
 
             // Assert
             _mockBidListRepository.Verify(repo => repo.DeleteAsync(1), Times.Once);
+        }
+
+        [Fact]
+        public async Task DeleteAsync_ThrowsInvalidOperationException_WhenBidListDoesNotExist()
+        {
+            // Arrange
+            int id = 1;
+            _mockBidListRepository.Setup(repo => repo.ExistsAsync(id)).ReturnsAsync(false);
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<InvalidOperationException>(() => _bidListServices.DeleteAsync(id));
+            Assert.Equal($"Bid list with ID {id} does not exist.", exception.Message);
+        }
+
+        [Fact]
+        public async Task DeleteAsync_ThrowsApplicationException_WhenRepositoryThrowsException()
+        {
+            // Arrange
+            int id = 1;
+            _mockBidListRepository.Setup(repo => repo.ExistsAsync(id)).ReturnsAsync(true);
+            _mockBidListRepository.Setup(repo => repo.DeleteAsync(id)).ThrowsAsync(new Exception("Test exception"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _bidListServices.DeleteAsync(id));
+            Assert.Equal($"An error occurred while deleting the bid list with ID {id}.", exception.Message);
+            Assert.Equal("Test exception", exception.InnerException.Message);
+        }
+
+
+
+        [Fact]
+        public async Task ExistsAsync_ReturnsTrue_WhenBidListExists()
+        {
+            // Arrange
+            int id = 1;
+            _mockBidListRepository.Setup(repo => repo.ExistsAsync(id)).ReturnsAsync(true);
+
+            // Act
+            var result = await _bidListServices.ExistsAsync(id);
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public async Task ExistsAsync_ReturnsFalse_WhenBidListDoesNotExist()
+        {
+            // Arrange
+            int id = 1;
+            _mockBidListRepository.Setup(repo => repo.ExistsAsync(id)).ReturnsAsync(false);
+
+            // Act
+            var result = await _bidListServices.ExistsAsync(id);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public async Task ExistsAsync_ThrowsApplicationException_WhenRepositoryThrowsException()
+        {
+            // Arrange
+            int id = 1;
+            _mockBidListRepository.Setup(repo => repo.ExistsAsync(id)).ThrowsAsync(new Exception("Test exception"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ApplicationException>(() => _bidListServices.ExistsAsync(id));
+            Assert.Equal($"An error occurred while checking the existence of the bid list with ID {id}.", exception.Message);
+            Assert.Equal("Test exception", exception.InnerException.Message);
         }
     }
 }

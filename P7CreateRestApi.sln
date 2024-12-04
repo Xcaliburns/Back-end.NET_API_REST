@@ -16,11 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.env = .env
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindexiumApi.tests", "FindexiumApi.tests\FindexiumApi.tests.csproj", "{3E170EC9-6194-4E56-A6D5-69DB6FA88D38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumApi.tests", "FindexiumApi.tests\FindexiumApi.tests.csproj", "{3E170EC9-6194-4E56-A6D5-69DB6FA88D38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindexiumDomain.tests", "FindexiumDomain.tests\FindexiumDomain.tests.csproj", "{3FD53BFB-B0D5-4D84-9509-A5944D472A51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumDomain.tests", "FindexiumDomain.tests\FindexiumDomain.tests.csproj", "{3FD53BFB-B0D5-4D84-9509-A5944D472A51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindexiumInfrastructure.tests", "FindexiumInfrastructure.tests\FindexiumInfrastructure.tests.csproj", "{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumInfrastructure.tests", "FindexiumInfrastructure.tests\FindexiumInfrastructure.tests.csproj", "{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
