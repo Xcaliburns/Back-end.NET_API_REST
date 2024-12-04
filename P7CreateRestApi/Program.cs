@@ -1,19 +1,16 @@
+using Findexium.Domain.Interfaces;
+using Findexium.Domain.Models;
+using Findexium.Domain.Services;
+using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Findexium.Domain.Models;
-using Findexium.Api.Extensions;
-using Findexium.Infrastructure.Data;
-using Findexium.Domain.Interfaces;
-using Findexium.Domain.Services;
 using Microsoft.OpenApi.Models;
-using Microsoft.Extensions.Logging;
-using System.Reflection;
 using Serilog;
 using Serilog.Events;
+using System.Text;
 
 
 
@@ -49,7 +46,7 @@ var JwtSecretKey = jwtSettings["SecretKey"] ?? throw new ArgumentNullException("
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddControllers();
+builder.Services.AddControllers();// ajouter des options pour ne pas afficher les champs vides ou nuls
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -162,8 +159,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Initialize roles and default admin user 
-await app.InitializeRolesAndAdminAsync();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

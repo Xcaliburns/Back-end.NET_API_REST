@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.45159999999999995" branch-rate="0.0809" version="1.9" timestamp="1733305011" lines-covered="2109" lines-valid="4670" branches-covered="61" branches-valid="754">
+<coverage line-rate="0.4518" branch-rate="0.0809" version="1.9" timestamp="1733315030" lines-covered="2109" lines-valid="4667" branches-covered="61" branches-valid="754">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -3044,50 +3044,48 @@
           <methods>
             <method name=".ctor" signature="(Microsoft.Extensions.Configuration.IConfiguration,Findexium.Domain.Interfaces.IUserService,Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Controllers.AuthController&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
                 <line number="24" hits="0" branch="False" />
                 <line number="25" hits="0" branch="False" />
                 <line number="26" hits="0" branch="False" />
                 <line number="27" hits="0" branch="False" />
                 <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
             <line number="24" hits="0" branch="False" />
             <line number="25" hits="0" branch="False" />
             <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.AuthController/&lt;Login&gt;d__5" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\AuthController.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="32" hits="0" branch="False" />
                 <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
                 <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="246" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
                 <line number="40" hits="0" branch="False" />
                 <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="498" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
                 <line number="45" hits="0" branch="False" />
                 <line number="46" hits="0" branch="False" />
                 <line number="47" hits="0" branch="False" />
@@ -3099,39 +3097,39 @@
                 <line number="53" hits="0" branch="False" />
                 <line number="54" hits="0" branch="False" />
                 <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
                 <line number="57" hits="0" branch="False" />
-                <line number="58" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="62" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
                 <line number="64" hits="0" branch="False" />
-                <line number="65" hits="0" branch="False" />
                 <line number="66" hits="0" branch="False" />
                 <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
                 <line number="69" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="32" hits="0" branch="False" />
             <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
             <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="246" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
             <line number="40" hits="0" branch="False" />
             <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="498" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
             <line number="45" hits="0" branch="False" />
             <line number="46" hits="0" branch="False" />
             <line number="47" hits="0" branch="False" />
@@ -3143,15 +3141,17 @@
             <line number="53" hits="0" branch="False" />
             <line number="54" hits="0" branch="False" />
             <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
             <line number="57" hits="0" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="62" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
             <line number="64" hits="0" branch="False" />
-            <line number="65" hits="0" branch="False" />
             <line number="66" hits="0" branch="False" />
             <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
             <line number="69" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.BidListController" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\BidListController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -11424,14 +11424,13 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="56" hits="0" branch="False" />
-                <line number="58" hits="0" branch="False" />
-                <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="57" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="224" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="60" hits="0" branch="False" />
                 <line number="61" hits="0" branch="False" />
                 <line number="62" hits="0" branch="False" />
                 <line number="63" hits="0" branch="False" />
@@ -11459,19 +11458,19 @@
                 <line number="85" hits="0" branch="False" />
                 <line number="86" hits="0" branch="False" />
                 <line number="87" hits="0" branch="False" />
-                <line number="89" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="56" hits="0" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="57" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="224" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="60" hits="0" branch="False" />
             <line number="61" hits="0" branch="False" />
             <line number="62" hits="0" branch="False" />
             <line number="63" hits="0" branch="False" />
@@ -11499,18 +11498,18 @@
             <line number="85" hits="0" branch="False" />
             <line number="86" hits="0" branch="False" />
             <line number="87" hits="0" branch="False" />
-            <line number="89" hits="0" branch="False" />
+            <line number="88" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.BidRepository/&lt;DeleteAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="119" hits="0" branch="False" />
-                <line number="121" hits="0" branch="False" />
+                <line number="120" hits="0" branch="False" />
                 <line number="122" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="183" type="jump" coverage="0%" />
+                    <condition number="160" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="123" hits="0" branch="False" />
@@ -11519,17 +11518,14 @@
                 <line number="126" hits="0" branch="False" />
                 <line number="127" hits="0" branch="False" />
                 <line number="128" hits="0" branch="False" />
-                <line number="129" hits="0" branch="False" />
-                <line number="131" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="119" hits="0" branch="False" />
-            <line number="121" hits="0" branch="False" />
+            <line number="120" hits="0" branch="False" />
             <line number="122" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="183" type="jump" coverage="0%" />
+                <condition number="160" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="123" hits="0" branch="False" />
@@ -11538,34 +11534,32 @@
             <line number="126" hits="0" branch="False" />
             <line number="127" hits="0" branch="False" />
             <line number="128" hits="0" branch="False" />
-            <line number="129" hits="0" branch="False" />
-            <line number="131" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.BidRepository/&lt;ExistsAsync&gt;d__8" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="131" hits="0" branch="False" />
+                <line number="133" hits="0" branch="False" />
                 <line number="134" hits="0" branch="False" />
                 <line number="136" hits="0" branch="False" />
                 <line number="137" hits="0" branch="False" />
+                <line number="138" hits="0" branch="False" />
                 <line number="139" hits="0" branch="False" />
-                <line number="140" hits="0" branch="False" />
                 <line number="141" hits="0" branch="False" />
-                <line number="142" hits="0" branch="False" />
-                <line number="144" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="131" hits="0" branch="False" />
+            <line number="133" hits="0" branch="False" />
             <line number="134" hits="0" branch="False" />
             <line number="136" hits="0" branch="False" />
             <line number="137" hits="0" branch="False" />
+            <line number="138" hits="0" branch="False" />
             <line number="139" hits="0" branch="False" />
-            <line number="140" hits="0" branch="False" />
             <line number="141" hits="0" branch="False" />
-            <line number="142" hits="0" branch="False" />
-            <line number="144" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.BidRepository/&lt;GetAllAsync&gt;d__3" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -11599,113 +11593,113 @@
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
                 <line number="38" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
                 <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="196" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="43" hits="0" branch="False" />
                 <line number="44" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
                 <line number="49" hits="0" branch="False" />
                 <line number="50" hits="0" branch="False" />
                 <line number="51" hits="0" branch="False" />
-                <line number="53" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="38" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
             <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="196" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="43" hits="0" branch="False" />
             <line number="44" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
             <line number="49" hits="0" branch="False" />
             <line number="50" hits="0" branch="False" />
             <line number="51" hits="0" branch="False" />
-            <line number="53" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.BidRepository/&lt;UpdateAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="0" branch-rate="0" complexity="6">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
               <lines>
-                <line number="92" hits="0" branch="False" />
-                <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="93" hits="0" branch="False" />
+                <line number="94" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="51" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="94" hits="0" branch="False" />
                 <line number="95" hits="0" branch="False" />
-                <line number="97" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="96" hits="0" branch="False" />
+                <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="194" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="98" hits="0" branch="False" />
                 <line number="99" hits="0" branch="False" />
                 <line number="100" hits="0" branch="False" />
-                <line number="103" hits="0" branch="False" />
-                <line number="104" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="101" hits="0" branch="False" />
+                <line number="104" hits="0" branch="False" />
+                <line number="105" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="426" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="105" hits="0" branch="False" />
-                <line number="107" hits="0" branch="False" />
+                <line number="106" hits="0" branch="False" />
                 <line number="108" hits="0" branch="False" />
                 <line number="109" hits="0" branch="False" />
                 <line number="110" hits="0" branch="False" />
-                <line number="112" hits="0" branch="False" />
+                <line number="111" hits="0" branch="False" />
                 <line number="113" hits="0" branch="False" />
                 <line number="114" hits="0" branch="False" />
-                <line number="116" hits="0" branch="False" />
+                <line number="115" hits="0" branch="False" />
+                <line number="117" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="92" hits="0" branch="False" />
-            <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="93" hits="0" branch="False" />
+            <line number="94" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="51" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="94" hits="0" branch="False" />
             <line number="95" hits="0" branch="False" />
-            <line number="97" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="96" hits="0" branch="False" />
+            <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="194" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="98" hits="0" branch="False" />
             <line number="99" hits="0" branch="False" />
             <line number="100" hits="0" branch="False" />
-            <line number="103" hits="0" branch="False" />
-            <line number="104" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="101" hits="0" branch="False" />
+            <line number="104" hits="0" branch="False" />
+            <line number="105" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="426" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="105" hits="0" branch="False" />
-            <line number="107" hits="0" branch="False" />
+            <line number="106" hits="0" branch="False" />
             <line number="108" hits="0" branch="False" />
             <line number="109" hits="0" branch="False" />
             <line number="110" hits="0" branch="False" />
-            <line number="112" hits="0" branch="False" />
+            <line number="111" hits="0" branch="False" />
             <line number="113" hits="0" branch="False" />
             <line number="114" hits="0" branch="False" />
-            <line number="116" hits="0" branch="False" />
+            <line number="115" hits="0" branch="False" />
+            <line number="117" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.CurvePointRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\CurvePointRepository.cs" line-rate="0" branch-rate="1" complexity="1">

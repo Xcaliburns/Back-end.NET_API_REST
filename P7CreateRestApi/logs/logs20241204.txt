@@ -842,3 +842,97 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13
 2024-12-04 12:31:33.554 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 198.7723ms
 2024-12-04 12:31:33.555 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
 2024-12-04 12:31:33.556 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 204 null null 219.2309ms
+2024-12-04 13:11:24.523 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-04 13:11:26.004 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-04 13:11:26.090 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-04 13:11:26.110 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-04 13:11:26.489 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-04 13:11:26.490 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-04 13:11:26.549 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-04 13:11:26.551 +01:00 [INF] Hosting environment: Development
+2024-12-04 13:11:26.552 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-04 13:11:27.113 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-04 13:11:27.474 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 365.5404ms
+2024-12-04 13:11:27.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-04 13:11:27.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-04 13:11:27.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-04 13:11:27.499 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 9.6667ms
+2024-12-04 13:11:27.543 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 53.9284ms
+2024-12-04 13:11:27.596 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.6823ms
+2024-12-04 13:11:27.705 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-04 13:11:27.896 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.1295ms
+2024-12-04 13:18:11.664 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-04 13:18:13.512 +01:00 [INF] Executed DbCommand (44ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-04 13:18:13.600 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-04 13:18:13.620 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-04 13:18:14.076 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-04 13:18:14.079 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-04 13:18:14.143 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-04 13:18:14.144 +01:00 [INF] Hosting environment: Development
+2024-12-04 13:18:14.147 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-04 13:18:14.273 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-04 13:18:14.489 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 218.5058ms
+2024-12-04 13:18:14.512 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-04 13:18:14.522 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-04 13:18:14.534 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 20.6688ms
+2024-12-04 13:18:14.552 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 30.7357ms
+2024-12-04 13:18:14.584 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-04 13:18:14.675 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.1649ms
+2024-12-04 13:18:14.930 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-04 13:18:15.114 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 184.0332ms
+2024-12-04 13:23:31.451 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-04 13:23:33.050 +01:00 [INF] Executed DbCommand (45ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-04 13:23:33.151 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-04 13:23:33.203 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-04 13:23:33.601 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-04 13:23:33.602 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-04 13:23:33.655 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-04 13:23:33.657 +01:00 [INF] Hosting environment: Development
+2024-12-04 13:23:33.658 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-04 13:23:33.682 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-04 13:23:33.818 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 137.2849ms
+2024-12-04 13:23:33.827 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-04 13:23:33.827 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-04 13:23:33.827 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-04 13:23:33.840 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 12.8638ms
+2024-12-04 13:23:33.840 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.2659ms
+2024-12-04 13:23:33.872 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.0781ms
+2024-12-04 13:23:34.017 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-04 13:23:34.147 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 129.3504ms
+2024-12-04 13:25:53.272 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-04 13:25:53.287 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 14.725ms
+2024-12-04 13:25:53.301 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-04 13:25:53.301 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-04 13:25:53.301 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-04 13:25:53.305 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.9377ms
+2024-12-04 13:25:53.309 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 7.8141ms
+2024-12-04 13:25:53.327 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.5684ms
+2024-12-04 13:25:53.639 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-04 13:25:53.697 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.7181ms
