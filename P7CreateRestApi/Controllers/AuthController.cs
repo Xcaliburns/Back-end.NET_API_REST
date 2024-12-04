@@ -10,6 +10,8 @@ using System.Text;
 
 namespace Findexium.Api.Controllers
 {
+
+    //TODO: separer dans un controller /service/repository et faire les tests unitaires
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -52,7 +54,7 @@ namespace Findexium.Api.Controllers
                         Audience = _configuration["Jwt:Audience"]
                     };
                     var token = tokenHandler.CreateToken(tokenDescriptor);
-                    var tokenString = tokenHandler.WriteToken(token);
+                    var tokenString =  "Bearer " + tokenHandler.WriteToken(token);
 
                     _logger.LogInformation("User {Login} logged in successfully", loginRequest.Login);
                     return Ok(new { Token = tokenString });
