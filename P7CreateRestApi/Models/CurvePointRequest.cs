@@ -8,9 +8,7 @@ namespace Findexium.Api.Models
         [Required(ErrorMessage = "CurveId is required.")]
         [Range(1, int.MaxValue, ErrorMessage = "CurveId must be a positive number.")]
         public int CurveId { get; set; }
-       // public DateTime? AsOfDate { get; set; }
-
-
+      
         [Range(0, double.MaxValue, ErrorMessage = "Term must be a positive number.")]
         public double? Term { get; set; }
 

@@ -109,7 +109,6 @@ namespace Findexium.Infrastructure.Repositories
                 existingBid.BidType = bidList.BidType;
                 existingBid.BidQuantity = bidList.BidQuantity;
                 existingBid.RevisionDate = DateTime.Now;
-
                 _context.Bids.Update(existingBid);
                 await _context.SaveChangesAsync();
             }     
