@@ -143,9 +143,16 @@ namespace FindexiumDomain.tests
         public async Task UpdateAsync_ThrowsApplicationException_OnError()
         {
             // Arrange
-            var curvePoint = new CurvePoint { Id = 1 };
+            int id = 1;
+            var curvePoint = new CurvePoint
+            { 
+                Id = id,
+                CurveId = 1,               
+                Term = 1,
+                CurvePointValue = 1,
+            };
             _mockRepository.Setup(repo => repo.ExistsAsync(curvePoint.Id)).ReturnsAsync(true);
-    //        _mockRepository.Setup(repo => repo.UpdateAsync(curvePoint)).ThrowsAsync(new Exception("Database error"));
+            _mockRepository.Setup(repo => repo.UpdateAsync(id,curvePoint)).ThrowsAsync(new Exception("Database error"));
 
             // Act
             var exception = await Assert.ThrowsAsync<ApplicationException>(() => _service.UpdateAsync(curvePoint));
