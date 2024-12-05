@@ -75,13 +75,13 @@ namespace FindexiumApi.tests
             // Arrange
             var curvePoint = new CurvePoint
             {
-                Id = -1,
+                Id = 1,
                 CurveId = 1,
-                AsOfDate = DateTime.Now,
                 Term = 1,
                 CurvePointValue = 1,
-                CreationDate = DateTime.Now
+               
             };
+
             _mockCurvePointService.Setup(service => service.GetByIdAsync(curvePoint.Id)).ReturnsAsync(curvePoint);
 
             // Act
@@ -89,8 +89,11 @@ namespace FindexiumApi.tests
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnCurvePoint = Assert.IsType<CurvePoint>(okResult.Value);
+            var returnCurvePoint = Assert.IsType<CurvePointResponse>(okResult.Value);
             Assert.Equal(curvePoint.Id, returnCurvePoint.Id);
+            Assert.Equal(curvePoint.CurveId, returnCurvePoint.CurveId);
+            Assert.Equal(curvePoint.Term, returnCurvePoint.Term);
+            Assert.Equal(curvePoint.CurvePointValue, returnCurvePoint.CurvePointValue);
         }
 
         [Fact]
@@ -126,36 +129,62 @@ namespace FindexiumApi.tests
         }
 
         [Fact]
-        public async Task PutCurvePoint_ValidIdAndCurvePoint_ReturnsNoContent()
+        public async Task PutCurvePoint_ReturnsBadRequest_WhenModelStateIsInvalid()
         {
             // Arrange
+            var id = 1;
             var curvePointRequest = new CurvePointRequest
             {
                 CurveId = 1,
                 Term = 1.0,
                 CurvePointValue = 1.0
             };
-            var curvePoint = new CurvePoint
-            {
-                Id = 1,
-                CurveId = curvePointRequest.CurveId,
-                AsOfDate = DateTime.Now,
-   //             Term = curvePointRequest.Term,
- //               CurvePointValue = curvePointRequest.CurvePointValue,
-                CreationDate = DateTime.Now
-            };
-            _mockCurvePointService.Setup(service => service.UpdateAsync(It.IsAny<CurvePoint>()))
-                .Returns(Task.CompletedTask);
+
+            _controller.ModelState.AddModelError("CurveId", "Required");
 
             // Act
-            var result = await _controller.PutCurvePoint(curvePoint.Id, curvePointRequest);
+            var result = await _controller.PutCurvePoint(id, curvePointRequest);
 
             // Assert
-            var noContentResult = Assert.IsType<NoContentResult>(result);
+            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
+            Assert.IsType<SerializableError>(badRequestResult.Value);
         }
 
         [Fact]
-        public async Task PutCurvePoint_ReturnsBadRequestWhenIdIsNotEqual()
+        public async Task PutCurvePoint_ReturnsNoContent_WhenUpdateIsSuccessful()
+        {
+            // Arrange
+            var id = 1;
+            var curvePointRequest = new CurvePointRequest
+            {
+                CurveId = 1,
+                Term = 1.0,
+                CurvePointValue = 1.0
+            };
+
+            var existingCurvePoint = new CurvePoint
+            {
+                Id = id,
+                CurveId = 1,
+                AsOfDate = DateTime.Now,
+                Term = 1.0,
+                CurvePointValue = 1.0,
+                CreationDate = DateTime.Now
+            };
+
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(id)).ReturnsAsync(existingCurvePoint);
+            _mockCurvePointService.Setup(service => service.UpdateAsync(It.IsAny<CurvePoint>())).Returns(Task.CompletedTask);
+
+            // Act
+            var result = await _controller.PutCurvePoint(id, curvePointRequest);
+
+            // Assert
+            var noContentResult = Assert.IsType<NoContentResult>(result);
+            _mockCurvePointService.Verify(service => service.UpdateAsync(It.Is<CurvePoint>(cp => cp.Id == id && cp.CurveId == curvePointRequest.CurveId && cp.Term == curvePointRequest.Term && cp.CurvePointValue == curvePointRequest.CurvePointValue)), Times.Once);
+        }
+
+        [Fact]
+        public async Task PutCurvePoint_ReturnsNotFound_WhenBidDoesNotExist()
         {
             // Arrange
             var curvePointId = 1;
@@ -165,12 +194,14 @@ namespace FindexiumApi.tests
                 Term = 1.0,
                 CurvePointValue = 1.0
             };
+            _mockCurvePointService.Setup(service => service.UpdateAsync(It.IsAny<CurvePoint>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _controller.PutCurvePoint(curvePointId, curvePointRequest);
 
             // Assert
-            Assert.IsType<BadRequestResult>(result);
+            Assert.IsType<NotFoundResult>(result);
         }
 
         [Fact]
@@ -194,40 +225,33 @@ namespace FindexiumApi.tests
             Assert.Equal(StatusCodes.Status404NotFound, notFoundResult.StatusCode);
         }
 
-
-
-        [Fact]
-        public async Task PutCurvePoint_DbUpdateConcurrencyException_CurvePointExists_ThrowsException()
-        {
-            // Arrange
-            var curvePointRequest = new CurvePointRequest
-            {
-                CurveId = 1,
-                Term = 1.0,
-                CurvePointValue = 100.0
-            };
-            _mockCurvePointService.Setup(service => service.UpdateAsync(It.IsAny<CurvePoint>()))
-                .ThrowsAsync(new DbUpdateConcurrencyException());
-
-            // Act & Assert
-            await Assert.ThrowsAsync<DbUpdateConcurrencyException>(() => _controller.PutCurvePoint(1, curvePointRequest));
-        }
-
+      
         [Fact]
         public async Task PutCurvePoint_ReturnsInternalServerError()
         {
             // Arrange
+            var id = 1;
             var curvePointRequest = new CurvePointRequest
             {
                 CurveId = 1,
                 Term = 1.0,
                 CurvePointValue = 1.0
             };
-            _mockCurvePointService.Setup(service => service.UpdateAsync(It.IsAny<CurvePoint>()))
-                .ThrowsAsync(new Exception("Test exception"));
+
+            var existingCurvePoint = new CurvePoint
+            {
+                Id = id,
+                CurveId = 1,              
+                Term = 1.0,
+                CurvePointValue = 1.0,
+               
+            };
+
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(id)).ReturnsAsync(existingCurvePoint);
+            _mockCurvePointService.Setup(service => service.UpdateAsync(It.IsAny<CurvePoint>())).ThrowsAsync(new Exception("Test exception"));
 
             // Act
-            var result = await _controller.PutCurvePoint(1, curvePointRequest);
+            var result = await _controller.PutCurvePoint(id, curvePointRequest);
 
             // Assert
             var statusCodeResult = Assert.IsType<ObjectResult>(result);
