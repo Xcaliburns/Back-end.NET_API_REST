@@ -1,17 +1,10 @@
-﻿using Findexium.Domain.Interfaces;
-using Findexium.Domain.Models;
+﻿using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Models;
 using Findexium.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
-using NuGet.Protocol.Core.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;// ici il a fallu ajouter Linq
-using System.Threading.Tasks;
-using Xunit;
 
 
 namespace FindexiumInfrastructure.tests

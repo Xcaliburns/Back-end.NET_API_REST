@@ -21,8 +21,17 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<IEnumerable<CurvePoint>> GetAllAsync()
         {
-            var curvePointsDto = await _context.CurvePoints.ToListAsync();
-            return curvePointsDto.ConvertAll(c => c.ToCurvePoint());
+            try 
+            {
+                var curvePointsDto = await _context.CurvePoints.ToListAsync();
+                return curvePointsDto.ConvertAll(c => c.ToCurvePoint());
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while retrieving all curve points.");
+                throw new ApplicationException("An error occurred while retrieving all curve points.", ex);
+            }
+          
         }
 
         public async Task<CurvePoint> GetByIdAsync(int id)
@@ -44,43 +53,50 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task AddAsync(CurvePoint curvePoint)
         {
-            _context.CurvePoints.Add(new CurvePointsDto(
-                curvePoint.CurveId,
-                curvePoint.AsOfDate,
-                curvePoint.Term,
-                curvePoint.CurvePointValue,
-                curvePoint.CreationDate
-            ));
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<bool> UpdateAsync(int id, CurvePoint curvePoint)
-        {
-            var curvePointDto = await _context.CurvePoints.FindAsync(curvePoint.Id);
-            if (curvePointDto == null)
-            {
-                return false;
-            }
-
-            curvePointDto.CurveId = curvePoint.CurveId;
-            curvePointDto.Term = curvePoint.Term;
-            curvePointDto.CurvePointValue = curvePoint.CurvePointValue;
-            curvePointDto.CreationDate = curvePoint.CreationDate;
-
-            _context.Entry(curvePointDto).State = EntityState.Modified;
 
             try
             {
+              _context.CurvePoints.Add(new CurvePointsDto(
+              curvePoint.CurveId,
+              curvePoint.AsOfDate,
+              curvePoint.Term,
+              curvePoint.CurvePointValue,
+              curvePoint.CreationDate
+          ));
                 await _context.SaveChangesAsync();
-                return true;
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (Exception ex)
             {
-                _logger.LogError(ex, "Concurrency error occurred while updating curvePoint with id: {Id}", id);
-
-                throw;
-
+                _logger.LogError(ex, "An error occurred while adding curve point.");
+                throw new ApplicationException("An error occurred while adding curve point.", ex);
             }
+
+        }
+
+        public async Task UpdateAsync(int id, CurvePoint curvePoint)
+        {
+            if(curvePoint==null)
+            {
+                throw new ArgumentNullException(nameof(curvePoint), "Curve point cannot be null");
+            }
+
+            if (!await ExistsAsync(id))
+            {
+                _logger.LogWarning("CurvePoint with id: {Id} not found during update", id);
+                throw new KeyNotFoundException("CurvePoint not found");
+            }
+
+            var curvePointDto = await _context.CurvePoints.FindAsync(curvePoint.Id);
+            if (curvePointDto != null)
+            {
+
+                curvePointDto.CurveId = curvePoint.CurveId;
+                curvePointDto.Term = curvePoint.Term;
+                curvePointDto.CurvePointValue = curvePoint.CurvePointValue;
+                _context.Entry(curvePointDto);
+                await _context.SaveChangesAsync();
+
+            }           
         }
 
         public async Task DeleteAsync(int id)
@@ -102,7 +118,7 @@ namespace Findexium.Infrastructure.Repositories
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred while checking if curve point with id: {Id} exists", id);
-                throw;
+                throw new ApplicationException($"An error occurred while checking the existence of the CurvePoint with ID {id}", ex);
             }
         }
 

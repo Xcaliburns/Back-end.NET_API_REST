@@ -280,7 +280,7 @@ namespace FindexiumApi.tests
      
 
         [Fact]
-        public async Task PutBid_ReturnsInternalServerError_WhenExceptionIsThrown()
+        public async Task PutBid_ReturnsInternalServerError()
         {
             // Arrange
             var Id = 1;
