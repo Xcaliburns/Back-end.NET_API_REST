@@ -97,9 +97,6 @@ namespace Findexium.Domain.Services
             }
         }
 
-        public async Task<bool> ExistsAsync(int id)
-        {
-            return await _ruleNameRepository.ExistsAsync(id);
-        }
     }
-}
+} 
+
