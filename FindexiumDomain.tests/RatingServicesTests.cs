@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Findexium.Domain.Interfaces;
+﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Domain.Services;
 using Moq;
-using Xunit;
 
 namespace FindexiumDomain.tests
 {
@@ -42,6 +39,21 @@ namespace FindexiumDomain.tests
                 item => Assert.Equal(3, item.Id));
         }
 
+
+        [Fact]
+        public async Task GetAllRatingsAsync_WhenExceptionThrown_ShouldThrowExceptionWithMessage()
+        {
+            // Arrange
+            _mockRatingRepository
+                .Setup(repo => repo.GetAllAsync())
+                .ThrowsAsync(new Exception("Database retrieval error"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<Exception>(() => _ratingServices.GetAllRatingsAsync());
+            Assert.Equal("An error occurred while retrieving all ratings.", exception.Message);
+            Assert.Equal("Database retrieval error", exception.InnerException.Message);
+        }
+
         [Fact]
         public async Task GetRatingByIdAsync_ReturnsRating()
         {
@@ -58,6 +70,23 @@ namespace FindexiumDomain.tests
         }
 
         [Fact]
+        public async Task GetRatingByIdAsync_WhenExceptionThrown_ShouldThrowExceptionWithMessage()
+        {
+            // Arrange
+            int ratingId = 1;
+            _mockRatingRepository
+                .Setup(repo => repo.GetByIdAsync(ratingId))
+                .ThrowsAsync(new Exception("Database retrieval error"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<Exception>(() => _ratingServices.GetRatingByIdAsync(ratingId));
+            Assert.Equal($"An error occurred while retrieving the rating with id {ratingId}.", exception.Message);
+            Assert.Equal("Database retrieval error", exception.InnerException.Message);
+        }
+
+
+
+        [Fact]
         public async Task AddRatingAsync_AddsRating()
         {
             // Arrange
@@ -69,6 +98,29 @@ namespace FindexiumDomain.tests
 
             // Assert
             _mockRatingRepository.Verify(repo => repo.AddAsync(rating), Times.Once);
+        }
+
+        [Fact]
+        public async Task AddRatingAsync_WhenExceptionThrown_ShouldThrowExceptionWithMessage()
+        {
+            // Arrange
+            var rating = new Rating
+            {
+                Id = 1,
+                MoodysRating = "AAA",
+                SandPRating = "AAA",
+                FitchRating = "AAA",
+                OrderNumber = 1
+            };
+
+            _mockRatingRepository
+                .Setup(repo => repo.AddAsync(rating))
+                .ThrowsAsync(new Exception("Database insertion error"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<Exception>(() => _ratingServices.AddRatingAsync(rating));
+            Assert.Equal("An error occurred while adding a new rating.", exception.Message);
+            Assert.Equal("Database insertion error", exception.InnerException.Message);
         }
 
         [Fact]
@@ -87,6 +139,29 @@ namespace FindexiumDomain.tests
         }
 
         [Fact]
+        public async Task UpdateRatingAsync_WhenExceptionThrown_ShouldThrowExceptionWithMessage()
+        {
+            // Arrange
+            var rating = new Rating
+            {
+                Id = 1,
+                MoodysRating = "AAA",
+                SandPRating = "AAA",
+                FitchRating = "AAA",
+                OrderNumber = 1
+            };
+
+            _mockRatingRepository
+                .Setup(repo => repo.UpdateAsync(rating))
+                .ThrowsAsync(new Exception("Database update error"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<Exception>(() => _ratingServices.UpdateRatingAsync(rating));
+            Assert.Equal($"An error occurred while updating the rating with id {rating.Id}.", exception.Message);
+            Assert.Equal("Database update error", exception.InnerException.Message);
+        }
+
+        [Fact]
         public async Task DeleteRatingAsync_DeletesRating()
         {
             // Arrange
@@ -98,6 +173,21 @@ namespace FindexiumDomain.tests
 
             // Assert
             _mockRatingRepository.Verify(repo => repo.DeleteAsync(1), Times.Once);
+        }
+
+        [Fact]
+        public async Task DeleteRatingAsync_WhenExceptionThrown_ShouldThrowExceptionWithMessage()
+        {
+            // Arrange
+            int ratingId = 1;
+            _mockRatingRepository
+                .Setup(repo => repo.DeleteAsync(ratingId))
+                .ThrowsAsync(new Exception("Database deletion error"));
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<Exception>(() => _ratingServices.DeleteRatingAsync(ratingId));
+            Assert.Equal($"An error occurred while deleting the rating with id {ratingId}.", exception.Message);
+            Assert.Equal("Database deletion error", exception.InnerException.Message);
         }
     }
 }

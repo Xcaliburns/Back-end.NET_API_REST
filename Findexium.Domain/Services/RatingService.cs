@@ -19,28 +19,67 @@ namespace Findexium.Domain.Services
 
         public async Task<IEnumerable<Rating>> GetAllRatingsAsync()
         {
-            return await _ratingRepository.GetAllAsync();
+            try
+            {
+                return await _ratingRepository.GetAllAsync();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception("An error occurred while retrieving all ratings.", ex);
+            }
         }
 
         public async Task<Rating> GetRatingByIdAsync(int id)
         {
-            return await _ratingRepository.GetByIdAsync(id);
+            try
+            {
+                return await _ratingRepository.GetByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception($"An error occurred while retrieving the rating with id {id}.", ex);
+            }
         }
 
         public async Task AddRatingAsync(Rating rating)
         {
-            await _ratingRepository.AddAsync(rating);
+            try
+            {
+                await _ratingRepository.AddAsync(rating);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception("An error occurred while adding a new rating.", ex);
+            }
         }
 
-        public async Task UpdateRatingAsync( Rating rating)
+        public async Task UpdateRatingAsync(Rating rating)
         {
-           
-            await _ratingRepository.UpdateAsync(rating);
+            try
+            {
+                await _ratingRepository.UpdateAsync(rating);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception($"An error occurred while updating the rating with id {rating.Id}.", ex);
+            }
         }
 
         public async Task DeleteRatingAsync(int id)
         {
-            await _ratingRepository.DeleteAsync(id);
+            try
+            {
+                await _ratingRepository.DeleteAsync(id);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                throw new Exception($"An error occurred while deleting the rating with id {id}.", ex);
+            }
         }
     }
 }
