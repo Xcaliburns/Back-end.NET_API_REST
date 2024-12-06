@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.5152" branch-rate="0.4545" version="1.9" timestamp="1733480196" lines-covered="810" lines-valid="1572" branches-covered="50" branches-valid="110">
+<coverage line-rate="0.5149" branch-rate="0.4545" version="1.9" timestamp="1733484592" lines-covered="810" lines-valid="1573" branches-covered="50" branches-valid="110">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -2244,43 +2244,41 @@
         </class>
         <class name="Findexium.Infrastructure.Repositories.RatingRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(Findexium.Infrastructure.Data.LocalDbContext)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(Findexium.Infrastructure.Data.LocalDbContext,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Infrastructure.Repositories.RatingRepository&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="0" branch="False" />
-                <line number="14" hits="0" branch="False" />
-                <line number="15" hits="0" branch="False" />
                 <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="13" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
             <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
-            <method name="&lt;GetAllAsync&gt;b__2_0" signature="(Findexium.Infrastructure.Models.RatingDto)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="&lt;GetAllAsync&gt;b__3_0" signature="(Findexium.Infrastructure.Models.RatingDto)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="23" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;AddAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;AddAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="45" hits="0" branch="False" />
-                <line number="47" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
                 <line number="49" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
                 <line number="51" hits="0" branch="False" />
                 <line number="52" hits="0" branch="False" />
                 <line number="53" hits="0" branch="False" />
@@ -2289,16 +2287,16 @@
                 <line number="56" hits="0" branch="False" />
                 <line number="57" hits="0" branch="False" />
                 <line number="58" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
                 <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="45" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
             <line number="49" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
             <line number="51" hits="0" branch="False" />
             <line number="52" hits="0" branch="False" />
             <line number="53" hits="0" branch="False" />
@@ -2307,157 +2305,161 @@
             <line number="56" hits="0" branch="False" />
             <line number="57" hits="0" branch="False" />
             <line number="58" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
             <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;DeleteAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;DeleteAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="80" hits="0" branch="False" />
-                <line number="81" hits="0" branch="False" />
-                <line number="82" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="84" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
+                <line number="86" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="197" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="83" hits="0" branch="False" />
-                <line number="84" hits="0" branch="False" />
-                <line number="85" hits="0" branch="False" />
-                <line number="86" hits="0" branch="False" />
                 <line number="87" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
+                <line number="89" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
+                <line number="91" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="80" hits="0" branch="False" />
-            <line number="81" hits="0" branch="False" />
-            <line number="82" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="84" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
+            <line number="86" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="197" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="83" hits="0" branch="False" />
-            <line number="84" hits="0" branch="False" />
-            <line number="85" hits="0" branch="False" />
-            <line number="86" hits="0" branch="False" />
             <line number="87" hits="0" branch="False" />
+            <line number="88" hits="0" branch="False" />
+            <line number="89" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
+            <line number="91" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;ExistsAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;ExistsAsync&gt;d__8" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="90" hits="0" branch="False" />
-                <line number="92" hits="0" branch="False" />
-                <line number="93" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
+                <line number="94" hits="0" branch="False" />
                 <line number="96" hits="0" branch="False" />
                 <line number="97" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
+                <line number="100" hits="0" branch="False" />
                 <line number="101" hits="0" branch="False" />
+                <line number="104" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="90" hits="0" branch="False" />
-            <line number="92" hits="0" branch="False" />
-            <line number="93" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
+            <line number="94" hits="0" branch="False" />
             <line number="96" hits="0" branch="False" />
             <line number="97" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
+            <line number="100" hits="0" branch="False" />
             <line number="101" hits="0" branch="False" />
+            <line number="104" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;GetAllAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;GetAllAsync&gt;d__3" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
                 <line number="25" hits="0" branch="False" />
                 <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
                 <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
             <line number="25" hits="0" branch="False" />
             <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;GetByIdAsync&gt;d__3" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;GetByIdAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="32" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
                 <line number="36" hits="0" branch="False" />
                 <line number="38" hits="0" branch="False" />
                 <line number="39" hits="0" branch="False" />
                 <line number="40" hits="0" branch="False" />
                 <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="32" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
             <line number="36" hits="0" branch="False" />
             <line number="38" hits="0" branch="False" />
             <line number="39" hits="0" branch="False" />
             <line number="40" hits="0" branch="False" />
             <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;UpdateAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;UpdateAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="64" hits="0" branch="False" />
-                <line number="65" hits="0" branch="False" />
-                <line number="66" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="202" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="67" hits="0" branch="False" />
-                <line number="69" hits="0" branch="False" />
-                <line number="70" hits="0" branch="False" />
                 <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
                 <line number="74" hits="0" branch="False" />
                 <line number="75" hits="0" branch="False" />
                 <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
+                <line number="79" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="64" hits="0" branch="False" />
-            <line number="65" hits="0" branch="False" />
-            <line number="66" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="202" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="67" hits="0" branch="False" />
-            <line number="69" hits="0" branch="False" />
-            <line number="70" hits="0" branch="False" />
             <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
             <line number="74" hits="0" branch="False" />
             <line number="75" hits="0" branch="False" />
             <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
+            <line number="79" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.RuleNameRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RuleNameRepository.cs" line-rate="0" branch-rate="1" complexity="1">

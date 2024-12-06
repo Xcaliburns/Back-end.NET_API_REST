@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.6181" branch-rate="0.3048" version="1.9" timestamp="1733483982" lines-covered="1031" lines-valid="1668" branches-covered="25" branches-valid="82">
+<coverage line-rate="0.6181" branch-rate="0.3048" version="1.9" timestamp="1733484584" lines-covered="1031" lines-valid="1668" branches-covered="25" branches-valid="82">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -2356,7 +2356,7 @@
                 <line number="99" hits="1" branch="False" />
                 <line number="100" hits="1" branch="False" />
                 <line number="101" hits="1" branch="False" />
-                <line number="105" hits="0" branch="False" />
+                <line number="104" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -2367,7 +2367,7 @@
             <line number="99" hits="1" branch="False" />
             <line number="100" hits="1" branch="False" />
             <line number="101" hits="1" branch="False" />
-            <line number="105" hits="0" branch="False" />
+            <line number="104" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.RatingRepository/&lt;GetAllAsync&gt;d__3" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RatingRepository.cs" line-rate="1" branch-rate="1" complexity="1">
