@@ -1,0 +1,239 @@
+2024-12-06 15:27:43.788 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-06 15:27:44.261 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-06 15:27:44.262 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-06 15:27:44.320 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-06 15:27:44.323 +01:00 [INF] Hosting environment: Development
+2024-12-06 15:27:44.325 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-06 15:27:45.105 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-06 15:27:45.303 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 199.6569ms
+2024-12-06 15:27:45.316 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-06 15:27:45.319 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-06 15:27:45.329 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-06 15:27:45.351 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 35.7993ms
+2024-12-06 15:27:45.367 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 48.3642ms
+2024-12-06 15:27:45.432 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 103.4827ms
+2024-12-06 15:27:45.609 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-06 15:27:45.738 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 129.1908ms
+2024-12-06 15:28:04.317 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 52
+2024-12-06 15:28:04.414 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-12-06 15:28:04.438 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-12-06 15:28:04.605 +01:00 [INF] Attempting to log in user with login: toto
+2024-12-06 15:28:05.886 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-06 15:28:06.037 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-06 15:28:06.065 +01:00 [INF] User toto logged in successfully
+2024-12-06 15:28:06.075 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-06 15:28:06.083 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 1641.1058ms
+2024-12-06 15:28:06.085 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-12-06 15:28:06.093 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 1776.3595ms
+2024-12-06 15:28:29.198 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/RuleName - application/json 138
+2024-12-06 15:28:29.252 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.PostRuleName (Findexium.Api)'
+2024-12-06 15:28:29.259 +01:00 [INF] Route matched with {action = "PostRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostRuleName(Findexium.Api.Models.RuleNameRequest) on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-12-06 15:28:29.266 +01:00 [INF] Creating a new rule name
+2024-12-06 15:28:29.416 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RuleNames] ([Description], [Json], [Name], [SqlPart], [SqlStr], [Template])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-12-06 15:28:29.437 +01:00 [INF] Executing CreatedResult, writing value of type 'null'.
+2024-12-06 15:28:29.440 +01:00 [INF] Executed action Findexium.Api.Controllers.RuleNameController.PostRuleName (Findexium.Api) in 179.4487ms
+2024-12-06 15:28:29.441 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RuleNameController.PostRuleName (Findexium.Api)'
+2024-12-06 15:28:29.443 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/RuleName - 204 null null 244.3792ms
+2024-12-06 15:29:04.550 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RuleName - null null
+2024-12-06 15:29:04.557 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api)'
+2024-12-06 15:29:04.562 +01:00 [INF] Route matched with {action = "GetRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.RuleNameResponse]]] GetRuleName() on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-12-06 15:29:04.567 +01:00 [INF] Fetching all rule names
+2024-12-06 15:29:04.588 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Description], [r].[Json], [r].[Name], [r].[SqlPart], [r].[SqlStr], [r].[Template]
+FROM [RuleNames] AS [r]
+2024-12-06 15:29:04.593 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.RuleNameResponse, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-06 15:29:04.597 +01:00 [INF] Executed action Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api) in 32.6255ms
+2024-12-06 15:29:04.598 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api)'
+2024-12-06 15:29:04.599 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RuleName - 200 null application/json; charset=utf-8 48.874ms
+2024-12-06 15:29:17.026 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/RuleName - application/json 138
+2024-12-06 15:29:17.030 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.PostRuleName (Findexium.Api)'
+2024-12-06 15:29:17.031 +01:00 [INF] Route matched with {action = "PostRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostRuleName(Findexium.Api.Models.RuleNameRequest) on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-12-06 15:29:17.035 +01:00 [INF] Creating a new rule name
+2024-12-06 15:29:17.049 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RuleNames] ([Description], [Json], [Name], [SqlPart], [SqlStr], [Template])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-12-06 15:29:17.051 +01:00 [INF] Executing CreatedResult, writing value of type 'null'.
+2024-12-06 15:29:17.052 +01:00 [INF] Executed action Findexium.Api.Controllers.RuleNameController.PostRuleName (Findexium.Api) in 19.4639ms
+2024-12-06 15:29:17.053 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RuleNameController.PostRuleName (Findexium.Api)'
+2024-12-06 15:29:17.053 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/RuleName - 204 null null 26.8466ms
+2024-12-06 15:29:25.633 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RuleName - null null
+2024-12-06 15:29:25.636 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api)'
+2024-12-06 15:29:25.637 +01:00 [INF] Route matched with {action = "GetRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.RuleNameResponse]]] GetRuleName() on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-12-06 15:29:25.638 +01:00 [INF] Fetching all rule names
+2024-12-06 15:29:25.644 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Description], [r].[Json], [r].[Name], [r].[SqlPart], [r].[SqlStr], [r].[Template]
+FROM [RuleNames] AS [r]
+2024-12-06 15:29:25.646 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.RuleNameResponse, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-06 15:29:25.648 +01:00 [INF] Executed action Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api) in 9.8687ms
+2024-12-06 15:29:25.650 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api)'
+2024-12-06 15:29:25.651 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RuleName - 200 null application/json; charset=utf-8 17.4645ms
+2024-12-06 15:45:05.990 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-06 15:45:06.277 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-06 15:45:06.278 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-06 15:45:06.323 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-06 15:45:06.324 +01:00 [INF] Hosting environment: Development
+2024-12-06 15:45:06.325 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-06 15:45:06.916 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-06 15:45:07.092 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 177.8058ms
+2024-12-06 15:45:07.098 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-06 15:45:07.098 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-06 15:45:07.105 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 7.2444ms
+2024-12-06 15:45:07.109 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-06 15:45:07.115 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 17.026ms
+2024-12-06 15:45:07.147 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.6795ms
+2024-12-06 15:45:07.252 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-06 15:45:07.423 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.7693ms
+2024-12-06 15:45:27.908 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 52
+2024-12-06 15:45:27.960 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-12-06 15:45:27.980 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-12-06 15:45:28.081 +01:00 [INF] Attempting to log in user with login: toto
+2024-12-06 15:45:29.029 +01:00 [INF] Executed DbCommand (42ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-06 15:45:29.160 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-06 15:45:29.178 +01:00 [INF] User toto logged in successfully
+2024-12-06 15:45:29.184 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-06 15:45:29.190 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 1206.4121ms
+2024-12-06 15:45:29.191 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-12-06 15:45:29.199 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 1290.3558ms
+2024-12-06 15:46:36.989 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/RuleName/1 - application/json 135
+2024-12-06 15:46:37.043 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.PutRuleName (Findexium.Api)'
+2024-12-06 15:46:37.050 +01:00 [INF] Route matched with {action = "PutRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutRuleName(Int32, Findexium.Api.Models.RuleNameRequest) on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-12-06 15:46:37.058 +01:00 [INF] Updating rule name with id: 1
+2024-12-06 15:46:37.132 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Description], [r].[Json], [r].[Name], [r].[SqlPart], [r].[SqlStr], [r].[Template]
+FROM [RuleNames] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-12-06 15:46:37.166 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RuleNames] AS [r]
+        WHERE [r].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-06 15:46:37.173 +01:00 [ERR] Error occurred while updating rule name with id: 1
+System.ApplicationException: An error occurred while updating the rule name with ID 1.
+ ---> System.InvalidOperationException: The entity type 'RuleName' was not found. Ensure that the entity type has been added to the model.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity)
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Findexium.Infrastructure.Repositories.RuleNameRepository.UpdateAsync(RuleName ruleName) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\RuleNameRepository.cs:line 81
+   at Findexium.Domain.Services.RuleNameService.UpdateRuleAsync(RuleName ruleName) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs:line 75
+   --- End of inner exception stack trace ---
+   at Findexium.Domain.Services.RuleNameService.UpdateRuleAsync(RuleName ruleName) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs:line 79
+   at Findexium.Api.Controllers.RuleNameController.PutRuleName(Int32 id, RuleNameRequest request) in C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\RuleNameController.cs:line 123
+2024-12-06 15:46:37.212 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-12-06 15:46:37.213 +01:00 [INF] Executed action Findexium.Api.Controllers.RuleNameController.PutRuleName (Findexium.Api) in 161.6496ms
+2024-12-06 15:46:37.215 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RuleNameController.PutRuleName (Findexium.Api)'
+2024-12-06 15:46:37.216 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/RuleName/1 - 500 null text/plain; charset=utf-8 227.1516ms
+2024-12-06 15:47:11.033 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-06 15:47:11.673 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-06 15:47:11.674 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-06 15:47:11.741 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-06 15:47:11.747 +01:00 [INF] Hosting environment: Development
+2024-12-06 15:47:11.748 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-06 15:47:12.506 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-06 15:47:12.805 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 304.3842ms
+2024-12-06 15:47:12.810 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-06 15:47:12.827 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-06 15:47:12.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-06 15:47:12.851 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 40.6032ms
+2024-12-06 15:47:12.869 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 35.2771ms
+2024-12-06 15:47:12.909 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.7382ms
+2024-12-06 15:47:12.992 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-06 15:47:13.184 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.8127ms
+2024-12-06 15:47:36.456 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/RuleName/1 - application/json 138
+2024-12-06 15:47:36.644 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.PutRuleName (Findexium.Api)'
+2024-12-06 15:47:36.666 +01:00 [INF] Route matched with {action = "PutRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutRuleName(Int32, Findexium.Api.Models.RuleNameRequest) on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-12-06 15:47:36.834 +01:00 [INF] Updating rule name with id: 1
+2024-12-06 15:47:38.027 +01:00 [INF] Executed DbCommand (52ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Description], [r].[Json], [r].[Name], [r].[SqlPart], [r].[SqlStr], [r].[Template]
+FROM [RuleNames] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-12-06 15:47:38.126 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RuleNames] AS [r]
+        WHERE [r].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-06 15:49:57.378 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-06 15:49:57.595 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-06 15:49:57.596 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-06 15:49:57.631 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-06 15:49:57.632 +01:00 [INF] Hosting environment: Development
+2024-12-06 15:49:57.632 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-06 15:49:57.798 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-06 15:49:57.928 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 130.8928ms
+2024-12-06 15:49:57.933 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-06 15:49:57.933 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-06 15:49:57.942 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 8.67ms
+2024-12-06 15:49:57.948 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-06 15:49:57.950 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 16.8649ms
+2024-12-06 15:49:58.000 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.5991ms
+2024-12-06 15:49:58.086 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-06 15:49:58.260 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 173.6045ms
+2024-12-06 15:50:19.049 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/RuleName/1 - application/json 136
+2024-12-06 15:50:19.152 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.PutRuleName (Findexium.Api)'
+2024-12-06 15:50:19.172 +01:00 [INF] Route matched with {action = "PutRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutRuleName(Int32, Findexium.Api.Models.RuleNameRequest) on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-12-06 15:50:19.275 +01:00 [INF] Updating rule name with id: 1
+2024-12-06 15:50:20.245 +01:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Description], [r].[Json], [r].[Name], [r].[SqlPart], [r].[SqlStr], [r].[Template]
+FROM [RuleNames] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-12-06 15:50:20.331 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RuleNames] AS [r]
+        WHERE [r].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-06 15:50:20.399 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [RuleNames] SET [Description] = @p0, [Json] = @p1, [Name] = @p2, [SqlPart] = @p3, [SqlStr] = @p4, [Template] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-12-06 15:50:20.414 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-12-06 15:50:20.418 +01:00 [INF] Executed action Findexium.Api.Controllers.RuleNameController.PutRuleName (Findexium.Api) in 1242.0868ms
+2024-12-06 15:50:20.419 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RuleNameController.PutRuleName (Findexium.Api)'
+2024-12-06 15:50:20.426 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/RuleName/1 - 204 null null 1377.7359ms
+2024-12-06 15:53:19.973 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-06 15:53:20.258 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-06 15:53:20.259 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-06 15:53:20.313 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-06 15:53:20.315 +01:00 [INF] Hosting environment: Development
+2024-12-06 15:53:20.316 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-06 15:53:20.484 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-06 15:53:20.674 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 189.9658ms
+2024-12-06 15:53:20.703 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-06 15:53:20.703 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-06 15:53:20.704 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-06 15:53:20.715 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 11.8263ms
+2024-12-06 15:53:20.727 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 23.7113ms
+2024-12-06 15:53:20.754 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.4286ms
+2024-12-06 15:53:21.057 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-06 15:53:21.189 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.4325ms

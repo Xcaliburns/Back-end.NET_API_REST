@@ -123,11 +123,7 @@ namespace Findexium.Api.Controllers
                 await _ruleNameServices.UpdateRuleAsync(existingRuleName);
                 return NoContent();
             }
-            catch (ArgumentException ex)
-            {
-                _logger.LogWarning(ex, "Invalid argument for rule name with id: {Id}", id);
-                return BadRequest(ex.Message);
-            }
+           
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while updating rule name with id: {Id}", id);
