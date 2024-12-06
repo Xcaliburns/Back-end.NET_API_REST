@@ -378,7 +378,8 @@ namespace FindexiumInfrastructure.tests
 
                 // Create a mock DbSet and configure it to throw an exception when AnyAsync is called
                 var mockSet = new Mock<DbSet<CurvePointsDto>>();
-                mockSet.As<IQueryable<CurvePointsDto>>().Setup(m => m.Provider).Throws(new Exception("Mock exception"));
+                mockSet.As<IQueryable<CurvePointsDto>>().Setup(m => m.Provider)
+                    .Throws(new Exception("Mock exception"));
                 context.CurvePoints = mockSet.Object;
 
                 //Act and Assert
