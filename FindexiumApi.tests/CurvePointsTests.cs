@@ -82,7 +82,8 @@ namespace FindexiumApi.tests
                
             };
 
-            _mockCurvePointService.Setup(service => service.GetByIdAsync(curvePoint.Id)).ReturnsAsync(curvePoint);
+            _mockCurvePointService.Setup(service => service.GetByIdAsync(curvePoint.Id))
+                .ReturnsAsync(curvePoint);
 
             // Act
             var result = await _controller.GetCurvePoint(curvePoint.Id);

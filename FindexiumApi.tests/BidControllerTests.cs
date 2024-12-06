@@ -81,7 +81,8 @@ namespace FindexiumApi.tests
                 BidQuantity = 1
             };
 
-            _mockBidService.Setup(service => service.GetByIdAsync(-1)).ReturnsAsync(bid);
+            _mockBidService.Setup(service => service.GetByIdAsync(-1))
+                    .ReturnsAsync(bid);
 
             // Act
             var result = await _controller.GetBid(-1);
@@ -219,8 +220,10 @@ namespace FindexiumApi.tests
                 BidQuantity = 50
             };
 
-            _mockBidService.Setup(service => service.GetByIdAsync(Id)).ReturnsAsync(existingBid);
-            _mockBidService.Setup(service => service.UpdateAsync(Id, It.IsAny<BidList>())).Returns(Task.CompletedTask);
+            _mockBidService.Setup(service => service.GetByIdAsync(Id))
+                .ReturnsAsync(existingBid);
+            _mockBidService.Setup(service => service.UpdateAsync(Id, It.IsAny<BidList>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _controller.PutBid(Id, bidRequest);
@@ -291,8 +294,10 @@ namespace FindexiumApi.tests
                 BidQuantity = 100
             };
 
-            _mockBidService.Setup(service => service.GetByIdAsync(Id)).ReturnsAsync(new BidList { BidListId = Id });
-            _mockBidService.Setup(service => service.UpdateAsync(Id, It.IsAny<BidList>())).ThrowsAsync(new Exception());
+            _mockBidService.Setup(service => service.GetByIdAsync(Id))
+                .ReturnsAsync(new BidList { BidListId = Id });
+            _mockBidService.Setup(service => service.UpdateAsync(Id, It.IsAny<BidList>()))
+                .ThrowsAsync(new Exception());
 
             // Act
             var result = await _controller.PutBid(Id, bidRequest);
