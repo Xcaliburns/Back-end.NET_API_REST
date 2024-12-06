@@ -95,9 +95,7 @@ namespace Findexium.Api.Controllers
             {
                 _logger.LogWarning("Invalid model state for RatingRequest");
                 return BadRequest(ModelState);
-            }
-
-          
+            }          
             try
             {
                 _logger.LogInformation("Updating rating with id {Id}", id);
@@ -114,11 +112,7 @@ namespace Findexium.Api.Controllers
                 await _ratingService.UpdateRatingAsync(updatedRating);
                 return NoContent();
             }
-            catch (ArgumentException ex)
-            {
-                _logger.LogError(ex, "Invalid argument for rating with id {Id}", id);
-                return BadRequest(ex.Message);
-            }
+         
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error updating rating with id {Id}", id);

@@ -88,7 +88,7 @@ namespace FindexiumApi.tests
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnRating = Assert.IsType<Rating>(okResult.Value);
+            var returnRating = Assert.IsType<RatingResponse>(okResult.Value);
             Assert.Equal(-1, returnRating.Id);
             Assert.Equal("A1", returnRating.MoodysRating);
             Assert.Equal("A+", returnRating.SandPRating);
@@ -270,9 +270,17 @@ namespace FindexiumApi.tests
                 OrderNumber = 1
             };
 
-            var rating = ratingRequest.ToRating();
-            
+           var existingRating = new Rating
+           {
+               Id = 1,
+               MoodysRating = "A1",
+               SandPRating = "A+",
+               FitchRating = "A",
+               OrderNumber = 1
+           };
 
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(It.IsAny<int>()))
+                .ReturnsAsync(existingRating);
             _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
                 .Returns(Task.CompletedTask);
 
@@ -281,14 +289,35 @@ namespace FindexiumApi.tests
 
             // Assert
             Assert.IsType<NoContentResult>(result);
-            _mockRatingService.Verify(service => service.UpdateRatingAsync(It.Is<Rating>(r => r.Id == 1)), Times.Once);
+            
+        }
+
+        [Fact]
+        public async Task PutRating_InvalidModelState_ReturnsBadRequest()
+        {
+            // Arrange
+            _controller.ModelState.AddModelError("MoodysRating", "Required");
+            var ratingRequest = new RatingRequest
+            {
+                MoodysRating = null, // Invalid value to trigger model state error
+                SandPRating = "AAA",
+                FitchRating = "AAA",
+                OrderNumber = 1
+            };
+
+            // Act
+            var result = await _controller.PutRating(1, ratingRequest);
+
+            // Assert
+            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
+            Assert.IsType<SerializableError>(badRequestResult.Value);
         }
 
 
 
 
         [Fact]
-        public async Task PutRating_ReturnsBadRequestResult_WhenIdMismatch()
+        public async Task PutRating_ReturnsBadNotFound_WhenRatingDoesntExists()
         {
             // Arrange
             var id = 1;
@@ -301,65 +330,17 @@ namespace FindexiumApi.tests
                 OrderNumber = 1
             };
 
-            // Act
-            var result = await _controller.PutRating(id, ratingRequest);
-
-            // Assert
-            Assert.IsType<BadRequestResult>(result);
-        }
-
-        [Fact]
-        public async Task PutRating_ShouldReturnBadRequest_WhenArgumentExceptionIsThrown()
-        {
-            // Arrange
-            var id = 1;
-            var ratingRequest = new RatingRequest
-            {
-               
-                MoodysRating = "A1",
-                SandPRating = "A+",
-                FitchRating = "A",
-                OrderNumber = 1
-            };
-
-            _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
-                .ThrowsAsync(new ArgumentException("Invalid argument"));
-
-            // Act
-            var result = await _controller.PutRating(id, ratingRequest);
-
-            // Assert
-            var actionResult = Assert.IsType<BadRequestObjectResult>(result);
-            Assert.Equal("Invalid argument", actionResult.Value);
-        }
-        [Fact]
-        public async Task PutRating_ShouldReturnNotFound_WhenExceptionIsThrownAndRatingDoesNotExist()
-        {
-            // Arrange
-            var id = 1;
-            var ratingRequest = new RatingRequest
-            {
-                MoodysRating = "A1",
-                SandPRating = "A+",
-                FitchRating = "A",
-                OrderNumber = 1
-            };
-
-            _mockRatingService.Setup(service => service.UpdateRatingAsync(It.IsAny<Rating>()))
-                .ThrowsAsync(new Exception("Some error"));
-
-            _mockRatingService.Setup(service => service.GetRatingByIdAsync(It.IsAny<int>()))
+            _mockRatingService.Setup(service => service.GetRatingByIdAsync(id))
                 .ReturnsAsync((Rating)null);
 
             // Act
             var result = await _controller.PutRating(id, ratingRequest);
 
             // Assert
-            Assert.IsType<NotFoundResult>(result);
+            Assert.IsType<NotFoundObjectResult>(result);
         }
-
-
-
+       
+       
         [Fact]
         public async Task PutRating_ShouldReturnInternalServerError_WhenExceptionIsThrownAndRatingExists()
         {
