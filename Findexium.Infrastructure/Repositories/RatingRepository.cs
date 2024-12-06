@@ -2,7 +2,6 @@
 using Findexium.Domain.Models;
 using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Models;
-using Microsoft.CodeAnalysis.Elfie.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
