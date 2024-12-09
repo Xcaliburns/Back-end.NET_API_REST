@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Findexium.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0976951bbe6d5de7908faa6c2bd74923fb7e3c1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a06ce6505d3a0a253490dddd174033d2398e0e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Findexium.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Findexium.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

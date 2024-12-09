@@ -210,6 +210,19 @@ namespace FindexiumDomain.tests
             Assert.Equal("An error occurred while deleting the trade with ID 1.", exception.Message);
         }
 
+        [Fact]
+        public async Task DeleteTradeAsync_ThrowsInvalidOperationException()
+        {
+            // Arrange
+            _mockTradeRepository.Setup(repo => repo.TradeExistsAsync(1)).ReturnsAsync(false);
+
+            // Act
+            var exception = await Assert.ThrowsAsync<InvalidOperationException>(() => _tradeService.DeleteTradeAsync(1));
+
+            // Assert
+            Assert.Equal("Trade with ID 1 does not exist.", exception.Message);
+        }
+
         #endregion
 
         #region TradeExistsAsync Tests

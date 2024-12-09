@@ -1,16 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Findexium.Api.Controllers;
+﻿using Findexium.Api.Controllers;
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Client;
 using Moq;
-using Xunit;
 
 
 namespace FindexiumApi.tests
@@ -54,8 +49,8 @@ namespace FindexiumApi.tests
                     CreationDate = DateTime.Now,
                     RevisionName = "RevisionName1",
                     RevisionDate = DateTime.Now,
-                    BuyCurrency = "USD",
-                    SellCurrency = "EUR"
+                    //BuyCurrency = "USD",
+                   // SellCurrency = "EUR"
                 },
                 new Trade
                 {
@@ -76,8 +71,8 @@ namespace FindexiumApi.tests
                     CreationDate = DateTime.Now,
                     RevisionName = "RevisionName2",
                     RevisionDate = DateTime.Now,
-                    BuyCurrency = "GBP",
-                    SellCurrency = "USD"
+                    //BuyCurrency = "GBP",
+                   // SellCurrency = "USD"
                 },
                 new Trade
                 {
@@ -98,8 +93,8 @@ namespace FindexiumApi.tests
                     CreationDate = DateTime.Now,
                     RevisionName = "RevisionName3",
                     RevisionDate = DateTime.Now,
-                    BuyCurrency = "EUR",
-                    SellCurrency = "JPY"
+                    //BuyCurrency = "EUR",
+                   // SellCurrency = "JPY"
                 }
             };
 
@@ -161,8 +156,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.GetTradeByIdAsync(1)).ReturnsAsync(trade);
@@ -170,11 +165,16 @@ namespace FindexiumApi.tests
             // Act
             var result = await _controller.GetTrade(1);
 
+
             // Assert
-            var actionResult = Assert.IsType<ActionResult<Trade>>(result);
-            var okResult = Assert.IsType<OkObjectResult>(actionResult.Result);
-            var returnTrade = Assert.IsType<Trade>(okResult.Value);
-            Assert.Equal(1, returnTrade.TradeId);
+            var okResult = Assert.IsType<OkObjectResult>(result.Result);
+            var returnTradeResponse = Assert.IsType<TradeResponse>(okResult.Value);
+
+
+            Assert.Equal(1, returnTradeResponse.TradeId);
+            Assert.Equal("Account1", returnTradeResponse.Account);
+            Assert.Equal("AccountType1", returnTradeResponse.AccountType);
+            Assert.Equal(1, returnTradeResponse.BuyQuantity);
 
         }
         [Fact]
@@ -231,8 +231,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+              //  BuyCurrency = "USD",
+              //  SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.AddTradeAsync(It.IsAny<Trade>()))
@@ -268,8 +268,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+               // BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
 
@@ -303,8 +303,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+               // BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.AddTradeAsync(It.IsAny<Trade>()))
@@ -342,8 +342,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.UpdateTradeAsync(It.IsAny<Trade>()))
@@ -384,8 +384,8 @@ namespace FindexiumApi.tests
                 DealType = "DealType1",
                 SourceListId = "SourceListId1",
                 Side = "Side1",
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             // Act
@@ -424,8 +424,8 @@ namespace FindexiumApi.tests
                 DealType = "DealType1",
                 SourceListId = "SourceListId1",
                 Side = "Side1",
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+                //SellCurrency = "EUR"
             };
 
             // Simulate invalid model state
@@ -440,11 +440,11 @@ namespace FindexiumApi.tests
             Assert.True(modelState.ContainsKey("Account"));
         }
 
-       
 
-           
 
-       
+
+
+
         [Fact]
         public async Task UpdateTrade_ThrowsException_ReturnsInternalServerError()
         {
@@ -473,8 +473,8 @@ namespace FindexiumApi.tests
                 DealType = "DealType1",
                 SourceListId = "SourceListId1",
                 Side = "Side1",
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.UpdateTradeAsync(It.IsAny<Trade>()))
