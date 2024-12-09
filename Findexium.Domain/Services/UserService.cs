@@ -1,6 +1,7 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,73 +14,129 @@ namespace Findexium.Domain.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly UserManager<User> _userManager;
+        private readonly ILogger<UserService> _logger;
 
-        public UserService(IUserRepository userRepository, UserManager<User> userManager)
+        public UserService(IUserRepository userRepository, UserManager<User> userManager, ILogger<UserService> logger)
         {
             _userRepository = userRepository;
             _userManager = userManager;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<User>> GetUsersAsync()
         {
-            return await _userRepository.GetUsersAsync();
+            try
+            {
+                return await _userRepository.GetUsersAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching users");
+                throw;
+            }
         }
 
         public async Task<User> GetUserByIdAsync(string id)
         {
-            return await _userRepository.GetUserByIdAsync(id);
+            try
+            {
+                return await _userRepository.GetUserByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching user by id: {Id}", id);
+                throw;
+            }
         }
 
         public async Task<IdentityResult> AddUserAsync(User user, string password)
         {
-            var existingUser = await _userManager.FindByNameAsync(user.UserName);
-            if (existingUser != null)
+            try
             {
-                return IdentityResult.Failed(new IdentityError { Description = "Username is already taken." });
+                return await _userManager.CreateAsync(user, password);
             }
-
-            var result = await _userManager.CreateAsync(user, password);
-            if (result.Succeeded)
+            catch (Exception ex)
             {
-                var roleResult = await _userManager.AddToRoleAsync(user, "User");
-                if (!roleResult.Succeeded)
+                _logger.LogError(ex, "Error occurred while adding a new user");
+                throw;
+            }
+        }
+
+        public async Task<IdentityResult> UpdateUserAsync(User user)
+        {
+            try
+            {
+                return await _userManager.UpdateAsync(user);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while updating user");
+                throw;
+            }
+        }
+
+        public async Task<IdentityResult> DeleteUserAsync(string id)
+        {
+            try
+            {
+                var user = await _userRepository.GetUserByIdAsync(id);
+                if (user == null)
                 {
-                    return roleResult;
+                    return IdentityResult.Failed(new IdentityError { Description = "User not found" });
                 }
 
+                return await _userManager.DeleteAsync(user);
             }
-
-            return result;
-        }
-
-        public async Task UpdateUserAsync(User user)
-        {
-            await _userRepository.UpdateUserAsync(user);
-        }
-
-        public async Task DeleteUserAsync(string id)
-        {
-            await _userRepository.DeleteUserAsync(id);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting user with id: {Id}", id);
+                throw;
+            }
         }
 
         public async Task<bool> UserExistsAsync(string id)
         {
-            return await _userRepository.UserExistsAsync(id);
+            try
+            {
+                var user = await _userRepository.GetUserByIdAsync(id);
+                return user != null;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while checking if user exists with id: {Id}", id);
+                throw;
+            }
         }
 
         public async Task<User> ValidateCredentialsAsync(string login, string password)
         {
-            var user = await _userManager.FindByNameAsync(login);
-            if (user != null && await _userManager.CheckPasswordAsync(user, password))
+            try
             {
-                return user;
+                var user = await _userManager.FindByNameAsync(login);
+                if (user != null && await _userManager.CheckPasswordAsync(user, password))
+                {
+                    return user;
+                }
+                return null;
             }
-            return null;
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while validating credentials for login: {Login}", login);
+                throw;
+            }
         }
 
         public async Task<IList<string>> GetUserRolesAsync(User user)
         {
-            return await _userManager.GetRolesAsync(user);
+            try
+            {
+                return await _userManager.GetRolesAsync(user);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching roles for user");
+                throw;
+            }
         }
     }
 }

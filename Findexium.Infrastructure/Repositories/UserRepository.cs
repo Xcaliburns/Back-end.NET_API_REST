@@ -4,6 +4,7 @@ using Findexium.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Findexium.Infrastructure.Models;
+using Microsoft.Extensions.Logging;
 
 namespace Findexium.Infrastructure.Repositories
 {
@@ -11,65 +12,113 @@ namespace Findexium.Infrastructure.Repositories
     {
         private readonly LocalDbContext _context;
         private readonly UserManager<User> _userManager;
+        private readonly ILogger<UserRepository> _logger;
 
-        public UserRepository(LocalDbContext context, UserManager<User> userManager)
+        public UserRepository(LocalDbContext context, UserManager<User> userManager, ILogger<UserRepository> logger)
         {
             _context = context;
             _userManager = userManager;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<User>> GetUsersAsync()
         {
-            return await _context.Users.ToListAsync();
+            try
+            {
+                return await _context.Users.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching users");
+                throw;
+            }
         }
-        //la méthode n'est pas appelée, la création et gestion des roles est faite depuis le service et se sert de usermanager
+
         public async Task<User> GetUserByIdAsync(string id)
         {
-            return await _context.Users.FindAsync(id);
+            try
+            {
+                return await _context.Users.FindAsync(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching user by id: {Id}", id);
+                throw;
+            }
         }
 
         public async Task AddUserAsync(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding a new user");
+                throw;
+            }
         }
 
         public async Task UpdateUserAsync(User user)
         {
-            var existingUser = await _context.Users.FindAsync(user.Id);
-            if (existingUser != null)
+            try
             {
-                existingUser.UserName = user.UserName;
-                existingUser.Fullname = user.Fullname;
-               
+                var existingUser = await _context.Users.FindAsync(user.Id);
+                if (existingUser != null)
+                {
+                    existingUser.UserName = user.UserName;
+                    existingUser.Fullname = user.Fullname;
 
-                var result = await _userManager.UpdateAsync(existingUser);
-                if (result.Succeeded)
-                {
-                    var currentRoles = await _userManager.GetRolesAsync(existingUser);
-                    await _userManager.RemoveFromRolesAsync(existingUser, currentRoles);
-                   
+                    var result = await _userManager.UpdateAsync(existingUser);
+                    if (result.Succeeded)
+                    {
+                        var currentRoles = await _userManager.GetRolesAsync(existingUser);
+                        await _userManager.RemoveFromRolesAsync(existingUser, currentRoles);
+                    }
+                    else
+                    {
+                        throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
+                    }
                 }
-                else
-                {
-                    throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
-                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while updating user");
+                throw;
             }
         }
 
         public async Task DeleteUserAsync(string id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
+            try
             {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
+                var user = await _context.Users.FindAsync(id);
+                if (user != null)
+                {
+                    _context.Users.Remove(user);
+                    await _context.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting user with id: {Id}", id);
+                throw;
             }
         }
 
         public async Task<bool> UserExistsAsync(string id)
         {
-            return await _context.Users.AnyAsync(e => e.Id == id);
+            try
+            {
+                return await _context.Users.AnyAsync(e => e.Id == id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while checking if user exists with id: {Id}", id);
+                throw;
+            }
         }
     }
 }

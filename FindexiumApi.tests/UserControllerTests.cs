@@ -120,7 +120,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             var userId = "1";
             var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
             _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(user);
-            _userService.Setup(x => x.UpdateUserAsync(user)).Returns(Task.CompletedTask);
+        //    _userService.Setup(x => x.UpdateUserAsync(user)).Returns(Task.CompletedTask);
 
             // Act
             var result = await _controller.PutUser(userId, user);
@@ -232,7 +232,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             var userId = "1";
             var user = new User { Id = userId, UserName = "User1", Fullname = "Full Name 1" };
             _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(user);
-            _userService.Setup(x => x.DeleteUserAsync(userId)).Returns(Task.CompletedTask);
+      //      _userService.Setup(x => x.DeleteUserAsync(userId)).Returns(Task.CompletedTask);
 
             // Act
             var result = await _controller.DeleteUser(userId);

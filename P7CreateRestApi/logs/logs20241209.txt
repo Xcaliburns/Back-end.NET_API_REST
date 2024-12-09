@@ -22,3 +22,126 @@ ALTER TABLE [AspNetUsers] DROP COLUMN [Role];
 2024-12-09 14:18:06.417 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
 VALUES (N'20241209131515_RemoveRoleColumn', N'8.0.10');
+2024-12-09 14:25:34.805 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-09 14:25:35.151 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-09 14:25:35.152 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-09 14:25:35.190 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-09 14:25:35.192 +01:00 [INF] Hosting environment: Development
+2024-12-09 14:25:35.192 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-09 14:25:36.384 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-09 14:25:36.603 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 220.6135ms
+2024-12-09 14:25:36.609 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.css - null null
+2024-12-09 14:25:36.609 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui.css - null null
+2024-12-09 14:25:36.609 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui-bundle.js - null null
+2024-12-09 14:25:36.610 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-09 14:25:36.610 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-09 14:25:36.611 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-09 14:25:36.616 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-09 14:25:36.619 +01:00 [INF] The file /swagger-ui.css was not modified
+2024-12-09 14:25:36.619 +01:00 [INF] The file /index.css was not modified
+2024-12-09 14:25:36.619 +01:00 [INF] The file /swagger-ui-bundle.js was not modified
+2024-12-09 14:25:36.623 +01:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-12-09 14:25:36.627 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 16.3489ms
+2024-12-09 14:25:36.632 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 21.5223ms
+2024-12-09 14:25:36.633 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui.css - 304 null text/css 23.9823ms
+2024-12-09 14:25:36.634 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.css - 304 null text/css 24.8825ms
+2024-12-09 14:25:36.636 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui-bundle.js - 304 null text/javascript 26.1038ms
+2024-12-09 14:25:36.637 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 26.533ms
+2024-12-09 14:25:36.785 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 169.5475ms
+2024-12-09 14:25:36.911 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-09 14:25:37.054 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 143.8109ms
+2024-12-09 14:31:45.242 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-09 14:31:45.249 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.2041ms
+2024-12-09 14:31:45.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-09 14:31:45.263 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-09 14:31:45.263 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 2.3476ms
+2024-12-09 14:31:45.266 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 2.473ms
+2024-12-09 14:31:45.268 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-09 14:31:45.279 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.517ms
+2024-12-09 14:31:45.497 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-09 14:31:45.507 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/favicon-32x32.png - null null
+2024-12-09 14:31:45.510 +01:00 [INF] The file /favicon-32x32.png was not modified
+2024-12-09 14:31:45.511 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/favicon-32x32.png - 304 null image/png 4.1186ms
+2024-12-09 14:31:45.530 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.4517ms
+2024-12-09 14:32:14.179 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-09 14:32:14.184 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 5.3713ms
+2024-12-09 14:32:14.194 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-09 14:32:14.194 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-09 14:32:14.194 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-09 14:32:14.196 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 2.6587ms
+2024-12-09 14:32:14.198 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.3531ms
+2024-12-09 14:32:14.204 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.2883ms
+2024-12-09 14:32:14.315 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-09 14:32:14.333 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7545ms
+2024-12-09 14:34:56.906 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-09 14:34:56.915 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.9234ms
+2024-12-09 14:34:56.928 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-09 14:34:56.928 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-09 14:34:56.929 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-09 14:34:56.932 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.7064ms
+2024-12-09 14:34:56.934 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.7131ms
+2024-12-09 14:34:56.942 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.0538ms
+2024-12-09 14:34:57.177 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-09 14:34:57.200 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.479ms
+2024-12-09 15:02:15.251 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-09 15:02:15.502 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-09 15:02:15.503 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-09 15:02:15.540 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-09 15:02:15.541 +01:00 [INF] Hosting environment: Development
+2024-12-09 15:02:15.542 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-09 15:02:15.785 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-09 15:02:15.900 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 116.6676ms
+2024-12-09 15:02:15.909 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-09 15:02:15.909 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-09 15:02:15.909 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-09 15:02:15.913 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.6418ms
+2024-12-09 15:02:15.922 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.1778ms
+2024-12-09 15:02:15.949 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.9025ms
+2024-12-09 15:02:16.008 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-09 15:02:16.126 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.8916ms
+2024-12-09 15:02:54.828 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Users - application/json 82
+2024-12-09 15:02:54.920 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-09 15:02:54.925 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-09 15:02:54.926 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Users - 401 0 null 97.7255ms
+2024-12-09 15:04:27.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-09 15:04:27.856 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.1106ms
+2024-12-09 15:04:27.881 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-09 15:04:27.881 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-09 15:04:27.881 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-09 15:04:27.888 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 7.5866ms
+2024-12-09 15:04:27.892 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 10.8611ms
+2024-12-09 15:04:27.908 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.4602ms
+2024-12-09 15:04:32.023 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-09 15:04:32.260 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-09 15:04:32.262 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-09 15:04:32.301 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-09 15:04:32.302 +01:00 [INF] Hosting environment: Development
+2024-12-09 15:04:32.303 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-09 15:04:32.702 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-09 15:04:32.818 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 116.8716ms
+2024-12-09 15:04:32.824 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-09 15:04:32.824 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-09 15:04:32.824 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-09 15:04:32.835 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 11.7426ms
+2024-12-09 15:04:32.838 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.9209ms
+2024-12-09 15:04:32.868 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.8529ms
+2024-12-09 15:04:32.903 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-09 15:04:33.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.7391ms
+2024-12-09 15:04:59.348 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Users - application/json 82
+2024-12-09 15:04:59.407 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api)'
+2024-12-09 15:04:59.436 +01:00 [INF] Route matched with {action = "PostUser", controller = "Users", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.UserResponse]] PostUser(Findexium.Api.Models.UserRequest) on controller Findexium.Api.Controllers.UsersController (Findexium.Api).
+2024-12-09 15:04:59.577 +01:00 [INF] Creating a new user
+2024-12-09 15:05:00.754 +01:00 [INF] Executed DbCommand (45ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-09 15:05:00.940 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [Fullname], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-12-09 15:05:00.958 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Api.Models.UserResponse'.
+2024-12-09 15:05:00.979 +01:00 [INF] Executed action Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api) in 1536.9615ms
+2024-12-09 15:05:00.981 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.UsersController.PostUser (Findexium.Api)'
+2024-12-09 15:05:00.988 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Users - 201 null application/json; charset=utf-8 1639.8939ms
