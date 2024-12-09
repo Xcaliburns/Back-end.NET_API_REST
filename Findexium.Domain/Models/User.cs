@@ -7,7 +7,7 @@ namespace Findexium.Domain.Models
         
        
         public string Fullname { get; set; }
-        public string Role { get; set; } = "User"; //attribue le role user par défaut
+      
 
        
     }

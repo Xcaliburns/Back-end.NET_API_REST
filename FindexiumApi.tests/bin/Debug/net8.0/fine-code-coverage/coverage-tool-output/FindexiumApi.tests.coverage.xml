@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.4608" branch-rate="0.0906" version="1.9" timestamp="1733748281" lines-covered="2187" lines-valid="4746" branches-covered="68" branches-valid="750">
+<coverage line-rate="0.4612" branch-rate="0.0906" version="1.9" timestamp="1733750526" lines-covered="2185" lines-valid="4737" branches-covered="68" branches-valid="750">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Api" line-rate="0.3373" branch-rate="0.09390000000000001" complexity="931">
+    <package name="Findexium.Api" line-rate="0.3372" branch-rate="0.09390000000000001" complexity="929">
       <classes>
         <class name="Program" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Program.cs" line-rate="0" branch-rate="0" complexity="8">
           <methods>
@@ -2712,7 +2712,7 @@
             <line number="106" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Models.TradeResponse" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\TradeResponse.cs" line-rate="0.9129999999999999" branch-rate="1" complexity="23">
+        <class name="Findexium.Api.Models.TradeResponse" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\TradeResponse.cs" line-rate="1" branch-rate="1" complexity="21">
           <methods>
             <method name="get_TradeId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2739,94 +2739,84 @@
                 <line number="9" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="get_BuyCurrency" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_SellCurrency" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="11" hits="0" branch="False" />
-              </lines>
-            </method>
             <method name="get_BuyPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="4" branch="False" />
+                <line number="10" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_SellPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="4" branch="False" />
+                <line number="11" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_Benchmark" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="4" branch="False" />
+                <line number="12" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_TradeDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="4" branch="False" />
+                <line number="13" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_TradeSecurity" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_TradeStatus" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="4" branch="False" />
+                <line number="15" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_Trader" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="4" branch="False" />
+                <line number="16" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_Book" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="4" branch="False" />
+                <line number="17" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_CreationName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="20" hits="4" branch="False" />
+                <line number="18" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_CreationDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="4" branch="False" />
+                <line number="19" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_RevisionName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="4" branch="False" />
+                <line number="20" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_RevisionDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="4" branch="False" />
+                <line number="21" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_DealName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="4" branch="False" />
+                <line number="22" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_DealType" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="4" branch="False" />
+                <line number="23" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_SourceListId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="4" branch="False" />
+                <line number="24" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_Side" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="4" branch="False" />
+                <line number="25" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
@@ -2836,8 +2826,8 @@
             <line number="7" hits="5" branch="False" />
             <line number="8" hits="5" branch="False" />
             <line number="9" hits="4" branch="False" />
-            <line number="10" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
+            <line number="10" hits="4" branch="False" />
+            <line number="11" hits="4" branch="False" />
             <line number="12" hits="4" branch="False" />
             <line number="13" hits="4" branch="False" />
             <line number="14" hits="4" branch="False" />
@@ -2852,8 +2842,6 @@
             <line number="23" hits="4" branch="False" />
             <line number="24" hits="4" branch="False" />
             <line number="25" hits="4" branch="False" />
-            <line number="26" hits="4" branch="False" />
-            <line number="27" hits="4" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Models.UserRequest" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\UserRequest.cs" line-rate="1" branch-rate="1" complexity="4">
@@ -2898,7 +2886,7 @@
             <line number="28" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Models.UserResponse" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\UserResponse.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="Findexium.Api.Models.UserResponse" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Models\UserResponse.cs" line-rate="0.8" branch-rate="1" complexity="5">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2920,9 +2908,9 @@
                 <line number="8" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_Role" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="get_Role" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="3" branch="False" />
+                <line number="9" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -2931,7 +2919,7 @@
             <line number="6" hits="4" branch="False" />
             <line number="7" hits="3" branch="False" />
             <line number="8" hits="3" branch="False" />
-            <line number="9" hits="3" branch="False" />
+            <line number="9" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.AuthController" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\AuthController.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -9642,7 +9630,7 @@
         </class>
       </classes>
     </package>
-    <package name="Findexium.Domain" line-rate="0.16570000000000001" branch-rate="0" complexity="132">
+    <package name="Findexium.Domain" line-rate="0.1635" branch-rate="0" complexity="131">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -11246,27 +11234,21 @@
             <line number="29" hits="9" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Models.User" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\User.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="Findexium.Domain.Models.User" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\User.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="get_Fullname" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="9" hits="11" branch="False" />
               </lines>
             </method>
-            <method name="get_Role" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="20" branch="False" />
-              </lines>
-            </method>
           </methods>
           <lines>
             <line number="9" hits="11" branch="False" />
-            <line number="10" hits="20" branch="False" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Findexium.Infrastructure" line-rate="0" branch-rate="0" complexity="155">
+    <package name="Findexium.Infrastructure" line-rate="0" branch-rate="0" complexity="154">
       <classes>
         <class name="Findexium.Infrastructure.Repositories.BidRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -12728,23 +12710,21 @@
                 <line number="39" hits="0" branch="False" />
                 <line number="40" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="229" type="jump" coverage="0%" />
+                    <condition number="220" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="41" hits="0" branch="False" />
                 <line number="42" hits="0" branch="False" />
                 <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
                 <line number="46" hits="0" branch="False" />
                 <line number="47" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="458" type="jump" coverage="0%" />
+                    <condition number="426" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="48" hits="0" branch="False" />
                 <line number="49" hits="0" branch="False" />
                 <line number="50" hits="0" branch="False" />
-                <line number="51" hits="0" branch="False" />
                 <line number="52" hits="0" branch="False" />
                 <line number="54" hits="0" branch="False" />
                 <line number="57" hits="0" branch="False" />
@@ -12757,23 +12737,21 @@
             <line number="39" hits="0" branch="False" />
             <line number="40" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="229" type="jump" coverage="0%" />
+                <condition number="220" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="41" hits="0" branch="False" />
             <line number="42" hits="0" branch="False" />
             <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
             <line number="46" hits="0" branch="False" />
             <line number="47" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="458" type="jump" coverage="0%" />
+                <condition number="426" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="48" hits="0" branch="False" />
             <line number="49" hits="0" branch="False" />
             <line number="50" hits="0" branch="False" />
-            <line number="51" hits="0" branch="False" />
             <line number="52" hits="0" branch="False" />
             <line number="54" hits="0" branch="False" />
             <line number="57" hits="0" branch="False" />
@@ -13566,92 +13544,80 @@
             <line number="52" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Models.UsersDto" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Models\UsersDto.cs" line-rate="0" branch-rate="1" complexity="7">
+        <class name="Findexium.Infrastructure.Models.UsersDto" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Models\UsersDto.cs" line-rate="0" branch-rate="1" complexity="6">
           <methods>
             <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="0" branch="False" />
+                <line number="8" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_UserName" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="0" branch="False" />
+                <line number="9" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_PasswordHash" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
               </lines>
             </method>
             <method name="get_FullName" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Role" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="18" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
               </lines>
             </method>
             <method name="ToUser" signature="(Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.String,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="20" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-                <line number="26" hits="0" branch="False" />
                 <line number="27" hits="0" branch="False" />
                 <line number="28" hits="0" branch="False" />
                 <line number="29" hits="0" branch="False" />
                 <line number="30" hits="0" branch="False" />
                 <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="14" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="20" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
             <line number="30" hits="0" branch="False" />
             <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Data.LocalDbContext" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Data\LocalDbContext.cs" line-rate="0" branch-rate="1" complexity="7">
@@ -13793,7 +13759,7 @@
                 <line number="241" hits="1" branch="False" />
                 <line number="242" hits="1" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="641" type="jump" coverage="100%" />
+                    <condition number="629" type="jump" coverage="100%" />
                   </conditions>
                 </line>
                 <line number="243" hits="1" branch="False" />
@@ -13810,7 +13776,7 @@
             <line number="241" hits="1" branch="False" />
             <line number="242" hits="1" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="641" type="jump" coverage="100%" />
+                <condition number="629" type="jump" coverage="100%" />
               </conditions>
             </line>
             <line number="243" hits="1" branch="False" />

@@ -41,14 +41,14 @@ namespace Findexium.Infrastructure.Repositories
             {
                 existingUser.UserName = user.UserName;
                 existingUser.Fullname = user.Fullname;
-                existingUser.Role = user.Role;
+               
 
                 var result = await _userManager.UpdateAsync(existingUser);
                 if (result.Succeeded)
                 {
                     var currentRoles = await _userManager.GetRolesAsync(existingUser);
                     await _userManager.RemoveFromRolesAsync(existingUser, currentRoles);
-                    await _userManager.AddToRoleAsync(existingUser, user.Role);
+                   
                 }
                 else
                 {

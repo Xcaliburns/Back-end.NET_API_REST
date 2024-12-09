@@ -34,8 +34,8 @@ namespace FindexiumApi.Tests
             // Arrange
             var users = new List<User>
             {
-                new User { Id = "1", UserName = "User1", Fullname = "Full Name 1", Role = "Admin" },
-                new User { Id = "2", UserName = "User2", Fullname = "Full Name 2", Role = "User" }
+                new User { Id = "1", UserName = "User1", Fullname = "Full Name 1",  },
+                new User { Id = "2", UserName = "User2", Fullname = "Full Name 2",  }
             };
             _userService.Setup(x => x.GetUsersAsync()).ReturnsAsync(users);
 
@@ -70,7 +70,7 @@ namespace FindexiumApi.Tests
         {
             // Arrange
             var userId = "1";
-            var user = new User { Id = userId, UserName = "User1", Fullname = "Full Name 1", Role = "Admin" };
+            var user = new User { Id = userId, UserName = "User1", Fullname = "Full Name 1" };
             _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(user);
 
             // Act
@@ -182,7 +182,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
         {
             // Arrange
             var userRequest = new UserRequest { UserName = "NewUser", Password = "Password123", FullName = "New User" };
-            var user = new User { Id = "1", UserName = "NewUser", Fullname = "New User", Role = "User" };
+            var user = new User { Id = "1", UserName = "NewUser", Fullname = "New User" };
             _userService.Setup(x => x.AddUserAsync(It.IsAny<User>(), userRequest.Password)).ReturnsAsync(IdentityResult.Success);
 
             // Act
@@ -230,7 +230,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
         {
             // Arrange
             var userId = "1";
-            var user = new User { Id = userId, UserName = "User1", Fullname = "Full Name 1", Role = "Admin" };
+            var user = new User { Id = userId, UserName = "User1", Fullname = "Full Name 1" };
             _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(user);
             _userService.Setup(x => x.DeleteUserAsync(userId)).Returns(Task.CompletedTask);
 

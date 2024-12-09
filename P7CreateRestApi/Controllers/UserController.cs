@@ -34,7 +34,7 @@ namespace Findexium.Api.Controllers
                     UserName = user.UserName,
                     Password = user.PasswordHash, // Assuming PasswordHash is used for Password
                     FullName = user.Fullname,
-                    Role = user.Role
+                   
                 }).ToList();
                 return Ok(userDto);
             }
@@ -120,7 +120,7 @@ namespace Findexium.Api.Controllers
                         UserName = user.UserName,
                         Password = user.PasswordHash, // Assuming PasswordHash is used for Password
                         FullName = user.Fullname,
-                        Role = user.Role
+                        
                     };
                     return CreatedAtAction(nameof(GetUser), new { id = user.Id }, userResponse);
                 }
