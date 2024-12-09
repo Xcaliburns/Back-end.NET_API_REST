@@ -7,8 +7,6 @@
         public string? AccountType { get; set; }
         public double? BuyQuantity { get; set; }
         public double? SellQuantity { get; set; }
-        public string? BuyCurrency { get; set; }
-        public string? SellCurrency { get; set; }
         public double? BuyPrice { get; set; }
         public double? SellPrice { get; set; }
         public string? Benchmark { get; set; }

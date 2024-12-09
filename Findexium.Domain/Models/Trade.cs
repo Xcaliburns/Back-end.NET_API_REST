@@ -11,8 +11,8 @@ namespace Findexium.Domain.Models
         public double? SellQuantity { get; set; }
         public double? BuyPrice { get; set; }
         public double? SellPrice { get; set; }
-        public string? BuyCurrency { get; set; }
-        public string? SellCurrency { get; set; }
+      //  public string? BuyCurrency { get; set; }
+     //   public string? SellCurrency { get; set; }
         public DateTime? TradeDate { get; set; }
         public string TradeSecurity { get; set; }
         public string TradeStatus { get; set; }

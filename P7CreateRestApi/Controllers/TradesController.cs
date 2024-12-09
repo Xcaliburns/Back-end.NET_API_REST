@@ -52,8 +52,8 @@ namespace Findexium.Api.Controllers
                     DealType = t.DealType,
                     SourceListId = t.SourceListId,
                     Side = t.Side,
-                    BuyCurrency = t.BuyCurrency,
-                    SellCurrency = t.SellCurrency
+                  //  BuyCurrency = t.BuyCurrency,
+                  //  SellCurrency = t.SellCurrency
                 }).ToList();
                 return Ok(tradeDtos);
             }
@@ -102,8 +102,8 @@ namespace Findexium.Api.Controllers
                     DealType = trade.DealType,
                     SourceListId = trade.SourceListId,
                     Side = trade.Side,
-                    BuyCurrency = trade.BuyCurrency,
-                    SellCurrency = trade.SellCurrency
+                 //   BuyCurrency = trade.BuyCurrency,
+                  //  SellCurrency = trade.SellCurrency
                 };
 
                 return Ok(tradeResponse);

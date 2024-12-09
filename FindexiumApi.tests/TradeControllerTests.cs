@@ -49,8 +49,8 @@ namespace FindexiumApi.tests
                     CreationDate = DateTime.Now,
                     RevisionName = "RevisionName1",
                     RevisionDate = DateTime.Now,
-                    BuyCurrency = "USD",
-                    SellCurrency = "EUR"
+                    //BuyCurrency = "USD",
+                   // SellCurrency = "EUR"
                 },
                 new Trade
                 {
@@ -71,8 +71,8 @@ namespace FindexiumApi.tests
                     CreationDate = DateTime.Now,
                     RevisionName = "RevisionName2",
                     RevisionDate = DateTime.Now,
-                    BuyCurrency = "GBP",
-                    SellCurrency = "USD"
+                    //BuyCurrency = "GBP",
+                   // SellCurrency = "USD"
                 },
                 new Trade
                 {
@@ -93,8 +93,8 @@ namespace FindexiumApi.tests
                     CreationDate = DateTime.Now,
                     RevisionName = "RevisionName3",
                     RevisionDate = DateTime.Now,
-                    BuyCurrency = "EUR",
-                    SellCurrency = "JPY"
+                    //BuyCurrency = "EUR",
+                   // SellCurrency = "JPY"
                 }
             };
 
@@ -156,8 +156,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.GetTradeByIdAsync(1)).ReturnsAsync(trade);
@@ -231,8 +231,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+              //  BuyCurrency = "USD",
+              //  SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.AddTradeAsync(It.IsAny<Trade>()))
@@ -268,8 +268,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+               // BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
 
@@ -303,8 +303,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+               // BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.AddTradeAsync(It.IsAny<Trade>()))
@@ -342,8 +342,8 @@ namespace FindexiumApi.tests
                 CreationDate = DateTime.Now,
                 RevisionName = "RevisionName1",
                 RevisionDate = DateTime.Now,
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.UpdateTradeAsync(It.IsAny<Trade>()))
@@ -384,8 +384,8 @@ namespace FindexiumApi.tests
                 DealType = "DealType1",
                 SourceListId = "SourceListId1",
                 Side = "Side1",
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             // Act
@@ -424,8 +424,8 @@ namespace FindexiumApi.tests
                 DealType = "DealType1",
                 SourceListId = "SourceListId1",
                 Side = "Side1",
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+                //SellCurrency = "EUR"
             };
 
             // Simulate invalid model state
@@ -473,8 +473,8 @@ namespace FindexiumApi.tests
                 DealType = "DealType1",
                 SourceListId = "SourceListId1",
                 Side = "Side1",
-                BuyCurrency = "USD",
-                SellCurrency = "EUR"
+                //BuyCurrency = "USD",
+               // SellCurrency = "EUR"
             };
 
             _tradeService.Setup(service => service.UpdateTradeAsync(It.IsAny<Trade>()))
