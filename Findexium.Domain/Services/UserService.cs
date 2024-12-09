@@ -49,18 +49,23 @@ namespace Findexium.Domain.Services
             }
         }
 
+        public async Task<User> GetUserByUserNameAsync(string userName)
+        {
+            return await _userManager.FindByNameAsync(userName);
+        }
+
         public async Task<IdentityResult> AddUserAsync(User user, string password)
         {
-            try
+            var existingUser = await GetUserByUserNameAsync(user.UserName);
+            if (existingUser != null)
             {
-                return await _userManager.CreateAsync(user, password);
+                return IdentityResult.Failed(new IdentityError { Description = "Username already exists." });
             }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error occurred while adding a new user");
-                throw;
-            }
+
+            return await _userManager.CreateAsync(user, password);
         }
+
+      
 
         public async Task<IdentityResult> UpdateUserAsync(User user)
         {

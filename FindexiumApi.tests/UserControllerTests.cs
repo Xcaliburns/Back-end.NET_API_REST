@@ -119,8 +119,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             // Arrange
             var userId = "1";
             var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-            _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(user);
-        //    _userService.Setup(x => x.UpdateUserAsync(user)).Returns(Task.CompletedTask);
+            _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Success);
 
             // Act
             var result = await _controller.PutUser(userId, user);
@@ -136,7 +135,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             // Arrange
             var userId = "1";
             var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-            _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync((User)null);
+            _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Failed(new IdentityError { Description = "User not found" }));
 
             // Act
             var result = await _controller.PutUser(userId, user);
@@ -165,7 +164,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             // Arrange
             var userId = "1";
             var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-            _userService.Setup(x => x.GetUserByIdAsync(userId)).ThrowsAsync(new Exception("Test exception"));
+            _userService.Setup(x => x.UpdateUserAsync(user)).ThrowsAsync(new Exception("Test exception"));
 
             // Act
             var result = await _controller.PutUser(userId, user);
@@ -232,7 +231,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             var userId = "1";
             var user = new User { Id = userId, UserName = "User1", Fullname = "Full Name 1" };
             _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(user);
-      //      _userService.Setup(x => x.DeleteUserAsync(userId)).Returns(Task.CompletedTask);
+            _userService.Setup(x => x.DeleteUserAsync(userId)).ReturnsAsync(IdentityResult.Success);
 
             // Act
             var result = await _controller.DeleteUser(userId);
@@ -241,6 +240,7 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             Assert.IsType<NoContentResult>(result);
             _userService.Verify(x => x.DeleteUserAsync(userId), Times.Once);
         }
+
         [Fact]
         public async Task PostUser_ReturnsBadRequest_WhenAddUserFails()
         {
@@ -270,8 +270,22 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             // Assert
             Assert.IsType<NotFoundResult>(result);
         }
+        [Fact]
+        public async Task DeleteUser_ReturnsNotFound_WhenDeleteFails()
+        {
+            // Arrange
+            var userId = "1";
+            var user = new User { Id = userId, UserName = "User1", Fullname = "Full Name 1" };
+            _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(user);
+            _userService.Setup(x => x.DeleteUserAsync(userId)).ReturnsAsync(IdentityResult.Failed(new IdentityError { Description = "Deletion failed" }));
 
-     
+            // Act
+            var result = await _controller.DeleteUser(userId);
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result);
+        }
+
         [Fact]
         public async Task DeleteUser_ReturnsInternalServerError_WhenExceptionIsThrown()
         {

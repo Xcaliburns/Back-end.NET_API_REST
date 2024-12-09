@@ -103,8 +103,8 @@ namespace Findexium.Api.Controllers
             {
                 var user = request.ToUser();
                 _logger.LogInformation("Creating a new user");
-                //le mot de passe sera haché ici
-                var result = await _userService.AddUserAsync(user, request.Password); // Passer le mot de passe ici
+                //verifie que le userName est unique
+                var result = await _userService.AddUserAsync(user, request.Password);
                 if (result.Succeeded)
                 {
                     var userResponse = new UserResponse
@@ -132,11 +132,19 @@ namespace Findexium.Api.Controllers
             try
             {
                 _logger.LogInformation("Deleting user with id: {Id}", id);
+
+                var user = await _userService.GetUserByIdAsync(id);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
                 var result = await _userService.DeleteUserAsync(id);
                 if (!result.Succeeded)
                 {
                     return NotFound();
                 }
+
                 return NoContent();
             }
             catch (Exception ex)
