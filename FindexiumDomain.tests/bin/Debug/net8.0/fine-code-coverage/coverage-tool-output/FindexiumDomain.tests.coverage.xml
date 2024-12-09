@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.48479999999999995" branch-rate="0.4722" version="1.9" timestamp="1733759635" lines-covered="817" lines-valid="1685" branches-covered="51" branches-valid="108">
+<coverage line-rate="0.5699000000000001" branch-rate="0.5462" version="1.9" timestamp="1733761066" lines-covered="1043" lines-valid="1830" branches-covered="59" branches-valid="108">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Domain" line-rate="0.7108" branch-rate="0.8" complexity="129">
+    <package name="Findexium.Domain" line-rate="0.9059999999999999" branch-rate="1" complexity="129">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
@@ -998,292 +998,292 @@
             <line number="82" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(Findexium.Domain.Interfaces.IUserRepository,Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Domain.Services.UserService&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(Findexium.Domain.Interfaces.IUserRepository,Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Domain.Services.UserService&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="0" branch="False" />
-                <line number="20" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
+                <line number="14" hits="19" branch="False" />
+                <line number="15" hits="19" branch="False" />
+                <line number="16" hits="19" branch="False" />
+                <line number="17" hits="19" branch="False" />
+                <line number="18" hits="19" branch="False" />
+                <line number="19" hits="19" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="0" branch="False" />
-            <line number="20" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
+            <line number="14" hits="19" branch="False" />
+            <line number="15" hits="19" branch="False" />
+            <line number="16" hits="19" branch="False" />
+            <line number="17" hits="19" branch="False" />
+            <line number="18" hits="19" branch="False" />
+            <line number="19" hits="19" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;AddUserAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Domain.Services.UserService/&lt;AddUserAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="58" hits="0" branch="False" />
-                <line number="59" hits="0" branch="False" />
-                <line number="60" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="53" hits="2" branch="False" />
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="175" type="jump" coverage="0%" />
+                    <condition number="175" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="61" hits="0" branch="False" />
-                <line number="62" hits="0" branch="False" />
-                <line number="65" hits="0" branch="False" />
-                <line number="66" hits="0" branch="False" />
+                <line number="56" hits="1" branch="False" />
+                <line number="57" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
-            <line number="60" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="53" hits="2" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="175" type="jump" coverage="0%" />
+                <condition number="175" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="61" hits="0" branch="False" />
-            <line number="62" hits="0" branch="False" />
-            <line number="65" hits="0" branch="False" />
-            <line number="66" hits="0" branch="False" />
+            <line number="56" hits="1" branch="False" />
+            <line number="57" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;DeleteUserAsync&gt;d__9" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Findexium.Domain.Services.UserService/&lt;DeleteUserAsync&gt;d__9" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="84" hits="0" branch="False" />
-                <line number="86" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="79" hits="3" branch="False" />
+                <line number="81" hits="3" branch="False" />
+                <line number="82" hits="3" branch="False" />
+                <line number="83" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="185" type="jump" coverage="0%" />
+                    <condition number="185" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="89" hits="0" branch="False" />
-                <line number="90" hits="0" branch="False" />
-                <line number="93" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
-                <line number="96" hits="0" branch="False" />
-                <line number="97" hits="0" branch="False" />
-                <line number="98" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="90" hits="1" branch="False" />
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="95" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="84" hits="0" branch="False" />
-            <line number="86" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
-            <line number="88" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="79" hits="3" branch="False" />
+            <line number="81" hits="3" branch="False" />
+            <line number="82" hits="3" branch="False" />
+            <line number="83" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="185" type="jump" coverage="0%" />
+                <condition number="185" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="89" hits="0" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="93" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
-            <line number="96" hits="0" branch="False" />
-            <line number="97" hits="0" branch="False" />
-            <line number="98" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="90" hits="1" branch="False" />
+            <line number="91" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="95" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;GetUserByIdAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService/&lt;GetUserByIdAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="40" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="47" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
+                <line number="35" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="40" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
+            <line number="35" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;GetUserByUserNameAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService/&lt;GetUserByUserNameAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="53" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
-                <line number="55" hits="0" branch="False" />
+                <line number="48" hits="2" branch="False" />
+                <line number="49" hits="2" branch="False" />
+                <line number="50" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="53" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
-            <line number="55" hits="0" branch="False" />
+            <line number="48" hits="2" branch="False" />
+            <line number="49" hits="2" branch="False" />
+            <line number="50" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;GetUserRolesAsync&gt;d__12" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService/&lt;GetUserRolesAsync&gt;d__12" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="135" hits="0" branch="False" />
-                <line number="137" hits="0" branch="False" />
-                <line number="138" hits="0" branch="False" />
-                <line number="140" hits="0" branch="False" />
-                <line number="141" hits="0" branch="False" />
-                <line number="142" hits="0" branch="False" />
-                <line number="143" hits="0" branch="False" />
-                <line number="145" hits="0" branch="False" />
+                <line number="130" hits="2" branch="False" />
+                <line number="132" hits="2" branch="False" />
+                <line number="133" hits="2" branch="False" />
+                <line number="135" hits="1" branch="False" />
+                <line number="136" hits="1" branch="False" />
+                <line number="137" hits="1" branch="False" />
+                <line number="138" hits="1" branch="False" />
+                <line number="140" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="135" hits="0" branch="False" />
-            <line number="137" hits="0" branch="False" />
-            <line number="138" hits="0" branch="False" />
-            <line number="140" hits="0" branch="False" />
-            <line number="141" hits="0" branch="False" />
-            <line number="142" hits="0" branch="False" />
-            <line number="143" hits="0" branch="False" />
-            <line number="145" hits="0" branch="False" />
+            <line number="130" hits="2" branch="False" />
+            <line number="132" hits="2" branch="False" />
+            <line number="133" hits="2" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="136" hits="1" branch="False" />
+            <line number="137" hits="1" branch="False" />
+            <line number="138" hits="1" branch="False" />
+            <line number="140" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;GetUsersAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService/&lt;GetUsersAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
+                <line number="22" hits="2" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="25" hits="2" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+                <line number="29" hits="1" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="27" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
+            <line number="22" hits="2" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="25" hits="2" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+            <line number="29" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;UpdateUserAsync&gt;d__8" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService/&lt;UpdateUserAsync&gt;d__8" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="71" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-                <line number="74" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="False" />
-                <line number="78" hits="0" branch="False" />
-                <line number="79" hits="0" branch="False" />
-                <line number="81" hits="0" branch="False" />
+                <line number="66" hits="2" branch="False" />
+                <line number="68" hits="2" branch="False" />
+                <line number="69" hits="2" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="72" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="71" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-            <line number="74" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
-            <line number="78" hits="0" branch="False" />
-            <line number="79" hits="0" branch="False" />
-            <line number="81" hits="0" branch="False" />
+            <line number="66" hits="2" branch="False" />
+            <line number="68" hits="2" branch="False" />
+            <line number="69" hits="2" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;UserExistsAsync&gt;d__10" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService/&lt;UserExistsAsync&gt;d__10" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="103" hits="0" branch="False" />
-                <line number="105" hits="0" branch="False" />
-                <line number="106" hits="0" branch="False" />
-                <line number="107" hits="0" branch="False" />
-                <line number="109" hits="0" branch="False" />
-                <line number="110" hits="0" branch="False" />
-                <line number="111" hits="0" branch="False" />
-                <line number="112" hits="0" branch="False" />
-                <line number="114" hits="0" branch="False" />
+                <line number="98" hits="3" branch="False" />
+                <line number="100" hits="3" branch="False" />
+                <line number="101" hits="3" branch="False" />
+                <line number="102" hits="2" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="109" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="103" hits="0" branch="False" />
-            <line number="105" hits="0" branch="False" />
-            <line number="106" hits="0" branch="False" />
-            <line number="107" hits="0" branch="False" />
-            <line number="109" hits="0" branch="False" />
-            <line number="110" hits="0" branch="False" />
-            <line number="111" hits="0" branch="False" />
-            <line number="112" hits="0" branch="False" />
-            <line number="114" hits="0" branch="False" />
+            <line number="98" hits="3" branch="False" />
+            <line number="100" hits="3" branch="False" />
+            <line number="101" hits="3" branch="False" />
+            <line number="102" hits="2" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="109" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;ValidateCredentialsAsync&gt;d__11" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="Findexium.Domain.Services.UserService/&lt;ValidateCredentialsAsync&gt;d__11" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="117" hits="0" branch="False" />
-                <line number="119" hits="0" branch="False" />
-                <line number="120" hits="0" branch="False" />
-                <line number="121" hits="0" branch="True" condition-coverage="0% (0/4)">
+                <line number="112" hits="3" branch="False" />
+                <line number="114" hits="3" branch="False" />
+                <line number="115" hits="3" branch="False" />
+                <line number="116" hits="2" branch="True" condition-coverage="100% (4/4)">
                   <conditions>
-                    <condition number="205" type="jump" coverage="0%" />
-                    <condition number="358" type="jump" coverage="0%" />
+                    <condition number="205" type="jump" coverage="100%" />
+                    <condition number="358" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="122" hits="0" branch="False" />
-                <line number="123" hits="0" branch="False" />
-                <line number="125" hits="0" branch="False" />
-                <line number="127" hits="0" branch="False" />
-                <line number="128" hits="0" branch="False" />
-                <line number="129" hits="0" branch="False" />
-                <line number="130" hits="0" branch="False" />
-                <line number="132" hits="0" branch="False" />
+                <line number="117" hits="1" branch="False" />
+                <line number="118" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="122" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="124" hits="1" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="127" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="117" hits="0" branch="False" />
-            <line number="119" hits="0" branch="False" />
-            <line number="120" hits="0" branch="False" />
-            <line number="121" hits="0" branch="True" condition-coverage="0% (0/4)">
+            <line number="112" hits="3" branch="False" />
+            <line number="114" hits="3" branch="False" />
+            <line number="115" hits="3" branch="False" />
+            <line number="116" hits="2" branch="True" condition-coverage="100% (4/4)">
               <conditions>
-                <condition number="205" type="jump" coverage="0%" />
-                <condition number="358" type="jump" coverage="0%" />
+                <condition number="205" type="jump" coverage="100%" />
+                <condition number="358" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="122" hits="0" branch="False" />
-            <line number="123" hits="0" branch="False" />
-            <line number="125" hits="0" branch="False" />
-            <line number="127" hits="0" branch="False" />
-            <line number="128" hits="0" branch="False" />
-            <line number="129" hits="0" branch="False" />
-            <line number="130" hits="0" branch="False" />
-            <line number="132" hits="0" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="118" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="122" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="124" hits="1" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="127" hits="2" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Models.BidList" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\BidList.cs" line-rate="0.1818" branch-rate="1" complexity="22">
@@ -4200,7 +4200,7 @@
         </class>
       </classes>
     </package>
-    <package name="FindexiumDomain.tests" line-rate="0.998" branch-rate="0.6785" complexity="147">
+    <package name="FindexiumDomain.tests" line-rate="0.9984999999999999" branch-rate="0.6785" complexity="174">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -6532,6 +6532,560 @@
           <lines>
             <line number="7" hits="1" branch="False" />
             <line number="9" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="&lt;GetUsersAsync_ThrowsException&gt;b__6_1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="19" branch="False" />
+                <line number="22" hits="19" branch="False" />
+                <line number="23" hits="19" branch="False" />
+                <line number="24" hits="19" branch="False" />
+                <line number="25" hits="19" branch="False" />
+                <line number="26" hits="19" branch="False" />
+                <line number="27" hits="19" branch="False" />
+                <line number="28" hits="19" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="52" hits="2" branch="False" />
+            <line number="21" hits="19" branch="False" />
+            <line number="22" hits="19" branch="False" />
+            <line number="23" hits="19" branch="False" />
+            <line number="24" hits="19" branch="False" />
+            <line number="25" hits="19" branch="False" />
+            <line number="26" hits="19" branch="False" />
+            <line number="27" hits="19" branch="False" />
+            <line number="28" hits="19" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;&gt;c__DisplayClass12_0" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;UpdateUserAsync_ThrowsException&gt;b__1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="138" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="138" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;&gt;c__DisplayClass15_0" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;DeleteUserAsync_ThrowsException&gt;b__1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="182" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="182" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;&gt;c__DisplayClass18_0" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;UserExistsAsync_ThrowsException&gt;b__1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="225" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="225" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;&gt;c__DisplayClass21_0" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;ValidateCredentialsAsync_ThrowsException&gt;b__1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="274" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="274" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;&gt;c__DisplayClass23_0" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;GetUserRolesAsync_ThrowsException&gt;b__1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="302" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="302" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;&gt;c__DisplayClass8_0" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;GetUserByIdAsync_ThrowsException&gt;b__1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="80" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="80" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;AddUserAsync_ReturnsFailure_WhenUserAlreadyExists&gt;d__10" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="102" hits="1" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="109" hits="1" branch="False" />
+                <line number="112" hits="1" branch="False" />
+                <line number="113" hits="1" branch="False" />
+                <line number="114" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="102" hits="1" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="109" hits="1" branch="False" />
+            <line number="112" hits="1" branch="False" />
+            <line number="113" hits="1" branch="False" />
+            <line number="114" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;AddUserAsync_ReturnsSuccess_WhenUserIsAdded&gt;d__9" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="86" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
+                <line number="90" hits="1" branch="False" />
+                <line number="91" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="98" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="86" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
+            <line number="90" hits="1" branch="False" />
+            <line number="91" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="98" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;DeleteUserAsync_ReturnsFailure_WhenUserNotFound&gt;d__14" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="160" hits="1" branch="False" />
+                <line number="162" hits="1" branch="False" />
+                <line number="163" hits="1" branch="False" />
+                <line number="166" hits="1" branch="False" />
+                <line number="169" hits="1" branch="False" />
+                <line number="170" hits="1" branch="False" />
+                <line number="171" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="160" hits="1" branch="False" />
+            <line number="162" hits="1" branch="False" />
+            <line number="163" hits="1" branch="False" />
+            <line number="166" hits="1" branch="False" />
+            <line number="169" hits="1" branch="False" />
+            <line number="170" hits="1" branch="False" />
+            <line number="171" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;DeleteUserAsync_ReturnsSuccess_WhenUserIsDeleted&gt;d__13" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="144" hits="1" branch="False" />
+                <line number="146" hits="1" branch="False" />
+                <line number="147" hits="1" branch="False" />
+                <line number="148" hits="1" branch="False" />
+                <line number="149" hits="1" branch="False" />
+                <line number="152" hits="1" branch="False" />
+                <line number="155" hits="1" branch="False" />
+                <line number="156" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="144" hits="1" branch="False" />
+            <line number="146" hits="1" branch="False" />
+            <line number="147" hits="1" branch="False" />
+            <line number="148" hits="1" branch="False" />
+            <line number="149" hits="1" branch="False" />
+            <line number="152" hits="1" branch="False" />
+            <line number="155" hits="1" branch="False" />
+            <line number="156" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;DeleteUserAsync_ThrowsException&gt;d__15" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="175" hits="1" branch="False" />
+                <line number="177" hits="1" branch="False" />
+                <line number="178" hits="1" branch="False" />
+                <line number="179" hits="1" branch="False" />
+                <line number="183" hits="1" branch="False" />
+                <line number="185" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="175" hits="1" branch="False" />
+            <line number="177" hits="1" branch="False" />
+            <line number="178" hits="1" branch="False" />
+            <line number="179" hits="1" branch="False" />
+            <line number="183" hits="1" branch="False" />
+            <line number="185" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;GetUserByIdAsync_ReturnsUser&gt;d__7" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="58" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="62" hits="1" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="58" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;GetUserByIdAsync_ThrowsException&gt;d__8" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="73" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="73" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;GetUserRolesAsync_ReturnsRoles&gt;d__22" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="280" hits="1" branch="False" />
+                <line number="282" hits="1" branch="False" />
+                <line number="283" hits="1" branch="False" />
+                <line number="284" hits="1" branch="False" />
+                <line number="287" hits="1" branch="False" />
+                <line number="290" hits="1" branch="False" />
+                <line number="291" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="280" hits="1" branch="False" />
+            <line number="282" hits="1" branch="False" />
+            <line number="283" hits="1" branch="False" />
+            <line number="284" hits="1" branch="False" />
+            <line number="287" hits="1" branch="False" />
+            <line number="290" hits="1" branch="False" />
+            <line number="291" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;GetUserRolesAsync_ThrowsException&gt;d__23" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="295" hits="1" branch="False" />
+                <line number="297" hits="1" branch="False" />
+                <line number="298" hits="1" branch="False" />
+                <line number="299" hits="1" branch="False" />
+                <line number="303" hits="1" branch="False" />
+                <line number="304" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="295" hits="1" branch="False" />
+            <line number="297" hits="1" branch="False" />
+            <line number="298" hits="1" branch="False" />
+            <line number="299" hits="1" branch="False" />
+            <line number="303" hits="1" branch="False" />
+            <line number="304" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;GetUsersAsync_ReturnsUsers&gt;d__5" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="32" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;GetUsersAsync_ThrowsException&gt;d__6" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="46" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="46" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;UpdateUserAsync_ReturnsSuccess_WhenUserIsUpdated&gt;d__11" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="117" hits="1" branch="False" />
+                <line number="119" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
+                <line number="127" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="117" hits="1" branch="False" />
+            <line number="119" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
+            <line number="127" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;UpdateUserAsync_ThrowsException&gt;d__12" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="131" hits="1" branch="False" />
+                <line number="133" hits="1" branch="False" />
+                <line number="134" hits="1" branch="False" />
+                <line number="135" hits="1" branch="False" />
+                <line number="139" hits="1" branch="False" />
+                <line number="141" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="131" hits="1" branch="False" />
+            <line number="133" hits="1" branch="False" />
+            <line number="134" hits="1" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="139" hits="1" branch="False" />
+            <line number="141" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;UserExistsAsync_ReturnsFalse_WhenUserDoesNotExist&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="204" hits="1" branch="False" />
+                <line number="206" hits="1" branch="False" />
+                <line number="207" hits="1" branch="False" />
+                <line number="210" hits="1" branch="False" />
+                <line number="213" hits="1" branch="False" />
+                <line number="214" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="204" hits="1" branch="False" />
+            <line number="206" hits="1" branch="False" />
+            <line number="207" hits="1" branch="False" />
+            <line number="210" hits="1" branch="False" />
+            <line number="213" hits="1" branch="False" />
+            <line number="214" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;UserExistsAsync_ReturnsTrue_WhenUserExists&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="189" hits="1" branch="False" />
+                <line number="191" hits="1" branch="False" />
+                <line number="192" hits="1" branch="False" />
+                <line number="193" hits="1" branch="False" />
+                <line number="196" hits="1" branch="False" />
+                <line number="199" hits="1" branch="False" />
+                <line number="200" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="189" hits="1" branch="False" />
+            <line number="191" hits="1" branch="False" />
+            <line number="192" hits="1" branch="False" />
+            <line number="193" hits="1" branch="False" />
+            <line number="196" hits="1" branch="False" />
+            <line number="199" hits="1" branch="False" />
+            <line number="200" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;UserExistsAsync_ThrowsException&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="218" hits="1" branch="False" />
+                <line number="220" hits="1" branch="False" />
+                <line number="221" hits="1" branch="False" />
+                <line number="222" hits="1" branch="False" />
+                <line number="226" hits="1" branch="False" />
+                <line number="228" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="218" hits="1" branch="False" />
+            <line number="220" hits="1" branch="False" />
+            <line number="221" hits="1" branch="False" />
+            <line number="222" hits="1" branch="False" />
+            <line number="226" hits="1" branch="False" />
+            <line number="228" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;ValidateCredentialsAsync_ReturnsNull_WhenCredentialsAreInvalid&gt;d__20" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="249" hits="1" branch="False" />
+                <line number="251" hits="1" branch="False" />
+                <line number="252" hits="1" branch="False" />
+                <line number="253" hits="1" branch="False" />
+                <line number="254" hits="1" branch="False" />
+                <line number="255" hits="1" branch="False" />
+                <line number="258" hits="1" branch="False" />
+                <line number="261" hits="1" branch="False" />
+                <line number="262" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="249" hits="1" branch="False" />
+            <line number="251" hits="1" branch="False" />
+            <line number="252" hits="1" branch="False" />
+            <line number="253" hits="1" branch="False" />
+            <line number="254" hits="1" branch="False" />
+            <line number="255" hits="1" branch="False" />
+            <line number="258" hits="1" branch="False" />
+            <line number="261" hits="1" branch="False" />
+            <line number="262" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;ValidateCredentialsAsync_ReturnsUser_WhenCredentialsAreValid&gt;d__19" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="232" hits="1" branch="False" />
+                <line number="234" hits="1" branch="False" />
+                <line number="235" hits="1" branch="False" />
+                <line number="236" hits="1" branch="False" />
+                <line number="237" hits="1" branch="False" />
+                <line number="238" hits="1" branch="False" />
+                <line number="241" hits="1" branch="False" />
+                <line number="244" hits="1" branch="False" />
+                <line number="245" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="232" hits="1" branch="False" />
+            <line number="234" hits="1" branch="False" />
+            <line number="235" hits="1" branch="False" />
+            <line number="236" hits="1" branch="False" />
+            <line number="237" hits="1" branch="False" />
+            <line number="238" hits="1" branch="False" />
+            <line number="241" hits="1" branch="False" />
+            <line number="244" hits="1" branch="False" />
+            <line number="245" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.UserServicesTests/&lt;ValidateCredentialsAsync_ThrowsException&gt;d__21" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\UserServicesTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="266" hits="1" branch="False" />
+                <line number="268" hits="1" branch="False" />
+                <line number="269" hits="1" branch="False" />
+                <line number="270" hits="1" branch="False" />
+                <line number="271" hits="1" branch="False" />
+                <line number="275" hits="1" branch="False" />
+                <line number="277" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="266" hits="1" branch="False" />
+            <line number="268" hits="1" branch="False" />
+            <line number="269" hits="1" branch="False" />
+            <line number="270" hits="1" branch="False" />
+            <line number="271" hits="1" branch="False" />
+            <line number="275" hits="1" branch="False" />
+            <line number="277" hits="1" branch="False" />
           </lines>
         </class>
       </classes>
