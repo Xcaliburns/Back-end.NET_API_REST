@@ -1,16 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Findexium.Api.Controllers;
+﻿using Findexium.Api.Controllers;
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Client;
 using Moq;
-using Xunit;
 
 
 namespace FindexiumApi.tests
@@ -170,11 +165,16 @@ namespace FindexiumApi.tests
             // Act
             var result = await _controller.GetTrade(1);
 
+
             // Assert
-            var actionResult = Assert.IsType<ActionResult<Trade>>(result);
-            var okResult = Assert.IsType<OkObjectResult>(actionResult.Result);
-            var returnTrade = Assert.IsType<Trade>(okResult.Value);
-            Assert.Equal(1, returnTrade.TradeId);
+            var okResult = Assert.IsType<OkObjectResult>(result.Result);
+            var returnTradeResponse = Assert.IsType<TradeResponse>(okResult.Value);
+
+
+            Assert.Equal(1, returnTradeResponse.TradeId);
+            Assert.Equal("Account1", returnTradeResponse.Account);
+            Assert.Equal("AccountType1", returnTradeResponse.AccountType);
+            Assert.Equal(1, returnTradeResponse.BuyQuantity);
 
         }
         [Fact]
@@ -440,11 +440,11 @@ namespace FindexiumApi.tests
             Assert.True(modelState.ContainsKey("Account"));
         }
 
-       
 
-           
 
-       
+
+
+
         [Fact]
         public async Task UpdateTrade_ThrowsException_ReturnsInternalServerError()
         {
