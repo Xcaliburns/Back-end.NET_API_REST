@@ -118,7 +118,16 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task<bool> TradeExistsAsync(int id)
         {
-            return await _context.Trades.AnyAsync(e => e.TradeId == id);
+            try
+            {
+                return await _context.Trades.AnyAsync(e => e.TradeId == id);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while checking if trade exists");
+                throw new Exception("An error occurred while checking if trade exists");
+            }
+
         }
     }
 }

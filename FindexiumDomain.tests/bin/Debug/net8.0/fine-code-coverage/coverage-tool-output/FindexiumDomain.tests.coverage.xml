@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.5036999999999999" branch-rate="0.4464" version="1.9" timestamp="1733735580" lines-covered="810" lines-valid="1608" branches-covered="50" branches-valid="112">
+<coverage line-rate="0.5049" branch-rate="0.45530000000000004" version="1.9" timestamp="1733738060" lines-covered="817" lines-valid="1618" branches-covered="51" branches-valid="112">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Domain" line-rate="0.767" branch-rate="0.738" complexity="134">
+    <package name="Findexium.Domain" line-rate="0.7722" branch-rate="0.7619" complexity="134">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
@@ -648,9 +648,9 @@
                 <line number="92" hits="2" branch="False" />
                 <line number="93" hits="1" branch="False" />
                 <line number="94" hits="1" branch="False" />
-                <line number="95" hits="1" branch="False" />
                 <line number="96" hits="1" branch="False" />
-                <line number="98" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -667,9 +667,9 @@
             <line number="92" hits="2" branch="False" />
             <line number="93" hits="1" branch="False" />
             <line number="94" hits="1" branch="False" />
-            <line number="95" hits="1" branch="False" />
             <line number="96" hits="1" branch="False" />
-            <line number="98" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.RuleNameService/&lt;GetAllRulesAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -778,18 +778,18 @@
           <methods>
             <method name=".ctor" signature="(Findexium.Domain.Interfaces.ITradeRepository)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="16" branch="False" />
-                <line number="17" hits="16" branch="False" />
-                <line number="18" hits="16" branch="False" />
-                <line number="19" hits="16" branch="False" />
+                <line number="16" hits="17" branch="False" />
+                <line number="17" hits="17" branch="False" />
+                <line number="18" hits="17" branch="False" />
+                <line number="19" hits="17" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="16" branch="False" />
-            <line number="17" hits="16" branch="False" />
-            <line number="18" hits="16" branch="False" />
-            <line number="19" hits="16" branch="False" />
+            <line number="16" hits="17" branch="False" />
+            <line number="17" hits="17" branch="False" />
+            <line number="18" hits="17" branch="False" />
+            <line number="19" hits="17" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;AddTradeAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="1" branch-rate="1" complexity="2">
@@ -832,44 +832,44 @@
             <line number="60" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.TradeService/&lt;DeleteTradeAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0.8181" branch-rate="0.5" complexity="2">
+        <class name="Findexium.Domain.Services.TradeService/&lt;DeleteTradeAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0.8181" branch-rate="0.5" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="85" hits="2" branch="False" />
-                <line number="87" hits="2" branch="False" />
-                <line number="88" hits="2" branch="True" condition-coverage="50% (1/2)">
+                <line number="85" hits="3" branch="False" />
+                <line number="87" hits="3" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="164" type="jump" coverage="50%" />
+                    <condition number="154" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="89" hits="0" branch="False" />
-                <line number="90" hits="0" branch="False" />
-                <line number="93" hits="2" branch="False" />
-                <line number="94" hits="1" branch="False" />
-                <line number="95" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
+                <line number="92" hits="2" branch="False" />
+                <line number="95" hits="2" branch="False" />
                 <line number="96" hits="1" branch="False" />
                 <line number="97" hits="1" branch="False" />
+                <line number="98" hits="1" branch="False" />
                 <line number="99" hits="1" branch="False" />
+                <line number="101" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="85" hits="2" branch="False" />
-            <line number="87" hits="2" branch="False" />
-            <line number="88" hits="2" branch="True" condition-coverage="50% (1/2)">
+            <line number="85" hits="3" branch="False" />
+            <line number="87" hits="3" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="164" type="jump" coverage="50%" />
+                <condition number="154" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="89" hits="0" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="93" hits="2" branch="False" />
-            <line number="94" hits="1" branch="False" />
-            <line number="95" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
+            <line number="92" hits="2" branch="False" />
+            <line number="95" hits="2" branch="False" />
             <line number="96" hits="1" branch="False" />
             <line number="97" hits="1" branch="False" />
+            <line number="98" hits="1" branch="False" />
             <line number="99" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;GetAllTradesAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -924,24 +924,24 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="102" hits="3" branch="False" />
                 <line number="104" hits="3" branch="False" />
-                <line number="105" hits="3" branch="False" />
-                <line number="107" hits="1" branch="False" />
-                <line number="108" hits="1" branch="False" />
+                <line number="106" hits="3" branch="False" />
+                <line number="107" hits="3" branch="False" />
                 <line number="109" hits="1" branch="False" />
-                <line number="111" hits="2" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="111" hits="1" branch="False" />
+                <line number="113" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="102" hits="3" branch="False" />
             <line number="104" hits="3" branch="False" />
-            <line number="105" hits="3" branch="False" />
-            <line number="107" hits="1" branch="False" />
-            <line number="108" hits="1" branch="False" />
+            <line number="106" hits="3" branch="False" />
+            <line number="107" hits="3" branch="False" />
             <line number="109" hits="1" branch="False" />
-            <line number="111" hits="2" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="111" hits="1" branch="False" />
+            <line number="113" hits="2" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;UpdateTradeAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="1" branch-rate="1" complexity="4">
@@ -2851,15 +2851,25 @@
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="120" hits="0" branch="False" />
-                <line number="121" hits="0" branch="False" />
                 <line number="122" hits="0" branch="False" />
+                <line number="123" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+                <line number="126" hits="0" branch="False" />
+                <line number="127" hits="0" branch="False" />
+                <line number="128" hits="0" branch="False" />
+                <line number="131" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="120" hits="0" branch="False" />
-            <line number="121" hits="0" branch="False" />
             <line number="122" hits="0" branch="False" />
+            <line number="123" hits="0" branch="False" />
+            <line number="125" hits="0" branch="False" />
+            <line number="126" hits="0" branch="False" />
+            <line number="127" hits="0" branch="False" />
+            <line number="128" hits="0" branch="False" />
+            <line number="131" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.TradeRepository/&lt;UpdateTradeAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\TradeRepository.cs" line-rate="0" branch-rate="0" complexity="4">
@@ -4078,7 +4088,7 @@
         </class>
       </classes>
     </package>
-    <package name="FindexiumDomain.tests" line-rate="0.998" branch-rate="0.6785" complexity="145">
+    <package name="FindexiumDomain.tests" line-rate="0.998" branch-rate="0.6785" complexity="147">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -5908,7 +5918,7 @@
             <line number="155" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumDomain.tests.TradeServiceTests" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="7">
+        <class name="FindexiumDomain.tests.TradeServiceTests" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="8">
           <methods>
             <method name="&lt;GetAllTradesAsync_ThrowsApplicationException&gt;b__4_1" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -5935,18 +5945,23 @@
                 <line number="209" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="&lt;TradeExistsAsync_ThrowsApplicationException&gt;b__18_1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="&lt;DeleteTradeAsync_ThrowsInvalidOperationException&gt;b__16_1" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="250" hits="2" branch="False" />
+                <line number="220" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;TradeExistsAsync_ThrowsApplicationException&gt;b__19_1" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="263" hits="2" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="16" branch="False" />
-                <line number="18" hits="16" branch="False" />
-                <line number="19" hits="16" branch="False" />
-                <line number="20" hits="16" branch="False" />
-                <line number="21" hits="16" branch="False" />
+                <line number="17" hits="17" branch="False" />
+                <line number="18" hits="17" branch="False" />
+                <line number="19" hits="17" branch="False" />
+                <line number="20" hits="17" branch="False" />
+                <line number="21" hits="17" branch="False" />
               </lines>
             </method>
           </methods>
@@ -5956,12 +5971,13 @@
             <line number="121" hits="2" branch="False" />
             <line number="163" hits="2" branch="False" />
             <line number="209" hits="2" branch="False" />
-            <line number="250" hits="2" branch="False" />
-            <line number="17" hits="16" branch="False" />
-            <line number="18" hits="16" branch="False" />
-            <line number="19" hits="16" branch="False" />
-            <line number="20" hits="16" branch="False" />
-            <line number="21" hits="16" branch="False" />
+            <line number="220" hits="2" branch="False" />
+            <line number="263" hits="2" branch="False" />
+            <line number="17" hits="17" branch="False" />
+            <line number="18" hits="17" branch="False" />
+            <line number="19" hits="17" branch="False" />
+            <line number="20" hits="17" branch="False" />
+            <line number="21" hits="17" branch="False" />
           </lines>
         </class>
         <class name="FindexiumDomain.tests.TradeServiceTests/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="2">
@@ -6134,6 +6150,24 @@
             <line number="211" hits="1" branch="False" />
           </lines>
         </class>
+        <class name="FindexiumDomain.tests.TradeServiceTests/&lt;DeleteTradeAsync_ThrowsInvalidOperationException&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="215" hits="1" branch="False" />
+                <line number="217" hits="1" branch="False" />
+                <line number="223" hits="1" branch="False" />
+                <line number="224" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="215" hits="1" branch="False" />
+            <line number="217" hits="1" branch="False" />
+            <line number="223" hits="1" branch="False" />
+            <line number="224" hits="1" branch="False" />
+          </lines>
+        </class>
         <class name="FindexiumDomain.tests.TradeServiceTests/&lt;GetAllTradesAsync_ReturnsListOfTrades&gt;d__3" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -6226,7 +6260,27 @@
             <line number="85" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumDomain.tests.TradeServiceTests/&lt;TradeExistsAsync_ReturnsFalse_WhenTradeDoesNotExist&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumDomain.tests.TradeServiceTests/&lt;TradeExistsAsync_ReturnsFalse_WhenTradeDoesNotExist&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="245" hits="1" branch="False" />
+                <line number="247" hits="1" branch="False" />
+                <line number="250" hits="1" branch="False" />
+                <line number="253" hits="1" branch="False" />
+                <line number="254" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="245" hits="1" branch="False" />
+            <line number="247" hits="1" branch="False" />
+            <line number="250" hits="1" branch="False" />
+            <line number="253" hits="1" branch="False" />
+            <line number="254" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumDomain.tests.TradeServiceTests/&lt;TradeExistsAsync_ReturnsTrue_WhenTradeExists&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -6246,42 +6300,22 @@
             <line number="241" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumDomain.tests.TradeServiceTests/&lt;TradeExistsAsync_ReturnsTrue_WhenTradeExists&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumDomain.tests.TradeServiceTests/&lt;TradeExistsAsync_ThrowsApplicationException&gt;d__19" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="219" hits="1" branch="False" />
-                <line number="221" hits="1" branch="False" />
-                <line number="224" hits="1" branch="False" />
-                <line number="227" hits="1" branch="False" />
-                <line number="228" hits="1" branch="False" />
+                <line number="258" hits="1" branch="False" />
+                <line number="260" hits="1" branch="False" />
+                <line number="266" hits="1" branch="False" />
+                <line number="267" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="219" hits="1" branch="False" />
-            <line number="221" hits="1" branch="False" />
-            <line number="224" hits="1" branch="False" />
-            <line number="227" hits="1" branch="False" />
-            <line number="228" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumDomain.tests.TradeServiceTests/&lt;TradeExistsAsync_ThrowsApplicationException&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="245" hits="1" branch="False" />
-                <line number="247" hits="1" branch="False" />
-                <line number="253" hits="1" branch="False" />
-                <line number="254" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="245" hits="1" branch="False" />
-            <line number="247" hits="1" branch="False" />
-            <line number="253" hits="1" branch="False" />
-            <line number="254" hits="1" branch="False" />
+            <line number="258" hits="1" branch="False" />
+            <line number="260" hits="1" branch="False" />
+            <line number="266" hits="1" branch="False" />
+            <line number="267" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumDomain.tests.TradeServiceTests/&lt;UpdateTradeAsync_ThrowsApplicationException&gt;d__11" filename="source\repos\Back-end.NET_API_REST\FindexiumDomain.tests\TradeServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">

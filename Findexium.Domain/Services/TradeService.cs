@@ -83,12 +83,14 @@ namespace Findexium.Domain.Services
 
         public async Task DeleteTradeAsync(int id)
         {
+
+            if (!await _tradeRepository.TradeExistsAsync(id))
+            {
+                throw new InvalidOperationException($"Trade with ID {id} does not exist.");
+            }
             try
             {
-                if (!await _tradeRepository.TradeExistsAsync(id))
-                {
-                    throw new InvalidOperationException($"Trade with ID {id} does not exist.");
-                }
+               
 
                 await _tradeRepository.DeleteTradeAsync(id);
             }

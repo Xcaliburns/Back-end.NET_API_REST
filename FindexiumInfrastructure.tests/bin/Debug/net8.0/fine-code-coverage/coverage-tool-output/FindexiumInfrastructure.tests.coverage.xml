@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.7062" branch-rate="0.3452" version="1.9" timestamp="1733735567" lines-covered="1351" lines-valid="1913" branches-covered="29" branches-valid="84">
+<coverage line-rate="0.7043" branch-rate="0.3452" version="1.9" timestamp="1733738051" lines-covered="1351" lines-valid="1918" branches-covered="29" branches-valid="84">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -648,9 +648,9 @@
                 <line number="92" hits="0" branch="False" />
                 <line number="93" hits="0" branch="False" />
                 <line number="94" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
                 <line number="96" hits="0" branch="False" />
-                <line number="98" hits="0" branch="False" />
+                <line number="97" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -667,9 +667,9 @@
             <line number="92" hits="0" branch="False" />
             <line number="93" hits="0" branch="False" />
             <line number="94" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
             <line number="96" hits="0" branch="False" />
-            <line number="98" hits="0" branch="False" />
+            <line number="97" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.RuleNameService/&lt;GetAllRulesAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\RuleNameService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -837,39 +837,39 @@
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
                 <line number="85" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="87" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="164" type="jump" coverage="0%" />
+                    <condition number="154" type="jump" coverage="0%" />
                   </conditions>
                 </line>
+                <line number="88" hits="0" branch="False" />
                 <line number="89" hits="0" branch="False" />
-                <line number="90" hits="0" branch="False" />
-                <line number="93" hits="0" branch="False" />
-                <line number="94" hits="0" branch="False" />
+                <line number="92" hits="0" branch="False" />
                 <line number="95" hits="0" branch="False" />
                 <line number="96" hits="0" branch="False" />
                 <line number="97" hits="0" branch="False" />
+                <line number="98" hits="0" branch="False" />
                 <line number="99" hits="0" branch="False" />
+                <line number="101" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="85" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
-            <line number="88" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="87" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="164" type="jump" coverage="0%" />
+                <condition number="154" type="jump" coverage="0%" />
               </conditions>
             </line>
+            <line number="88" hits="0" branch="False" />
             <line number="89" hits="0" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="93" hits="0" branch="False" />
-            <line number="94" hits="0" branch="False" />
+            <line number="92" hits="0" branch="False" />
             <line number="95" hits="0" branch="False" />
             <line number="96" hits="0" branch="False" />
             <line number="97" hits="0" branch="False" />
+            <line number="98" hits="0" branch="False" />
             <line number="99" hits="0" branch="False" />
+            <line number="101" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;GetAllTradesAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -924,24 +924,24 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="102" hits="0" branch="False" />
                 <line number="104" hits="0" branch="False" />
-                <line number="105" hits="0" branch="False" />
+                <line number="106" hits="0" branch="False" />
                 <line number="107" hits="0" branch="False" />
-                <line number="108" hits="0" branch="False" />
                 <line number="109" hits="0" branch="False" />
+                <line number="110" hits="0" branch="False" />
                 <line number="111" hits="0" branch="False" />
+                <line number="113" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="102" hits="0" branch="False" />
             <line number="104" hits="0" branch="False" />
-            <line number="105" hits="0" branch="False" />
+            <line number="106" hits="0" branch="False" />
             <line number="107" hits="0" branch="False" />
-            <line number="108" hits="0" branch="False" />
             <line number="109" hits="0" branch="False" />
+            <line number="110" hits="0" branch="False" />
             <line number="111" hits="0" branch="False" />
+            <line number="113" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.TradeService/&lt;UpdateTradeAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\TradeService.cs" line-rate="0" branch-rate="0" complexity="4">
@@ -1640,7 +1640,7 @@
         </class>
       </classes>
     </package>
-    <package name="Findexium.Infrastructure" line-rate="0.6906" branch-rate="0.6904" complexity="157">
+    <package name="Findexium.Infrastructure" line-rate="0.6858" branch-rate="0.6904" complexity="157">
       <classes>
         <class name="Findexium.Infrastructure.Repositories.BidRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
@@ -2851,15 +2851,25 @@
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="120" hits="0" branch="False" />
-                <line number="121" hits="0" branch="False" />
                 <line number="122" hits="0" branch="False" />
+                <line number="123" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+                <line number="126" hits="0" branch="False" />
+                <line number="127" hits="0" branch="False" />
+                <line number="128" hits="0" branch="False" />
+                <line number="131" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="120" hits="0" branch="False" />
-            <line number="121" hits="0" branch="False" />
             <line number="122" hits="0" branch="False" />
+            <line number="123" hits="0" branch="False" />
+            <line number="125" hits="0" branch="False" />
+            <line number="126" hits="0" branch="False" />
+            <line number="127" hits="0" branch="False" />
+            <line number="128" hits="0" branch="False" />
+            <line number="131" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Repositories.TradeRepository/&lt;UpdateTradeAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\TradeRepository.cs" line-rate="0" branch-rate="0" complexity="4">
