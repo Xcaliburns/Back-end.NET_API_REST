@@ -99,7 +99,6 @@ namespace Findexium.Infrastructure.Repositories
             {
                 throw new Exception("An error occurred while checking if the rating exists.");
             }
-
         }
     }
 }
