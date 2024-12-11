@@ -57,10 +57,19 @@ namespace Findexium.Domain.Services
                 return IdentityResult.Failed(new IdentityError { Description = "Username already exists." });
             }
 
-            return await _userManager.CreateAsync(user, password);
+            // Create the user using the repository
+            try
+            {
+                user.PasswordHash = password; // Set the password hash
+                await _userRepository.AddUserAsync(user);
+                return IdentityResult.Success;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding a new user");
+                return IdentityResult.Failed(new IdentityError { Description = "An error occurred while adding the user." });
+            }
         }
-
-      
 
         public async Task<IdentityResult> UpdateUserAsync(User user)
         {
@@ -106,25 +115,8 @@ namespace Findexium.Domain.Services
                 _logger.LogError(ex, "Error occurred while checking if user exists with id: {Id}", id);
                 throw;
             }
-        }
-
-        public async Task<User> ValidateCredentialsAsync(string login, string password)
-        {
-            try
-            {
-                var user = await _userManager.FindByNameAsync(login);
-                if (user != null && await _userManager.CheckPasswordAsync(user, password))
-                {
-                    return user;
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error occurred while validating credentials for login: {Login}", login);
-                throw;
-            }
-        }
+        }  
+      
 
         public async Task<IList<string>> GetUserRolesAsync(User user)
         {
@@ -138,5 +130,8 @@ namespace Findexium.Domain.Services
                 throw;
             }
         }
+
+      
+        }
     }
-}
+

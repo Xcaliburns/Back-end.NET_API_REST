@@ -1,4 +1,5 @@
 ﻿using Findexium.Domain.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Findexium.Domain.Interfaces
 {
@@ -10,5 +11,6 @@ namespace Findexium.Domain.Interfaces
         Task UpdateUserAsync(User user);
         Task DeleteUserAsync(string id);
         Task<bool> UserExistsAsync(string id);
+        Task<IdentityResult> AddUserToRoleAssync(User user, string role);
     }
 }

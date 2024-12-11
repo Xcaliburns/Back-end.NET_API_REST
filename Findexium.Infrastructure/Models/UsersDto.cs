@@ -7,34 +7,27 @@ namespace Findexium.Infrastructure.Models
     {
         public int Id { get; internal set; }
         public string UserName { get; set; }
-        public string PasswordHash { get; set; }
+        public string Password { get; set; }
         public string FullName { get; set; }
-       
 
-        public UsersDto(
-            string userName,
-            string password,
-            string fullName)
-          
+        public UsersDto(string userName, string password, string fullName)
         {
             UserName = userName;
-            PasswordHash = password;
+            Password = password;
             FullName = fullName;
-           
         }
 
-        internal User ToUser(UserManager<User> userManager)
+        public User ToUser(UserManager<User> userManager)
         {
             var user = new User
             {
                 UserName = UserName,
                 Fullname = FullName,
-               
             };
 
             // Hash the password using UserManager to ensure it is always secured
-            user.PasswordHash = userManager.PasswordHasher.HashPassword(user, PasswordHash);
-
+            user.PasswordHash = userManager.PasswordHasher.HashPassword(user, Password);
+        //    user.PasswordHash = userManager.PasswordHasher.HashPassword(user, PasswordHash);
             return user;
         }
     }

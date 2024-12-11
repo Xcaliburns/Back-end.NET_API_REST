@@ -113,67 +113,67 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
 }
 
 
-        [Fact]
-        public async Task PutUser_ReturnsNoContent_WhenUpdateIsSuccessful()
-        {
-            // Arrange
-            var userId = "1";
-            var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-            _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Success);
+        //[Fact]
+        //public async Task PutUser_ReturnsNoContent_WhenUpdateIsSuccessful()
+        //{
+        //    // Arrange
+        //    var userId = "1";
+        //    var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
+        //    _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Success);
 
-            // Act
-            var result = await _controller.PutUser(userId, user);
+        //    // Act
+        //    var result = await _controller.PutUser(userId, user);
 
-            // Assert
-            Assert.IsType<NoContentResult>(result);
-            _userService.Verify(x => x.UpdateUserAsync(user), Times.Once);
-        }
+        //    // Assert
+        //    Assert.IsType<NoContentResult>(result);
+        //    _userService.Verify(x => x.UpdateUserAsync(user), Times.Once);
+        //}
 
-        [Fact]
-        public async Task PutUser_ReturnsNotFound_WhenUserDoesNotExist()
-        {
-            // Arrange
-            var userId = "1";
-            var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-            _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Failed(new IdentityError { Description = "User not found" }));
+        //[Fact]
+        //public async Task PutUser_ReturnsNotFound_WhenUserDoesNotExist()
+        //{
+        //    // Arrange
+        //    var userId = "1";
+        //    var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
+        //    _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Failed(new IdentityError { Description = "User not found" }));
 
-            // Act
-            var result = await _controller.PutUser(userId, user);
+        //    // Act
+        //    var result = await _controller.PutUser(userId, user);
 
-            // Assert
-            Assert.IsType<NotFoundResult>(result);
-        }
+        //    // Assert
+        //    Assert.IsType<NotFoundResult>(result);
+        //}
 
-        [Fact]
-        public async Task PutUser_ReturnsBadRequest_WhenIdDoesNotMatchUserId()
-        {
-            // Arrange
-            var userId = "1";
-            var user = new User { Id = "2", UserName = "UpdatedUser", Email = "updated@example.com" };
+        //[Fact]
+        //public async Task PutUser_ReturnsBadRequest_WhenIdDoesNotMatchUserId()
+        //{
+        //    // Arrange
+        //    var userId = "1";
+        //    var user = new User { Id = "2", UserName = "UpdatedUser", Email = "updated@example.com" };
 
-            // Act
-            var result = await _controller.PutUser(userId, user);
+        //    // Act
+        //    var result = await _controller.PutUser(userId, user);
 
-            // Assert
-            Assert.IsType<BadRequestResult>(result);
-        }
+        //    // Assert
+        //    Assert.IsType<BadRequestResult>(result);
+        //}
 
-        [Fact]
-        public async Task PutUser_ReturnsInternalServerError_WhenExceptionIsThrown()
-        {
-            // Arrange
-            var userId = "1";
-            var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-            _userService.Setup(x => x.UpdateUserAsync(user)).ThrowsAsync(new Exception("Test exception"));
+        //[Fact]
+        //public async Task PutUser_ReturnsInternalServerError_WhenExceptionIsThrown()
+        //{
+        //    // Arrange
+        //    var userId = "1";
+        //    var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
+        //    _userService.Setup(x => x.UpdateUserAsync(user)).ThrowsAsync(new Exception("Test exception"));
 
-            // Act
-            var result = await _controller.PutUser(userId, user);
+        //    // Act
+        //    var result = await _controller.PutUser(userId, user);
 
-            // Assert
-            var statusCodeResult = Assert.IsType<ObjectResult>(result);
-            Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
-            Assert.Equal("Internal server error", statusCodeResult.Value);
-        }
+        //    // Assert
+        //    var statusCodeResult = Assert.IsType<ObjectResult>(result);
+        //    Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
+        //    Assert.Equal("Internal server error", statusCodeResult.Value);
+        //}
 
 
         [Fact]

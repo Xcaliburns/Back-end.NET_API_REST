@@ -2,6 +2,7 @@ using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Findexium.Api.Controllers
@@ -56,7 +57,15 @@ namespace Findexium.Api.Controllers
                     _logger.LogWarning("User with id: {Id} not found", id);
                     return NotFound();
                 }
-                return Ok(user);
+
+                var userResponse = new UserResponse
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    FullName = user.Fullname
+                };
+
+                return Ok(userResponse);
             }
             catch (Exception ex)
             {
@@ -67,20 +76,32 @@ namespace Findexium.Api.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> PutUser(string id, User user)
+        public async Task<IActionResult> PutUser(string id, UserRequest userRequest)
         {
-            if (id != user.Id)
-            {
-                return BadRequest();
-            }
-
             try
             {
                 _logger.LogInformation("Updating user with id: {Id}", id);
-                var result = await _userService.UpdateUserAsync(user);
-                if (!result.Succeeded)
+                var existingUser = await _userService.GetUserByIdAsync(id);
+                if (existingUser == null)
                 {
                     return NotFound();
+                }
+
+                // Mettre à jour les propriétés
+                existingUser.UserName = userRequest.UserName;
+                existingUser.Fullname = userRequest.FullName;
+
+                // Mettre à jour le mot de passe si fourni
+                if (!string.IsNullOrEmpty(userRequest.Password))
+                {
+                    var passwordHasher = new PasswordHasher<User>();
+                    existingUser.PasswordHash = passwordHasher.HashPassword(existingUser, userRequest.Password);
+                }
+
+                var result = await _userService.UpdateUserAsync(existingUser);
+                if (!result.Succeeded)
+                {
+                    return BadRequest(result.Errors);
                 }
                 return NoContent();
             }

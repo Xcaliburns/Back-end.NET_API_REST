@@ -227,54 +227,10 @@ namespace FindexiumDomain.tests
          
         }
 
-        [Fact]
-        public async Task ValidateCredentialsAsync_ReturnsUser_WhenCredentialsAreValid()
-        {
-            // Arrange
-            var login = "user1";
-            var password = "password";
-            var user = new User { UserName = login };
-            _userManagerMock.Setup(um => um.FindByNameAsync(login)).ReturnsAsync(user);
-            _userManagerMock.Setup(um => um.CheckPasswordAsync(user, password)).ReturnsAsync(true);
+      
 
-            // Act
-            var result = await _userService.ValidateCredentialsAsync(login, password);
+       
 
-            // Assert
-            Assert.Equal(user, result);
-        }
-
-        [Fact]
-        public async Task ValidateCredentialsAsync_ReturnsNull_WhenCredentialsAreInvalid()
-        {
-            // Arrange
-            var login = "user1";
-            var password = "password";
-            var user = new User { UserName = login };
-            _userManagerMock.Setup(um => um.FindByNameAsync(login)).ReturnsAsync(user);
-            _userManagerMock.Setup(um => um.CheckPasswordAsync(user, password)).ReturnsAsync(false);
-
-            // Act
-            var result = await _userService.ValidateCredentialsAsync(login, password);
-
-            // Assert
-            Assert.Null(result);
-        }
-
-        [Fact]
-        public async Task ValidateCredentialsAsync_ThrowsException()
-        {
-            // Arrange
-            var login = "user1";
-            var password = "password";
-            var exception = new Exception("Test exception");
-            _userManagerMock.Setup(um => um.FindByNameAsync(login)).ThrowsAsync(exception);
-
-            // Act & Assert
-            var ex = await Assert.ThrowsAsync<Exception>(() => _userService.ValidateCredentialsAsync(login, password));
-            Assert.Equal(exception, ex);
-           
-        }
         [Fact]
         public async Task GetUserRolesAsync_ReturnsRoles()
         {

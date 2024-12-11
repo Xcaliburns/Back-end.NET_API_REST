@@ -16,8 +16,8 @@ namespace Findexium.Domain.Interfaces
         Task<IdentityResult> UpdateUserAsync(User user);
         Task<IdentityResult> DeleteUserAsync(string id);
         Task<bool> UserExistsAsync(string id);
-        Task<User> ValidateCredentialsAsync(string login, string password);
         Task<IList<string>> GetUserRolesAsync(User user);
-        Task<User> GetUserByUserNameAsync(string userName); // Nouvelle méthode
+        Task<User> GetUserByUserNameAsync(string userName);
+      
     }
 }
