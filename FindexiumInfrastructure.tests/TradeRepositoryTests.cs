@@ -4,7 +4,6 @@ using Findexium.Infrastructure.Models;
 using Findexium.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Client;
 using Moq;
 
 namespace FindexiumInfrastructure.tests
