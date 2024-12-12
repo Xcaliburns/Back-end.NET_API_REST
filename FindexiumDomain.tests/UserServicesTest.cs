@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Domain.Services;
+using Findexium.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -95,6 +96,27 @@ namespace FindexiumDomain.tests
 
             // Assert
             Assert.True(result.Succeeded);
+        }
+
+        [Fact]
+        public async Task AddUserAsync_ReturnsFailedIdentityResult_WhenExceptionOccurs()
+        {
+            // Arrange
+            var user = new User { UserName = "NewUser", Fullname = "New User" };
+            var password = "Password123";
+
+            _userRepositoryMock.Setup(x => x.AddUserAsync(It.IsAny<User>())).ThrowsAsync(new Exception("Test exception"));
+            _userManagerMock.Setup(x => x.FindByNameAsync(user.UserName)).ReturnsAsync((User)null);
+
+            var userService = new UserService(_userRepositoryMock.Object, _userManagerMock.Object, _loggerMock.Object);
+
+            // Act
+            var result = await userService.AddUserAsync(user, password);
+
+            // Assert
+            Assert.False(result.Succeeded);
+            Assert.Contains(result.Errors, e => e.Description == "An error occurred while adding the user.");
+           
         }
 
         [Fact]
@@ -258,6 +280,7 @@ namespace FindexiumDomain.tests
             var ex = await Assert.ThrowsAsync<Exception>(() => _userService.GetUserRolesAsync(user));
             Assert.Equal(exception, ex);
         }
+      
     }
     
 }

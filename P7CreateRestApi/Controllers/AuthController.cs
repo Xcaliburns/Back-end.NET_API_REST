@@ -1,5 +1,4 @@
 ﻿using Findexium.Api.Models;
-using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +10,7 @@ using System.Text;
 namespace Findexium.Api.Controllers
 {
 
-    //TODO: separer dans un controller /service/repository et faire les tests unitaires
+    
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase

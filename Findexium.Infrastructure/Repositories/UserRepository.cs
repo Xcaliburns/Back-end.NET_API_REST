@@ -46,7 +46,7 @@ namespace Findexium.Infrastructure.Repositories
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while fetching user by id: {Id}", id);
-                throw new Exception($"An error occurred while fetching user by id: {id}", ex);
+                throw new Exception($"An error occurred while fetching user by id.", ex);
             }
         }
 
@@ -93,6 +93,16 @@ namespace Findexium.Infrastructure.Repositories
 
         public async Task UpdateUserAsync(User user)
         {
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user), "User cannot be null.");
+            }
+
+            if (string.IsNullOrEmpty(user.Id))
+            {
+                throw new ArgumentException("User ID cannot be null or empty.", nameof(user.Id));
+            }
+
             try
             {
                 var existingUser = await _userManager.FindByIdAsync(user.Id);
@@ -101,8 +111,8 @@ namespace Findexium.Infrastructure.Repositories
                     throw new Exception("User not found.");
                 }
 
-                existingUser.UserName = user.UserName;
-                existingUser.Fullname = user.Fullname;
+                existingUser.UserName = user.UserName ?? existingUser.UserName;
+                existingUser.Fullname = user.Fullname ?? existingUser.Fullname;
 
                 // Hash the new password if provided
                 if (!string.IsNullOrEmpty(user.PasswordHash))
