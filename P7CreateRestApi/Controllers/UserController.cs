@@ -1,27 +1,28 @@
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
-using Findexium.Domain.Services;
-using Findexium.Infrastructure.Models;
-using Findexium.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Findexium.Api.Controllers
 {
-
-
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
+   
     [ApiController]
-    public class UsersController(IUserService userService, ILogger<UsersController> logger) : ControllerBase
+    public class UsersController : ControllerBase
     {
-        private readonly IUserService _userService = userService;
-        private readonly ILogger<UsersController> _logger = logger;
+        private readonly IUserService _userService;
+        private readonly ILogger<UsersController> _logger;
+
+        public UsersController(IUserService userService, ILogger<UsersController> logger)
+        {
+            _userService = userService;
+            _logger = logger;
+        }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<UserResponse>>> GetUsers()
         {
             try
@@ -32,9 +33,7 @@ namespace Findexium.Api.Controllers
                 {
                     Id = user.Id,
                     UserName = user.UserName,
-                    Password = user.PasswordHash, // Assuming PasswordHash is used for Password
                     FullName = user.Fullname,
-                    Role = user.Role
                 }).ToList();
                 return Ok(userDto);
             }
@@ -46,6 +45,7 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<UserResponse>> GetUser(string id)
         {
             try
@@ -57,8 +57,15 @@ namespace Findexium.Api.Controllers
                     _logger.LogWarning("User with id: {Id} not found", id);
                     return NotFound();
                 }
-               
-                return Ok(user);
+
+                var userResponse = new UserResponse
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    FullName = user.Fullname
+                };
+
+                return Ok(userResponse);
             }
             catch (Exception ex)
             {
@@ -68,28 +75,34 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(string id, User user)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> PutUser(string id, UserRequest userRequest)
         {
-            if (id != user.Id)
-            {
-                return BadRequest();
-            }
-
             try
             {
                 _logger.LogInformation("Updating user with id: {Id}", id);
                 var existingUser = await _userService.GetUserByIdAsync(id);
                 if (existingUser == null)
                 {
-                    _logger.LogWarning("User with id: {Id} not found", id);
                     return NotFound();
                 }
 
-                existingUser.UserName = user.UserName;
-                existingUser.Email = user.Email;
-                // Update other properties as needed
+                // Mettre à jour les propriétés
+                existingUser.UserName = userRequest.UserName;
+                existingUser.Fullname = userRequest.FullName;
 
-                await _userService.UpdateUserAsync(existingUser);
+                // Mettre à jour le mot de passe si fourni
+                if (!string.IsNullOrEmpty(userRequest.Password))
+                {
+                    var passwordHasher = new PasswordHasher<User>();
+                    existingUser.PasswordHash = passwordHasher.HashPassword(existingUser, userRequest.Password);
+                }
+
+                var result = await _userService.UpdateUserAsync(existingUser);
+                if (!result.Succeeded)
+                {
+                    return BadRequest(result.Errors);
+                }
                 return NoContent();
             }
             catch (Exception ex)
@@ -109,8 +122,9 @@ namespace Findexium.Api.Controllers
 
             try
             {
-                _logger.LogInformation("Creating a new user");
                 var user = request.ToUser();
+                _logger.LogInformation("Creating a new user");
+                //verifie que le userName est unique
                 var result = await _userService.AddUserAsync(user, request.Password);
                 if (result.Succeeded)
                 {
@@ -118,9 +132,7 @@ namespace Findexium.Api.Controllers
                     {
                         Id = user.Id,
                         UserName = user.UserName,
-                        Password = user.PasswordHash, // Assuming PasswordHash is used for Password
-                        FullName = user.Fullname,
-                        Role = user.Role
+                        FullName = user.Fullname
                     };
                     return CreatedAtAction(nameof(GetUser), new { id = user.Id }, userResponse);
                 }
@@ -135,19 +147,25 @@ namespace Findexium.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUser(string id)
         {
             try
             {
                 _logger.LogInformation("Deleting user with id: {Id}", id);
+
                 var user = await _userService.GetUserByIdAsync(id);
                 if (user == null)
                 {
-                    _logger.LogWarning("User with id: {Id} not found", id);
                     return NotFound();
                 }
 
-                await _userService.DeleteUserAsync(id);
+                var result = await _userService.DeleteUserAsync(id);
+                if (!result.Succeeded)
+                {
+                    return NotFound();
+                }
+
                 return NoContent();
             }
             catch (Exception ex)
