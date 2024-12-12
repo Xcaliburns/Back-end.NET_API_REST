@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Findexium.Api.Controllers;
+﻿using Findexium.Api.Controllers;
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
@@ -8,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Xunit;
 
 
 namespace FindexiumApi.tests
@@ -32,9 +29,9 @@ namespace FindexiumApi.tests
             // Arrange
             var ratings = new List<Rating>
             {
-                new Rating { Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 },
-                new Rating { Id = 2, MoodysRating = "A2", SandPRating = "A", FitchRating = "A-", OrderNumber = 2 },
-                new Rating { Id = 3, MoodysRating = "A3", SandPRating = "A-", FitchRating = "BBB+", OrderNumber = 3 }
+                new() { Id = 1, MoodysRating = "A1", SandPRating = "A+", FitchRating = "A", OrderNumber = 1 },
+                new() { Id = 2, MoodysRating = "A2", SandPRating = "A", FitchRating = "A-", OrderNumber = 2 },
+                new() { Id = 3, MoodysRating = "A3", SandPRating = "A-", FitchRating = "BBB+", OrderNumber = 3 }
             };
             _mockRatingService.Setup(service => service.GetAllRatingsAsync()).ReturnsAsync(ratings);
 

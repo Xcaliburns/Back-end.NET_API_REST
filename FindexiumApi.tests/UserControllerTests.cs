@@ -78,7 +78,7 @@ namespace FindexiumApi.Tests
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnUser = Assert.IsType<User>(okResult.Value);
+            var returnUser = Assert.IsType<UserResponse>(okResult.Value);
             Assert.Equal(userId, returnUser.Id);
         }
 
@@ -113,67 +113,6 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
 }
 
 
-        //[Fact]
-        //public async Task PutUser_ReturnsNoContent_WhenUpdateIsSuccessful()
-        //{
-        //    // Arrange
-        //    var userId = "1";
-        //    var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-        //    _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Success);
-
-        //    // Act
-        //    var result = await _controller.PutUser(userId, user);
-
-        //    // Assert
-        //    Assert.IsType<NoContentResult>(result);
-        //    _userService.Verify(x => x.UpdateUserAsync(user), Times.Once);
-        //}
-
-        //[Fact]
-        //public async Task PutUser_ReturnsNotFound_WhenUserDoesNotExist()
-        //{
-        //    // Arrange
-        //    var userId = "1";
-        //    var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-        //    _userService.Setup(x => x.UpdateUserAsync(user)).ReturnsAsync(IdentityResult.Failed(new IdentityError { Description = "User not found" }));
-
-        //    // Act
-        //    var result = await _controller.PutUser(userId, user);
-
-        //    // Assert
-        //    Assert.IsType<NotFoundResult>(result);
-        //}
-
-        //[Fact]
-        //public async Task PutUser_ReturnsBadRequest_WhenIdDoesNotMatchUserId()
-        //{
-        //    // Arrange
-        //    var userId = "1";
-        //    var user = new User { Id = "2", UserName = "UpdatedUser", Email = "updated@example.com" };
-
-        //    // Act
-        //    var result = await _controller.PutUser(userId, user);
-
-        //    // Assert
-        //    Assert.IsType<BadRequestResult>(result);
-        //}
-
-        //[Fact]
-        //public async Task PutUser_ReturnsInternalServerError_WhenExceptionIsThrown()
-        //{
-        //    // Arrange
-        //    var userId = "1";
-        //    var user = new User { Id = userId, UserName = "UpdatedUser", Email = "updated@example.com" };
-        //    _userService.Setup(x => x.UpdateUserAsync(user)).ThrowsAsync(new Exception("Test exception"));
-
-        //    // Act
-        //    var result = await _controller.PutUser(userId, user);
-
-        //    // Assert
-        //    var statusCodeResult = Assert.IsType<ObjectResult>(result);
-        //    Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
-        //    Assert.Equal("Internal server error", statusCodeResult.Value);
-        //}
 
 
         [Fact]
@@ -300,6 +239,75 @@ public async Task GetUser_ReturnsInternalServerError_WhenExceptionIsThrown()
             var statusCodeResult = Assert.IsType<ObjectResult>(result);
             Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
             Assert.Equal("Internal server error", statusCodeResult.Value);
+        }
+        [Fact]
+        public async Task PutUser_ReturnsNoContent_WhenUpdateIsSuccessful()
+        {
+            // Arrange
+            var userId = "1";
+            var userRequest = new UserRequest { UserName = "UpdatedUser", FullName = "Updated Fullname", Password = "NewPassword123" };
+            var existingUser = new User { Id = userId, UserName = "OldUser", Fullname = "Old Fullname" };
+
+            _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(existingUser);
+            _userService.Setup(x => x.UpdateUserAsync(It.IsAny<User>())).ReturnsAsync(IdentityResult.Success);
+
+            // Act
+            var result = await _controller.PutUser(userId, userRequest);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+            _userService.Verify(x => x.UpdateUserAsync(It.IsAny<User>()), Times.Once);
+        }
+        [Fact]
+        public async Task PutUser_ReturnsNotFound_WhenUserDoesNotExist()
+        {
+            // Arrange
+            var userId = "1";
+            var userRequest = new UserRequest { UserName = "UpdatedUser", FullName = "Updated Fullname", Password = "NewPassword123" };
+
+            _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync((User)null);
+
+            // Act
+            var result = await _controller.PutUser(userId, userRequest);
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result);
+            _userService.Verify(x => x.UpdateUserAsync(It.IsAny<User>()), Times.Never);
+        }
+        [Fact]
+        public async Task PutUser_ReturnsBadRequest_WhenUpdateFails()
+        {
+            // Arrange
+            var userId = "1";
+            var userRequest = new UserRequest { UserName = "UpdatedUser", FullName = "Updated Fullname", Password = "NewPassword123" };
+            var existingUser = new User { Id = userId, UserName = "OldUser", Fullname = "Old Fullname" };
+
+            _userService.Setup(x => x.GetUserByIdAsync(userId)).ReturnsAsync(existingUser);
+            _userService.Setup(x => x.UpdateUserAsync(It.IsAny<User>())).ReturnsAsync(IdentityResult.Failed(new IdentityError { Description = "Update failed" }));
+
+            // Act
+            var result = await _controller.PutUser(userId, userRequest);
+
+            // Assert
+            Assert.IsType<BadRequestObjectResult>(result);
+            _userService.Verify(x => x.UpdateUserAsync(It.IsAny<User>()), Times.Once);
+        }
+        [Fact]
+        public async Task PutUser_ReturnsInternalServerError_WhenExceptionOccurs()
+        {
+            // Arrange
+            var userId = "1";
+            var userRequest = new UserRequest { UserName = "UpdatedUser", FullName = "Updated Fullname", Password = "NewPassword123" };
+
+            _userService.Setup(x => x.GetUserByIdAsync(userId)).ThrowsAsync(new Exception("Test exception"));
+
+            // Act
+            var result = await _controller.PutUser(userId, userRequest);
+
+            // Assert
+            var statusCodeResult = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(StatusCodes.Status500InternalServerError, statusCodeResult.StatusCode);
+            _userService.Verify(x => x.GetUserByIdAsync(userId), Times.Once);
         }
 
 

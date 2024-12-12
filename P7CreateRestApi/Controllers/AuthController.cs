@@ -1,5 +1,4 @@
 ﻿using Findexium.Api.Models;
-using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

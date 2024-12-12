@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.4548" branch-rate="0.0933" version="1.9" timestamp="1733760203" lines-covered="2187" lines-valid="4808" branches-covered="70" branches-valid="750">
+<coverage line-rate="0.4542" branch-rate="0.0969" version="1.9" timestamp="1733918484" lines-covered="2208" lines-valid="4861" branches-covered="76" branches-valid="784">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
   <packages>
-    <package name="Findexium.Api" line-rate="0.33590000000000003" branch-rate="0.0966" complexity="929">
+    <package name="Findexium.Api" line-rate="0.34009999999999996" branch-rate="0.099" complexity="933">
       <classes>
         <class name="Program" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Program.cs" line-rate="0" branch-rate="0" complexity="8">
           <methods>
@@ -2848,17 +2848,17 @@
           <methods>
             <method name="get_UserName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="7" branch="False" />
+                <line number="11" hits="13" branch="False" />
               </lines>
             </method>
             <method name="get_Password" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="12" branch="False" />
+                <line number="15" hits="20" branch="False" />
               </lines>
             </method>
             <method name="get_FullName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="6" branch="False" />
+                <line number="19" hits="12" branch="False" />
               </lines>
             </method>
             <method name="ToUser" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -2874,9 +2874,9 @@
             </method>
           </methods>
           <lines>
-            <line number="11" hits="7" branch="False" />
-            <line number="15" hits="12" branch="False" />
-            <line number="19" hits="6" branch="False" />
+            <line number="11" hits="13" branch="False" />
+            <line number="15" hits="20" branch="False" />
+            <line number="19" hits="12" branch="False" />
             <line number="22" hits="3" branch="False" />
             <line number="23" hits="3" branch="False" />
             <line number="24" hits="3" branch="False" />
@@ -2890,61 +2890,60 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="5" hits="3" branch="False" />
+                <line number="5" hits="5" branch="False" />
               </lines>
             </method>
             <method name="get_UserName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="6" hits="4" branch="False" />
+                <line number="6" hits="5" branch="False" />
               </lines>
             </method>
             <method name="get_FullName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="3" branch="False" />
+                <line number="7" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="5" hits="3" branch="False" />
-            <line number="6" hits="4" branch="False" />
-            <line number="7" hits="3" branch="False" />
+            <line number="5" hits="5" branch="False" />
+            <line number="6" hits="5" branch="False" />
+            <line number="7" hits="4" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.AuthController" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\AuthController.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(Microsoft.Extensions.Configuration.IConfiguration,Findexium.Domain.Interfaces.IUserService,Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Controllers.AuthController&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Controllers.AuthController&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="23" hits="0" branch="False" />
                 <line number="24" hits="0" branch="False" />
                 <line number="25" hits="0" branch="False" />
                 <line number="26" hits="0" branch="False" />
                 <line number="27" hits="0" branch="False" />
                 <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="23" hits="0" branch="False" />
             <line number="24" hits="0" branch="False" />
             <line number="25" hits="0" branch="False" />
             <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.AuthController/&lt;Login&gt;d__5" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\AuthController.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="Findexium.Api.Controllers.AuthController/&lt;Login&gt;d__4" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\AuthController.cs" line-rate="0" branch-rate="0" complexity="6">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
               <lines>
+                <line number="32" hits="0" branch="False" />
                 <line number="34" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
                 <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="39" hits="0" branch="True" condition-coverage="0% (0/4)">
                   <conditions>
-                    <condition number="246" type="jump" coverage="0%" />
+                    <condition number="269" type="jump" coverage="0%" />
+                    <condition number="427" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="40" hits="0" branch="False" />
@@ -2953,7 +2952,7 @@
                 <line number="43" hits="0" branch="False" />
                 <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="498" type="jump" coverage="0%" />
+                    <condition number="679" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="45" hits="0" branch="False" />
@@ -2982,13 +2981,14 @@
             </method>
           </methods>
           <lines>
+            <line number="32" hits="0" branch="False" />
             <line number="34" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
             <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="39" hits="0" branch="True" condition-coverage="0% (0/4)">
               <conditions>
-                <condition number="246" type="jump" coverage="0%" />
+                <condition number="269" type="jump" coverage="0%" />
+                <condition number="427" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="40" hits="0" branch="False" />
@@ -2997,7 +2997,7 @@
             <line number="43" hits="0" branch="False" />
             <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="498" type="jump" coverage="0%" />
+                <condition number="679" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="45" hits="0" branch="False" />
@@ -4636,308 +4636,344 @@
           <methods>
             <method name=".ctor" signature="(Findexium.Domain.Interfaces.IUserService,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Api.Controllers.UsersController&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="17" branch="False" />
                 <line number="18" hits="17" branch="False" />
                 <line number="19" hits="17" branch="False" />
                 <line number="20" hits="17" branch="False" />
                 <line number="21" hits="17" branch="False" />
+                <line number="22" hits="17" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="17" branch="False" />
             <line number="18" hits="17" branch="False" />
             <line number="19" hits="17" branch="False" />
             <line number="20" hits="17" branch="False" />
             <line number="21" hits="17" branch="False" />
+            <line number="22" hits="17" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.UsersController/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="&lt;GetUsers&gt;b__3_0" signature="(Findexium.Domain.Models.User)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="31" hits="3" branch="False" />
                 <line number="32" hits="3" branch="False" />
                 <line number="33" hits="3" branch="False" />
                 <line number="34" hits="3" branch="False" />
                 <line number="35" hits="3" branch="False" />
                 <line number="36" hits="3" branch="False" />
+                <line number="37" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="31" hits="3" branch="False" />
             <line number="32" hits="3" branch="False" />
             <line number="33" hits="3" branch="False" />
             <line number="34" hits="3" branch="False" />
             <line number="35" hits="3" branch="False" />
             <line number="36" hits="3" branch="False" />
+            <line number="37" hits="3" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.UsersController/&lt;DeleteUser&gt;d__7" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="131" hits="4" branch="False" />
-                <line number="133" hits="4" branch="False" />
-                <line number="134" hits="4" branch="False" />
-                <line number="136" hits="4" branch="False" />
-                <line number="137" hits="3" branch="True" condition-coverage="100% (2/2)">
+                <line number="152" hits="4" branch="False" />
+                <line number="154" hits="4" branch="False" />
+                <line number="155" hits="4" branch="False" />
+                <line number="157" hits="4" branch="False" />
+                <line number="158" hits="3" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="222" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="138" hits="1" branch="False" />
-                <line number="139" hits="1" branch="False" />
-                <line number="142" hits="2" branch="False" />
-                <line number="143" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="159" hits="1" branch="False" />
+                <line number="160" hits="1" branch="False" />
+                <line number="163" hits="2" branch="False" />
+                <line number="164" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="399" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="144" hits="1" branch="False" />
-                <line number="145" hits="1" branch="False" />
-                <line number="148" hits="1" branch="False" />
-                <line number="150" hits="1" branch="False" />
-                <line number="151" hits="1" branch="False" />
-                <line number="152" hits="1" branch="False" />
-                <line number="153" hits="1" branch="False" />
-                <line number="155" hits="4" branch="False" />
+                <line number="165" hits="1" branch="False" />
+                <line number="166" hits="1" branch="False" />
+                <line number="169" hits="1" branch="False" />
+                <line number="171" hits="1" branch="False" />
+                <line number="172" hits="1" branch="False" />
+                <line number="173" hits="1" branch="False" />
+                <line number="174" hits="1" branch="False" />
+                <line number="176" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="131" hits="4" branch="False" />
-            <line number="133" hits="4" branch="False" />
-            <line number="134" hits="4" branch="False" />
-            <line number="136" hits="4" branch="False" />
-            <line number="137" hits="3" branch="True" condition-coverage="100% (2/2)">
+            <line number="152" hits="4" branch="False" />
+            <line number="154" hits="4" branch="False" />
+            <line number="155" hits="4" branch="False" />
+            <line number="157" hits="4" branch="False" />
+            <line number="158" hits="3" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="222" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="138" hits="1" branch="False" />
-            <line number="139" hits="1" branch="False" />
-            <line number="142" hits="2" branch="False" />
-            <line number="143" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="159" hits="1" branch="False" />
+            <line number="160" hits="1" branch="False" />
+            <line number="163" hits="2" branch="False" />
+            <line number="164" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="399" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="144" hits="1" branch="False" />
-            <line number="145" hits="1" branch="False" />
-            <line number="148" hits="1" branch="False" />
-            <line number="150" hits="1" branch="False" />
-            <line number="151" hits="1" branch="False" />
-            <line number="152" hits="1" branch="False" />
-            <line number="153" hits="1" branch="False" />
-            <line number="155" hits="4" branch="False" />
+            <line number="165" hits="1" branch="False" />
+            <line number="166" hits="1" branch="False" />
+            <line number="169" hits="1" branch="False" />
+            <line number="171" hits="1" branch="False" />
+            <line number="172" hits="1" branch="False" />
+            <line number="173" hits="1" branch="False" />
+            <line number="174" hits="1" branch="False" />
+            <line number="176" hits="4" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.UsersController/&lt;GetUser&gt;d__4" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="49" hits="3" branch="False" />
-                <line number="51" hits="3" branch="False" />
+                <line number="50" hits="3" branch="False" />
                 <line number="52" hits="3" branch="False" />
                 <line number="53" hits="3" branch="False" />
-                <line number="54" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="54" hits="3" branch="False" />
+                <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="210" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="55" hits="1" branch="False" />
                 <line number="56" hits="1" branch="False" />
                 <line number="57" hits="1" branch="False" />
-                <line number="59" hits="1" branch="False" />
+                <line number="58" hits="1" branch="False" />
                 <line number="61" hits="1" branch="False" />
                 <line number="62" hits="1" branch="False" />
                 <line number="63" hits="1" branch="False" />
                 <line number="64" hits="1" branch="False" />
-                <line number="66" hits="3" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="72" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="75" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="49" hits="3" branch="False" />
-            <line number="51" hits="3" branch="False" />
+            <line number="50" hits="3" branch="False" />
             <line number="52" hits="3" branch="False" />
             <line number="53" hits="3" branch="False" />
-            <line number="54" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="54" hits="3" branch="False" />
+            <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="210" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="55" hits="1" branch="False" />
             <line number="56" hits="1" branch="False" />
             <line number="57" hits="1" branch="False" />
-            <line number="59" hits="1" branch="False" />
+            <line number="58" hits="1" branch="False" />
             <line number="61" hits="1" branch="False" />
             <line number="62" hits="1" branch="False" />
             <line number="63" hits="1" branch="False" />
             <line number="64" hits="1" branch="False" />
-            <line number="66" hits="3" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="75" hits="3" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.UsersController/&lt;GetUsers&gt;d__3" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="2" branch="False" />
-                <line number="28" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
                 <line number="29" hits="2" branch="False" />
                 <line number="30" hits="2" branch="False" />
-                <line number="37" hits="1" branch="False" />
-                <line number="39" hits="1" branch="False" />
+                <line number="31" hits="2" branch="False" />
+                <line number="38" hits="1" branch="False" />
                 <line number="40" hits="1" branch="False" />
                 <line number="41" hits="1" branch="False" />
                 <line number="42" hits="1" branch="False" />
-                <line number="44" hits="2" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="45" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="26" hits="2" branch="False" />
-            <line number="28" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
             <line number="29" hits="2" branch="False" />
             <line number="30" hits="2" branch="False" />
-            <line number="37" hits="1" branch="False" />
-            <line number="39" hits="1" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="38" hits="1" branch="False" />
             <line number="40" hits="1" branch="False" />
             <line number="41" hits="1" branch="False" />
             <line number="42" hits="1" branch="False" />
-            <line number="44" hits="2" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="45" hits="2" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Controllers.UsersController/&lt;PostUser&gt;d__6" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="96" hits="4" branch="False" />
-                <line number="97" hits="4" branch="True" condition-coverage="100% (2/2)">
+                <line number="117" hits="4" branch="False" />
+                <line number="118" hits="4" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="26" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="98" hits="1" branch="False" />
-                <line number="99" hits="1" branch="False" />
-                <line number="103" hits="3" branch="False" />
-                <line number="104" hits="3" branch="False" />
-                <line number="105" hits="3" branch="False" />
-                <line number="107" hits="3" branch="False" />
-                <line number="108" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="119" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="124" hits="3" branch="False" />
+                <line number="125" hits="3" branch="False" />
+                <line number="126" hits="3" branch="False" />
+                <line number="128" hits="3" branch="False" />
+                <line number="129" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="275" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="109" hits="1" branch="False" />
-                <line number="110" hits="1" branch="False" />
-                <line number="111" hits="1" branch="False" />
-                <line number="112" hits="1" branch="False" />
-                <line number="113" hits="1" branch="False" />
-                <line number="114" hits="1" branch="False" />
-                <line number="115" hits="1" branch="False" />
-                <line number="116" hits="1" branch="False" />
-                <line number="119" hits="1" branch="False" />
-                <line number="121" hits="1" branch="False" />
-                <line number="122" hits="1" branch="False" />
-                <line number="123" hits="1" branch="False" />
-                <line number="124" hits="1" branch="False" />
-                <line number="126" hits="4" branch="False" />
+                <line number="130" hits="1" branch="False" />
+                <line number="131" hits="1" branch="False" />
+                <line number="132" hits="1" branch="False" />
+                <line number="133" hits="1" branch="False" />
+                <line number="134" hits="1" branch="False" />
+                <line number="135" hits="1" branch="False" />
+                <line number="136" hits="1" branch="False" />
+                <line number="137" hits="1" branch="False" />
+                <line number="140" hits="1" branch="False" />
+                <line number="142" hits="1" branch="False" />
+                <line number="143" hits="1" branch="False" />
+                <line number="144" hits="1" branch="False" />
+                <line number="145" hits="1" branch="False" />
+                <line number="147" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="96" hits="4" branch="False" />
-            <line number="97" hits="4" branch="True" condition-coverage="100% (2/2)">
+            <line number="117" hits="4" branch="False" />
+            <line number="118" hits="4" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="26" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="98" hits="1" branch="False" />
-            <line number="99" hits="1" branch="False" />
-            <line number="103" hits="3" branch="False" />
-            <line number="104" hits="3" branch="False" />
-            <line number="105" hits="3" branch="False" />
-            <line number="107" hits="3" branch="False" />
-            <line number="108" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="119" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="124" hits="3" branch="False" />
+            <line number="125" hits="3" branch="False" />
+            <line number="126" hits="3" branch="False" />
+            <line number="128" hits="3" branch="False" />
+            <line number="129" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="275" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="109" hits="1" branch="False" />
-            <line number="110" hits="1" branch="False" />
-            <line number="111" hits="1" branch="False" />
-            <line number="112" hits="1" branch="False" />
-            <line number="113" hits="1" branch="False" />
-            <line number="114" hits="1" branch="False" />
-            <line number="115" hits="1" branch="False" />
-            <line number="116" hits="1" branch="False" />
-            <line number="119" hits="1" branch="False" />
-            <line number="121" hits="1" branch="False" />
-            <line number="122" hits="1" branch="False" />
-            <line number="123" hits="1" branch="False" />
-            <line number="124" hits="1" branch="False" />
-            <line number="126" hits="4" branch="False" />
+            <line number="130" hits="1" branch="False" />
+            <line number="131" hits="1" branch="False" />
+            <line number="132" hits="1" branch="False" />
+            <line number="133" hits="1" branch="False" />
+            <line number="134" hits="1" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="136" hits="1" branch="False" />
+            <line number="137" hits="1" branch="False" />
+            <line number="140" hits="1" branch="False" />
+            <line number="142" hits="1" branch="False" />
+            <line number="143" hits="1" branch="False" />
+            <line number="144" hits="1" branch="False" />
+            <line number="145" hits="1" branch="False" />
+            <line number="147" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Api.Controllers.UsersController/&lt;PutUser&gt;d__5" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="4">
+        <class name="Findexium.Api.Controllers.UsersController/&lt;PutUser&gt;d__5" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="6">
               <lines>
-                <line number="71" hits="4" branch="False" />
-                <line number="72" hits="4" branch="True" condition-coverage="100% (2/2)">
+                <line number="80" hits="4" branch="False" />
+                <line number="82" hits="4" branch="False" />
+                <line number="83" hits="4" branch="False" />
+                <line number="84" hits="4" branch="False" />
+                <line number="85" hits="3" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="39" type="jump" coverage="100%" />
+                    <condition number="222" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="73" hits="1" branch="False" />
-                <line number="74" hits="1" branch="False" />
-                <line number="78" hits="3" branch="False" />
-                <line number="79" hits="3" branch="False" />
-                <line number="80" hits="3" branch="False" />
-                <line number="81" hits="2" branch="True" condition-coverage="100% (2/2)">
-                  <conditions>
-                    <condition number="260" type="jump" coverage="100%" />
-                  </conditions>
-                </line>
-                <line number="82" hits="1" branch="False" />
-                <line number="83" hits="1" branch="False" />
-                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
                 <line number="87" hits="1" branch="False" />
-                <line number="88" hits="1" branch="False" />
-                <line number="89" hits="1" branch="False" />
-                <line number="90" hits="1" branch="False" />
-                <line number="92" hits="4" branch="False" />
+                <line number="91" hits="2" branch="False" />
+                <line number="92" hits="2" branch="False" />
+                <line number="95" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="311" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="96" hits="2" branch="False" />
+                <line number="97" hits="2" branch="False" />
+                <line number="98" hits="2" branch="False" />
+                <line number="99" hits="2" branch="False" />
+                <line number="101" hits="2" branch="False" />
+                <line number="102" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="531" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="103" hits="1" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="109" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="111" hits="1" branch="False" />
+                <line number="113" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="71" hits="4" branch="False" />
-            <line number="72" hits="4" branch="True" condition-coverage="100% (2/2)">
+            <line number="80" hits="4" branch="False" />
+            <line number="82" hits="4" branch="False" />
+            <line number="83" hits="4" branch="False" />
+            <line number="84" hits="4" branch="False" />
+            <line number="85" hits="3" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="39" type="jump" coverage="100%" />
+                <condition number="222" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="73" hits="1" branch="False" />
-            <line number="74" hits="1" branch="False" />
-            <line number="78" hits="3" branch="False" />
-            <line number="79" hits="3" branch="False" />
-            <line number="80" hits="3" branch="False" />
-            <line number="81" hits="2" branch="True" condition-coverage="100% (2/2)">
-              <conditions>
-                <condition number="260" type="jump" coverage="100%" />
-              </conditions>
-            </line>
-            <line number="82" hits="1" branch="False" />
-            <line number="83" hits="1" branch="False" />
-            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
             <line number="87" hits="1" branch="False" />
-            <line number="88" hits="1" branch="False" />
-            <line number="89" hits="1" branch="False" />
-            <line number="90" hits="1" branch="False" />
-            <line number="92" hits="4" branch="False" />
+            <line number="91" hits="2" branch="False" />
+            <line number="92" hits="2" branch="False" />
+            <line number="95" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="311" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="96" hits="2" branch="False" />
+            <line number="97" hits="2" branch="False" />
+            <line number="98" hits="2" branch="False" />
+            <line number="99" hits="2" branch="False" />
+            <line number="101" hits="2" branch="False" />
+            <line number="102" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="531" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="103" hits="1" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="109" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="111" hits="1" branch="False" />
+            <line number="113" hits="4" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Api.Areas.Identity.Pages.ErrorModel" filename="source\repos\Back-end.NET_API_REST\P7CreateRestApi\Areas\Identity\Pages\Error.cshtml.cs" line-rate="0" branch-rate="0" complexity="6">
@@ -9618,7 +9654,7 @@
         </class>
       </classes>
     </package>
-    <package name="Findexium.Domain" line-rate="0.1493" branch-rate="0" complexity="129">
+    <package name="Findexium.Domain" line-rate="0.1512" branch-rate="0" complexity="125">
       <classes>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -10647,8 +10683,15 @@
                 </line>
                 <line number="56" hits="0" branch="False" />
                 <line number="57" hits="0" branch="False" />
-                <line number="60" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -10662,50 +10705,57 @@
             </line>
             <line number="56" hits="0" branch="False" />
             <line number="57" hits="0" branch="False" />
-            <line number="60" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.UserService/&lt;DeleteUserAsync&gt;d__9" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="79" hits="0" branch="False" />
-                <line number="81" hits="0" branch="False" />
-                <line number="82" hits="0" branch="False" />
-                <line number="83" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="88" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
+                <line number="91" hits="0" branch="False" />
+                <line number="92" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="185" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="84" hits="0" branch="False" />
-                <line number="85" hits="0" branch="False" />
-                <line number="88" hits="0" branch="False" />
-                <line number="90" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
-                <line number="92" hits="0" branch="False" />
                 <line number="93" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
+                <line number="94" hits="0" branch="False" />
+                <line number="97" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
+                <line number="100" hits="0" branch="False" />
+                <line number="101" hits="0" branch="False" />
+                <line number="102" hits="0" branch="False" />
+                <line number="104" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="79" hits="0" branch="False" />
-            <line number="81" hits="0" branch="False" />
-            <line number="82" hits="0" branch="False" />
-            <line number="83" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="88" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
+            <line number="91" hits="0" branch="False" />
+            <line number="92" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="185" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="84" hits="0" branch="False" />
-            <line number="85" hits="0" branch="False" />
-            <line number="88" hits="0" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
-            <line number="92" hits="0" branch="False" />
             <line number="93" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
+            <line number="94" hits="0" branch="False" />
+            <line number="97" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
+            <line number="100" hits="0" branch="False" />
+            <line number="101" hits="0" branch="False" />
+            <line number="102" hits="0" branch="False" />
+            <line number="104" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.UserService/&lt;GetUserByIdAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -10750,30 +10800,30 @@
             <line number="50" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;GetUserRolesAsync&gt;d__12" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Domain.Services.UserService/&lt;GetUserRolesAsync&gt;d__11" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="122" hits="0" branch="False" />
+                <line number="124" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+                <line number="127" hits="0" branch="False" />
+                <line number="128" hits="0" branch="False" />
+                <line number="129" hits="0" branch="False" />
                 <line number="130" hits="0" branch="False" />
                 <line number="132" hits="0" branch="False" />
-                <line number="133" hits="0" branch="False" />
-                <line number="135" hits="0" branch="False" />
-                <line number="136" hits="0" branch="False" />
-                <line number="137" hits="0" branch="False" />
-                <line number="138" hits="0" branch="False" />
-                <line number="140" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="122" hits="0" branch="False" />
+            <line number="124" hits="0" branch="False" />
+            <line number="125" hits="0" branch="False" />
+            <line number="127" hits="0" branch="False" />
+            <line number="128" hits="0" branch="False" />
+            <line number="129" hits="0" branch="False" />
             <line number="130" hits="0" branch="False" />
             <line number="132" hits="0" branch="False" />
-            <line number="133" hits="0" branch="False" />
-            <line number="135" hits="0" branch="False" />
-            <line number="136" hits="0" branch="False" />
-            <line number="137" hits="0" branch="False" />
-            <line number="138" hits="0" branch="False" />
-            <line number="140" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.UserService/&lt;GetUsersAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -10806,98 +10856,54 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="66" hits="0" branch="False" />
-                <line number="68" hits="0" branch="False" />
-                <line number="69" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-                <line number="74" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
+                <line number="82" hits="0" branch="False" />
+                <line number="83" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="66" hits="0" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="69" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-            <line number="74" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
+            <line number="82" hits="0" branch="False" />
+            <line number="83" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.UserService/&lt;UserExistsAsync&gt;d__10" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="98" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
-                <line number="101" hits="0" branch="False" />
-                <line number="102" hits="0" branch="False" />
-                <line number="104" hits="0" branch="False" />
-                <line number="105" hits="0" branch="False" />
-                <line number="106" hits="0" branch="False" />
                 <line number="107" hits="0" branch="False" />
                 <line number="109" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="98" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
-            <line number="101" hits="0" branch="False" />
-            <line number="102" hits="0" branch="False" />
-            <line number="104" hits="0" branch="False" />
-            <line number="105" hits="0" branch="False" />
-            <line number="106" hits="0" branch="False" />
-            <line number="107" hits="0" branch="False" />
-            <line number="109" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="Findexium.Domain.Services.UserService/&lt;ValidateCredentialsAsync&gt;d__11" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\UserService.cs" line-rate="0" branch-rate="0" complexity="4">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
-                <line number="112" hits="0" branch="False" />
+                <line number="110" hits="0" branch="False" />
+                <line number="111" hits="0" branch="False" />
+                <line number="113" hits="0" branch="False" />
                 <line number="114" hits="0" branch="False" />
                 <line number="115" hits="0" branch="False" />
-                <line number="116" hits="0" branch="True" condition-coverage="0% (0/4)">
-                  <conditions>
-                    <condition number="205" type="jump" coverage="0%" />
-                    <condition number="358" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="117" hits="0" branch="False" />
+                <line number="116" hits="0" branch="False" />
                 <line number="118" hits="0" branch="False" />
-                <line number="120" hits="0" branch="False" />
-                <line number="122" hits="0" branch="False" />
-                <line number="123" hits="0" branch="False" />
-                <line number="124" hits="0" branch="False" />
-                <line number="125" hits="0" branch="False" />
-                <line number="127" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="112" hits="0" branch="False" />
+            <line number="107" hits="0" branch="False" />
+            <line number="109" hits="0" branch="False" />
+            <line number="110" hits="0" branch="False" />
+            <line number="111" hits="0" branch="False" />
+            <line number="113" hits="0" branch="False" />
             <line number="114" hits="0" branch="False" />
             <line number="115" hits="0" branch="False" />
-            <line number="116" hits="0" branch="True" condition-coverage="0% (0/4)">
-              <conditions>
-                <condition number="205" type="jump" coverage="0%" />
-                <condition number="358" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="117" hits="0" branch="False" />
+            <line number="116" hits="0" branch="False" />
             <line number="118" hits="0" branch="False" />
-            <line number="120" hits="0" branch="False" />
-            <line number="122" hits="0" branch="False" />
-            <line number="123" hits="0" branch="False" />
-            <line number="124" hits="0" branch="False" />
-            <line number="125" hits="0" branch="False" />
-            <line number="127" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Models.BidList" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Models\BidList.cs" line-rate="1" branch-rate="1" complexity="22">
@@ -11300,17 +11306,17 @@
           <methods>
             <method name="get_Fullname" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="12" branch="False" />
+                <line number="9" hits="17" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="9" hits="12" branch="False" />
+            <line number="9" hits="17" branch="False" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Findexium.Infrastructure" line-rate="0" branch-rate="0" complexity="154">
+    <package name="Findexium.Infrastructure" line-rate="0" branch-rate="0" complexity="185">
       <classes>
         <class name="Findexium.Infrastructure.Repositories.BidRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\BidRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -12650,258 +12656,484 @@
         </class>
         <class name="Findexium.Infrastructure.Repositories.UserRepository" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(Findexium.Infrastructure.Data.LocalDbContext,Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Infrastructure.Repositories.UserRepository&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(Findexium.Infrastructure.Data.LocalDbContext,Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;,Microsoft.AspNetCore.Identity.RoleManager`1&lt;Microsoft.AspNetCore.Identity.IdentityRole&gt;,Microsoft.Extensions.Logging.ILogger`1&lt;Findexium.Infrastructure.Repositories.UserRepository&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="0" branch="False" />
                 <line number="18" hits="0" branch="False" />
                 <line number="19" hits="0" branch="False" />
                 <line number="20" hits="0" branch="False" />
                 <line number="21" hits="0" branch="False" />
                 <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="0" branch="False" />
             <line number="18" hits="0" branch="False" />
             <line number="19" hits="0" branch="False" />
             <line number="20" hits="0" branch="False" />
             <line number="21" hits="0" branch="False" />
             <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;&gt;c" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="6">
           <methods>
-            <method name="&lt;UpdateUserAsync&gt;b__7_0" signature="(Microsoft.AspNetCore.Identity.IdentityError)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="&lt;AddUserAsync&gt;b__7_3" signature="(Microsoft.AspNetCore.Identity.IdentityError)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="63" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;AddUserAsync&gt;b__7_0" signature="(Microsoft.AspNetCore.Identity.IdentityError)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="74" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;AddUserAsync&gt;b__7_1" signature="(Microsoft.AspNetCore.Identity.IdentityError)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="81" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;AddUserAsync&gt;b__7_2" signature="(Microsoft.AspNetCore.Identity.IdentityError)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="82" hits="0" branch="False" />
               </lines>
             </method>
+            <method name="&lt;UpdateUserAsync&gt;b__8_0" signature="(Microsoft.AspNetCore.Identity.IdentityError)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="126" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;DeleteUserAsync&gt;b__9_0" signature="(Microsoft.AspNetCore.Identity.IdentityError)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="149" hits="0" branch="False" />
+              </lines>
+            </method>
           </methods>
           <lines>
+            <line number="63" hits="0" branch="False" />
+            <line number="74" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
             <line number="82" hits="0" branch="False" />
+            <line number="126" hits="0" branch="False" />
+            <line number="149" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;AddUserAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;AddUserAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="0" complexity="10">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="10">
               <lines>
-                <line number="51" hits="0" branch="False" />
-                <line number="53" hits="0" branch="False" />
                 <line number="54" hits="0" branch="False" />
-                <line number="55" hits="0" branch="False" />
                 <line number="56" hits="0" branch="False" />
-                <line number="57" hits="0" branch="False" />
-                <line number="58" hits="0" branch="False" />
+                <line number="58" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="186" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
                 <line number="59" hits="0" branch="False" />
                 <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="353" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
                 <line number="62" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="51" hits="0" branch="False" />
-            <line number="53" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
-            <line number="55" hits="0" branch="False" />
-            <line number="56" hits="0" branch="False" />
-            <line number="57" hits="0" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
-            <line number="60" hits="0" branch="False" />
-            <line number="62" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;DeleteUserAsync&gt;d__8" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="0" complexity="2">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
-              <lines>
-                <line number="94" hits="0" branch="False" />
-                <line number="96" hits="0" branch="False" />
-                <line number="97" hits="0" branch="False" />
-                <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="202" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="99" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
-                <line number="101" hits="0" branch="False" />
-                <line number="102" hits="0" branch="False" />
-                <line number="103" hits="0" branch="False" />
-                <line number="104" hits="0" branch="False" />
-                <line number="105" hits="0" branch="False" />
-                <line number="106" hits="0" branch="False" />
-                <line number="107" hits="0" branch="False" />
-                <line number="109" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="94" hits="0" branch="False" />
-            <line number="96" hits="0" branch="False" />
-            <line number="97" hits="0" branch="False" />
-            <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="202" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="99" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
-            <line number="101" hits="0" branch="False" />
-            <line number="102" hits="0" branch="False" />
-            <line number="103" hits="0" branch="False" />
-            <line number="104" hits="0" branch="False" />
-            <line number="105" hits="0" branch="False" />
-            <line number="106" hits="0" branch="False" />
-            <line number="107" hits="0" branch="False" />
-            <line number="109" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;GetUserByIdAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="38" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="38" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;GetUsersAsync&gt;d__4" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="25" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="25" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;UpdateUserAsync&gt;d__7" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="0" complexity="4">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
                 <line number="65" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="68" hits="0" branch="False" />
-                <line number="69" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="230" type="jump" coverage="0%" />
+                    <condition number="440" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="70" hits="0" branch="False" />
                 <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="74" hits="0" branch="False" />
-                <line number="75" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="436" type="jump" coverage="0%" />
+                    <condition number="627" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
                 <line number="78" hits="0" branch="False" />
-                <line number="79" hits="0" branch="False" />
-                <line number="81" hits="0" branch="False" />
-                <line number="84" hits="0" branch="False" />
+                <line number="79" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="850" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="80" hits="0" branch="False" />
                 <line number="85" hits="0" branch="False" />
                 <line number="86" hits="0" branch="False" />
                 <line number="87" hits="0" branch="False" />
                 <line number="88" hits="0" branch="False" />
                 <line number="89" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
+                <line number="92" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="54" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="58" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="186" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="353" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="62" hits="0" branch="False" />
             <line number="65" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="69" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="230" type="jump" coverage="0%" />
+                <condition number="440" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="70" hits="0" branch="False" />
             <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="74" hits="0" branch="False" />
-            <line number="75" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="436" type="jump" coverage="0%" />
+                <condition number="627" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
             <line number="78" hits="0" branch="False" />
-            <line number="79" hits="0" branch="False" />
-            <line number="81" hits="0" branch="False" />
-            <line number="84" hits="0" branch="False" />
+            <line number="79" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="850" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="80" hits="0" branch="False" />
             <line number="85" hits="0" branch="False" />
             <line number="86" hits="0" branch="False" />
             <line number="87" hits="0" branch="False" />
             <line number="88" hits="0" branch="False" />
             <line number="89" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
+            <line number="92" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;UserExistsAsync&gt;d__9" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;AddUserToRoleAssync&gt;d__11" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="112" hits="0" branch="False" />
-                <line number="114" hits="0" branch="False" />
-                <line number="115" hits="0" branch="False" />
-                <line number="117" hits="0" branch="False" />
-                <line number="118" hits="0" branch="False" />
-                <line number="119" hits="0" branch="False" />
-                <line number="120" hits="0" branch="False" />
-                <line number="122" hits="0" branch="False" />
+                <line number="173" hits="0" branch="False" />
+                <line number="175" hits="0" branch="False" />
+                <line number="177" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="179" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="178" hits="0" branch="False" />
+                <line number="179" hits="0" branch="False" />
+                <line number="180" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="348" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="181" hits="0" branch="False" />
+                <line number="182" hits="0" branch="False" />
+                <line number="184" hits="0" branch="False" />
+                <line number="187" hits="0" branch="False" />
+                <line number="188" hits="0" branch="False" />
+                <line number="190" hits="0" branch="False" />
+                <line number="191" hits="0" branch="False" />
+                <line number="192" hits="0" branch="False" />
+                <line number="193" hits="0" branch="False" />
+                <line number="195" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="112" hits="0" branch="False" />
-            <line number="114" hits="0" branch="False" />
-            <line number="115" hits="0" branch="False" />
-            <line number="117" hits="0" branch="False" />
-            <line number="118" hits="0" branch="False" />
+            <line number="173" hits="0" branch="False" />
+            <line number="175" hits="0" branch="False" />
+            <line number="177" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="179" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="178" hits="0" branch="False" />
+            <line number="179" hits="0" branch="False" />
+            <line number="180" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="348" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="181" hits="0" branch="False" />
+            <line number="182" hits="0" branch="False" />
+            <line number="184" hits="0" branch="False" />
+            <line number="187" hits="0" branch="False" />
+            <line number="188" hits="0" branch="False" />
+            <line number="190" hits="0" branch="False" />
+            <line number="191" hits="0" branch="False" />
+            <line number="192" hits="0" branch="False" />
+            <line number="193" hits="0" branch="False" />
+            <line number="195" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;DeleteUserAsync&gt;d__9" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="137" hits="0" branch="False" />
+                <line number="139" hits="0" branch="False" />
+                <line number="140" hits="0" branch="False" />
+                <line number="141" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="183" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="142" hits="0" branch="False" />
+                <line number="143" hits="0" branch="False" />
+                <line number="146" hits="0" branch="False" />
+                <line number="147" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="354" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="148" hits="0" branch="False" />
+                <line number="151" hits="0" branch="False" />
+                <line number="152" hits="0" branch="False" />
+                <line number="153" hits="0" branch="False" />
+                <line number="154" hits="0" branch="False" />
+                <line number="155" hits="0" branch="False" />
+                <line number="157" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="137" hits="0" branch="False" />
+            <line number="139" hits="0" branch="False" />
+            <line number="140" hits="0" branch="False" />
+            <line number="141" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="183" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="142" hits="0" branch="False" />
+            <line number="143" hits="0" branch="False" />
+            <line number="146" hits="0" branch="False" />
+            <line number="147" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="354" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="148" hits="0" branch="False" />
+            <line number="151" hits="0" branch="False" />
+            <line number="152" hits="0" branch="False" />
+            <line number="153" hits="0" branch="False" />
+            <line number="154" hits="0" branch="False" />
+            <line number="155" hits="0" branch="False" />
+            <line number="157" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;GetUserByIdAsync&gt;d__6" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="40" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="185" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="40" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="185" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;GetUsersAsync&gt;d__5" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;UpdateUserAsync&gt;d__8" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="0" complexity="14">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="14">
+              <lines>
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="27" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="97" hits="0" branch="False" />
+                <line number="98" hits="0" branch="False" />
+                <line number="101" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="64" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="102" hits="0" branch="False" />
+                <line number="103" hits="0" branch="False" />
+                <line number="107" hits="0" branch="False" />
+                <line number="108" hits="0" branch="False" />
+                <line number="109" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="258" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="110" hits="0" branch="False" />
+                <line number="111" hits="0" branch="False" />
+                <line number="114" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="290" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="115" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="328" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="118" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="371" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="119" hits="0" branch="False" />
+                <line number="120" hits="0" branch="False" />
+                <line number="121" hits="0" branch="False" />
+                <line number="123" hits="0" branch="False" />
+                <line number="124" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="583" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="125" hits="0" branch="False" />
+                <line number="128" hits="0" branch="False" />
+                <line number="129" hits="0" branch="False" />
+                <line number="130" hits="0" branch="False" />
+                <line number="131" hits="0" branch="False" />
+                <line number="132" hits="0" branch="False" />
+                <line number="134" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="27" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="97" hits="0" branch="False" />
+            <line number="98" hits="0" branch="False" />
+            <line number="101" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="64" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="102" hits="0" branch="False" />
+            <line number="103" hits="0" branch="False" />
+            <line number="107" hits="0" branch="False" />
+            <line number="108" hits="0" branch="False" />
+            <line number="109" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="258" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="110" hits="0" branch="False" />
+            <line number="111" hits="0" branch="False" />
+            <line number="114" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="290" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="115" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="328" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="118" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="371" type="jump" coverage="0%" />
+              </conditions>
+            </line>
             <line number="119" hits="0" branch="False" />
             <line number="120" hits="0" branch="False" />
-            <line number="122" hits="0" branch="False" />
+            <line number="121" hits="0" branch="False" />
+            <line number="123" hits="0" branch="False" />
+            <line number="124" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="583" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="125" hits="0" branch="False" />
+            <line number="128" hits="0" branch="False" />
+            <line number="129" hits="0" branch="False" />
+            <line number="130" hits="0" branch="False" />
+            <line number="131" hits="0" branch="False" />
+            <line number="132" hits="0" branch="False" />
+            <line number="134" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Findexium.Infrastructure.Repositories.UserRepository/&lt;UserExistsAsync&gt;d__10" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Repositories\UserRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="160" hits="0" branch="False" />
+                <line number="162" hits="0" branch="False" />
+                <line number="163" hits="0" branch="False" />
+                <line number="165" hits="0" branch="False" />
+                <line number="166" hits="0" branch="False" />
+                <line number="167" hits="0" branch="False" />
+                <line number="168" hits="0" branch="False" />
+                <line number="170" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="160" hits="0" branch="False" />
+            <line number="162" hits="0" branch="False" />
+            <line number="163" hits="0" branch="False" />
+            <line number="165" hits="0" branch="False" />
+            <line number="166" hits="0" branch="False" />
+            <line number="167" hits="0" branch="False" />
+            <line number="168" hits="0" branch="False" />
+            <line number="170" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Models.BidDto" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Models\BidDto.cs" line-rate="0" branch-rate="1" complexity="24">
@@ -13686,7 +13918,7 @@
                 <line number="9" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_PasswordHash" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Password" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="10" hits="0" branch="False" />
               </lines>
@@ -13698,29 +13930,25 @@
             </method>
             <method name="ToUser" signature="(Microsoft.AspNetCore.Identity.UserManager`1&lt;Findexium.Domain.Models.User&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
                 <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
                 <line number="31" hits="0" branch="False" />
                 <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="13" hits="0" branch="False" />
                 <line number="14" hits="0" branch="False" />
                 <line number="15" hits="0" branch="False" />
                 <line number="16" hits="0" branch="False" />
                 <line number="17" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
-                <line number="20" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -13729,25 +13957,21 @@
             <line number="9" hits="0" branch="False" />
             <line number="10" hits="0" branch="False" />
             <line number="11" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
             <line number="31" hits="0" branch="False" />
             <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
             <line number="14" hits="0" branch="False" />
             <line number="15" hits="0" branch="False" />
             <line number="16" hits="0" branch="False" />
             <line number="17" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="20" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Infrastructure.Data.LocalDbContext" filename="source\repos\Back-end.NET_API_REST\Findexium.Infrastructure\Data\LocalDbContext.cs" line-rate="0" branch-rate="1" complexity="7">
@@ -13814,7 +14038,7 @@
         </class>
       </classes>
     </package>
-    <package name="FindexiumApi.tests" line-rate="0.9992" branch-rate="0.75" complexity="123">
+    <package name="FindexiumApi.tests" line-rate="0.9992" branch-rate="0.7142000000000001" complexity="126">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -13850,114 +14074,114 @@
             <line number="29" hits="17" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsInternalServerError_WhenExceptionIsThrown&gt;d__20" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsInternalServerError_WhenExceptionIsThrown&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="291" hits="1" branch="False" />
-                <line number="293" hits="1" branch="False" />
-                <line number="294" hits="1" branch="False" />
-                <line number="297" hits="1" branch="False" />
-                <line number="300" hits="1" branch="False" />
-                <line number="301" hits="1" branch="False" />
-                <line number="302" hits="1" branch="False" />
-                <line number="303" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="291" hits="1" branch="False" />
-            <line number="293" hits="1" branch="False" />
-            <line number="294" hits="1" branch="False" />
-            <line number="297" hits="1" branch="False" />
-            <line number="300" hits="1" branch="False" />
-            <line number="301" hits="1" branch="False" />
-            <line number="302" hits="1" branch="False" />
-            <line number="303" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsNoContent_WhenUserIsDeleted&gt;d__16" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="2">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
-              <lines>
-                <line number="229" hits="1" branch="False" />
-                <line number="231" hits="1" branch="False" />
+                <line number="230" hits="1" branch="False" />
                 <line number="232" hits="1" branch="False" />
                 <line number="233" hits="1" branch="False" />
-                <line number="234" hits="1" branch="False" />
-                <line number="237" hits="1" branch="False" />
+                <line number="236" hits="1" branch="False" />
+                <line number="239" hits="1" branch="False" />
                 <line number="240" hits="1" branch="False" />
-                <line number="241" hits="1" branch="True" condition-coverage="100% (2/2)">
-                  <conditions>
-                    <condition number="629" type="jump" coverage="100%" />
-                  </conditions>
-                </line>
+                <line number="241" hits="1" branch="False" />
                 <line number="242" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="229" hits="1" branch="False" />
-            <line number="231" hits="1" branch="False" />
+            <line number="230" hits="1" branch="False" />
             <line number="232" hits="1" branch="False" />
             <line number="233" hits="1" branch="False" />
-            <line number="234" hits="1" branch="False" />
-            <line number="237" hits="1" branch="False" />
+            <line number="236" hits="1" branch="False" />
+            <line number="239" hits="1" branch="False" />
             <line number="240" hits="1" branch="False" />
-            <line number="241" hits="1" branch="True" condition-coverage="100% (2/2)">
-              <conditions>
-                <condition number="629" type="jump" coverage="100%" />
-              </conditions>
-            </line>
+            <line number="241" hits="1" branch="False" />
             <line number="242" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsNotFound_WhenDeleteFails&gt;d__19" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsNoContent_WhenUserIsDeleted&gt;d__12" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="0.5" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="275" hits="1" branch="False" />
-                <line number="277" hits="1" branch="False" />
-                <line number="278" hits="1" branch="False" />
-                <line number="279" hits="1" branch="False" />
-                <line number="280" hits="1" branch="False" />
-                <line number="283" hits="1" branch="False" />
-                <line number="286" hits="1" branch="False" />
-                <line number="287" hits="1" branch="False" />
+                <line number="168" hits="1" branch="False" />
+                <line number="170" hits="1" branch="False" />
+                <line number="171" hits="1" branch="False" />
+                <line number="172" hits="1" branch="False" />
+                <line number="173" hits="1" branch="False" />
+                <line number="176" hits="1" branch="False" />
+                <line number="179" hits="1" branch="False" />
+                <line number="180" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="629" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="181" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="275" hits="1" branch="False" />
-            <line number="277" hits="1" branch="False" />
-            <line number="278" hits="1" branch="False" />
-            <line number="279" hits="1" branch="False" />
-            <line number="280" hits="1" branch="False" />
-            <line number="283" hits="1" branch="False" />
-            <line number="286" hits="1" branch="False" />
-            <line number="287" hits="1" branch="False" />
+            <line number="168" hits="1" branch="False" />
+            <line number="170" hits="1" branch="False" />
+            <line number="171" hits="1" branch="False" />
+            <line number="172" hits="1" branch="False" />
+            <line number="173" hits="1" branch="False" />
+            <line number="176" hits="1" branch="False" />
+            <line number="179" hits="1" branch="False" />
+            <line number="180" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="629" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="181" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsNotFound_WhenUserDoesNotExist&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsNotFound_WhenDeleteFails&gt;d__15" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="262" hits="1" branch="False" />
-                <line number="264" hits="1" branch="False" />
-                <line number="265" hits="1" branch="False" />
-                <line number="268" hits="1" branch="False" />
-                <line number="271" hits="1" branch="False" />
-                <line number="272" hits="1" branch="False" />
+                <line number="214" hits="1" branch="False" />
+                <line number="216" hits="1" branch="False" />
+                <line number="217" hits="1" branch="False" />
+                <line number="218" hits="1" branch="False" />
+                <line number="219" hits="1" branch="False" />
+                <line number="222" hits="1" branch="False" />
+                <line number="225" hits="1" branch="False" />
+                <line number="226" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="262" hits="1" branch="False" />
-            <line number="264" hits="1" branch="False" />
-            <line number="265" hits="1" branch="False" />
-            <line number="268" hits="1" branch="False" />
-            <line number="271" hits="1" branch="False" />
-            <line number="272" hits="1" branch="False" />
+            <line number="214" hits="1" branch="False" />
+            <line number="216" hits="1" branch="False" />
+            <line number="217" hits="1" branch="False" />
+            <line number="218" hits="1" branch="False" />
+            <line number="219" hits="1" branch="False" />
+            <line number="222" hits="1" branch="False" />
+            <line number="225" hits="1" branch="False" />
+            <line number="226" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;DeleteUser_ReturnsNotFound_WhenUserDoesNotExist&gt;d__14" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="201" hits="1" branch="False" />
+                <line number="203" hits="1" branch="False" />
+                <line number="204" hits="1" branch="False" />
+                <line number="207" hits="1" branch="False" />
+                <line number="210" hits="1" branch="False" />
+                <line number="211" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="201" hits="1" branch="False" />
+            <line number="203" hits="1" branch="False" />
+            <line number="204" hits="1" branch="False" />
+            <line number="207" hits="1" branch="False" />
+            <line number="210" hits="1" branch="False" />
+            <line number="211" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.Tests.UserControllerTests/&lt;GetUser_ReturnsInternalServerError_WhenExceptionIsThrown&gt;d__8" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -14094,214 +14318,252 @@
             <line number="49" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsBadRequest_WhenAddUserFails&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsBadRequest_WhenAddUserFails&gt;d__13" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="246" hits="1" branch="False" />
-                <line number="248" hits="1" branch="False" />
-                <line number="249" hits="1" branch="False" />
-                <line number="250" hits="1" branch="False" />
-                <line number="253" hits="1" branch="False" />
-                <line number="256" hits="1" branch="False" />
-                <line number="257" hits="1" branch="False" />
-                <line number="258" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="246" hits="1" branch="False" />
-            <line number="248" hits="1" branch="False" />
-            <line number="249" hits="1" branch="False" />
-            <line number="250" hits="1" branch="False" />
-            <line number="253" hits="1" branch="False" />
-            <line number="256" hits="1" branch="False" />
-            <line number="257" hits="1" branch="False" />
-            <line number="258" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsBadRequest_WhenRequestIsNull&gt;d__14" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="198" hits="1" branch="False" />
-                <line number="200" hits="1" branch="False" />
-                <line number="203" hits="1" branch="False" />
-                <line number="206" hits="1" branch="False" />
-                <line number="207" hits="1" branch="False" />
-                <line number="208" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="198" hits="1" branch="False" />
-            <line number="200" hits="1" branch="False" />
-            <line number="203" hits="1" branch="False" />
-            <line number="206" hits="1" branch="False" />
-            <line number="207" hits="1" branch="False" />
-            <line number="208" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsCreatedAtAction_WhenUserIsCreated&gt;d__13" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="181" hits="1" branch="False" />
-                <line number="183" hits="1" branch="False" />
-                <line number="184" hits="1" branch="False" />
                 <line number="185" hits="1" branch="False" />
+                <line number="187" hits="1" branch="False" />
                 <line number="188" hits="1" branch="False" />
-                <line number="191" hits="1" branch="False" />
+                <line number="189" hits="1" branch="False" />
                 <line number="192" hits="1" branch="False" />
-                <line number="193" hits="1" branch="False" />
-                <line number="194" hits="1" branch="False" />
+                <line number="195" hits="1" branch="False" />
+                <line number="196" hits="1" branch="False" />
+                <line number="197" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="181" hits="1" branch="False" />
-            <line number="183" hits="1" branch="False" />
-            <line number="184" hits="1" branch="False" />
             <line number="185" hits="1" branch="False" />
+            <line number="187" hits="1" branch="False" />
             <line number="188" hits="1" branch="False" />
-            <line number="191" hits="1" branch="False" />
+            <line number="189" hits="1" branch="False" />
             <line number="192" hits="1" branch="False" />
-            <line number="193" hits="1" branch="False" />
-            <line number="194" hits="1" branch="False" />
+            <line number="195" hits="1" branch="False" />
+            <line number="196" hits="1" branch="False" />
+            <line number="197" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsInternalServerError_WhenExceptionIsThrown&gt;d__15" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsBadRequest_WhenRequestIsNull&gt;d__10" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="212" hits="1" branch="False" />
-                <line number="214" hits="1" branch="False" />
-                <line number="215" hits="1" branch="False" />
-                <line number="218" hits="1" branch="False" />
-                <line number="221" hits="1" branch="False" />
-                <line number="222" hits="1" branch="False" />
-                <line number="223" hits="1" branch="False" />
-                <line number="224" hits="1" branch="False" />
+                <line number="137" hits="1" branch="False" />
+                <line number="139" hits="1" branch="False" />
+                <line number="142" hits="1" branch="False" />
+                <line number="145" hits="1" branch="False" />
+                <line number="146" hits="1" branch="False" />
+                <line number="147" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="212" hits="1" branch="False" />
-            <line number="214" hits="1" branch="False" />
-            <line number="215" hits="1" branch="False" />
-            <line number="218" hits="1" branch="False" />
-            <line number="221" hits="1" branch="False" />
-            <line number="222" hits="1" branch="False" />
-            <line number="223" hits="1" branch="False" />
-            <line number="224" hits="1" branch="False" />
+            <line number="137" hits="1" branch="False" />
+            <line number="139" hits="1" branch="False" />
+            <line number="142" hits="1" branch="False" />
+            <line number="145" hits="1" branch="False" />
+            <line number="146" hits="1" branch="False" />
+            <line number="147" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsBadRequest_WhenIdDoesNotMatchUserId&gt;d__11" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsCreatedAtAction_WhenUserIsCreated&gt;d__9" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="149" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="122" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="124" hits="1" branch="False" />
+                <line number="127" hits="1" branch="False" />
+                <line number="130" hits="1" branch="False" />
+                <line number="131" hits="1" branch="False" />
+                <line number="132" hits="1" branch="False" />
+                <line number="133" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="120" hits="1" branch="False" />
+            <line number="122" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="124" hits="1" branch="False" />
+            <line number="127" hits="1" branch="False" />
+            <line number="130" hits="1" branch="False" />
+            <line number="131" hits="1" branch="False" />
+            <line number="132" hits="1" branch="False" />
+            <line number="133" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PostUser_ReturnsInternalServerError_WhenExceptionIsThrown&gt;d__11" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
                 <line number="151" hits="1" branch="False" />
-                <line number="152" hits="1" branch="False" />
-                <line number="155" hits="1" branch="False" />
-                <line number="158" hits="1" branch="False" />
-                <line number="159" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="149" hits="1" branch="False" />
-            <line number="151" hits="1" branch="False" />
-            <line number="152" hits="1" branch="False" />
-            <line number="155" hits="1" branch="False" />
-            <line number="158" hits="1" branch="False" />
-            <line number="159" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsInternalServerError_WhenExceptionIsThrown&gt;d__12" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
+                <line number="153" hits="1" branch="False" />
+                <line number="154" hits="1" branch="False" />
+                <line number="157" hits="1" branch="False" />
+                <line number="160" hits="1" branch="False" />
+                <line number="161" hits="1" branch="False" />
+                <line number="162" hits="1" branch="False" />
                 <line number="163" hits="1" branch="False" />
-                <line number="165" hits="1" branch="False" />
-                <line number="166" hits="1" branch="False" />
-                <line number="167" hits="1" branch="False" />
-                <line number="170" hits="1" branch="False" />
-                <line number="173" hits="1" branch="False" />
-                <line number="174" hits="1" branch="False" />
-                <line number="175" hits="1" branch="False" />
-                <line number="176" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="151" hits="1" branch="False" />
+            <line number="153" hits="1" branch="False" />
+            <line number="154" hits="1" branch="False" />
+            <line number="157" hits="1" branch="False" />
+            <line number="160" hits="1" branch="False" />
+            <line number="161" hits="1" branch="False" />
+            <line number="162" hits="1" branch="False" />
             <line number="163" hits="1" branch="False" />
-            <line number="165" hits="1" branch="False" />
-            <line number="166" hits="1" branch="False" />
-            <line number="167" hits="1" branch="False" />
-            <line number="170" hits="1" branch="False" />
-            <line number="173" hits="1" branch="False" />
-            <line number="174" hits="1" branch="False" />
-            <line number="175" hits="1" branch="False" />
-            <line number="176" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsNoContent_WhenUpdateIsSuccessful&gt;d__9" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="0.5" complexity="2">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsBadRequest_WhenUpdateFails&gt;d__19" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="279" hits="1" branch="False" />
+                <line number="281" hits="1" branch="False" />
+                <line number="282" hits="1" branch="False" />
+                <line number="283" hits="1" branch="False" />
+                <line number="285" hits="1" branch="False" />
+                <line number="286" hits="1" branch="False" />
+                <line number="289" hits="1" branch="False" />
+                <line number="292" hits="1" branch="False" />
+                <line number="293" hits="1" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="688" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="294" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="279" hits="1" branch="False" />
+            <line number="281" hits="1" branch="False" />
+            <line number="282" hits="1" branch="False" />
+            <line number="283" hits="1" branch="False" />
+            <line number="285" hits="1" branch="False" />
+            <line number="286" hits="1" branch="False" />
+            <line number="289" hits="1" branch="False" />
+            <line number="292" hits="1" branch="False" />
+            <line number="293" hits="1" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="688" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="294" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsInternalServerError_WhenExceptionOccurs&gt;d__20" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="0.5" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="118" hits="1" branch="False" />
-                <line number="120" hits="1" branch="False" />
-                <line number="121" hits="1" branch="False" />
-                <line number="122" hits="1" branch="False" />
-                <line number="125" hits="1" branch="False" />
-                <line number="128" hits="1" branch="False" />
-                <line number="129" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="297" hits="1" branch="False" />
+                <line number="299" hits="1" branch="False" />
+                <line number="300" hits="1" branch="False" />
+                <line number="302" hits="1" branch="False" />
+                <line number="305" hits="1" branch="False" />
+                <line number="308" hits="1" branch="False" />
+                <line number="309" hits="1" branch="False" />
+                <line number="310" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="500" type="jump" coverage="50%" />
+                    <condition number="536" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="130" hits="1" branch="False" />
+                <line number="311" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="118" hits="1" branch="False" />
-            <line number="120" hits="1" branch="False" />
-            <line number="121" hits="1" branch="False" />
-            <line number="122" hits="1" branch="False" />
-            <line number="125" hits="1" branch="False" />
-            <line number="128" hits="1" branch="False" />
-            <line number="129" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="297" hits="1" branch="False" />
+            <line number="299" hits="1" branch="False" />
+            <line number="300" hits="1" branch="False" />
+            <line number="302" hits="1" branch="False" />
+            <line number="305" hits="1" branch="False" />
+            <line number="308" hits="1" branch="False" />
+            <line number="309" hits="1" branch="False" />
+            <line number="310" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="500" type="jump" coverage="50%" />
+                <condition number="536" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="130" hits="1" branch="False" />
+            <line number="311" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsNotFound_WhenUserDoesNotExist&gt;d__10" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsNoContent_WhenUpdateIsSuccessful&gt;d__17" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="0.5" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="134" hits="1" branch="False" />
-                <line number="136" hits="1" branch="False" />
-                <line number="137" hits="1" branch="False" />
-                <line number="138" hits="1" branch="False" />
-                <line number="141" hits="1" branch="False" />
-                <line number="144" hits="1" branch="False" />
-                <line number="145" hits="1" branch="False" />
+                <line number="245" hits="1" branch="False" />
+                <line number="247" hits="1" branch="False" />
+                <line number="248" hits="1" branch="False" />
+                <line number="249" hits="1" branch="False" />
+                <line number="251" hits="1" branch="False" />
+                <line number="252" hits="1" branch="False" />
+                <line number="255" hits="1" branch="False" />
+                <line number="258" hits="1" branch="False" />
+                <line number="259" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="662" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="260" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="134" hits="1" branch="False" />
-            <line number="136" hits="1" branch="False" />
-            <line number="137" hits="1" branch="False" />
-            <line number="138" hits="1" branch="False" />
-            <line number="141" hits="1" branch="False" />
-            <line number="144" hits="1" branch="False" />
-            <line number="145" hits="1" branch="False" />
+            <line number="245" hits="1" branch="False" />
+            <line number="247" hits="1" branch="False" />
+            <line number="248" hits="1" branch="False" />
+            <line number="249" hits="1" branch="False" />
+            <line number="251" hits="1" branch="False" />
+            <line number="252" hits="1" branch="False" />
+            <line number="255" hits="1" branch="False" />
+            <line number="258" hits="1" branch="False" />
+            <line number="259" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="662" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="260" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FindexiumApi.Tests.UserControllerTests/&lt;PutUser_ReturnsNotFound_WhenUserDoesNotExist&gt;d__18" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="263" hits="1" branch="False" />
+                <line number="265" hits="1" branch="False" />
+                <line number="266" hits="1" branch="False" />
+                <line number="268" hits="1" branch="False" />
+                <line number="271" hits="1" branch="False" />
+                <line number="274" hits="1" branch="False" />
+                <line number="275" hits="1" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="485" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="276" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="263" hits="1" branch="False" />
+            <line number="265" hits="1" branch="False" />
+            <line number="266" hits="1" branch="False" />
+            <line number="268" hits="1" branch="False" />
+            <line number="271" hits="1" branch="False" />
+            <line number="274" hits="1" branch="False" />
+            <line number="275" hits="1" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="485" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="276" hits="1" branch="False" />
           </lines>
         </class>
         <class name="FindexiumApi.tests.BidControllerTests" filename="source\repos\Back-end.NET_API_REST\FindexiumApi.tests\BidControllerTests.cs" line-rate="1" branch-rate="1" complexity="1">
