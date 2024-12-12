@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-
+﻿using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
-using Findexium.Domain.Models;
-using Findexium.Api.Models;
 using Microsoft.AspNetCore.Authorization;
-using Findexium.Domain.Services;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace Findexium.Api.Controllers

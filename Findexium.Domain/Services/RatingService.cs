@@ -1,10 +1,5 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Findexium.Domain.Services
 {

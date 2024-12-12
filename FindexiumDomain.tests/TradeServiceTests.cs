@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Findexium.Domain.Interfaces;
+﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Domain.Services;
 using Moq;
-using Xunit;
 
 
 namespace FindexiumDomain.tests

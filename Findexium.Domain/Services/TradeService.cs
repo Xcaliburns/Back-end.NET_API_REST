@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using Findexium.Domain.Interfaces;
+﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 
 namespace Findexium.Domain.Services

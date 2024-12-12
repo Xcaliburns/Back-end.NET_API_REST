@@ -189,3 +189,20 @@ WHERE [a].[UserId] = @__userId_0
 2024-12-12 12:06:41.218 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
 2024-12-12 12:06:41.225 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 1508.447ms
 2024-12-12 12:18:46.385 +01:00 [INF] Application is shutting down...
+2024-12-12 13:52:15.225 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-12 13:52:15.575 +01:00 [INF] Now listening on: https://localhost:7210
+2024-12-12 13:52:15.576 +01:00 [INF] Now listening on: http://localhost:5267
+2024-12-12 13:52:15.625 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-12 13:52:15.626 +01:00 [INF] Hosting environment: Development
+2024-12-12 13:52:15.627 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-12-12 13:52:16.585 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-12-12 13:52:16.865 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 281.0151ms
+2024-12-12 13:52:16.878 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-12-12 13:52:16.879 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-12-12 13:52:16.883 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-12 13:52:16.886 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 6.5768ms
+2024-12-12 13:52:16.922 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 39.2264ms
+2024-12-12 13:52:16.963 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.3506ms
+2024-12-12 13:52:17.083 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-12-12 13:52:17.349 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 265.255ms
+2024-12-12 13:52:35.221 +01:00 [INF] Application is shutting down...

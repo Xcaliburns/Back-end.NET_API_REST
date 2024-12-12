@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Findexium.Api.Controllers;
+﻿using Findexium.Api.Controllers;
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
@@ -8,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Xunit;
 
 namespace FindexiumApi.tests
 {
@@ -88,16 +85,16 @@ namespace FindexiumApi.tests
             // Mocking the service to return ruleNameResponse when GetRuleByIdAsync is called
             //  _mockRuleNameService.Setup(service => service.GetRuleByIdAsync(It.IsAny<int>()))  // Match any integer input
             _mockRuleNameService.Setup(service => service.GetRuleByIdAsync(1))  
-                .ReturnsAsync(ruleName); // Return the mocked RuleNameResponse
+                .ReturnsAsync(ruleName); 
 
             // Act
             var result = await _mockRuleNameController.GetRuleName(1);
 
             // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result.Result); // Check that it's an OkObjectResult
-            var returnRuleNameResponse = Assert.IsType<RuleNameResponse>(okResult.Value); // Ensure it's a RuleNameResponse
+            var okResult = Assert.IsType<OkObjectResult>(result.Result); 
+            var returnRuleNameResponse = Assert.IsType<RuleNameResponse>(okResult.Value); 
 
-            // Validate the returned RuleNameResponse
+           
             Assert.Equal("Rule1", returnRuleNameResponse.Name);
             Assert.Equal(1, returnRuleNameResponse.Id);
             Assert.Equal("Rule1 Description", returnRuleNameResponse.Description);

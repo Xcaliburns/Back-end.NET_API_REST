@@ -1,6 +1,5 @@
 ﻿using Findexium.Api.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using Xunit;
 
 namespace FindexiumApi.tests
 {

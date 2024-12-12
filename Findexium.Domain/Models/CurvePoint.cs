@@ -1,5 +1,3 @@
-using System;
-
 namespace Findexium.Domain.Models
 {
     public class CurvePoint

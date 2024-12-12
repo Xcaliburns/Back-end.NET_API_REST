@@ -253,9 +253,7 @@ namespace FindexiumInfrastructure.tests
                 var exception = await Assert.ThrowsAsync<KeyNotFoundException>(() => repository.UpdateAsync(1, bidList));
                 Assert.Equal("Bid not found", exception.Message);
             }
-        }
-
-       
+        }   
 
       
 

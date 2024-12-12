@@ -54,7 +54,7 @@ namespace Findexium.Infrastructure.Repositories
         {
             try
             {
-                // Check if the role "User" exists, if not, create it
+                
                 if (!await _roleManager.RoleExistsAsync("User"))
                 {
                     var roleResult = await _roleManager.CreateAsync(new IdentityRole("User"));
@@ -64,17 +64,17 @@ namespace Findexium.Infrastructure.Repositories
                     }
                 }
 
-                // Ensure the password is not null
+                
                 var password = user.PasswordHash ?? throw new ArgumentNullException(nameof(user.PasswordHash), "Password cannot be null.");
 
-                // Create the user
+                
                 var result = await _userManager.CreateAsync(user, password);
                 if (!result.Succeeded)
                 {
                     throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
                 }
 
-                // Add the default "User" role to the user
+                
                 var roleAddResult = await AddUserToRoleAssync(user, "User");
                 if (!roleAddResult.Succeeded)
                 {
@@ -114,7 +114,7 @@ namespace Findexium.Infrastructure.Repositories
                 existingUser.UserName = user.UserName ?? existingUser.UserName;
                 existingUser.Fullname = user.Fullname ?? existingUser.Fullname;
 
-                // Hash the new password if provided
+                
                 if (!string.IsNullOrEmpty(user.PasswordHash))
                 {
                     existingUser.PasswordHash = _userManager.PasswordHasher.HashPassword(existingUser, user.PasswordHash);
@@ -173,7 +173,7 @@ namespace Findexium.Infrastructure.Repositories
         {
             try
             {
-                // Check if the role exists, if not, create it
+                
                 if (!await _roleManager.RoleExistsAsync(roleName))
                 {
                     var roleResult = await _roleManager.CreateAsync(new IdentityRole(roleName));

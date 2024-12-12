@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 
 namespace Findexium.Infrastructure.Models
-{//TODO revoir cette classe avec Laala
+{
     public class UsersDto
     {
         public int Id { get; internal set; }
@@ -25,9 +25,9 @@ namespace Findexium.Infrastructure.Models
                 Fullname = FullName,
             };
 
-            // Hash the password using UserManager to ensure it is always secured
+
             user.PasswordHash = userManager.PasswordHasher.HashPassword(user, Password);
-        //    user.PasswordHash = userManager.PasswordHasher.HashPassword(user, PasswordHash);
+
             return user;
         }
     }

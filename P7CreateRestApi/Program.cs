@@ -56,7 +56,7 @@ builder.Services.AddDbContext<LocalDbContext>(options =>
 
 // Register Identity services
 builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddRoles<IdentityRole>() // Add this line to enable roles
+    .AddRoles<IdentityRole>() 
     .AddEntityFrameworkStores<LocalDbContext>()
     .AddDefaultTokenProviders();
 

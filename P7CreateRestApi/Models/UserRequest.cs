@@ -5,7 +5,7 @@ namespace Findexium.Api.Models
 {
     public class UserRequest
     {
-        //les options de validation concernant un nom deja existants ou le format sont gérées avec identity, on retrouve les options de mots de passe dans program.cs
+        
         [Required]
         [StringLength(50, ErrorMessage = "Username cannot be longer than 50 characters.")]
         public string UserName { get; set; }
