@@ -1,4 +1,5 @@
 ﻿using Findexium.Api.Models;
+using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Domain.Services;
 using Microsoft.AspNetCore.Identity;
@@ -17,10 +18,10 @@ namespace Findexium.Api.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly AuthService _authService;
+        private readonly IAuthService _authService;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IConfiguration configuration, AuthService authService, ILogger<AuthController> logger)
+        public AuthController(IConfiguration configuration, IAuthService authService, ILogger<AuthController> logger)
         {
             _configuration = configuration;
             _authService = authService;
