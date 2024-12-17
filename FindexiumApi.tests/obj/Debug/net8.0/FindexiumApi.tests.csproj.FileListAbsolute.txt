@@ -1,4 +1,10 @@
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin\Debug\net8.0\CoverletSourceRootsMapping_FindexiumApi.tests
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.csproj.AssemblyReference.cache
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.AssemblyInfoInputs.cache
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.AssemblyInfo.cs
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.csproj.CoreCompileInputs.cache
+C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.sourcelink.json
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin\Debug\net8.0\testhost.dll
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin\Debug\net8.0\Findexium.Api.deps.json
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin\Debug\net8.0\Findexium.Api.runtimeconfig.json
@@ -348,12 +354,6 @@ C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin\Debug\net8.0\Findexium.Domain.pdb
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin\Debug\net8.0\Findexium.Infrastructure.pdb
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\bin\Debug\net8.0\Findexium.Api.pdb
-C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.csproj.AssemblyReference.cache
-C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.AssemblyInfoInputs.cache
-C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.AssemblyInfo.cs
-C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.csproj.CoreCompileInputs.cache
-C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.sourcelink.json
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\Findexiu.6740A825.Up2Date
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\FindexiumApi.tests.dll
 C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\FindexiumApi.tests\obj\Debug\net8.0\refint\FindexiumApi.tests.dll
