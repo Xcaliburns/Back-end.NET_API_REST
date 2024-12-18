@@ -1,8 +1,5 @@
 ﻿using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
-using Findexium.Domain.Models;
-using Findexium.Domain.Services;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -12,7 +9,7 @@ using System.Text;
 namespace Findexium.Api.Controllers
 {
 
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase

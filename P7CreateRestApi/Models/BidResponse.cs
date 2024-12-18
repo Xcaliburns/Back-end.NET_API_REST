@@ -5,6 +5,7 @@ namespace Findexium.Api.Models
 {
     public class BidResponse
     {
+      
         public int BidListId { get; set; }
 
         [Required]
