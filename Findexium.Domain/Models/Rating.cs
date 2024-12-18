@@ -1,5 +1,5 @@
 
-namespace Findexium.Domain.Models // namespace Dot.Net.WebApi.Controllers.Domain Correction effectuée
+namespace Findexium.Domain.Models 
 {
     public class Rating
     {

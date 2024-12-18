@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Findexium.Domain.Interfaces;
+﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Findexium.Domain.Services;
-using Findexium.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Xunit;
 
 namespace FindexiumDomain.tests
 {
@@ -248,8 +243,6 @@ namespace FindexiumDomain.tests
             Assert.Equal(exception, ex);
          
         }
-
-      
 
        
 

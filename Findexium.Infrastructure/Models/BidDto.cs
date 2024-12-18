@@ -11,7 +11,7 @@ namespace Findexium.Infrastructure.Models
     public class BidDto
     {
        
-        public int BidListId { get; set; } // Define this as the primary key
+        public int BidListId { get; set; } 
         public string Account { get; set; }
         public string BidType { get; set; }
         public double? BidQuantity { get; set; }
@@ -35,7 +35,7 @@ namespace Findexium.Infrastructure.Models
         public string? Side { get; set; }
 
         public BidDto(
-          //  int bidListId,
+          
             string account,
             string bidType,
             double? bidQuantity,
@@ -58,7 +58,7 @@ namespace Findexium.Infrastructure.Models
             string? sourceListId,
             string? side)
         {
-          // BidListId = bidListId;
+          
             Account = account;
             BidType = bidType;
             BidQuantity = bidQuantity;

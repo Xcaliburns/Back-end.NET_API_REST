@@ -1,5 +1,3 @@
-using System;
-
 namespace Findexium.Domain.Models
 {
     public class Trade
@@ -10,9 +8,7 @@ namespace Findexium.Domain.Models
         public double? BuyQuantity { get; set; }
         public double? SellQuantity { get; set; }
         public double? BuyPrice { get; set; }
-        public double? SellPrice { get; set; }
-      //  public string? BuyCurrency { get; set; }
-     //   public string? SellCurrency { get; set; }
+        public double? SellPrice { get; set; }    
         public DateTime? TradeDate { get; set; }
         public string TradeSecurity { get; set; }
         public string TradeStatus { get; set; }

@@ -1,6 +1,5 @@
 ﻿using Findexium.Api.Models;
-using Findexium.Domain.Models;
-using Microsoft.AspNetCore.Identity;
+using Findexium.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -10,19 +9,19 @@ using System.Text;
 namespace Findexium.Api.Controllers
 {
 
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly UserManager<User> _userManager;
+        private readonly IAuthService _authService;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IConfiguration configuration, UserManager<User> userManager, ILogger<AuthController> logger)
+        public AuthController(IConfiguration configuration, IAuthService authService, ILogger<AuthController> logger)
         {
             _configuration = configuration;
-            _userManager = userManager;
+            _authService = authService;
             _logger = logger;
         }
 
@@ -33,20 +32,19 @@ namespace Findexium.Api.Controllers
             {
                 _logger.LogInformation("Attempting to log in user with login: {Login}", loginRequest.Login);
 
-                // Validation des informations d'identification directement dans le contrôleur
-                var user = await _userManager.FindByNameAsync(loginRequest.Login);
-                if (user != null && await _userManager.CheckPasswordAsync(user, loginRequest.Password))
+                var user = await _authService.ValidateUserAsync(loginRequest.Login, loginRequest.Password);
+                if (user != null)
                 {
-                    var userRoles = await _userManager.GetRolesAsync(user);
+                    var userRoles = await _authService.GetUserRolesAsync(user);
                     var tokenHandler = new JwtSecurityTokenHandler();
                     var key = Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]);
                     var tokenDescriptor = new SecurityTokenDescriptor
                     {
                         Subject = new ClaimsIdentity(new[]
                         {
-                                new Claim(ClaimTypes.Name, user.UserName),
-                                new Claim(ClaimTypes.Role, userRoles.FirstOrDefault() ?? "User") // Assuming a single role for simplicity
-                            }),
+                            new Claim(ClaimTypes.Name, user.UserName),
+                            new Claim(ClaimTypes.Role, userRoles.FirstOrDefault() ?? "User")
+                        }),
                         Expires = DateTime.UtcNow.AddHours(1),
                         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                         Issuer = _configuration["Jwt:Issuer"],

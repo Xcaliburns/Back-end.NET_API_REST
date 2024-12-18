@@ -1,11 +1,16 @@
-﻿namespace Findexium.Api.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Findexium.Api.Models
 {
     public class LoginRequest
     {
-        //TODO: verifier s'il faut le modifier (login , mail, username ...)
-        //TODO : peut etre que le Login devait etre le userName au lieu du mail
 
+        [Required(ErrorMessage = "Nom d'utilisateur requis.")]
+        [Display(Name = "Utilisateur")]
         public string Login { get; set; }
+
+        [Required(ErrorMessage = "mot de passe requis.")]
+        [Display(Name = "Mot de passe")]       
         public string Password { get; set; }
     }
 }

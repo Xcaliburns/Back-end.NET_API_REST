@@ -1,9 +1,7 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
-using Findexium.Domain.Services;
 using Findexium.Infrastructure.Data;
 using Findexium.Infrastructure.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 

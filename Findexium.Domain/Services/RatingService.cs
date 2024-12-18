@@ -1,10 +1,5 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Findexium.Domain.Services
 {
@@ -25,7 +20,7 @@ namespace Findexium.Domain.Services
             }
             catch (Exception ex)
             {
-                // Log the exception
+               
                 throw new Exception("An error occurred while retrieving all ratings.", ex);
             }
         }
@@ -38,7 +33,7 @@ namespace Findexium.Domain.Services
             }
             catch (Exception ex)
             {
-                // Log the exception
+              
                 throw new Exception($"An error occurred while retrieving the rating with id {id}.", ex);
             }
         }
@@ -51,7 +46,7 @@ namespace Findexium.Domain.Services
             }
             catch (Exception ex)
             {
-                // Log the exception
+                
                 throw new Exception("An error occurred while adding a new rating.", ex);
             }
         }
@@ -64,7 +59,7 @@ namespace Findexium.Domain.Services
             }
             catch (Exception ex)
             {
-                // Log the exception
+                
                 throw new Exception($"An error occurred while updating the rating with id {rating.Id}.", ex);
             }
         }
@@ -77,7 +72,7 @@ namespace Findexium.Domain.Services
             }
             catch (Exception ex)
             {
-                // Log the exception
+                
                 throw new Exception($"An error occurred while deleting the rating with id {id}.", ex);
             }
         }

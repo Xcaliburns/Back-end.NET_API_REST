@@ -56,7 +56,7 @@ builder.Services.AddDbContext<LocalDbContext>(options =>
 
 // Register Identity services
 builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddRoles<IdentityRole>() // Add this line to enable roles
+    .AddRoles<IdentityRole>() 
     .AddEntityFrameworkStores<LocalDbContext>()
     .AddDefaultTokenProviders();
 
@@ -73,6 +73,8 @@ builder.Services.AddScoped<ITradeRepository, TradeRepository>();
 builder.Services.AddScoped<ITradeService, TradeService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // Register HttpClient with default handler
 builder.Services.AddHttpClient("DefaultClient");

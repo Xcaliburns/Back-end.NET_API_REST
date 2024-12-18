@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace Findexium.Domain.Models
 {
     public class BidList

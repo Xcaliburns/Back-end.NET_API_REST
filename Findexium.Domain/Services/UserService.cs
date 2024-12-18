@@ -57,7 +57,7 @@ namespace Findexium.Domain.Services
                 return IdentityResult.Failed(new IdentityError { Description = "Username already exists." });
             }
 
-            // Create the user using the repository
+           
             try
             {
                 user.PasswordHash = password; // Set the password hash

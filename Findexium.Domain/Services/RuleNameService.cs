@@ -1,10 +1,5 @@
 ﻿using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Findexium.Domain.Services
 {
@@ -92,7 +87,7 @@ namespace Findexium.Domain.Services
                 await _ruleNameRepository.DeleteAsync(id);
             }
             catch (Exception ex)
-           // when (!(ex is InvalidOperationException))
+         
             {
                 throw new ApplicationException($"An error occurred while deleting the rule name with ID {id}.", ex);
             }

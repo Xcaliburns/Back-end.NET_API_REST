@@ -1,16 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using System.Threading.Tasks;
-using Findexium.Api.Controllers;
+﻿using Findexium.Api.Controllers;
 using Findexium.Api.Models;
 using Findexium.Domain.Interfaces;
 using Findexium.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Xunit;
 
 namespace FindexiumApi.tests
 {

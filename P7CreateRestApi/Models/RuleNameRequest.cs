@@ -1,5 +1,6 @@
 ﻿using Findexium.Domain.Models;
 using System.ComponentModel.DataAnnotations;
+
 namespace Findexium.Api.Models
 {
     public class RuleNameRequest

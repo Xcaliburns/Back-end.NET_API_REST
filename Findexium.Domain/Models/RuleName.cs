@@ -2,7 +2,7 @@ namespace Findexium.Domain.Models
 {
     public class RuleName
     {
-        // TODO: Map columns in data table RULENAME with corresponding fields
+        
 
         public int Id { get; set; }
         public string Name { get; set; }

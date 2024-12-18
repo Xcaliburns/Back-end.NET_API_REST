@@ -68,7 +68,7 @@ namespace Findexium.Infrastructure.Repositories
             var ratingDto = await _context.Ratings.FindAsync(rating.Id);
             if (ratingDto != null)
             {
-                // Modification for the test _context.Entry(rating).State = EntityState.Modified;
+                
                 ratingDto.MoodysRating = rating.MoodysRating;
                 ratingDto.SandPRating = rating.SandPRating;
                 ratingDto.FitchRating = rating.FitchRating;

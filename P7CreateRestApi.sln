@@ -20,8 +20,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumApi.tests", "Finde
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumDomain.tests", "FindexiumDomain.tests\FindexiumDomain.tests.csproj", "{3FD53BFB-B0D5-4D84-9509-A5944D472A51}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumInfrastructure.tests", "FindexiumInfrastructure.tests\FindexiumInfrastructure.tests.csproj", "{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,10 +46,6 @@ Global
 		{3FD53BFB-B0D5-4D84-9509-A5944D472A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FD53BFB-B0D5-4D84-9509-A5944D472A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FD53BFB-B0D5-4D84-9509-A5944D472A51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,7 +56,6 @@ Global
 		{2AACDA51-F0FF-430E-90B3-3DB182183C10} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
 		{3E170EC9-6194-4E56-A6D5-69DB6FA88D38} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
 		{3FD53BFB-B0D5-4D84-9509-A5944D472A51} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
-		{AB9B37EE-81C4-415C-9F3C-69D44E9B0EEE} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {736FFB93-FCD6-4284-83EA-2D51FC805936}
