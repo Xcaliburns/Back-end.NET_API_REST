@@ -1,5 +1,4 @@
 ﻿using Findexium.Domain.Models;
-//using Microsoft.OpenApi.Attributes;
 using System.ComponentModel.DataAnnotations;
 
 namespace Findexium.Api.Models

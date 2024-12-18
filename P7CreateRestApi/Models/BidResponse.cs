@@ -8,10 +8,10 @@ namespace Findexium.Api.Models
       
         public int BidListId { get; set; }
 
-        [Required]
+       
         public string Account { get; set; } = string.Empty;
 
-        [Required]
+       
         public string BidType { get; set; } = string.Empty;
 
         public double? BidQuantity { get; set; }

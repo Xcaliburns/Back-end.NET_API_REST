@@ -87,7 +87,7 @@ namespace Findexium.Domain.Services
                 await _ruleNameRepository.DeleteAsync(id);
             }
             catch (Exception ex)
-           // when (!(ex is InvalidOperationException))
+         
             {
                 throw new ApplicationException($"An error occurred while deleting the rule name with ID {id}.", ex);
             }
