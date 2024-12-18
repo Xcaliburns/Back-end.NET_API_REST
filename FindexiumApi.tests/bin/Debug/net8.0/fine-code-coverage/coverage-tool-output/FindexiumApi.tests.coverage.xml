@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.4637" branch-rate="0.1005" version="1.9" timestamp="1734512926" lines-covered="2285" lines-valid="4927" branches-covered="79" branches-valid="786">
+<coverage line-rate="0.4637" branch-rate="0.1005" version="1.9" timestamp="1734513512" lines-covered="2285" lines-valid="4927" branches-covered="79" branches-valid="786">
   <sources>
     <source>C:\Users\David Abruzzo\</source>
   </sources>
@@ -9660,68 +9660,68 @@
           <methods>
             <method name=".ctor" signature="(Findexium.Domain.Interfaces.IAuthRepository)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
                 <line number="12" hits="0" branch="False" />
                 <line number="13" hits="0" branch="False" />
-                <line number="14" hits="0" branch="False" />
-                <line number="15" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
             <line number="12" hits="0" branch="False" />
             <line number="13" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.AuthService/&lt;GetUserRolesAsync&gt;d__3" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\AuthService.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
                 <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.AuthService/&lt;ValidateUserAsync&gt;d__2" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\AuthService.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="18" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
-                <line number="20" hits="0" branch="True" condition-coverage="0% (0/4)">
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="True" condition-coverage="0% (0/4)">
                   <conditions>
                     <condition number="195" type="jump" coverage="0%" />
                     <condition number="348" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="21" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
                 <line number="22" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="18" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="20" hits="0" branch="True" condition-coverage="0% (0/4)">
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="True" condition-coverage="0% (0/4)">
               <conditions>
                 <condition number="195" type="jump" coverage="0%" />
                 <condition number="348" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="21" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
             <line number="22" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Findexium.Domain.Services.BidListService" filename="source\repos\Back-end.NET_API_REST\Findexium.Domain\Services\BidListService.cs" line-rate="0" branch-rate="1" complexity="1">
