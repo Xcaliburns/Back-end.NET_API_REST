@@ -1,40 +1,165 @@
-using Dot.Net.WebApi.Domain;
+﻿using Findexium.Api.Models;
+using Findexium.Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
-namespace Dot.Net.WebApi.Controllers
+namespace Findexium.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [Authorize(Roles = "User,Admin")]
     [ApiController]
-    [Route("[controller]")]
+   
     public class BidListController : ControllerBase
     {
-        [HttpGet]
-        [Route("validate")]
-        public IActionResult Validate([FromBody] BidList bidList)
+        private readonly IBidListServices _bidListServices;
+        private readonly ILogger<BidListController> _logger;
+
+        public BidListController(IBidListServices bidListServices, ILogger<BidListController> logger)
         {
-            // TODO: check data valid and save to db, after saving return bid list
-            return Ok();
+            _bidListServices = bidListServices;
+            _logger = logger;
         }
 
+        // GET: api/BidList
         [HttpGet]
-        [Route("update/{id}")]
-        public IActionResult ShowUpdateForm(int id)
+
+        public async Task<ActionResult<IEnumerable<BidResponse>>> GetBids()
         {
-            return Ok();
+            try
+            {
+                _logger.LogInformation("Fetching all bids");
+                var bids = await _bidListServices.GetAllAsync();
+                var bidDtos = bids.Select(b => new BidResponse
+                {
+                    BidListId = b.BidListId,
+                    Account = b.Account,
+                    BidType = b.BidType,
+                    BidQuantity = b.BidQuantity,
+                }).ToList();
+                return Ok(bidDtos);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching all bids");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
 
+        // GET: api/BidLists/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<BidResponse>> GetBid(int id)
+        {
+            try
+            {
+                _logger.LogInformation("Fetching bid with id: {Id}", id);
+                var bid = await _bidListServices.GetByIdAsync(id);
+                if (bid == null)
+                {
+                    _logger.LogWarning("Bid with id: {Id} not found", id);
+                    return NotFound();
+                }
+
+                var bidResponse = new BidResponse
+                {
+                    BidListId = bid.BidListId,
+                    Account = bid.Account,
+                    BidType = bid.BidType,
+                    BidQuantity = bid.BidQuantity
+                };
+
+                return Ok(bidResponse);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching bid with id: {Id}", id);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
+        }
+
+        // PUT: api/BidLists/5
+        [HttpPut("{id}")]
+        [Authorize]
+        public async Task<IActionResult> PutBid(int id, BidRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("Invalid model state for BidRequest");
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                _logger.LogInformation("Updating bid with id: {Id}", id);
+                var existingBid = await _bidListServices.GetByIdAsync(id);
+                if (existingBid == null)
+                {
+                    _logger.LogWarning("Bid with id: {Id} not found", id);
+                    return NotFound();
+                }
+
+                var updatedBid = request.ToBid();
+                updatedBid.BidListId = id; // Ensure the ID remains the same
+
+                await _bidListServices.UpdateAsync(id, updatedBid);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while updating bid with id: {Id}", id);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
+        }
+
+        // POST: api/BidLists
         [HttpPost]
-        [Route("update/{id}")]
-        public IActionResult UpdateBid(int id, [FromBody] BidList bidList)
+        [Authorize]
+        public async Task<IActionResult> PostBidList(BidRequest request)
         {
-            // TODO: check required fields, if valid call service to update Bid and return list Bid
-            return Ok();
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for BidRequest");
+                    return BadRequest(ModelState);
+                }
+                _logger.LogInformation("Creating a new bid");
+                var bid = request.ToBid();
+                await _bidListServices.AddAsync(bid);
+                
+                return Created();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while creating a new bid");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
 
-        [HttpDelete]
-        [Route("{id}")]
-        public IActionResult DeleteBid(int id)
+
+        // DELETE: api/BidLists/5
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteBidList(int id)
         {
-            return Ok();
+            try
+            {
+                _logger.LogInformation("Deleting bid with id: {Id}", id);
+                var bidList = await _bidListServices.GetByIdAsync(id);
+                if (bidList == null)
+                {
+                    _logger.LogWarning("Bid with id: {Id} not found during deletion", id);
+                    return NotFound();
+                }
+
+                await _bidListServices.DeleteAsync(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting bid with id: {Id}", id);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
     }
 }

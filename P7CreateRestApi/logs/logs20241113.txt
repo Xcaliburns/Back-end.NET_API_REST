@@ -1,0 +1,1375 @@
+2024-11-13 09:37:04.838 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 09:37:06.235 +01:00 [INF] Executed DbCommand (55ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:37:06.307 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:37:06.325 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 09:37:06.835 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 09:37:06.836 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 09:37:06.891 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 09:37:06.893 +01:00 [INF] Hosting environment: Development
+2024-11-13 09:37:06.894 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 09:37:07.458 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 09:37:07.697 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 241.273ms
+2024-11-13 09:37:07.704 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 09:37:07.704 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 09:37:07.718 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 09:37:07.723 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 18.5473ms
+2024-11-13 09:37:07.726 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 22.3658ms
+2024-11-13 09:37:07.796 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.579ms
+2024-11-13 09:37:07.969 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 09:37:08.131 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 161.255ms
+2024-11-13 09:37:18.917 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CurvePoints - null null
+2024-11-13 09:37:19.006 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:37:19.022 +01:00 [INF] Route matched with {action = "GetCurvePoints", controller = "CurvePoints", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.CurvePoint]]] GetCurvePoints() on controller Findexium.Api.Controllers.CurvePointsController (Findexium.Api).
+2024-11-13 09:37:19.030 +01:00 [INF] Fetching all curve points
+2024-11-13 09:37:19.095 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AsOfDate], [c].[CreationDate], [c].[CurveId], [c].[CurvePointValue], [c].[Term]
+FROM [CurvePoints] AS [c]
+2024-11-13 09:37:19.124 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.CurvePoint, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 09:37:19.147 +01:00 [INF] Executed action Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api) in 119.534ms
+2024-11-13 09:37:19.148 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:37:19.154 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CurvePoints - 200 null application/json; charset=utf-8 237.1312ms
+2024-11-13 09:37:56.075 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Ratings - null null
+2024-11-13 09:37:56.082 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RatingsController.GetRating (Findexium.Api)'
+2024-11-13 09:37:56.106 +01:00 [INF] Route matched with {action = "GetRating", controller = "Ratings", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.Rating]]] GetRating() on controller Findexium.Api.Controllers.RatingsController (Findexium.Api).
+2024-11-13 09:37:56.110 +01:00 [INF] Getting all ratings
+2024-11-13 09:37:56.129 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[FitchRating], [r].[MoodysRating], [r].[OrderNumber], [r].[SandPRating]
+FROM [Ratings] AS [r]
+2024-11-13 09:37:56.140 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.Rating, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 09:37:56.142 +01:00 [INF] Executed action Findexium.Api.Controllers.RatingsController.GetRating (Findexium.Api) in 34.4449ms
+2024-11-13 09:37:56.143 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RatingsController.GetRating (Findexium.Api)'
+2024-11-13 09:37:56.144 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Ratings - 200 null application/json; charset=utf-8 69.6459ms
+2024-11-13 09:40:35.322 +01:00 [INF] Application is shutting down...
+2024-11-13 09:41:44.754 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 09:41:45.740 +01:00 [INF] Executed DbCommand (43ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:41:45.849 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:41:45.867 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 09:41:46.166 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 09:41:46.168 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 09:41:46.212 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 09:41:46.213 +01:00 [INF] Hosting environment: Development
+2024-11-13 09:41:46.214 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 09:41:46.680 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 09:41:46.892 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 214.0783ms
+2024-11-13 09:41:46.898 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 09:41:46.898 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 09:41:46.907 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 9.3613ms
+2024-11-13 09:41:46.910 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 09:41:46.912 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.4551ms
+2024-11-13 09:41:46.972 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.6492ms
+2024-11-13 09:41:47.053 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 09:41:47.228 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 175.7802ms
+2024-11-13 09:42:03.185 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList/1 - null null
+2024-11-13 09:42:03.239 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api)'
+2024-11-13 09:42:03.256 +01:00 [INF] Route matched with {action = "GetBid", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.BidDtoWithoutId]] GetBid(Int32) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 09:42:03.273 +01:00 [INF] Fetching bid with id: 1
+2024-11-13 09:42:03.360 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+WHERE [b].[BidListId] = @__p_0
+2024-11-13 09:42:03.418 +01:00 [INF] Executing OkObjectResult, writing value of type 'Findexium.Api.Models.BidDtoWithoutId'.
+2024-11-13 09:42:03.444 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api) in 183.0968ms
+2024-11-13 09:42:03.448 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api)'
+2024-11-13 09:42:03.454 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList/1 - 200 null application/json; charset=utf-8 269.4638ms
+2024-11-13 09:42:28.609 +01:00 [INF] Application is shutting down...
+2024-11-13 09:52:59.811 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 09:53:00.798 +01:00 [INF] Executed DbCommand (33ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:53:00.861 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:53:00.875 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 09:53:01.157 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 09:53:01.158 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 09:53:01.198 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 09:53:01.200 +01:00 [INF] Hosting environment: Development
+2024-11-13 09:53:01.200 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 09:53:01.778 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 09:53:01.924 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 147.6956ms
+2024-11-13 09:53:01.933 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 09:53:01.933 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 09:53:01.939 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 6.6264ms
+2024-11-13 09:53:01.942 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 09:53:01.944 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.7927ms
+2024-11-13 09:53:01.985 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.1699ms
+2024-11-13 09:53:02.081 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 09:53:02.226 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 144.5635ms
+2024-11-13 09:53:14.881 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CurvePoints - null null
+2024-11-13 09:53:14.949 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:53:14.963 +01:00 [INF] Route matched with {action = "GetCurvePoints", controller = "CurvePoints", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.CurvePoint]]] GetCurvePoints() on controller Findexium.Api.Controllers.CurvePointsController (Findexium.Api).
+2024-11-13 09:53:14.969 +01:00 [INF] Fetching all curve points
+2024-11-13 09:53:15.034 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AsOfDate], [c].[CreationDate], [c].[CurveId], [c].[CurvePointValue], [c].[Term]
+FROM [CurvePoints] AS [c]
+2024-11-13 09:53:15.063 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.CurvePoint, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 09:53:15.086 +01:00 [INF] Executed action Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api) in 118.5955ms
+2024-11-13 09:53:15.089 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:53:15.095 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CurvePoints - 200 null application/json; charset=utf-8 213.6685ms
+2024-11-13 09:55:46.814 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 09:55:46.823 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.3465ms
+2024-11-13 09:55:46.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 09:55:46.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 09:55:46.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 09:55:46.842 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.5997ms
+2024-11-13 09:55:46.844 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.7167ms
+2024-11-13 09:55:46.862 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.6782ms
+2024-11-13 09:55:46.966 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 09:55:47.002 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.901ms
+2024-11-13 09:55:55.074 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 09:55:56.044 +01:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:55:56.125 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:55:56.147 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 09:55:56.448 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 09:55:56.449 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 09:55:56.491 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 09:55:56.492 +01:00 [INF] Hosting environment: Development
+2024-11-13 09:55:56.493 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 09:55:56.698 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 09:55:56.832 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 137.0258ms
+2024-11-13 09:55:56.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 09:55:56.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 09:55:56.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 09:55:56.846 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 6.709ms
+2024-11-13 09:55:56.858 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 18.6184ms
+2024-11-13 09:55:56.877 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.7762ms
+2024-11-13 09:55:56.933 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 09:55:57.092 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.8008ms
+2024-11-13 09:56:05.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CurvePoints - null null
+2024-11-13 09:56:05.227 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:56:05.241 +01:00 [INF] Route matched with {action = "GetCurvePoints", controller = "CurvePoints", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.CurvePoint]]] GetCurvePoints() on controller Findexium.Api.Controllers.CurvePointsController (Findexium.Api).
+2024-11-13 09:56:05.247 +01:00 [INF] Fetching all curve points
+2024-11-13 09:56:05.324 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AsOfDate], [c].[CreationDate], [c].[CurveId], [c].[CurvePointValue], [c].[Term]
+FROM [CurvePoints] AS [c]
+2024-11-13 09:56:05.352 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.CurvePoint, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 09:56:05.379 +01:00 [INF] Executed action Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api) in 132.7617ms
+2024-11-13 09:56:05.381 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:56:05.387 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CurvePoints - 200 null application/json; charset=utf-8 228.6232ms
+2024-11-13 09:56:16.591 +01:00 [INF] Application is shutting down...
+2024-11-13 09:56:43.364 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 09:56:44.492 +01:00 [INF] Executed DbCommand (37ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:56:44.561 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 09:56:44.571 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 09:56:44.875 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 09:56:44.876 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 09:56:44.916 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 09:56:44.917 +01:00 [INF] Hosting environment: Development
+2024-11-13 09:56:44.918 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 09:56:45.280 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 09:56:45.435 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 154.193ms
+2024-11-13 09:56:45.442 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 09:56:45.442 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 09:56:45.450 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 8.1488ms
+2024-11-13 09:56:45.455 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 09:56:45.460 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 17.9119ms
+2024-11-13 09:56:45.508 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.5139ms
+2024-11-13 09:56:45.597 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 09:56:45.729 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.2039ms
+2024-11-13 09:57:28.556 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CurvePoints - null null
+2024-11-13 09:57:28.646 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:57:28.657 +01:00 [INF] Route matched with {action = "GetCurvePoints", controller = "CurvePoints", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.CurvePoint]]] GetCurvePoints() on controller Findexium.Api.Controllers.CurvePointsController (Findexium.Api).
+2024-11-13 09:57:28.663 +01:00 [INF] Fetching all curve points
+2024-11-13 09:57:28.724 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AsOfDate], [c].[CreationDate], [c].[CurveId], [c].[CurvePointValue], [c].[Term]
+FROM [CurvePoints] AS [c]
+2024-11-13 09:57:28.749 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.CurvePoint, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 09:57:28.769 +01:00 [INF] Executed action Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api) in 106.8941ms
+2024-11-13 09:57:28.770 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 09:57:28.775 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CurvePoints - 200 null application/json; charset=utf-8 219.1076ms
+2024-11-13 09:59:04.962 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 09:59:04.970 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.1266ms
+2024-11-13 09:59:04.982 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 09:59:04.984 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 09:59:04.984 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 09:59:04.986 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.725ms
+2024-11-13 09:59:04.989 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.9158ms
+2024-11-13 09:59:05.009 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.7322ms
+2024-11-13 09:59:05.124 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 09:59:05.180 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.3756ms
+2024-11-13 10:02:05.632 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:02:05.640 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.9156ms
+2024-11-13 10:02:05.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:02:05.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:02:05.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:02:05.653 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 2.4898ms
+2024-11-13 10:02:05.655 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.2663ms
+2024-11-13 10:02:05.663 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.0213ms
+2024-11-13 10:02:05.883 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:02:05.942 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.2871ms
+2024-11-13 10:02:27.198 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:02:28.153 +01:00 [INF] Executed DbCommand (39ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:02:28.220 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:02:28.238 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:02:28.517 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:02:28.518 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:02:28.558 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:02:28.559 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:02:28.560 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:02:28.861 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:02:28.981 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 121.6792ms
+2024-11-13 10:02:28.986 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:02:28.986 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:02:28.986 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:02:28.994 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 8.3581ms
+2024-11-13 10:02:28.995 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 9.3138ms
+2024-11-13 10:02:29.022 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.166ms
+2024-11-13 10:02:29.105 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:02:29.214 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 108.7165ms
+2024-11-13 10:02:44.227 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CurvePoints - null null
+2024-11-13 10:02:44.302 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 10:02:44.316 +01:00 [INF] Route matched with {action = "GetCurvePoints", controller = "CurvePoints", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.CurvePoint]]] GetCurvePoints() on controller Findexium.Api.Controllers.CurvePointsController (Findexium.Api).
+2024-11-13 10:02:44.321 +01:00 [INF] Fetching all curve points
+2024-11-13 10:02:44.387 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AsOfDate], [c].[CreationDate], [c].[CurveId], [c].[CurvePointValue], [c].[Term]
+FROM [CurvePoints] AS [c]
+2024-11-13 10:02:44.416 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.CurvePoint, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 10:02:44.441 +01:00 [INF] Executed action Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api) in 120.6309ms
+2024-11-13 10:02:44.443 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.CurvePointsController.GetCurvePoints (Findexium.Api)'
+2024-11-13 10:02:44.449 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CurvePoints - 200 null application/json; charset=utf-8 222.1055ms
+2024-11-13 10:03:09.602 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:03:09.609 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 6.9613ms
+2024-11-13 10:03:09.623 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:03:09.623 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:03:09.623 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:03:09.625 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 2.6945ms
+2024-11-13 10:03:09.628 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.2794ms
+2024-11-13 10:03:09.643 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.2406ms
+2024-11-13 10:03:09.741 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:03:09.775 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.0385ms
+2024-11-13 10:04:06.913 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:04:07.866 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:04:07.929 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:04:07.943 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:04:08.221 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:04:08.222 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:04:08.261 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:04:08.263 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:04:08.264 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:04:08.521 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:04:08.630 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 109.6677ms
+2024-11-13 10:04:08.637 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:04:08.637 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:04:08.637 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:04:08.646 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 9.5381ms
+2024-11-13 10:04:08.651 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.7051ms
+2024-11-13 10:04:08.674 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.8011ms
+2024-11-13 10:04:08.742 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:04:08.843 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 100.7157ms
+2024-11-13 10:04:24.845 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList/2 - null null
+2024-11-13 10:04:24.893 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api)'
+2024-11-13 10:04:24.909 +01:00 [INF] Route matched with {action = "GetBid", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.BidDtoWithoutId]] GetBid(Int32) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:04:24.920 +01:00 [INF] Fetching bid with id: 2
+2024-11-13 10:04:25.007 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+WHERE [b].[BidListId] = @__p_0
+2024-11-13 10:04:25.065 +01:00 [INF] Executing OkObjectResult, writing value of type 'Findexium.Api.Models.BidDtoWithoutId'.
+2024-11-13 10:04:25.087 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api) in 173.4661ms
+2024-11-13 10:04:25.089 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api)'
+2024-11-13 10:04:25.093 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList/2 - 200 null application/json; charset=utf-8 248.3774ms
+2024-11-13 10:04:38.906 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RuleName - null null
+2024-11-13 10:04:38.913 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api)'
+2024-11-13 10:04:38.922 +01:00 [INF] Route matched with {action = "GetRuleName", controller = "RuleName", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.RuleName]]] GetRuleName() on controller Findexium.Api.Controllers.RuleNameController (Findexium.Api).
+2024-11-13 10:04:38.929 +01:00 [INF] Fetching all rule names
+2024-11-13 10:04:38.961 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Description], [r].[Json], [r].[Name], [r].[SqlPart], [r].[SqlStr], [r].[Template]
+FROM [RuleNames] AS [r]
+2024-11-13 10:04:38.966 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.RuleName, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 10:04:38.968 +01:00 [INF] Executed action Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api) in 43.9492ms
+2024-11-13 10:04:38.969 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RuleNameController.GetRuleName (Findexium.Api)'
+2024-11-13 10:04:38.971 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RuleName - 200 null application/json; charset=utf-8 64.8328ms
+2024-11-13 10:06:47.278 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:06:47.287 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 9.5881ms
+2024-11-13 10:06:47.311 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:06:47.311 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:06:47.311 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:06:47.314 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.6176ms
+2024-11-13 10:06:47.316 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.4754ms
+2024-11-13 10:06:47.325 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.1045ms
+2024-11-13 10:06:47.465 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:06:47.497 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.8664ms
+2024-11-13 10:07:17.886 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Ratings - application/json 102
+2024-11-13 10:07:17.890 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RatingsController.PostRating (Findexium.Api)'
+2024-11-13 10:07:17.896 +01:00 [INF] Route matched with {action = "PostRating", controller = "Ratings", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Domain.Models.Rating]] PostRating(Findexium.Api.Models.RatingRequest) on controller Findexium.Api.Controllers.RatingsController (Findexium.Api).
+2024-11-13 10:07:17.917 +01:00 [INF] Creating a new rating
+2024-11-13 10:07:18.029 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Ratings] ([FitchRating], [MoodysRating], [OrderNumber], [SandPRating])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-11-13 10:07:18.052 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Domain.Models.Rating'.
+2024-11-13 10:07:18.071 +01:00 [INF] Executed action Findexium.Api.Controllers.RatingsController.PostRating (Findexium.Api) in 173.2897ms
+2024-11-13 10:07:18.072 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RatingsController.PostRating (Findexium.Api)'
+2024-11-13 10:07:18.073 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Ratings - 201 null application/json; charset=utf-8 187.4042ms
+2024-11-13 10:08:35.563 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 574
+2024-11-13 10:08:35.571 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:08:35.589 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:08:35.591 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 27.9238ms
+2024-11-13 10:09:34.746 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:09:34.753 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.5074ms
+2024-11-13 10:09:34.793 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:09:34.793 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:09:34.793 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:09:34.797 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.8933ms
+2024-11-13 10:09:34.800 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 7.3493ms
+2024-11-13 10:09:34.814 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.0292ms
+2024-11-13 10:09:34.942 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:09:34.980 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.3953ms
+2024-11-13 10:09:54.484 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:09:55.429 +01:00 [INF] Executed DbCommand (38ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:09:55.495 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:09:55.509 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:09:55.793 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:09:55.794 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:09:55.835 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:09:55.837 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:09:55.838 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:09:56.121 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:09:56.244 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 123.8488ms
+2024-11-13 10:09:56.251 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:09:56.251 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:09:56.251 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:09:56.255 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.3549ms
+2024-11-13 10:09:56.266 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.9497ms
+2024-11-13 10:09:56.291 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.6507ms
+2024-11-13 10:09:56.369 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:09:56.527 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 157.991ms
+2024-11-13 10:10:21.801 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 574
+2024-11-13 10:10:21.867 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:10:21.870 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:10:21.872 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 70.8851ms
+2024-11-13 10:10:25.485 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 574
+2024-11-13 10:10:25.494 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:10:25.499 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:10:25.500 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 14.8115ms
+2024-11-13 10:11:22.934 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:11:23.886 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:11:23.950 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:11:23.967 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:11:24.249 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:11:24.251 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:11:24.291 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:11:24.293 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:11:24.294 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:11:24.728 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:11:24.840 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 112.1879ms
+2024-11-13 10:11:24.849 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:11:24.849 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:11:24.849 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:11:24.855 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 6.2291ms
+2024-11-13 10:11:24.866 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 17.681ms
+2024-11-13 10:11:24.888 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.8678ms
+2024-11-13 10:11:25.026 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:11:25.142 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.9972ms
+2024-11-13 10:13:07.915 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 52
+2024-11-13 10:13:07.973 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:13:07.998 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:13:08.023 +01:00 [INF] Attempting to log in user with login: toto
+2024-11-13 10:13:08.092 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:13:08.155 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:13:08.176 +01:00 [INF] User toto logged in successfully
+2024-11-13 10:13:08.182 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:13:08.190 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 187.3658ms
+2024-11-13 10:13:08.191 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:13:08.196 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 280.4882ms
+2024-11-13 10:13:11.042 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 52
+2024-11-13 10:13:11.050 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:13:11.051 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:13:11.058 +01:00 [INF] Attempting to log in user with login: toto
+2024-11-13 10:13:11.074 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:13:11.087 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:13:11.090 +01:00 [INF] User toto logged in successfully
+2024-11-13 10:13:11.091 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:13:11.092 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 39.4094ms
+2024-11-13 10:13:11.093 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:13:11.095 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 52.4649ms
+2024-11-13 10:13:55.654 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 575
+2024-11-13 10:13:55.663 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:13:55.670 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:13:55.671 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 16.8293ms
+2024-11-13 10:24:42.971 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:24:44.136 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:24:44.205 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:24:44.222 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:24:44.529 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:24:44.531 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:24:44.572 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:24:44.573 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:24:44.574 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:24:45.114 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:24:45.236 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 124.4286ms
+2024-11-13 10:24:45.242 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:24:45.242 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:24:45.242 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:24:45.247 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.2333ms
+2024-11-13 10:24:45.257 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 15.0286ms
+2024-11-13 10:24:45.280 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.9435ms
+2024-11-13 10:24:45.443 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:24:45.577 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.3571ms
+2024-11-13 10:25:07.796 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:25:07.851 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:25:07.854 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:25:07.855 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 59.7278ms
+2024-11-13 10:26:08.595 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 60
+2024-11-13 10:26:08.605 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:26:08.626 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:26:08.652 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:26:08.722 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:26:08.737 +01:00 [WRN] Invalid login attempt for user: admin@example.com
+2024-11-13 10:26:08.745 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-11-13 10:26:08.761 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 130.3801ms
+2024-11-13 10:26:08.763 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:26:08.769 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 401 null application/problem+json; charset=utf-8 173.9979ms
+2024-11-13 10:31:28.083 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 60
+2024-11-13 10:31:28.086 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:31:28.087 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:31:28.108 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:31:28.137 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:31:28.148 +01:00 [WRN] Invalid login attempt for user: admin@example.com
+2024-11-13 10:31:28.149 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-11-13 10:31:28.151 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 47.9142ms
+2024-11-13 10:31:28.152 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:31:28.153 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 401 null application/problem+json; charset=utf-8 69.8482ms
+2024-11-13 10:31:47.119 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 10:31:47.121 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:31:47.123 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:31:47.134 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:31:47.137 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:31:47.192 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:31:47.211 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 10:31:47.213 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:31:47.215 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 90.282ms
+2024-11-13 10:31:47.216 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:31:47.217 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 98.4195ms
+2024-11-13 10:32:15.279 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:32:15.284 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:32:15.285 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:32:15.286 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 6.5738ms
+2024-11-13 10:32:38.999 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:32:39.003 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:32:39.004 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:32:39.005 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 5.8105ms
+2024-11-13 10:33:12.720 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 10:33:12.723 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:33:12.724 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:33:12.726 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:33:12.759 +01:00 [INF] Executed DbCommand (30ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:33:12.779 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:33:12.782 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 10:33:12.782 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:33:12.783 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 57.7838ms
+2024-11-13 10:33:12.784 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:33:12.785 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 64.5267ms
+2024-11-13 10:34:01.363 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:34:01.403 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:34:01'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-13 10:34:01.414 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:34:01'.
+2024-11-13 10:34:01.415 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:34:01.416 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:34:01.417 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 53.8795ms
+2024-11-13 10:34:25.028 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 10:34:25.032 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:34:25'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-13 10:34:25.033 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:34:25'.
+2024-11-13 10:34:25.034 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:34:25.035 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:34:25.037 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:34:25.069 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:34:25.085 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:34:25.087 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 10:34:25.088 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:34:25.089 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 53.5367ms
+2024-11-13 10:34:25.091 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:34:25.092 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 63.2372ms
+2024-11-13 10:35:29.321 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:35:29.324 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:35:29'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-13 10:35:29.326 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:35:29'.
+2024-11-13 10:35:29.327 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:35:29.328 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:35:29.328 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 7.6334ms
+2024-11-13 10:35:55.934 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 10:35:55.937 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:35:55.937 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:35:55.939 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:35:55.948 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:35:55.965 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:35:55.967 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 10:35:55.968 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:35:55.970 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 31.369ms
+2024-11-13 10:35:55.972 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:35:55.973 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 38.332ms
+2024-11-13 10:36:57.940 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:36:57.953 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:36:57.959 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Domain.Models.BidList]] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:36:57.984 +01:00 [INF] Creating a new bid
+2024-11-13 10:36:58.131 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-13 10:36:58.154 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Domain.Models.BidList'.
+2024-11-13 10:36:58.177 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 216.1736ms
+2024-11-13 10:36:58.178 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:36:58.179 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 201 null application/json; charset=utf-8 238.7173ms
+2024-11-13 10:38:40.251 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList - null null
+2024-11-13 10:38:40.254 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 10:38:40.257 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.BidDtoWithoutId]]] GetBids() on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:38:40.279 +01:00 [INF] Fetching all bids
+2024-11-13 10:38:40.305 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2024-11-13 10:38:40.315 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.BidDtoWithoutId, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 10:38:40.322 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api) in 63.5079ms
+2024-11-13 10:38:40.323 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 10:38:40.324 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList - 200 null application/json; charset=utf-8 73.65ms
+2024-11-13 10:39:00.977 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList/2 - null null
+2024-11-13 10:39:00.980 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api)'
+2024-11-13 10:39:00.984 +01:00 [INF] Route matched with {action = "GetBid", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.BidDtoWithoutId]] GetBid(Int32) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:39:00.989 +01:00 [INF] Fetching bid with id: 2
+2024-11-13 10:39:01.018 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+WHERE [b].[BidListId] = @__p_0
+2024-11-13 10:39:01.021 +01:00 [INF] Executing OkObjectResult, writing value of type 'Findexium.Api.Models.BidDtoWithoutId'.
+2024-11-13 10:39:01.023 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api) in 37.3182ms
+2024-11-13 10:39:01.024 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBid (Findexium.Api)'
+2024-11-13 10:39:01.024 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList/2 - 200 null application/json; charset=utf-8 47.2043ms
+2024-11-13 10:43:07.048 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:43:07.057 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.4251ms
+2024-11-13 10:43:07.069 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:43:07.073 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.43ms
+2024-11-13 10:43:07.074 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:43:07.078 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.2935ms
+2024-11-13 10:43:07.078 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:43:07.096 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.507ms
+2024-11-13 10:43:07.368 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:43:07.410 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.0129ms
+2024-11-13 10:43:17.945 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:43:19.256 +01:00 [INF] Executed DbCommand (46ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:43:19.326 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:43:19.341 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:43:19.623 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:43:19.624 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:43:19.672 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:43:19.673 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:43:19.675 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:43:20.111 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:43:20.258 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 146.8185ms
+2024-11-13 10:43:20.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:43:20.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:43:20.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:43:20.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.7868ms
+2024-11-13 10:43:20.277 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 15.6363ms
+2024-11-13 10:43:20.303 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.1059ms
+2024-11-13 10:43:20.392 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:43:20.531 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 139.296ms
+2024-11-13 10:43:32.945 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:43:33.006 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:43:33.010 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:43:33.011 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 66.4733ms
+2024-11-13 10:44:11.269 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 10:44:11.294 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:44:11.315 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:44:11.343 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:44:11.415 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:44:11.476 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:44:11.500 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 10:44:11.505 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:44:11.514 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 193.6856ms
+2024-11-13 10:44:11.516 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:44:11.521 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 252.2217ms
+2024-11-13 10:44:55.388 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 567
+2024-11-13 10:44:55.432 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:44:55.437 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Domain.Models.BidList]] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:44:55.472 +01:00 [INF] Creating a new bid
+2024-11-13 10:44:55.619 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-13 10:44:55.643 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Domain.Models.BidList'.
+2024-11-13 10:44:55.658 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 218.3809ms
+2024-11-13 10:44:55.659 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:44:55.662 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-11-13 10:44:55.681 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-13 10:44:55.691 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 500 null text/plain; charset=utf-8 302.7511ms
+2024-11-13 10:44:55.693 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7210/api/BidList, Response status code: 500
+2024-11-13 10:47:06.383 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:47:06.392 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.8845ms
+2024-11-13 10:47:06.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:47:06.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:47:06.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:47:06.430 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 6.3079ms
+2024-11-13 10:47:06.436 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.1039ms
+2024-11-13 10:47:06.449 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.3865ms
+2024-11-13 10:47:06.675 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:47:06.720 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.3604ms
+2024-11-13 10:47:10.056 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:47:11.027 +01:00 [INF] Executed DbCommand (48ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:47:11.091 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:47:11.104 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:47:11.387 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:47:11.388 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:47:11.444 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:47:11.446 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:47:11.447 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:47:11.711 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:47:11.864 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 155.9688ms
+2024-11-13 10:47:11.871 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:47:11.871 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:47:11.871 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:47:11.879 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 8.2795ms
+2024-11-13 10:47:11.886 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.9198ms
+2024-11-13 10:47:11.921 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.7528ms
+2024-11-13 10:47:12.002 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:47:12.218 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 216.5027ms
+2024-11-13 10:52:21.213 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:52:22.194 +01:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:52:22.258 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:52:22.273 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:52:22.573 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:52:22.574 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:52:22.614 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:52:22.615 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:52:22.616 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:52:22.765 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:52:22.900 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 136.5207ms
+2024-11-13 10:52:22.906 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:52:22.906 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:52:22.906 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:52:22.912 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 6.2332ms
+2024-11-13 10:52:22.923 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 16.6703ms
+2024-11-13 10:52:22.947 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.5714ms
+2024-11-13 10:52:23.031 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:52:23.167 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 136.5275ms
+2024-11-13 10:52:27.965 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:52:27.973 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.5316ms
+2024-11-13 10:52:27.986 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:52:27.986 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:52:27.986 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:52:27.992 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.3206ms
+2024-11-13 10:52:27.994 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 7.6251ms
+2024-11-13 10:52:28.002 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.841ms
+2024-11-13 10:52:28.075 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:52:28.165 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.4567ms
+2024-11-13 10:53:11.596 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 10:53:11.648 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:53:11.665 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:53:11.690 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:53:11.762 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:53:11.821 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:53:11.841 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 10:53:11.847 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:53:11.854 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 184.6917ms
+2024-11-13 10:53:11.855 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:53:11.859 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 263.6183ms
+2024-11-13 10:53:38.997 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-13 10:53:39.045 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:53:39.052 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Domain.Models.BidList]] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:53:39.077 +01:00 [INF] Creating a new bid
+2024-11-13 10:53:39.235 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-13 10:53:39.264 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Domain.Models.BidList'.
+2024-11-13 10:53:39.291 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 237.7096ms
+2024-11-13 10:53:39.293 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:53:39.294 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 201 null application/json; charset=utf-8 297.2364ms
+2024-11-13 10:54:20.481 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:54:21.490 +01:00 [INF] Executed DbCommand (50ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:54:21.554 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:54:21.569 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:54:21.859 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:54:21.860 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:54:21.899 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:54:21.900 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:54:21.901 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:54:22.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:54:22.400 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 144.0542ms
+2024-11-13 10:54:22.406 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:54:22.406 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:54:22.406 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:54:22.410 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.91ms
+2024-11-13 10:54:22.421 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.4846ms
+2024-11-13 10:54:22.441 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.1792ms
+2024-11-13 10:54:22.540 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:54:22.670 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 130.4199ms
+2024-11-13 10:54:53.725 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-13 10:54:53.871 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:54:53.887 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Domain.Models.BidList]] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:54:53.927 +01:00 [INF] Creating a new bid
+2024-11-13 10:54:54.117 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-13 10:54:54.156 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Domain.Models.BidList'.
+2024-11-13 10:54:54.183 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 291.4551ms
+2024-11-13 10:54:54.184 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:54:54.189 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 201 null application/json; charset=utf-8 463.8292ms
+2024-11-13 10:55:32.185 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:55:32.193 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.9694ms
+2024-11-13 10:55:32.212 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:55:32.212 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:55:32.212 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:55:32.216 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.9023ms
+2024-11-13 10:55:32.218 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 6.1758ms
+2024-11-13 10:55:32.232 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.4137ms
+2024-11-13 10:55:32.352 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:55:32.378 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/BidList" for actions - Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api),Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-11-13 10:55:32.400 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/BidList" for actions - Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api),Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-13 10:55:32.410 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 57.4092ms
+2024-11-13 10:55:32.414 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7210/swagger/v1/swagger.json, Response status code: 500
+2024-11-13 10:55:37.073 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 10:55:38.021 +01:00 [INF] Executed DbCommand (39ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:55:38.090 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 10:55:38.103 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 10:55:38.398 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 10:55:38.399 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 10:55:38.437 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 10:55:38.438 +01:00 [INF] Hosting environment: Development
+2024-11-13 10:55:38.439 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 10:55:38.738 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 10:55:38.882 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 147.7153ms
+2024-11-13 10:55:38.887 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 10:55:38.887 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 10:55:38.887 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 10:55:38.891 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.6528ms
+2024-11-13 10:55:38.900 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.711ms
+2024-11-13 10:55:38.923 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.6638ms
+2024-11-13 10:55:38.979 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 10:55:39.120 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 141.1125ms
+2024-11-13 10:56:04.123 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-13 10:56:04.222 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:56:04'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-13 10:56:04.233 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:56:04'.
+2024-11-13 10:56:04.238 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:56:04.243 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:56:04.244 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 120.6889ms
+2024-11-13 10:56:49.132 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 10:56:49.140 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:56:49'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-13 10:56:49.158 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '06/11/2024 14:10:52', Current time (UTC): '13/11/2024 09:56:49'.
+2024-11-13 10:56:49.162 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:56:49.180 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 10:56:49.205 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 10:56:49.286 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 10:56:49.343 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 10:56:49.355 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 10:56:49.360 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 10:56:49.366 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 182.1326ms
+2024-11-13 10:56:49.369 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 10:56:49.374 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 241.7536ms
+2024-11-13 10:57:39.750 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-13 10:57:39.753 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-11-13 10:57:39.755 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-11-13 10:57:39.758 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-13 10:57:39.759 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-13 10:57:39.760 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 401 0 null 10.7514ms
+2024-11-13 10:58:35.236 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-13 10:58:35.263 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:58:35.275 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.BidDtoWithoutId]] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 10:58:35.300 +01:00 [INF] Creating a new bid
+2024-11-13 10:58:35.465 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-13 10:58:35.495 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Api.Models.BidDtoWithoutId'.
+2024-11-13 10:58:35.521 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 243.9982ms
+2024-11-13 10:58:35.523 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 10:58:35.525 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 201 null application/json; charset=utf-8 288.8336ms
+2024-11-13 11:02:54.021 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Ratings - null null
+2024-11-13 11:02:54.023 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.RatingsController.GetRating (Findexium.Api)'
+2024-11-13 11:02:54.049 +01:00 [INF] Route matched with {action = "GetRating", controller = "Ratings", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Domain.Models.Rating]]] GetRating() on controller Findexium.Api.Controllers.RatingsController (Findexium.Api).
+2024-11-13 11:02:54.051 +01:00 [INF] Getting all ratings
+2024-11-13 11:02:54.080 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[FitchRating], [r].[MoodysRating], [r].[OrderNumber], [r].[SandPRating]
+FROM [Ratings] AS [r]
+2024-11-13 11:02:54.092 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Domain.Models.Rating, Findexium.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 11:02:54.095 +01:00 [INF] Executed action Findexium.Api.Controllers.RatingsController.GetRating (Findexium.Api) in 45.0588ms
+2024-11-13 11:02:54.097 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.RatingsController.GetRating (Findexium.Api)'
+2024-11-13 11:02:54.097 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Ratings - 200 null application/json; charset=utf-8 76.6461ms
+2024-11-13 11:55:05.386 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 11:55:05.394 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.811ms
+2024-11-13 11:55:05.411 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 11:55:05.411 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 11:55:05.411 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 11:55:05.415 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.2228ms
+2024-11-13 11:55:05.420 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 8.6036ms
+2024-11-13 11:55:05.436 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.6027ms
+2024-11-13 11:55:05.733 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 11:55:05.784 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.592ms
+2024-11-13 11:57:42.681 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 11:57:42.687 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 6.8798ms
+2024-11-13 11:57:42.701 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 11:57:42.701 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 11:57:42.701 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 11:57:42.705 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 3.8639ms
+2024-11-13 11:57:42.707 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 6.2388ms
+2024-11-13 11:57:42.719 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.0963ms
+2024-11-13 11:57:42.860 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 11:57:42.891 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.6013ms
+2024-11-13 12:01:06.702 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 12:01:07.698 +01:00 [INF] Executed DbCommand (45ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 12:01:07.761 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 12:01:07.775 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 12:01:08.081 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 12:01:08.082 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 12:01:08.125 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 12:01:08.126 +01:00 [INF] Hosting environment: Development
+2024-11-13 12:01:08.127 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 12:01:08.201 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 12:01:08.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 110.5622ms
+2024-11-13 12:01:08.317 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 12:01:08.317 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 12:01:08.317 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 12:01:08.322 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 4.677ms
+2024-11-13 12:01:08.327 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 10.2591ms
+2024-11-13 12:01:08.350 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.1891ms
+2024-11-13 12:01:08.422 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 12:01:08.537 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.6554ms
+2024-11-13 12:01:43.710 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 12:01:43.767 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 12:01:43.784 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 12:01:43.807 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 12:01:43.864 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 12:01:43.919 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 12:01:43.939 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 12:01:43.944 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 12:01:43.951 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 164.02ms
+2024-11-13 12:01:43.953 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 12:01:43.958 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 248.0721ms
+2024-11-13 12:02:26.888 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/BidList - application/json 569
+2024-11-13 12:02:26.940 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 12:02:26.949 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Findexium.Api.Models.BidDtoWithoutId]] PostBidList(Findexium.Api.Models.BidRequest) on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 12:02:26.976 +01:00 [INF] Creating a new bid
+2024-11-13 12:02:27.174 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2024-11-13 12:02:27.210 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Findexium.Domain.Models.BidList'.
+2024-11-13 12:02:27.239 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api) in 288.6054ms
+2024-11-13 12:02:27.240 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.PostBidList (Findexium.Api)'
+2024-11-13 12:02:27.241 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/BidList - 201 null application/json; charset=utf-8 353.1834ms
+2024-11-13 12:03:02.213 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 12:03:02.220 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 7.6302ms
+2024-11-13 12:03:02.235 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 12:03:02.235 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 12:03:02.235 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 12:03:02.238 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.3544ms
+2024-11-13 12:03:02.240 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 5.2015ms
+2024-11-13 12:03:02.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.1497ms
+2024-11-13 12:03:02.413 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 12:03:02.452 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.8434ms
+2024-11-13 13:04:33.486 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login - application/json 61
+2024-11-13 13:04:33.494 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 13:04:33.501 +01:00 [INF] Route matched with {action = "Login", controller = "Auth", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Findexium.Api.Models.LoginRequest) on controller Findexium.Api.Controllers.AuthController (Findexium.Api).
+2024-11-13 13:04:33.509 +01:00 [INF] Attempting to log in user with login: admin@example.com
+2024-11-13 13:04:33.535 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-13 13:04:33.555 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-11-13 13:04:33.558 +01:00 [INF] User admin@example.com logged in successfully
+2024-11-13 13:04:33.559 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-13 13:04:33.561 +01:00 [INF] Executed action Findexium.Api.Controllers.AuthController.Login (Findexium.Api) in 58.8813ms
+2024-11-13 13:04:33.563 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.AuthController.Login (Findexium.Api)'
+2024-11-13 13:04:33.564 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login - 200 null application/json; charset=utf-8 77.6517ms
+2024-11-13 13:08:16.528 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList - null null
+2024-11-13 13:08:16.559 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-11-13 13:08:16.572 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-11-13 13:08:16.573 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:08:16.577 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.BidDtoWithoutId]]] GetBids() on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 13:08:16.583 +01:00 [INF] Fetching all bids
+2024-11-13 13:08:16.599 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2024-11-13 13:08:16.617 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.BidDtoWithoutId, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 13:08:16.630 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api) in 51.5551ms
+2024-11-13 13:08:16.632 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:08:16.633 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList - 200 null application/json; charset=utf-8 104.7754ms
+2024-11-13 13:12:49.397 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 13:12:50.562 +01:00 [INF] Executed DbCommand (43ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 13:12:50.656 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 13:12:50.678 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 13:12:51.004 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 13:12:51.006 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 13:12:51.056 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 13:12:51.058 +01:00 [INF] Hosting environment: Development
+2024-11-13 13:12:51.059 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 13:12:51.778 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 13:12:52.232 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 457.288ms
+2024-11-13 13:12:52.244 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 13:12:52.245 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 13:12:52.260 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 13:12:52.332 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 86.8969ms
+2024-11-13 13:12:52.335 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 90.9941ms
+2024-11-13 13:12:52.394 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 138.8774ms
+2024-11-13 13:12:53.018 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 13:12:53.167 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.6276ms
+2024-11-13 13:12:54.809 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 13:12:54.817 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 8.473ms
+2024-11-13 13:12:54.828 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 13:12:54.828 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 13:12:54.828 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 13:12:54.831 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 2.8202ms
+2024-11-13 13:12:54.834 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.385ms
+2024-11-13 13:12:54.850 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.8243ms
+2024-11-13 13:12:54.932 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 13:12:55.059 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.5816ms
+2024-11-13 13:13:11.854 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList - null null
+2024-11-13 13:13:11.931 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:13:11.946 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.BidListModel]]] GetBids() on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 13:13:11.952 +01:00 [INF] Fetching all bids
+2024-11-13 13:13:12.046 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2024-11-13 13:13:12.121 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.BidListModel, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 13:13:12.133 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api) in 181.3412ms
+2024-11-13 13:13:12.134 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:13:12.141 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList - 200 null application/json; charset=utf-8 286.6301ms
+2024-11-13 13:13:58.414 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 13:13:59.805 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 13:13:59.880 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 13:13:59.897 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 13:14:00.485 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 13:14:00.486 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 13:14:00.558 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 13:14:00.559 +01:00 [INF] Hosting environment: Development
+2024-11-13 13:14:00.560 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 13:14:02.181 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 13:14:02.593 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 419.8101ms
+2024-11-13 13:14:02.618 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 13:14:02.619 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 13:14:02.630 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 13:14:02.680 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 61.5671ms
+2024-11-13 13:14:02.691 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 73.2066ms
+2024-11-13 13:14:02.793 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 163.2077ms
+2024-11-13 13:14:02.896 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 13:14:03.205 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 309.4742ms
+2024-11-13 13:14:10.590 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList - null null
+2024-11-13 13:14:10.736 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:14:10.757 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.BidListModel]]] GetBids() on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 13:14:16.623 +01:00 [INF] Fetching all bids
+2024-11-13 13:14:28.442 +01:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2024-11-13 13:15:36.283 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.BidListModel, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 13:15:36.297 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api) in 85533.3087ms
+2024-11-13 13:15:36.298 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:15:36.304 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList - 200 null application/json; charset=utf-8 85714.2595ms
+2024-11-13 13:20:48.260 +01:00 [INF] User profile is available. Using 'C:\Users\David Abruzzo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-13 13:20:49.490 +01:00 [INF] Executed DbCommand (49ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 13:20:49.562 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-13 13:20:49.578 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[Fullname], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Role], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-13 13:20:49.931 +01:00 [INF] Now listening on: https://localhost:7210
+2024-11-13 13:20:49.932 +01:00 [INF] Now listening on: http://localhost:5267
+2024-11-13 13:20:49.979 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-13 13:20:49.980 +01:00 [INF] Hosting environment: Development
+2024-11-13 13:20:49.980 +01:00 [INF] Content root path: C:\Users\David Abruzzo\source\repos\Back-end.NET_API_REST\P7CreateRestApi
+2024-11-13 13:20:50.451 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2024-11-13 13:20:50.698 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 255.1107ms
+2024-11-13 13:20:50.709 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-13 13:20:50.709 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2024-11-13 13:20:50.709 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2024-11-13 13:20:50.718 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 9.0233ms
+2024-11-13 13:20:50.724 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.2086ms
+2024-11-13 13:20:50.791 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.1526ms
+2024-11-13 13:20:50.911 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2024-11-13 13:20:51.194 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 282.407ms
+2024-11-13 13:21:01.426 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/BidList - null null
+2024-11-13 13:21:01.515 +01:00 [INF] Executing endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:21:01.528 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Findexium.Api.Models.BidListModel]]] GetBids() on controller Findexium.Api.Controllers.BidListController (Findexium.Api).
+2024-11-13 13:21:01.533 +01:00 [INF] Fetching all bids
+2024-11-13 13:21:01.612 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2024-11-13 13:21:01.685 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Findexium.Api.Models.BidListModel, Findexium.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-13 13:21:01.712 +01:00 [INF] Executed action Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api) in 179.43ms
+2024-11-13 13:21:01.713 +01:00 [INF] Executed endpoint 'Findexium.Api.Controllers.BidListController.GetBids (Findexium.Api)'
+2024-11-13 13:21:01.719 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/BidList - 200 null application/json; charset=utf-8 292.7319ms
+2024-11-13 13:31:55.793 +01:00 [INF] Application is shutting down...

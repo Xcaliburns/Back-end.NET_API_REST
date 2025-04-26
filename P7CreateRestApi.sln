@@ -3,7 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P7CreateRestApi/P7CreateRestApi", "P7CreateRestApi/P7CreateRestApi.csproj", "{CD72E8FF-4E16-4807-ABBA-F4D163825ECA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Findexium.Api", "P7CreateRestApi\Findexium.Api.csproj", "{CD72E8FF-4E16-4807-ABBA-F4D163825ECA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3FA1B650-40B0-4AC4-854E-A8A20F109DC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Findexium.Domain", "Findexium.Domain\Findexium.Domain.csproj", "{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Findexium.Infrastructure", "Findexium.Infrastructure\Findexium.Infrastructure.csproj", "{2AACDA51-F0FF-430E-90B3-3DB182183C10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4FC222DB-8CD0-4A97-A735-44737DAE7BFD}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumApi.tests", "FindexiumApi.tests\FindexiumApi.tests.csproj", "{3E170EC9-6194-4E56-A6D5-69DB6FA88D38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindexiumDomain.tests", "FindexiumDomain.tests\FindexiumDomain.tests.csproj", "{3FD53BFB-B0D5-4D84-9509-A5944D472A51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +30,32 @@ Global
 		{CD72E8FF-4E16-4807-ABBA-F4D163825ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD72E8FF-4E16-4807-ABBA-F4D163825ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD72E8FF-4E16-4807-ABBA-F4D163825ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AACDA51-F0FF-430E-90B3-3DB182183C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AACDA51-F0FF-430E-90B3-3DB182183C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AACDA51-F0FF-430E-90B3-3DB182183C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AACDA51-F0FF-430E-90B3-3DB182183C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E170EC9-6194-4E56-A6D5-69DB6FA88D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E170EC9-6194-4E56-A6D5-69DB6FA88D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E170EC9-6194-4E56-A6D5-69DB6FA88D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E170EC9-6194-4E56-A6D5-69DB6FA88D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD53BFB-B0D5-4D84-9509-A5944D472A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD53BFB-B0D5-4D84-9509-A5944D472A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD53BFB-B0D5-4D84-9509-A5944D472A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD53BFB-B0D5-4D84-9509-A5944D472A51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD72E8FF-4E16-4807-ABBA-F4D163825ECA} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
+		{88CFB404-A957-45F9-8AD8-1EC21F0CAD9F} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
+		{2AACDA51-F0FF-430E-90B3-3DB182183C10} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
+		{3E170EC9-6194-4E56-A6D5-69DB6FA88D38} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
+		{3FD53BFB-B0D5-4D84-9509-A5944D472A51} = {3FA1B650-40B0-4AC4-854E-A8A20F109DC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {736FFB93-FCD6-4284-83EA-2D51FC805936}
